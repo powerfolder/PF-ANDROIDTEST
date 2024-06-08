@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MobileElementEntity>
+   <description></description>
+   <name>showPasswordCheckbox</name>
+   <tag></tag>
+   <elementGuidId>a8391a9b-62f5-4964-b9bc-85e23aa8c285</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>XPATH</name>
+      <type>Main</type>
+      <value>(//*[@class='android.widget.CheckBox'])[1]</value>
+      <webElementGuid>896bc860-0b21-4724-becd-81c252a751d0</webElementGuid>
+   </webElementProperties>
+   <locator>(//*[@class='android.widget.CheckBox'])[1]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</MobileElementEntity>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MobileElementEntity>
+   <description></description>
+   <name>LayoutClick</name>
+   <tag></tag>
+   <elementGuidId>b286f2f4-d0f9-4934-bce3-44ebfd68e2ba</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>XPATH</name>
+      <type>Main</type>
+      <value>(//android.view.View)[6]</value>
+      <webElementGuid>5174a102-a003-4062-80a3-f9c34d49519a</webElementGuid>
+   </webElementProperties>
+   <locator>(//android.view.View)[6]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</MobileElementEntity>

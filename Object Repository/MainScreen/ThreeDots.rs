@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MobileElementEntity>
+   <description></description>
+   <name>ThreeDots</name>
+   <tag></tag>
+   <elementGuidId>d6fe0b38-88b1-4143-a6b7-4a92580bc7d6</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>XPATH</name>
+      <type>Main</type>
+      <value>(//android.widget.Button)[3]</value>
+      <webElementGuid>b98b8113-8735-4d32-8cf8-0fc9f37e4aa3</webElementGuid>
+   </webElementProperties>
+   <locator>(//android.widget.Button)[3]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</MobileElementEntity>

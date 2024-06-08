@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MobileElementEntity>
+   <description></description>
+   <name>useCodeProtection</name>
+   <tag></tag>
+   <elementGuidId>705e637e-c788-4d8b-9c47-88987ebfaa58</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>XPATH</name>
+      <type>Main</type>
+      <value>(//android.view.View[1]/android.view.View[2]/android.widget.TextView[1])[1]</value>
+      <webElementGuid>1bc343f9-2cf0-46ab-9baa-56a13577853a</webElementGuid>
+   </webElementProperties>
+   <locator>(//android.view.View[1]/android.view.View[2]/android.widget.TextView[1])[1]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</MobileElementEntity>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MobileElementEntity>
+   <description></description>
+   <name>removeServerURL</name>
+   <tag></tag>
+   <elementGuidId>2b65626f-27a6-4d38-8788-8204616e824c</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>XPATH</name>
+      <type>Main</type>
+      <value>(//android.view.View[1]/android.view.View[1])[2]</value>
+      <webElementGuid>b6aa801d-32c6-47f0-b446-bad445b4a40a</webElementGuid>
+   </webElementProperties>
+   <locator>(//android.view.View[1]/android.view.View[1])[2]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</MobileElementEntity>

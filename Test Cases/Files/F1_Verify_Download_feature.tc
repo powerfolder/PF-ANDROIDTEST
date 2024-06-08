@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>F1_Verify_Download_feature</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>cb9c8ef3-d569-4533-bd72-649c73d02de0</testCaseGuid>
+</TestCaseEntity>

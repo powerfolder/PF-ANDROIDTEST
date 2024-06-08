@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MobileElementEntity>
+   <description></description>
+   <name>Content2</name>
+   <tag></tag>
+   <elementGuidId>48e16619-e29a-48a0-9c84-89666e333489</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>XPATH</name>
+      <type>Main</type>
+      <value>//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[3]/android.view.View[1]/android.widget.ListView[1]/android.view.View[2]/android.view.View[1]/android.widget.TextView[1]</value>
+      <webElementGuid>b1f68b4c-a835-41cd-8e59-8530e2ad8f20</webElementGuid>
+   </webElementProperties>
+   <locator>//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[3]/android.view.View[1]/android.widget.ListView[1]/android.view.View[2]/android.view.View[1]/android.widget.TextView[1]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</MobileElementEntity>

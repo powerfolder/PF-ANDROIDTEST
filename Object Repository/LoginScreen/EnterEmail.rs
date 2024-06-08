@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MobileElementEntity>
+   <description></description>
+   <name>EnterEmail</name>
+   <tag></tag>
+   <elementGuidId>0d32e6dd-9f4b-42f5-923b-d80c6ce032de</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>XPATH</name>
+      <type>Main</type>
+      <value>(//*[@class='android.widget.EditText'])[1]</value>
+      <webElementGuid>e90a9765-7d9d-4ffb-8586-eb991dc321a5</webElementGuid>
+   </webElementProperties>
+   <locator>(//*[@class='android.widget.EditText'])[1]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</MobileElementEntity>

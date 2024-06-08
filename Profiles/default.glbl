@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>default</name>
+   <tag></tag>
+   <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'ajit@thoughtcoders.com'</initValue>
+      <name>userid</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Alexa@131190'</initValue>
+      <name>password</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://my.powerfolder.com'</initValue>
+      <name>ServerURL</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>
