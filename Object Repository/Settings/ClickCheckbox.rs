@@ -3,60 +3,17 @@
    <description></description>
    <name>ClickCheckbox</name>
    <tag></tag>
-   <elementGuidId>b2e3c193-26a2-4eed-95b2-6337af0e98aa</elementGuidId>
+   <elementGuidId>c0f2fcf4-ed36-447e-844c-9ea61bfc8116</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
-   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>(//*[@class = 'android.view.View' and (@text = '' or . = '')])[6]</locator>
-   <locatorCollection>
-      <entry>
-         <key>NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ANDROID_VIEWTAG</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_PREDICATE_STRING</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CLASS_NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ID</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CUSTOM</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IMAGE</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_CLASS_CHAIN</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ACCESSIBILITY</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ATTRIBUTES</key>
-      </entry>
-      <entry>
-         <key>ANDROID_UI_AUTOMATOR</key>
-         <value>new UiSelector()</value>
-      </entry>
-   </locatorCollection>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>XPATH</name>
+      <type>Main</type>
+      <value>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[1]</value>
+      <webElementGuid>e931252a-0622-4950-b9af-9ef11729abb6</webElementGuid>
+   </webElementProperties>
+   <locator>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[1]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
-   <platform>ANDROID</platform>
 </MobileElementEntity>

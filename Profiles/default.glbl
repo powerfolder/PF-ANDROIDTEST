@@ -19,4 +19,14 @@
       <initValue>'https://my.powerfolder.com'</initValue>
       <name>ServerURL</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>false</initValue>
+      <name>isExistingApp</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'PowerFolder_v21.1.6.apk'</initValue>
+      <name>AppName</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

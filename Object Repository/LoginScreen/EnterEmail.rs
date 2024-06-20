@@ -3,9 +3,8 @@
    <description></description>
    <name>EnterEmail</name>
    <tag></tag>
-   <elementGuidId>0d32e6dd-9f4b-42f5-923b-d80c6ce032de</elementGuidId>
+   <elementGuidId>8f693b57-376f-4b70-a2b3-827415837c1e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
-   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -13,7 +12,7 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>(//*[@class='android.widget.EditText'])[1]</value>
-      <webElementGuid>e90a9765-7d9d-4ffb-8586-eb991dc321a5</webElementGuid>
+      <webElementGuid>8d623ef7-535f-4907-9ebd-6d589365cf44</webElementGuid>
    </webElementProperties>
    <locator>(//*[@class='android.widget.EditText'])[1]</locator>
    <locatorStrategy>XPATH</locatorStrategy>

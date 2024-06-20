@@ -17,13 +17,23 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory
+import com.kms.katalon.core.configuration.RunConfiguration
 
-
-Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.OPTIONAL)
-Mobile.delay(5)
-if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
-	logout()
+if(GlobalVariable.isExistingApp) {
+Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
+} else {
+	String applocation = RunConfiguration.getProjectDir()+'/apks/'+GlobalVariable.AppName;
+	System.out.println("Applocation"+ applocation)
+	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
+	Mobile.delay(5)
+	if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
+		logout()
+	}
+	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
+	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
+	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 }
+
 Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
 Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
 Mobile.hideKeyboard()

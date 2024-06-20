@@ -12,10 +12,10 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>28bab8ef-7798-425a-a25d-cffcd6688afe</testSuiteGuid>
    <testCaseLink>
-      <guid>0153e4e5-34cf-46c3-8867-2ddcba35e4d4</guid>
+      <guid>74fc32a4-e545-40e8-a9ff-6516bff31864</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Files/F1_Verify_Download_feature</testCaseId>
+      <testCaseId>Test Cases/Setting/SE3_VerifyLockCodeDeactivateFunctionality</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -110,17 +110,10 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>74fc32a4-e545-40e8-a9ff-6516bff31864</guid>
+      <guid>0153e4e5-34cf-46c3-8867-2ddcba35e4d4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Setting/SE3_VerifyLockCodeDeactivateFunctionality</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>03ebb065-dd6d-49c6-9ace-665c8c29d3c1</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Setting/SE4_VerifyChangeLanguageFunctionality</testCaseId>
+      <testCaseId>Test Cases/Files/F1_Verify_Download_feature</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -135,6 +128,13 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SubFolder/CreateSubFolder</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ddc6aa01-3d63-4a11-8796-f57672ddb93d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Files/F3_VerifyUploadFeatures</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

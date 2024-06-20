@@ -9,63 +9,13 @@
    <testSuiteRunConfigurations>
       <TestSuiteRunConfiguration>
          <configuration>
-            <groupName>Mobile</groupName>
+            <groupName>Web Desktop</groupName>
             <profileName>default</profileName>
-            <requireConfigurationData>true</requireConfigurationData>
-            <runConfigurationData>
-               <entry>
-                  <key>deviceName</key>
-                  <value>vivo vivo 1904 (Android 11)</value>
-               </entry>
-               <entry>
-                  <key>deviceId</key>
-                  <value>TKX44XS8DAVWNRMZ</value>
-               </entry>
-            </runConfigurationData>
-            <runConfigurationId>Android</runConfigurationId>
+            <requireConfigurationData>false</requireConfigurationData>
+            <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Login</testSuiteEntity>
-      </TestSuiteRunConfiguration>
-      <TestSuiteRunConfiguration>
-         <configuration>
-            <groupName>Mobile</groupName>
-            <profileName>default</profileName>
-            <requireConfigurationData>true</requireConfigurationData>
-            <runConfigurationData>
-               <entry>
-                  <key>deviceName</key>
-                  <value>vivo vivo 1904 (Android 11)</value>
-               </entry>
-               <entry>
-                  <key>deviceId</key>
-                  <value>TKX44XS8DAVWNRMZ</value>
-               </entry>
-            </runConfigurationData>
-            <runConfigurationId>Android</runConfigurationId>
-         </configuration>
-         <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Search</testSuiteEntity>
-      </TestSuiteRunConfiguration>
-      <TestSuiteRunConfiguration>
-         <configuration>
-            <groupName>Mobile</groupName>
-            <profileName>default</profileName>
-            <requireConfigurationData>true</requireConfigurationData>
-            <runConfigurationData>
-               <entry>
-                  <key>deviceName</key>
-                  <value>vivo vivo 1904 (Android 11)</value>
-               </entry>
-               <entry>
-                  <key>deviceId</key>
-                  <value>TKX44XS8DAVWNRMZ</value>
-               </entry>
-            </runConfigurationData>
-            <runConfigurationId>Android</runConfigurationId>
-         </configuration>
-         <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Settings</testSuiteEntity>
+         <testSuiteEntity>Test Suites/Files</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
 </TestSuiteCollectionEntity>

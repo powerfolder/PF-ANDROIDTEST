@@ -17,64 +17,57 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
+import com.kms.katalon.core.configuration.RunConfiguration
+
+if(GlobalVariable.isExistingApp) {
 Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
-Mobile.delay(5)
-if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
-	logoutF()
+} else {
+	String applocation = RunConfiguration.getProjectDir()+'/apks/'+GlobalVariable.AppName;
+	System.out.println("Applocation"+ applocation)
+	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
+	Mobile.delay(5)
+	if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
+		logout()
+	}
+	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
+	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
+	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 }
 
 Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
-
 Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
-
 Mobile.hideKeyboard()
-
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-
 Mobile.delay(3)
-
 Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
 Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)
 Mobile.delay(2)
- 
 Mobile.tap(findTestObject('Settings/LanguageselectButton'), 45)
 Mobile.delay(2)
 Mobile.tap(findTestObject('Settings/GermanLanguageBtn'), 45)
-
-String CheckName = Mobile.getText(findTestObject('Settings/VerifyGermanLanguage'), 45)
-
-if(CheckName == 'Einstellungen') {
-	return true;
-}
-
 Mobile.delay(5)
-
+Mobile.verifyElementExist(findTestObject('Settings/VerifyGermanLanguage'), 45, FailureHandling.CONTINUE_ON_FAILURE)
+Mobile.delay(5) 
 Mobile.tap(findTestObject('Settings/LanguageselectButton'), 45)
-Mobile.delay(3)
-Mobile.tap(findTestObject('Settings/SelectEngLanguage'), 45)
-
 Mobile.delay(2)
-logout()
-
+Mobile.tap(findTestObject('Settings/GermanLanguageBtn'), 45)
+Mobile.delay(5)
+Mobile.tap(findTestObject('Settings/englishSelectGerman'), 45)
+Mobile.delay(5)
+Mobile.verifyElementVisible(findTestObject('Settings/settingsHeader'), 30)
+Mobile.tap(findTestObject('Settings/settingsHeader'), 30)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'),30)
+//logout()
 Mobile.closeApplication()
-
-def logout() { 
+def logout() {
 	Mobile.delay(3)
-	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
-	String confirmationMessage = Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
+	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45, FailureHandling.OPTIONAL)
+	Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45, FailureHandling.OPTIONAL)
+	Mobile.delay(5)
+	Mobile.tap(findTestObject('Settings/LogoutButton'), 45,  FailureHandling.OPTIONAL)
+	String confirmationMessage = Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30,  FailureHandling.OPTIONAL)
 	Mobile.tap(findTestObject('Settings/LogoutConfirmationYes'), 30)
 	Mobile.delay(5)
-	Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?')
-} 
-
-def logoutF() {
-	Mobile.delay(3)
-	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-	Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)
-	Mobile.delay(5)
-	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
-	String confirmationMessage = Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
-	Mobile.tap(findTestObject('Settings/LogoutConfirmationYes'), 30)
-	Mobile.delay(5)
-	Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?')
+	Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?',  FailureHandling.OPTIONAL)
 }

@@ -4,14 +4,9 @@
    <name>PF-ANDROIDTEST</name>
    <tag></tag>
    <UUID>c2537991-2b3b-4542-b114-a12a62e94811</UUID>
-   <createdEdition>FREE</createdEdition>
-   <createdVersion>9.4.0</createdVersion>
-   <freeLicense>false</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
-   <modifiedEdition>ENTERPRISE</modifiedEdition>
-   <modifiedVersion>9.5.0</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>D:\Code\PowerFolder\Mobile\Android\PF-ANDROIDTEST\PF-ANDROIDTEST\PF-ANDROIDTEST.prj</projectFileLocation>
+   <projectFileLocation>D:\Code\PowerFolder\Mobile\PF-ANDROIDTEST\PF-ANDROIDTEST.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>

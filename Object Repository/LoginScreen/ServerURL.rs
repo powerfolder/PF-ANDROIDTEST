@@ -3,7 +3,7 @@
    <description></description>
    <name>ServerURL</name>
    <tag></tag>
-   <elementGuidId>b3233f04-9463-43af-972e-08094f3cfdc2</elementGuidId>
+   <elementGuidId>4a86eedf-3e01-467a-aa33-7712f495b35a</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -13,8 +13,59 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>//*[@class = 'android.widget.TextView' and (@text = 'Server: powerfolder.com' or . = 'Server: powerfolder.com')]</value>
-      <webElementGuid>7e3cfcbe-5e45-4d1e-8849-f40402e0069d</webElementGuid>
+      <webElementGuid>7b1b7ffb-d41e-45bf-8b86-a66296e76de1</webElementGuid>
    </webElementProperties>
-   <locator>//*[@class = 'android.widget.TextView' and (@text = 'Server: powerfolder.com' or . = 'Server: powerfolder.com')]</locator>
+   <locator>//*[@class = 'android.widget.TextView' and (contains(@text, 'Server:'))]</locator>
+   <locatorCollection>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.widget.TextView' and (@text = 'Server: powerfolder.com' or . = 'Server: powerfolder.com')]</value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+         <value>//*[@class = 'android.widget.TextView' and (@text = 'Server: powerfolder.com' or . = 'Server: powerfolder.com')]</value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+   </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>
+   <platform>ANDROID</platform>
 </MobileElementEntity>

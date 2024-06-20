@@ -17,10 +17,21 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+import com.kms.katalon.core.configuration.RunConfiguration
+
+if(GlobalVariable.isExistingApp) {
 Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
-Mobile.delay(5)
-if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
-	logout()
+} else {
+	String applocation = RunConfiguration.getProjectDir()+'/apks/'+GlobalVariable.AppName;
+	System.out.println("Applocation"+ applocation)
+	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
+	Mobile.delay(5)
+	if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
+		logout()
+	}
+	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
+	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
+	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 }
 
 
@@ -28,7 +39,7 @@ Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 
 Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
 Mobile.hideKeyboard()
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-Mobile.delay(3)
+Mobile.delay(5)
 
 //new Directory creation 
 
