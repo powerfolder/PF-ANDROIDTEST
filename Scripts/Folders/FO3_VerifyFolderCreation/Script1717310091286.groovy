@@ -55,7 +55,7 @@ logout()
 Mobile.closeApplication()
 
 
-def  logout() {
+def logout() {
 	Mobile.delay(3)
 	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
 	Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)

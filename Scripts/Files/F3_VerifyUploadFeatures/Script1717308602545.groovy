@@ -51,9 +51,6 @@ Mobile.delay(2)
 Mobile.tap(findTestObject('ThreeDotsMenu/Upload'), 30)
 Mobile.delay(2)
 Mobile.verifyElementExist(findTestObject('Folder_Menu/clickOnCancelUploadButton'), 30, FailureHandling.CONTINUE_ON_FAILURE)
- 
-
- 
 Mobile.tap(findTestObject('ThreeDotsMenu/upload_section'), 30)
 Mobile.tap(findTestObject('Folder_Menu/Upload_img'), 30)
 Mobile.delay(5)

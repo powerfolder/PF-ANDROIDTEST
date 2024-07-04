@@ -41,15 +41,12 @@ Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.passw
 Mobile.hideKeyboard()
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 Mobile.delay(3)
- 
- 
 String List1 = Mobile.getText(findTestObject('ListContent/Content1'), 30)
 Mobile.verifyEqual(List1, 'Base1')
 Mobile.delay(1)
 String List2 = Mobile.getText(findTestObject('ListContent/Content2'), 30)
-//Mobile.verifyEqual(List1, 'Mobile Uploads')
+Mobile.verifyEqual(List2, 'Mobile Uploads')
 Mobile.delay(2)
-
 logout()
  
 Mobile.closeApplication()

@@ -21,7 +21,7 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration
 
 if(GlobalVariable.isExistingApp) {
-Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
+Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.OPTIONAL)
 } else {
 	String applocation = RunConfiguration.getProjectDir()+'/apks/'+GlobalVariable.AppName;
 	System.out.println("Applocation"+ applocation)
@@ -36,39 +36,24 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 }
 
 Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
-
 Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
-
 Mobile.hideKeyboard()
-
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-
 Mobile.delay(3)
-
 Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)
-
 Mobile.delay(1)
-
 Mobile.tap(findTestObject('Folder_Menu/ShareButton'), 30)
-
 Mobile.tap(findTestObject('Folder_Menu/VerifyshareLinkButton'), 30)
-
 Mobile.delay(5)
-
 String link = Mobile.getText(findTestObject('Folder_Menu/FloderLink'), 30)
-
 if (link.contains('https://my.powerfolder.com')) {
     println(link)
 } else {
     println('The header text does not contain the expected substring.')
 }
-
 Mobile.delay(5)
-
 Mobile.pressBack()
-
 logout()
-
 Mobile.closeApplication()
 
 

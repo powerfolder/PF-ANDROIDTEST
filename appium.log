@@ -723,3 +723,7 @@
 [35m[Appium][39m Removing session 'c55c5c26-6fcc-4198-9290-05621dbdf538' from our master session list
 [35m[UiAutomator2][39m Did not get confirmation UiAutomator2 deleteSession worked; Error was: UnknownError: An unknown server-side error occurred while processing the command. Original error: 'DELETE /' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
 [35m[UiAutomator2][39m Restoring hidden api policy to the device default configuration
+[35m[HTTP][39m [37m-->[39m [37mDELETE[39m [37m/wd/hub/session/c55c5c26-6fcc-4198-9290-05621dbdf538[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- DELETE /wd/hub/session/c55c5c26-6fcc-4198-9290-05621dbdf538 [39m[33m404[39m [90m17 ms - 2380[39m
+[35m[HTTP][39m [90m[39m

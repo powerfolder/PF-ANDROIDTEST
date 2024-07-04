@@ -42,7 +42,7 @@ Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.Serv
 
 Mobile.setText(findTestObject('/LoginScreen/enterUserNameCustomServer'), GlobalVariable.userid, 30)
 Mobile.setText(findTestObject('LoginScreen/enterPasswordCustomServer'), GlobalVariable.password, 30)
-Mobile.pressBack()
+//Mobile.pressBack()
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 Mobile.delay(3)
 String mobileUploadsText = Mobile.getText(findTestObject('MainScreen/MobileUploads'), 30)
