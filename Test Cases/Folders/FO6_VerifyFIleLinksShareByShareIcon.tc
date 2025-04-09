@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FO6_VerifyFIleLinksShareByShareIcon</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>bcac7096-b966-41f7-a866-27430bb70d40</testCaseGuid>
+</TestCaseEntity>

@@ -28,7 +28,7 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
 	Mobile.delay(5)
 	if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
-		logout()
+		logoutF()
 	}
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
@@ -47,7 +47,7 @@ Mobile.delay(3)
 
 Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
 
-Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)
+Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 
 Mobile.delay(2)
 
@@ -58,7 +58,7 @@ logout()
 
 Mobile.closeApplication()
 
-//WebUI.callTestCase(findTestCase('Files/F1_Verify_Download_feature'), [:], FailureHandling.STOP_ON_FAILURE)
+//WebUI.callTestCase(findTestCase('null'), [:], FailureHandling.STOP_ON_FAILURE)
 
 
 def logout() { 
@@ -73,7 +73,7 @@ def logout() {
 def logoutF() {
 	Mobile.delay(3)
 	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-	Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)
+	Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 	Mobile.delay(5)
 	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
 	String confirmationMessage = Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)

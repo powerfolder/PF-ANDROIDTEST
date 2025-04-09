@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>S2_VerifySubDirectorySearchFunctionality</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b2a72537-aa38-4685-b119-79d87c78c588</testCaseGuid>
+</TestCaseEntity>

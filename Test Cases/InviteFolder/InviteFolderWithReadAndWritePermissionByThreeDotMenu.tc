@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>InviteFolderWithReadAndWritePermissionByThreeDotMenu</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0ecc1c5c-6664-4a1c-b335-3d5d07157a65</testCaseGuid>
+</TestCaseEntity>

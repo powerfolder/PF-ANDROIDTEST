@@ -4,6 +4,5 @@
    <name>FO4_VerifyFolderDelete</name>
    <tag></tag>
    <comment></comment>
-   <recordOption>OTHER</recordOption>
    <testCaseGuid>2ab4b55e-df7c-4b6a-b4c6-5a8e19476ce4</testCaseGuid>
 </TestCaseEntity>

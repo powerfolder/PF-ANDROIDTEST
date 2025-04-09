@@ -4,5 +4,6 @@
    <name>FO3_VerifyFolderCreation</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>2674a822-6067-4374-aa0c-f6c10039fd8f</testCaseGuid>
 </TestCaseEntity>

@@ -3,7 +3,7 @@
    <description></description>
    <name>ClickCheckbox</name>
    <tag></tag>
-   <elementGuidId>c0f2fcf4-ed36-447e-844c-9ea61bfc8116</elementGuidId>
+   <elementGuidId>5a60f2cd-d504-4be0-87aa-cf5bb1096a6d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -12,8 +12,8 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[1]</value>
-      <webElementGuid>e931252a-0622-4950-b9af-9ef11729abb6</webElementGuid>
+      <webElementGuid>d261db61-2994-41cf-990d-6a5f664fb369</webElementGuid>
    </webElementProperties>
-   <locator>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[1]</locator>
+   <locator>//*[@class = 'android.widget.TextView' and @resource-id = 'settings_guard' and (@text = '' or . = '')]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
 </MobileElementEntity>

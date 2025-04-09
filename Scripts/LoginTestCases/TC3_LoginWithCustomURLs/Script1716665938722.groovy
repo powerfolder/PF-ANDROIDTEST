@@ -36,20 +36,20 @@ Mobile.verifyElementExist(findTestObject('LoginScreen/ServerURL'), 30)
 
 Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 
-//Mobile.tap(findTestObject('LoginScreen/removeServerURL'), 45)
+Mobile.tap(findTestObject('LoginScreen/removeServerURL'), 45)
 
 Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
 
 Mobile.setText(findTestObject('/LoginScreen/enterUserNameCustomServer'), GlobalVariable.userid, 30)
 Mobile.setText(findTestObject('LoginScreen/enterPasswordCustomServer'), GlobalVariable.password, 30)
-//Mobile.pressBack()
+Mobile.hideKeyboard()
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 Mobile.delay(3)
 String mobileUploadsText = Mobile.getText(findTestObject('MainScreen/MobileUploads'), 30)
 Mobile.verifyEqual(mobileUploadsText, 'Mobile Uploads')
 Mobile.delay(3)
 Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)
+Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 Mobile.delay(5)
 Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
 String confirmationMessage= Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
@@ -60,7 +60,7 @@ Mobile.closeApplication()
 
 def  logout() {
 	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-	Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)
+	Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 	Mobile.delay(5)
 	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
 	String confirmationMessage= Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)

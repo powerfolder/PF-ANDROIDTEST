@@ -41,8 +41,11 @@ Mobile.hideKeyboard()
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 Mobile.delay(3)
 Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)
+Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 Mobile.delay(2)
+
+// There is no any option for change language 
+/*
 Mobile.tap(findTestObject('Settings/LanguageselectButton'), 45)
 Mobile.delay(2)
 Mobile.tap(findTestObject('Settings/GermanLanguageBtn'), 45)
@@ -57,13 +60,13 @@ Mobile.tap(findTestObject('Settings/englishSelectGerman'), 45)
 Mobile.delay(5)
 Mobile.verifyElementVisible(findTestObject('Settings/settingsHeader'), 30)
 Mobile.tap(findTestObject('Settings/settingsHeader'), 30)
-Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'),30)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'),30)*/
 //logout()
 Mobile.closeApplication()
 def logout() {
 	Mobile.delay(3)
 	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45, FailureHandling.OPTIONAL)
-	Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45, FailureHandling.OPTIONAL)
+	Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45, FailureHandling.OPTIONAL)
 	Mobile.delay(5)
 	Mobile.tap(findTestObject('Settings/LogoutButton'), 45,  FailureHandling.OPTIONAL)
 	String confirmationMessage = Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30,  FailureHandling.OPTIONAL)

@@ -40,7 +40,7 @@ Mobile.hideKeyboard()
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 Mobile.delay(5)
 Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)
+Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 Mobile.delay(2)
 
 Mobile.tap(findTestObject('Settings/ClickCheckbox'), 30)
@@ -88,7 +88,7 @@ def logout() {
 def logoutF() {
 	Mobile.delay(3)
 	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-	Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)
+	Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 	Mobile.delay(5)
 	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
 	String confirmationMessage = Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)

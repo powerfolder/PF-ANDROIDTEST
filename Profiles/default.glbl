@@ -11,12 +11,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Alexa@131190'</initValue>
+      <initValue>'Thoughtcoders@123'</initValue>
       <name>password</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://my.powerfolder.com'</initValue>
+      <initValue>'https://titan.powerfolder.net'</initValue>
       <name>ServerURL</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -26,7 +26,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'PowerFolder_v21.1.10.apk'</initValue>
+      <initValue>'PF debug.apk'</initValue>
       <name>AppName</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

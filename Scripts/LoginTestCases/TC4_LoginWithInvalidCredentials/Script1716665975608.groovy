@@ -42,7 +42,7 @@ Mobile.closeApplication()
 
 def  logout() {
 	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-	Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)
+	Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 	Mobile.delay(5)
 	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
 	String confirmationMessage= Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)

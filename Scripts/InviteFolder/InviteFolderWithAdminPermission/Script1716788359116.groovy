@@ -16,7 +16,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -38,6 +37,9 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+
+String randomEmail = "user" + System.currentTimeMillis() + "@powerfoldertest.com"
 if(GlobalVariable.isExistingApp) {
 Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
 } else {
@@ -57,13 +59,16 @@ Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 
 Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
 Mobile.hideKeyboard()
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45) 
-Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30) 
-Mobile.tap(findTestObject('InviteFolder/InviteButton'), 30)
-Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
-Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30) 
-Mobile.tap(findTestObject('InviteFolder/SelectAdminToggleButton') , 30)
+Mobile.delay(3)
 
+//Invite folder with admin permission 
+Mobile.tap(findTestObject('InviteFolder/ShareButton'), 30)
+Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
+Mobile.setText(findTestObject('LoginScreen/EnterEmail'), randomEmail, 30)
+Mobile.tap(findTestObject('InviteFolder/SelectAdminToggleButton') , 30)
 Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)
+String permissionAlertText= Mobile.getText(findTestObject('InviteFolder/VerifyInvitationSentText'), 30)
+Mobile.verifyEqual(permissionAlertText, 'Invitation sent')
 
 logout()
 
@@ -71,7 +76,7 @@ Mobile.closeApplication()
 
 def  logout() {
 	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-	Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)
+	Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 	Mobile.delay(5)
 	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
 	String confirmationMessage= Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
