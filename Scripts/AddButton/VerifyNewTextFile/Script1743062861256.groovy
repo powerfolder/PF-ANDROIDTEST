@@ -47,7 +47,7 @@ Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 // click on plus icon and select to New text file
 
 Mobile.delay(3)
-Mobile.tapAtPosition(639, 1361)
+Mobile.tapAtPosition(GlobalVariable.tapX , GlobalVariable.tapY)
 Mobile.delay(3)
 Mobile.tap(findTestObject('PlusIconMenus/NewTextFile'), 30)
 Mobile.delay(3)

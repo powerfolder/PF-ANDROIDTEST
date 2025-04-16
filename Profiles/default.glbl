@@ -26,7 +26,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'PF debug.apk'</initValue>
+      <initValue>'PowerFolder.apk'</initValue>
       <name>AppName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>638</initValue>
+      <name>tapX</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>1450</initValue>
+      <name>tapY</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

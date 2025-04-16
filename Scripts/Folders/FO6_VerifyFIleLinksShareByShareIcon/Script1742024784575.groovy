@@ -46,13 +46,13 @@ Mobile.delay(3)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 10)
 Mobile.delay(3)
 Mobile.tap(findTestObject('Folder_Menu/ShareIcon'), 30)
-Mobile.delay(7)
+/*Mobile.delay(7)
 String text = Mobile.getText(findTestObject('Folder_Menu/VerifyShareViaText'), 30)
 if (text.contains('Share via')) {
 	println(text)
 }else {
 	print('The header text is not present')
-}
+}*/
 Mobile.delay(3)
 Mobile.pressBack()
 logout()

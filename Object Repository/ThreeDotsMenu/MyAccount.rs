@@ -3,7 +3,7 @@
    <description></description>
    <name>MyAccount</name>
    <tag></tag>
-   <elementGuidId>da62f3aa-d2b3-4c3a-890b-29f2770cc548</elementGuidId>
+   <elementGuidId>48c27dbb-fcb3-4b44-aa51-62b412ef9443</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -13,8 +13,59 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>//*[@class = 'android.view.View' and (@text = 'Settings' or . = 'Settings')]</value>
-      <webElementGuid>e78e71e6-b0f0-41e0-8e86-74de7da22c39</webElementGuid>
+      <webElementGuid>0e9831fb-1ce1-4ba4-818c-ee4f8d79fe8c</webElementGuid>
    </webElementProperties>
    <locator>//*[@class = 'android.view.View' and (@text = 'My account' or . = 'My account') and @resource-id = 'ab_settings']</locator>
+   <locatorCollection>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.view.View' and (@text = 'My account' or . = 'My account') and @resource-id = 'ab_settings']</value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+         <value>//*[@class = 'android.view.View' and (@text = 'Settings' or . = 'Settings')]</value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+   </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>
+   <platform>ANDROID</platform>
 </MobileElementEntity>

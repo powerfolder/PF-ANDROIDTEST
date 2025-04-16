@@ -12,24 +12,31 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>845f512f-9172-4952-b158-4be4a25b6d65</testSuiteGuid>
    <testCaseLink>
-      <guid>999bc10b-97a1-48ed-a4f9-12afb3d2c149</guid>
+      <guid>6f08de7e-cb6c-48ca-875e-6683345d5a81</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TestForSwipeMenus/VerifyFileToDelete</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>c7bf79d7-1142-4d6f-abca-3d6dc125c40f</guid>
+      <guid>9e43cc60-e67b-42f0-bbef-92d82cd93aeb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TestForSwipeMenus/VerifyFileToMove</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>d5e0bb5e-f0c4-4064-838e-88476809a4bb</guid>
+      <guid>16fcf601-d0fd-4d66-8a50-3958ea13e75a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TestForSwipeMenus/VerifyFileToSave</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e4b9eed2-e4e9-48e5-a7eb-cd2487063ee3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForSwipeMenus/VerifyToDownloadFolder</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

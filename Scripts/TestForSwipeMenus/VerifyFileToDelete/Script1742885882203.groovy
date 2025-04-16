@@ -47,7 +47,7 @@ Mobile.delay(3)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
 
 Mobile.delay(3)
-Mobile.tapAtPosition(639, 1361)
+Mobile.tapAtPosition(GlobalVariable.tapX,GlobalVariable.tapY)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
 
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)

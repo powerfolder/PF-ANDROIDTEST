@@ -48,7 +48,7 @@ Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 // CLick on plus icon and select to create spreadsheet
 
 Mobile.delay(3)
-Mobile.tapAtPosition(639, 1361)
+Mobile.tapAtPosition(GlobalVariable.tapX , GlobalVariable.tapY)
 Mobile.delay(3)
 Mobile.tap(findTestObject('PlusIconMenus/NewSpreadsSheet'), 30)
 Mobile.delay(3)
@@ -68,7 +68,7 @@ Mobile.verifyEqual(getFolderName, 'Test Document.xlsx')
 Mobile.swipe(568, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
-Mobile.delay(3)
+Mobile.delay(2)
 String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
 if (alertMsg.contains('Deleted Test Document.xlsx')) {
 	println(alertMsg)

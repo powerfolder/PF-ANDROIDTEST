@@ -54,8 +54,8 @@ Mobile.swipe(140, 351, 568, 351)
 Mobile.tap(findTestObject('SwipeElements/SaveIcon'), 30)
 
 Mobile.delay(3)
-/*String alertTextForSaveFile= Mobile.getText(findTestObject('SwipeElements/VerifySaveFileAlertMsg'), 30)
-Mobile.verifyEqual(alertTextForSaveFile, 'File successfully saved to "Downloads"')*/
+String alertTextForSaveFile= Mobile.getText(findTestObject('SwipeElements/VerifySaveFileAlertMsg'), 30)
+Mobile.verifyEqual(alertTextForSaveFile, 'File successfully saved to "Downloads"')
 
 Mobile.closeApplication()
 

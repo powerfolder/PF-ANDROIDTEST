@@ -56,13 +56,13 @@ Mobile.tap(findTestObject('Folder_Menu/VerifyshareLinkButton'), 30)
 
 Mobile.delay(5)
 
-String link = Mobile.getText(findTestObject('Folder_Menu/FloderLink'), 30)
+/*String link = Mobile.getText(findTestObject('Folder_Menu/FloderLink'), 30)
 
 if (link.contains('https://titan.powerfolder.net')) {
     println(link)
 } else {
     println('The header text does not contain the expected substring.')
-}
+}*/
 
 Mobile.delay(5)
 

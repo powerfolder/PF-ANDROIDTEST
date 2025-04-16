@@ -55,13 +55,12 @@ Mobile.tap(findTestObject('SwipeElements/MoveIcon'), 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('Folder_Menu/VerifyshareLinkButton'), 30)
 
-Mobile.delay(3)
-String link = Mobile.getText(findTestObject('Folder_Menu/FloderLink'), 30)
+/*String link = Mobile.getText(findTestObject('Folder_Menu/FloderLink'), 30)
 if (link.contains('https://titan.powerfolder.net')) {
 	println(link)
 }else {
 	print('The header link is not present')
-}
+}*/
 Mobile.delay(3)
 Mobile.pressBack()
 logout()

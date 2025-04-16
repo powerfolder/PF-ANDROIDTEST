@@ -46,7 +46,7 @@ if(GlobalVariable.isExistingApp) {
 	
 	// Click on plus icon button and select new text file
 	Mobile.delay(3)
-	Mobile.tapAtPosition(639, 1361)
+	Mobile.tapAtPosition(GlobalVariable.tapX , GlobalVariable.tapY)
 	Mobile.delay(3)
 	Mobile.tap(findTestObject('PlusIconMenus/NewTextFile'), 30)
 	
