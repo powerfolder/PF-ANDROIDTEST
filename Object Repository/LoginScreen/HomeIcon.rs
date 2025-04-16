@@ -3,7 +3,7 @@
    <description></description>
    <name>HomeIcon</name>
    <tag></tag>
-   <elementGuidId>522b4aa6-4c02-43e2-b64c-29bcbfacb104</elementGuidId>
+   <elementGuidId>d0fbff76-46f1-4523-9655-1e53aee497c0</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -13,17 +13,25 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[1]/android.widget.Button[1]</value>
-      <webElementGuid>8f2745db-defa-4924-a091-50b405f5df1c</webElementGuid>
+      <webElementGuid>354f89fd-47e1-46a9-8fd7-2f9aac96eafc</webElementGuid>
    </webElementProperties>
-   <locator>//*[@class = 'android.widget.Image' and (@text = 'logo' or . = 'logo')]</locator>
+   <locator>//*[@class = 'android.widget.Button' and (@text = ' ' or . = ' ') and @resource-id = 'ab_home']</locator>
    <locatorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.widget.Button' and (@text = ' ' or . = ' ') and @resource-id = 'ab_home']</value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
       <entry>
          <key>ANDROID_UI_AUTOMATOR</key>
          <value>new UiSelector()</value>
-      </entry>
-      <entry>
-         <key>ATTRIBUTES</key>
-         <value>//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[1]/android.widget.Button[1]</value>
       </entry>
       <entry>
          <key>IOS_CLASS_CHAIN</key>
@@ -34,24 +42,20 @@
          <value></value>
       </entry>
       <entry>
-         <key>ID</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ACCESSIBILITY</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[1]/android.widget.Button[1]</value>
-      </entry>
-      <entry>
          <key>IMAGE</key>
          <value></value>
       </entry>
       <entry>
-         <key>NAME</key>
+         <key>IOS_PREDICATE_STRING</key>
          <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+         <value>//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[1]/android.widget.Button[1]</value>
       </entry>
       <entry>
          <key>CUSTOM</key>
@@ -59,10 +63,6 @@
       </entry>
       <entry>
          <key>ANDROID_VIEWTAG</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_PREDICATE_STRING</key>
          <value></value>
       </entry>
    </locatorCollection>

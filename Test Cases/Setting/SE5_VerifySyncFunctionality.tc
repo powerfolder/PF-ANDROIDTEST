@@ -4,5 +4,6 @@
    <name>SE5_VerifySyncFunctionality</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>4df84de6-722e-471f-b6b0-1ea274886a5e</testCaseGuid>
 </TestCaseEntity>
