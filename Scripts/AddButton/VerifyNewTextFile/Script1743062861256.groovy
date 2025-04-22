@@ -37,7 +37,7 @@ Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 // click on plus icon and select to New text file
 
 Mobile.delay(3)
-Mobile.tapAtPosition(GlobalVariable.tapX , GlobalVariable.tapY)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
 Mobile.tap(findTestObject('PlusIconMenus/NewTextFile'), 30)
 Mobile.delay(3)
@@ -47,16 +47,16 @@ Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
 Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
 Mobile.delay(10)
-Mobile.tap(findTestObject('VerifyCreatedFIleNames/CloseButton'),30)
+Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(5)
-String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFIleNames/VerifyCreatedTextFileName'), 30)
+String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/VerifyCreatedTextFileName'), 30)
 Mobile.verifyEqual(getFolderName, 'Test Document.txt')
 
 //Swipe to delete created docx.
 Mobile.swipe(568, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
-Mobile.delay(3)
+Mobile.delay(1)
 String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
 if (alertMsg.contains('Deleted Test Document.txt')) {
 	println(alertMsg)

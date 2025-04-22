@@ -42,7 +42,7 @@ Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
 // Create on plus icon and verify upload here
 
 Mobile.delay(3)
-Mobile.tapAtPosition(GlobalVariable.tapX , GlobalVariable.tapY)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
 Mobile.tap(findTestObject('PlusIconMenus/UploadHere'), 30)
 Mobile.delay(3)

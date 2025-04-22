@@ -12,45 +12,59 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>8e9a88ce-a1ce-4f69-9d5f-d774a65e4391</testSuiteGuid>
    <testCaseLink>
-      <guid>2e9d71d1-e1fa-456b-857c-63f7eb26b86e</guid>
+      <guid>af289b78-6c91-4f9b-9453-25922635e4fa</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO1_VerifyFolderList</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>a4d85385-7548-409f-8fe8-f1904fdaad18</guid>
+      <guid>0a2e0949-be8d-4b55-be2c-15d8c23ab2eb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO2_VerifyListOfFiles</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>cbca7086-a8d3-44d8-8921-d35adf4caf34</guid>
+      <guid>155b0677-6f66-4d7f-a3dd-77169c3345b1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO3_VerifyFolderCreation</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>71129944-0496-4946-867f-792d63aa340e</guid>
+      <guid>d7db5424-e2a6-4141-9227-d85731255716</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO4_VerifyFolderDelete</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>1ba97db2-a48e-4d5b-ab26-c9aaefae906b</guid>
+      <guid>5fed5743-aa2a-44b8-aae0-58e93c26f7e2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO5_VerifyFilesLinks</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>c46b16df-cb48-40be-9a5a-6b786ae0c8fe</guid>
+      <guid>029f3782-5ee7-4f5c-8abc-10fd664fd647</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO6_VerifyFIleLinksShareByShareIcon</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f5cdd144-2755-41c8-9ead-f8f1218c72c1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Folders/FO7_VerifyDownloadAllFeature</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>b84b0ecd-47a2-4129-8e57-2ce33670e5b0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Folders/FO8_VerifyToRenameFolder</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

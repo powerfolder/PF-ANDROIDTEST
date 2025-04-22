@@ -54,7 +54,6 @@ Mobile.delay(5)
 Mobile.verifyElementVisible(findTestObject('Settings/settingsHeader'), 30)
 Mobile.tap(findTestObject('Settings/settingsHeader'), 30)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'),30)*/
-//logout()
 Mobile.closeApplication()
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)

@@ -38,7 +38,7 @@ Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 // CLick on plus icon and select to create spreadsheet
 
 Mobile.delay(3)
-Mobile.tapAtPosition(GlobalVariable.tapX , GlobalVariable.tapY)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
 Mobile.tap(findTestObject('PlusIconMenus/NewSpreadsSheet'), 30)
 Mobile.delay(3)
@@ -49,9 +49,9 @@ Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
 Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
 Mobile.delay(10)
-Mobile.tap(findTestObject('VerifyCreatedFIleNames/CloseButton'),30)
+Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(5)
-String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFIleNames/VerifyCreateSpreadSheetName'), 30)
+String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/VerifyCreateSpreadSheetName'), 30)
 Mobile.verifyEqual(getFolderName, 'Test Document.xlsx')
 
 //Swipe to delete created docx.

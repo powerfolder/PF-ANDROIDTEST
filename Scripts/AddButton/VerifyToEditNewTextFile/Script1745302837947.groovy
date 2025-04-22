@@ -19,8 +19,8 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration
 
 if(GlobalVariable.isExistingApp) {
-	Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
-	} else {
+Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
+} else {
 	String applocation = RunConfiguration.getProjectDir()+'/apks/'+GlobalVariable.AppName;
 	System.out.println("Applocation"+ applocation)
 	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -31,28 +31,49 @@ if(GlobalVariable.isExistingApp) {
 	// click on home icon button 
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
-	
-	Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
-	
-	// Click on plus icon button and select new presentation
-	
-	Mobile.delay(3)
-	Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
-	Mobile.delay(3)
-	Mobile.tap(findTestObject('PlusIconMenus/NewPresentation'), 30)
-	
-	//Create and verify new file without name
-	Mobile.delay(3)
-	Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
-	Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "", 30)
-	Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
-	String alertMsg = Mobile.getText(findTestObject('CreateNewFile/ValidFieldAlertMsg'), 30)
-	Mobile.verifyEqual(alertMsg, 'Please enter valid file name')
-	Mobile.pressBack()
-	Mobile.delay(2)
-	Mobile.closeApplication()
-	
-	def login() {
+
+Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
+
+// click on plus icon and select to New text file
+
+Mobile.delay(3)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
+Mobile.delay(3)
+Mobile.tap(findTestObject('PlusIconMenus/NewTextFile'), 30)
+Mobile.delay(3)
+// Create new text file and verify .txt extension
+
+Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
+Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
+Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
+Mobile.delay(10)
+Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
+Mobile.delay(5)
+String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/VerifyCreatedTextFileName'), 30)
+Mobile.verifyEqual(getFolderName, 'Test Document.txt')
+Mobile.tap(findTestObject('VerifyCreatedFileNames/VerifyCreatedTextFileName'),30)
+
+//click on edit button with help of coordinates
+Mobile.delay(20)
+Mobile.tap(findTestObject('VerifyCreatedFileNames/TextFileEditButton'),30)
+Mobile.delay(5)
+Mobile.verifyElementVisible(findTestObject('VerifyCreatedFileNames/EditTextArea'), 10)
+Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
+
+//Swipe to delete created docx.
+Mobile.swipe(568, 351, 140, 351)
+Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
+Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
+Mobile.delay(1)
+String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
+if (alertMsg.contains('Deleted Test Document.txt')) {
+	println(alertMsg)
+}else {
+	print('text File not deleted')
+}
+Mobile.closeApplication()
+
+def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)

@@ -48,7 +48,7 @@ Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
 String confirmationMessage= Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
 Mobile.tap(findTestObject('Settings/LogoutConfirmationYes'), 30)
 Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?')
-Mobile.delay(5)
+Mobile.delay(3)
 Mobile.closeApplication()
 
 
@@ -59,6 +59,6 @@ def  logout() {
 	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
 	String confirmationMessage= Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
 	Mobile.tap(findTestObject('Settings/LogoutConfirmationYes'), 30)
-	Mobile.delay(5)
+	Mobile.delay(3)
 	Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?')
 }

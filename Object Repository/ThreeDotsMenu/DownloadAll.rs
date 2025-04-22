@@ -3,7 +3,7 @@
    <description></description>
    <name>DownloadAll</name>
    <tag></tag>
-   <elementGuidId>2dbadc07-a397-45db-af93-5d54d53e389a</elementGuidId>
+   <elementGuidId>fccd1f67-fa99-486b-842c-dcab1c442da4</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -13,8 +13,59 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>//*[@class = 'android.view.View' and (@text = 'Download all' or . = 'Download all')]</value>
-      <webElementGuid>0832b752-7472-4c4b-bd16-4ad196a41c75</webElementGuid>
+      <webElementGuid>c7f7988c-71b6-45e9-9cb9-4ed6470f6326</webElementGuid>
    </webElementProperties>
-   <locator>//*[@class = 'android.view.View' and (@text = 'Download all' or . = 'Download all')]</locator>
+   <locator>//*[@class = 'android.view.View' and (@text = 'Download all' or . = 'Download all') and @resource-id = 'ab_download']</locator>
+   <locatorCollection>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+         <value>//*[@class = 'android.view.View' and (@text = 'Download all' or . = 'Download all')]</value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.view.View' and (@text = 'Download all' or . = 'Download all') and @resource-id = 'ab_download']</value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+   </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>
+   <platform>ANDROID</platform>
 </MobileElementEntity>

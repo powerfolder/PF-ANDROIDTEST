@@ -31,11 +31,11 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	}
 	// click on home icon button 
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(3)}
+	Mobile.delay(4)}
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
 
 Mobile.delay(3)
-Mobile.tapAtPosition(GlobalVariable.tapX,GlobalVariable.tapY)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
 
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
@@ -58,34 +58,6 @@ if (alertMsg.contains('Deleted')) {
 }else {
 	print('File not deleted')
 }
-
-Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
-
-Mobile.delay(3)
-Mobile.tapAtPosition(GlobalVariable.tapX,GlobalVariable.tapY)
-Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
-
-Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
-Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
-
-Mobile.delay(5)
-String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
-Mobile.verifyEqual(getFolderName, 'Test Folder')
-Mobile.delay(5)
-
-Mobile.swipe(440, 332, 140, 332)
-Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
-
-Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
-
-Mobile.delay(3)
-String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
-if (alertMsg.contains('Deleted')) {
-	println(alertMsg)
-}else {
-	print('File not deleted')
-}
-
 
 Mobile.closeApplication()
 

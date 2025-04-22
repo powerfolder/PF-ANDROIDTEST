@@ -1,29 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MobileElementEntity>
    <description></description>
-   <name>RenameIcon</name>
+   <name>SlideDropDown</name>
    <tag></tag>
-   <elementGuidId>20a5e34d-921b-4a17-8e29-f6a2a2da157f</elementGuidId>
+   <elementGuidId>3d06de95-52e8-43ba-a79a-abf468356e31</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//android.view.View[@content-desc=&quot;border_color&quot;]&#xd;
-</locator>
+   <locator>//*[@class = 'android.widget.TextView' and (@text = 'Slide' or . = 'Slide')]</locator>
    <locatorCollection>
       <entry>
-         <key>ID</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CUSTOM</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ANDROID_VIEWTAG</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
          <value></value>
       </entry>
       <entry>
@@ -35,28 +26,35 @@
          <value></value>
       </entry>
       <entry>
-         <key>ATTRIBUTES</key>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//android.view.View[@content-desc=&quot;border_color&quot;]&#xd;
-</value>
-      </entry>
-      <entry>
-         <key>ANDROID_UI_AUTOMATOR</key>
-         <value>new UiSelector()</value>
-      </entry>
-      <entry>
          <key>NAME</key>
          <value></value>
       </entry>
       <entry>
-         <key>IMAGE</key>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
          <value></value>
       </entry>
       <entry>
          <key>IOS_PREDICATE_STRING</key>
          <value></value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.widget.TextView' and (@text = 'Slide' or . = 'Slide')]</value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
       </entry>
    </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>

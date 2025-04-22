@@ -35,16 +35,6 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
 
-Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
-
-Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
-
-Mobile.hideKeyboard()
-
-Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-
-Mobile.delay(10)
-
 Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
 Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 Mobile.delay(2)
@@ -53,7 +43,6 @@ Mobile.tap(findTestObject('ThreeDotsMenu/CacheClearOKButton'),30)
 
 Mobile.delay(2)
 Mobile.closeApplication()
-
 
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)

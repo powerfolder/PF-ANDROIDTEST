@@ -16,11 +16,12 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+
 import com.kms.katalon.core.configuration.RunConfiguration
 
 if(GlobalVariable.isExistingApp) {
-	Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
-	} else {
+Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
+} else {
 	String applocation = RunConfiguration.getProjectDir()+'/apks/'+GlobalVariable.AppName;
 	System.out.println("Applocation"+ applocation)
 	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -28,31 +29,48 @@ if(GlobalVariable.isExistingApp) {
 	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
 		login()
 	}
-	// click on home icon button 
+	// click on home icon button
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(3)}
-	
-	Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
-	
-	// Click on plus icon button and select new presentation
-	
-	Mobile.delay(3)
-	Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
-	Mobile.delay(3)
-	Mobile.tap(findTestObject('PlusIconMenus/NewPresentation'), 30)
-	
-	//Create and verify new file without name
-	Mobile.delay(3)
-	Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
-	Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "", 30)
-	Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
-	String alertMsg = Mobile.getText(findTestObject('CreateNewFile/ValidFieldAlertMsg'), 30)
-	Mobile.verifyEqual(alertMsg, 'Please enter valid file name')
-	Mobile.pressBack()
-	Mobile.delay(2)
-	Mobile.closeApplication()
-	
-	def login() {
+	Mobile.delay(4)}
+Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
+
+Mobile.delay(3)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
+Mobile.delay(3)
+Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
+
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
+
+Mobile.delay(5)
+String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
+Mobile.verifyEqual(getFolderName, 'Test Folder')
+Mobile.delay(5)
+Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)
+Mobile.tap(findTestObject('SwipeElements/RenameIcon'), 30)
+Mobile.delay(3)
+Mobile.tap(findTestObject('SwipeElements/CrossIconRenameTab'), 30)
+Mobile.delay(3)
+Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), "RenameTestFolder", 30)
+Mobile.tap(findTestObject('SwipeElements/SaveButton'), 30)
+Mobile.delay(3)
+/*Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)
+Mobile.delay(3)
+Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
+
+Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
+
+Mobile.delay(3)
+String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
+if (alertMsg.contains('Deleted')) {
+	println(alertMsg)
+}else {
+	print('File not deleted')
+}*/
+
+Mobile.closeApplication()
+
+def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
@@ -62,3 +80,4 @@ if(GlobalVariable.isExistingApp) {
 	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 	Mobile.delay(3)
 }
+

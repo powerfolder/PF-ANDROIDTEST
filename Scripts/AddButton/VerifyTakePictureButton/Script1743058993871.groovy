@@ -37,7 +37,7 @@ Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 // click on plus icon select take picture
 
 Mobile.delay(3)
-Mobile.tapAtPosition(GlobalVariable.tapX , GlobalVariable.tapY)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
 Mobile.tap(findTestObject('PlusIconMenus/TakePicture'), 30)
 Mobile.delay(3)

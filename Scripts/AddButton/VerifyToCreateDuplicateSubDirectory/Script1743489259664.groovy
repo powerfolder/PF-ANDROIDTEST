@@ -34,7 +34,7 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.delay(3)}
 Mobile.tap(findTestObject('Folder_Menu/ClickSecondSubFloder'),30)
 Mobile.delay(3)
-Mobile.tapAtPosition(GlobalVariable.tapX , GlobalVariable.tapY)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
 Mobile.delay(3)
@@ -46,8 +46,7 @@ String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFo
 Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(5)
 
-
-Mobile.tapAtPosition(638, 1450)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
 Mobile.delay(3)
@@ -69,7 +68,6 @@ if (alertMsg.contains('Deleted')) {
 	print('File not deleted')
 }
 Mobile.closeApplication()
-
 
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)

@@ -34,7 +34,7 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.delay(3)}
 Mobile.tap(findTestObject('Folder_Menu/ClickSecondSubFloder'),30)
 Mobile.delay(3)
-Mobile.tapAtPosition(GlobalVariable.tapX , GlobalVariable.tapY)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
 Mobile.delay(3)
@@ -49,7 +49,6 @@ Mobile.pressBack()
 Mobile.delay(2)
 
 Mobile.closeApplication()
-
 
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)

@@ -38,7 +38,7 @@ if(GlobalVariable.isExistingApp) {
 	// Click on plus icon button and select new spreadsheet
 	
 	Mobile.delay(3)
-	Mobile.tapAtPosition(GlobalVariable.tapX , GlobalVariable.tapY)
+	Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 	Mobile.delay(3)
 	Mobile.tap(findTestObject('PlusIconMenus/NewSpreadsSheet'), 30)
 	

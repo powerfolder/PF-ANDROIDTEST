@@ -36,7 +36,7 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.delay(3)}
 Mobile.tap(findTestObject('Folder_Menu/ClickSecondSubFloder'),30)
 Mobile.delay(3)
-Mobile.tapAtPosition(GlobalVariable.tapX,GlobalVariable.tapY)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
 Mobile.delay(3)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
 Mobile.delay(3)
@@ -64,7 +64,6 @@ if (alertMsg.contains('Deleted')) {
 	print('File not deleted')
 }
 Mobile.pressBack()
-logout()
 
 Mobile.closeApplication()
 
