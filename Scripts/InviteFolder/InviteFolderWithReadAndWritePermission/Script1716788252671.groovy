@@ -57,6 +57,7 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 
 //Invite folder with Read and Write permission
 Mobile.tap(findTestObject('InviteFolder/ShareButton'), 30)
+Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),5)
 Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
 Mobile.setText(findTestObject('LoginScreen/EnterEmail'), randomEmail, 30)
 Mobile.tap(findTestObject('InviteFolder/SelectReadAndWriteToggleButton') , 30)

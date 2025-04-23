@@ -16,7 +16,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
 import com.kms.katalon.core.configuration.RunConfiguration
 
 if(GlobalVariable.isExistingApp) {
@@ -32,20 +31,19 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	// click on home icon button 
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
-
 Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 
 // CLick on plus icon and select to create spreadsheet
-
 Mobile.delay(3)
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewSpreadsSheet'),10)	
 Mobile.tap(findTestObject('PlusIconMenus/NewSpreadsSheet'), 30)
 Mobile.delay(3)
-Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
 
 //Creating document and verify with .xlsx extension
-
+Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'),5)
+Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
 Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
 Mobile.delay(10)
@@ -59,12 +57,16 @@ Mobile.swipe(568, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(2)
+
+//Verifying delete alert message
 String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
 if (alertMsg.contains('Deleted Test Document.xlsx')) {
 	println(alertMsg)
 }else {
 	print('text File not deleted')
 }
+
+//Closing application 
 Mobile.closeApplication()
 
 def login() {

@@ -59,4 +59,9 @@
       <initValue>215</initValue>
       <name>SpreadSheetEditButtontapY</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://titan.powerfolder.net/login'</initValue>
+      <name>WebURL</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

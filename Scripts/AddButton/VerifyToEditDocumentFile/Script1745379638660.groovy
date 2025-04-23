@@ -16,8 +16,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+
 import com.kms.katalon.core.configuration.RunConfiguration
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 
 if(GlobalVariable.isExistingApp) {
 Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
@@ -33,16 +33,45 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
 
-//Verify email field with black details
-Mobile.tap(findTestObject('InviteFolder/ShareButton'), 30)
-Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),5)
-Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
-Mobile.tap(findTestObject('InviteFolder/SelectAdminToggleButton') , 30)
-Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)
-String permissionAlertText= Mobile.getText(findTestObject('InviteFolder/VerifyBlankFieldAlertText'), 30)
-Mobile.verifyEqual(permissionAlertText, 'Please enter an email address first.')
-Mobile.tap(findTestObject('InviteFolder/CancelButton'), 0)
+Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 
+// click on plus icon and select new document 
+
+Mobile.delay(3)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
+Mobile.delay(3)
+Mobile.tap(findTestObject('PlusIconMenus/NewDocument'), 30)
+Mobile.delay(3)
+// Create docx and verify .docx extensiion
+ 
+Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
+Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
+Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
+Mobile.delay(10)
+Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
+Mobile.delay(5)
+String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/VerifyCreatedDocumentName'), 30)
+Mobile.verifyEqual(getFolderName, 'Test Document.docx')
+Mobile.tap(findTestObject('VerifyCreatedFileNames/VerifyCreatedDocumentName'),30)
+
+//click on edit button with help of coordinates
+Mobile.delay(20)
+Mobile.tap(findTestObject('VerifyCreatedFileNames/TextFileEditButton'),30)
+Mobile.delay(5)
+Mobile.verifyElementVisible(findTestObject('VerifyCreatedFileNames/EditTextArea'), 10)
+Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
+
+//Swipe to delete created docx.
+Mobile.swipe(568, 351, 140, 351)
+Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
+Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
+Mobile.delay(1)
+String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
+if (alertMsg.contains('Deleted Test Document.docx')) {
+	println(alertMsg)
+}else {
+	print('File not deleted')
+}
 Mobile.closeApplication()
 
 def login() {

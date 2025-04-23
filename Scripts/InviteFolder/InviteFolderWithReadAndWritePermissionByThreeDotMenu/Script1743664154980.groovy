@@ -37,10 +37,11 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 // Selecting InviteTofolder By Three Dot menu
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 10)
 Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
+Mobile.verifyElementExist(findTestObject('ThreeDotsMenu/InviteToFolder'),5)
 Mobile.tap(findTestObject('ThreeDotsMenu/InviteToFolder'), 45)
 
 //Invite folder with Read and Write permission
-Mobile.tap(findTestObject('InviteFolder/ShareButton'), 30)
+Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),5)
 Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
 Mobile.setText(findTestObject('LoginScreen/EnterEmail'), randomEmail, 30)
 Mobile.tap(findTestObject('InviteFolder/SelectReadAndWriteToggleButton') , 30)

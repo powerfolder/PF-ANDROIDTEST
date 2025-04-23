@@ -39,10 +39,11 @@ Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 Mobile.delay(3)
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewTextFile'),10)
 Mobile.tap(findTestObject('PlusIconMenus/NewTextFile'), 30)
 Mobile.delay(3)
 // Create new text file and verify .txt extension
-
+Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
 Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
 Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)

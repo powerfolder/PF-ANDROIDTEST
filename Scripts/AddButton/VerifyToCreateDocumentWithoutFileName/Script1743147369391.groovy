@@ -36,23 +36,25 @@ if(GlobalVariable.isExistingApp) {
 	Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 	
 	// Click on plus icon button and select new Document
-	
 	Mobile.delay(3)
 	Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 	Mobile.delay(3)
+	Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDocument'),10)
 	Mobile.tap(findTestObject('PlusIconMenus/NewDocument'), 30)
 	
 	//Create and verify new file wihtout name 
 	Mobile.delay(3)
+	Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
 	Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
 	Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "", 30)
 	Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
 	String alertMsg = Mobile.getText(findTestObject('CreateNewFile/ValidFieldAlertMsg'), 30)
 	Mobile.verifyEqual(alertMsg, 'Please enter valid file name')
 	Mobile.delay(3)
-	//Mobile.tap(findTestObject('CreateNewFile/CancelButton'),30)
 	Mobile.pressBack()
 	Mobile.delay(2)
+	
+	//Closing application
 	Mobile.closeApplication()
 	
 	def login() {

@@ -56,6 +56,7 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 
 // Invite folder with Read only permission
 Mobile.tap(findTestObject('InviteFolder/ShareButton'), 30)
+Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),5)
 Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
 Mobile.setText(findTestObject('LoginScreen/EnterEmail'), randomEmail, 30)
 Mobile.tap(findTestObject('InviteFolder/SelectReadToggleButton') , 30)
@@ -63,6 +64,7 @@ Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)
 String permissionAlertText= Mobile.getText(findTestObject('InviteFolder/VerifyInvitationSentText'), 30)
 Mobile.verifyEqual(permissionAlertText, 'Invitation sent')
 
+//Closing application 
 Mobile.closeApplication()
 
 def login() {

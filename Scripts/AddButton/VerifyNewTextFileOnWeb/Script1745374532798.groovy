@@ -17,7 +17,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 
 if(GlobalVariable.isExistingApp) {
 Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
@@ -33,17 +32,44 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
 
-//Verify email field with black details
-Mobile.tap(findTestObject('InviteFolder/ShareButton'), 30)
-Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),5)
-Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
-Mobile.tap(findTestObject('InviteFolder/SelectAdminToggleButton') , 30)
-Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)
-String permissionAlertText= Mobile.getText(findTestObject('InviteFolder/VerifyBlankFieldAlertText'), 30)
-Mobile.verifyEqual(permissionAlertText, 'Please enter an email address first.')
-Mobile.tap(findTestObject('InviteFolder/CancelButton'), 0)
+Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 
+// click on plus icon and select to New text file
+
+Mobile.delay(3)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
+Mobile.delay(3)
+Mobile.tap(findTestObject('PlusIconMenus/NewTextFile'), 30)
+Mobile.delay(3)
+// Create new text file and verify .txt extension
+
+Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
+Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
+Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
+Mobile.delay(10)
+Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
+Mobile.delay(5)
+String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/VerifyCreatedTextFileName'), 30)
+Mobile.verifyEqual(getFolderName, 'Test Document.txt')
+
+Mobile.delay(2)
 Mobile.closeApplication()
+
+
+//Verifying created text on file on web
+Mobile.startExistingApplication('com.android.chrome')
+Mobile.delay(2)
+Mobile.tap(findTestObject('ChromeBrowser/SearchEngineTextField'),30)
+Mobile.setText(findTestObject('ChromeBrowser/SearchEngineTextField'), GlobalVariable.WebURL, 30)
+Mobile.pressKeyCode('ENTER', FailureHandling.CONTINUE_ON_FAILURE)
+Mobile.delay(10)
+
+//Mobile.tap(findTestObject('ChromeBrowser/EmailInputField'),30)
+Mobile.setText(findTestObject('ChromeBrowser/EmailInputField'), GlobalVariable.userid, 30)
+Mobile.hideKeyboard()
+Mobile.tap(findTestObject('ChromeBrowser/LogInButton'),30)
+Mobile.setText(findTestObject('ChromeBrowser/PasswordField'), GlobalVariable.password, 30)
+Mobile.tap(findTestObject('ChromeBrowser/LogInButton'),30)
 
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)

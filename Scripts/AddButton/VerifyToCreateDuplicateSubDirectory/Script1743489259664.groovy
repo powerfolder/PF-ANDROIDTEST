@@ -34,39 +34,52 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.delay(3)}
 Mobile.tap(findTestObject('Folder_Menu/ClickSecondSubFloder'),30)
 Mobile.delay(3)
+
+//Verify and create subdirectory file with the help of plus icon coodinates
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'), 10)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
 Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'), 10)
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
-
 Mobile.delay(5)
+
+// Verify created folder name
 String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
 Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(5)
 
+//Verify and create duplicate subdirectory file with the help of plus icon coodinates
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'), 10)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
 Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'), 10)
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
+
+//Verifying duplicate alert message
 String duplicateAlertMsg = Mobile.getText(findTestObject('CreateNewFile/DuplicateAlertMsg'), 30)
 Mobile.verifyEqual(duplicateAlertMsg, 'Cannot create directory')
 
+// delete created sub directory
 Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
-
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
-
 Mobile.delay(3)
+
+// Verifying delete alert message
 String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
 if (alertMsg.contains('Deleted')) {
 	println(alertMsg)
 }else {
 	print('File not deleted')
 }
+
+// closing application
 Mobile.closeApplication()
 
 def login() {

@@ -37,17 +37,17 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 // Selecting InviteTofolder By Three Dot menu
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 10)
 Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
+Mobile.verifyElementExist(findTestObject('ThreeDotsMenu/InviteToFolder'),5)
 Mobile.tap(findTestObject('ThreeDotsMenu/InviteToFolder'), 45)
 
 //Verify email field with black details
-Mobile.tap(findTestObject('InviteFolder/ShareButton'), 30)
+Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),5)
 Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
 Mobile.tap(findTestObject('InviteFolder/SelectAdminToggleButton') , 30)
 Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)
 String permissionAlertText= Mobile.getText(findTestObject('InviteFolder/VerifyBlankFieldAlertText'), 30)
 Mobile.verifyEqual(permissionAlertText, 'Please enter an email address first.')
 Mobile.tap(findTestObject('InviteFolder/CancelButton'), 0)
-
 
 //Closing application 
 Mobile.closeApplication()

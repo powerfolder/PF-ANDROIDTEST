@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VerifyCrossIconButtonOnInvitePopup</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2ea9493b-2b60-48ce-9b20-7271439150b6</testCaseGuid>
+</TestCaseEntity>

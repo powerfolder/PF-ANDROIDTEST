@@ -29,19 +29,22 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
 		login()
 	}
+	
 	// click on home icon button 
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
 Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 
 // click on plus icon select take picture
-
 Mobile.delay(3)
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/TakePicture'),10)
 Mobile.tap(findTestObject('PlusIconMenus/TakePicture'), 30)
 Mobile.delay(3)
 Mobile.pressBack()
+
+//closing application
 Mobile.closeApplication()
 
 def login() {
