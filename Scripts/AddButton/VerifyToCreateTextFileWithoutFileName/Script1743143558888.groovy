@@ -38,18 +38,24 @@ if(GlobalVariable.isExistingApp) {
 	Mobile.delay(3)
 	Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 	Mobile.delay(3)
+	Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewTextFile'), 10)
 	Mobile.tap(findTestObject('PlusIconMenus/NewTextFile'), 30)
 	
 	//Create and verify file without name 
 	Mobile.delay(3)
+	Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
 	Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
 	Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "", 30)
 	Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
+	
+	// verifying alert message as Please enter valid file name
 	String alertMsg = Mobile.getText(findTestObject('CreateNewFile/ValidFieldAlertMsg'), 30)
 	Mobile.verifyEqual(alertMsg, 'Please enter valid file name')
 	Mobile.delay(1)
 	Mobile.pressBack()
 	Mobile.delay(2)
+	
+	//Closing application 
 	Mobile.closeApplication()
 	
 	def login() {

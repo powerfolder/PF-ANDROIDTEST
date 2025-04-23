@@ -40,10 +40,12 @@ Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 Mobile.delay(3)
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewPresentation'), 10)
 Mobile.tap(findTestObject('PlusIconMenus/NewPresentation'), 30)
 Mobile.delay(3)
 
 //Create and verify new presentation with .pptx extension
+Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
 Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
 Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
@@ -66,12 +68,16 @@ Mobile.swipe(568, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(1)
+
+// Verifying delete alert message
 String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
 if (alertMsg.contains('Deleted Test Document.pptx')) {
 	println(alertMsg)
 }else {
 	print('text File not deleted')
 }
+
+// Closing application
 Mobile.closeApplication()
 
 def login() {

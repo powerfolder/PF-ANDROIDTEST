@@ -34,20 +34,25 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.delay(3)}
 Mobile.tap(findTestObject('Folder_Menu/ClickSecondSubFloder'),30)
 Mobile.delay(3)
+
+// Create sub directory with file name with the help of plus icon coodinates
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'),5)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
 Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'),5)
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "", 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
 
+//Verifying alert mesage as Please enter a name first.
 String alertMsg = Mobile.getText(findTestObject('CreateNewFile/VerifyFIleALertMsg'), 30)
 Mobile.verifyEqual(alertMsg, 'Please enter a name first.')
-
 Mobile.pressBack()
 Mobile.delay(2)
 
+// Closing application 
 Mobile.closeApplication()
 
 def login() {

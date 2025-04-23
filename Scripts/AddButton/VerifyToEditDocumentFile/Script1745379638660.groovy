@@ -32,24 +32,26 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	// click on home icon button 
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
-
 Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 
 // click on plus icon and select new document 
-
 Mobile.delay(3)
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDocument'), 10)
 Mobile.tap(findTestObject('PlusIconMenus/NewDocument'), 30)
 Mobile.delay(3)
+
 // Create docx and verify .docx extensiion
- 
+Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
 Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
 Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
 Mobile.delay(10)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(5)
+
+//Verifying Created documnent with extension
 String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/VerifyCreatedDocumentName'), 30)
 Mobile.verifyEqual(getFolderName, 'Test Document.docx')
 Mobile.tap(findTestObject('VerifyCreatedFileNames/VerifyCreatedDocumentName'),30)
@@ -66,12 +68,16 @@ Mobile.swipe(568, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(1)
+
+//Verifying delete alert message
 String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
 if (alertMsg.contains('Deleted Test Document.docx')) {
 	println(alertMsg)
 }else {
 	print('File not deleted')
 }
+
+// Closing application
 Mobile.closeApplication()
 
 def login() {

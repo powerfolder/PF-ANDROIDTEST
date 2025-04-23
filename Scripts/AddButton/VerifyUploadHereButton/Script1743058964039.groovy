@@ -36,18 +36,19 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	// click on home icon button 
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
-
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
 
 // Create on plus icon and verify upload here
-
 Mobile.delay(3)
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/UploadHere'), 10)
 Mobile.tap(findTestObject('PlusIconMenus/UploadHere'), 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('CreateNewFile/SelectUploadFileFromDevice'), 30)
 Mobile.delay(3)
+
+//Closing application
 Mobile.closeApplication()
 
 def login() {
