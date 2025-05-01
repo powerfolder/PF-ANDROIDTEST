@@ -90,4 +90,3 @@ def login() {
 	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 	Mobile.delay(3)
 }
-

@@ -34,14 +34,17 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
 
-//Verify search
+//Verify search with invalid input
 Mobile.tap(findTestObject('Search/SearchBtn'), 30)
 Mobile.setText(findTestObject('Search/SearchInput'), 'InvalidSearch', 30)
 Mobile.delay(5)
 Mobile.pressKeyCode('ENTER', FailureHandling.CONTINUE_ON_FAILURE)
 Mobile.delay(3)
+
+// verifying no result found text
 Mobile.verifyElementExist(findTestObject('Search/VerifyNoResultFoundText'), 10)
 
+// closing application
 Mobile.closeApplication()
 
 def login() {

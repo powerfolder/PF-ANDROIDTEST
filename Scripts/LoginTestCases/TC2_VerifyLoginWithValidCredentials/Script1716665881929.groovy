@@ -29,18 +29,24 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
 		logout()
 	}
+	// click on enter server URL
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 }
 
+// enter login credentials
 Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
 Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
 Mobile.hideKeyboard()
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 Mobile.delay(3)
+
+// verifying home page after login to application 
 String mobileUploadsText = Mobile.getText(findTestObject('MainScreen/MobileUploads'), 30)
 Mobile.verifyEqual(mobileUploadsText, 'Mobile Uploads')
+
+// logout from the application 
 Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
 Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 Mobile.delay(5)
@@ -49,6 +55,8 @@ String confirmationMessage= Mobile.getText(findTestObject('Settings/logoutConfir
 Mobile.tap(findTestObject('Settings/LogoutConfirmationYes'), 30)
 Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?')
 Mobile.delay(3)
+
+// clossing application
 Mobile.closeApplication()
 
 

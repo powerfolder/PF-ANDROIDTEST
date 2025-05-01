@@ -54,6 +54,7 @@ Mobile.delay(3)
 Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), "RenameTestFolder", 30)
 Mobile.tap(findTestObject('SwipeElements/SaveButton'), 30)
 Mobile.delay(3)
+
 /*Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
@@ -68,6 +69,7 @@ if (alertMsg.contains('Deleted')) {
 	print('File not deleted')
 }*/
 
+// closing application
 Mobile.closeApplication()
 
 def login() {

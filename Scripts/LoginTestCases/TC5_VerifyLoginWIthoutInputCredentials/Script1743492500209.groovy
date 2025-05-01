@@ -28,14 +28,22 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
 		logout()
 	}
+	
+	// enter server URL
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 }
+ 
+// click on login button without enter credentials
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 String alertMessage= Mobile.getText(findTestObject('LoginScreen/EnterCredentialsAlertMsg'), 45)
+
+// verifying alert message as Please enter credentials first.
 Mobile.verifyEqual(alertMessage, 'Please enter credentials first.')
 Mobile.delay(2)
+
+// closing application
 Mobile.closeApplication()
 
 def  logout() {

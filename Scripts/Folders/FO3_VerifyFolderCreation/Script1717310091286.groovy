@@ -34,6 +34,7 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.delay(3)}
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'),30)
 
+// closing application 
 Mobile.closeApplication()
 
 def login() {

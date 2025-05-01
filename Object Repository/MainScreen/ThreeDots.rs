@@ -3,7 +3,7 @@
    <description></description>
    <name>ThreeDots</name>
    <tag></tag>
-   <elementGuidId>d6fe0b38-88b1-4143-a6b7-4a92580bc7d6</elementGuidId>
+   <elementGuidId>33f579cf-03e5-41e1-87c1-c9ad4880cc61</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -13,8 +13,59 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>(//android.widget.Button)[3]</value>
-      <webElementGuid>b98b8113-8735-4d32-8cf8-0fc9f37e4aa3</webElementGuid>
+      <webElementGuid>34869140-3a25-4856-8efa-0e7e20339b8f</webElementGuid>
    </webElementProperties>
-   <locator>(//android.widget.Button)[3]</locator>
+   <locator>//*[@class = 'android.widget.Button' and (@text = ' ' or . = ' ') and @resource-id = 'ab_overflow']</locator>
+   <locatorCollection>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+         <value>(//android.widget.Button)[3]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.widget.Button' and (@text = ' ' or . = ' ') and @resource-id = 'ab_overflow']</value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+   </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>
+   <platform>ANDROID</platform>
 </MobileElementEntity>

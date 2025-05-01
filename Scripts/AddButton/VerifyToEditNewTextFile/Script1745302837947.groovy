@@ -55,7 +55,7 @@ String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/Veri
 Mobile.verifyEqual(getFolderName, 'Test Document.txt')
 Mobile.tap(findTestObject('VerifyCreatedFileNames/VerifyCreatedTextFileName'),30)
 
-//click on edit button with help of coordinates
+//click on edit button
 Mobile.delay(20)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/TextFileEditButton'),30)
 Mobile.delay(5)

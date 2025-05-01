@@ -6,12 +6,12 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'ajit@thoughtcoders.com'</initValue>
+      <initValue>'ajit091@gmail.com'</initValue>
       <name>userid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Thoughtcoders@123'</initValue>
+      <initValue>'Alexa@131190'</initValue>
       <name>password</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

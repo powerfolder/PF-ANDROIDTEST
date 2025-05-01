@@ -35,13 +35,17 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
 
+// Reset cache and verify alert message
 Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
 Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 Mobile.delay(2)
 Mobile.tap(findTestObject('ThreeDotsMenu/ClearCache'),30)
+Mobile.verifyElementExist(findTestObject('ThreeDotsMenu/ClearCatcheAlertMessage'), 5)
 Mobile.tap(findTestObject('ThreeDotsMenu/CacheClearOKButton'),30)
 
 Mobile.delay(2)
+
+// closing application 
 Mobile.closeApplication()
 
 def login() {

@@ -34,24 +34,26 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.delay(4)}
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
 
+// New directory creation with the help of plus icon coodinates
 Mobile.delay(3)
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
-
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
-
 Mobile.delay(5)
+
+// verifying folder with there name 
 String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
 Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(5)
 
+// delete created file with swape method 
 Mobile.swipe(440, 332, 140, 332)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
-
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
-
 Mobile.delay(3)
+
+// verifying delete alert message
 String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
 if (alertMsg.contains('Deleted')) {
 	println(alertMsg)
@@ -59,6 +61,7 @@ if (alertMsg.contains('Deleted')) {
 	print('File not deleted')
 }
 
+// closing application
 Mobile.closeApplication()
 
 def login() {

@@ -32,6 +32,7 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
 
+// verifying to share file lin by share icon 
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 10)
 Mobile.delay(3)
 Mobile.tap(findTestObject('Folder_Menu/ShareIcon'), 30)

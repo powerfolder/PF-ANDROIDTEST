@@ -28,11 +28,11 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
 		login()
 	}
+	
 	// click on home icon button 
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
 // Verifying folder list 
-
 String mobileUploadsText = Mobile.getText(findTestObject('MainScreen/MobileUploads'), 30)
 Mobile.delay(3)
 Mobile.verifyEqual(mobileUploadsText, 'Mobile Uploads')
@@ -41,9 +41,8 @@ String baseUploadsText = Mobile.getText(findTestObject('MainScreen/BaseFolderNam
 Mobile.verifyEqual(baseUploadsText, 'Base')
 Mobile.delay(3)
 
-
+// closing application
 Mobile.closeApplication()
-
 
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)

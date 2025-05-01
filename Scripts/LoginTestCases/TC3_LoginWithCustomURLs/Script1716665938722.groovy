@@ -27,20 +27,15 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
 		logout()
 	}
+	
+	// enter server URL
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 }
 
-Mobile.verifyElementExist(findTestObject('LoginScreen/ServerURL'), 30)
-
-Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-
-Mobile.tap(findTestObject('LoginScreen/removeServerURL'), 45)
-
-Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
-
-Mobile.setText(findTestObject('/LoginScreen/enterUserNameCustomServer'), GlobalVariable.userid, 30)
+// login with credentials
+Mobile.tap(findTestObject('LoginScreen/enterUserNameCustomServer'),30)
+Mobile.setText(findTestObject('LoginScreen/enterUserNameCustomServer'), GlobalVariable.userid, 30)
 Mobile.setText(findTestObject('LoginScreen/enterPasswordCustomServer'), GlobalVariable.password, 30)
 Mobile.hideKeyboard()
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
@@ -48,6 +43,8 @@ Mobile.delay(3)
 String mobileUploadsText = Mobile.getText(findTestObject('MainScreen/MobileUploads'), 30)
 Mobile.verifyEqual(mobileUploadsText, 'Mobile Uploads')
 Mobile.delay(3)
+
+//Logout from the application
 Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
 Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 Mobile.delay(5)

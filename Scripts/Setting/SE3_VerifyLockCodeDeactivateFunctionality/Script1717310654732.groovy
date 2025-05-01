@@ -44,6 +44,7 @@ Mobile.tap(findTestObject('Settings/InputPassword'), 30)
 Mobile.tap(findTestObject('Settings/InputPassword'), 30)
 
 Mobile.tap(findTestObject('Settings/LockSaveButton') , 30)
+Mobile.verifyElementExist(findTestObject('Settings/CodeProtectionPopupText'), 5)
 Mobile.delay(2)
  
 Mobile.tap(findTestObject('Settings/InputPassword'), 30)
@@ -53,6 +54,7 @@ Mobile.tap(findTestObject('Settings/InputPassword'), 30)
 
 Mobile.tap(findTestObject('Settings/VerifyButtonPassCode') , 30)
 Mobile.delay(2)
+Mobile.verifyElementExist(findTestObject('Settings/ReEnterCodeProtectionPopupText'), 5)
 
 Mobile.tap(findTestObject('Settings/InputPassword'), 30)
 Mobile.tap(findTestObject('Settings/InputPassword'), 30)
