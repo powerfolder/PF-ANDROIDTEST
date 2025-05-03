@@ -34,20 +34,26 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.delay(4)}
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
 Mobile.pressBack()
-// New directory creation with the help of plus icon coodinates
+
+// Create new directory with the help of plus icon coordinates
 Mobile.delay(3)
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
+Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'),10)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
+Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'),5)
+Mobile.delay(1)
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
 Mobile.delay(5)
+
 // verifying folder with there name
 String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
 Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(5)
 
 // Rename flow
-Mobile.swipe(300, 451, 140, 451)
+Mobile.swipe(404, 609, 191, 609)
 Mobile.tap(findTestObject('SwipeElements/RenameIcon'), 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('SwipeElements/CrossIconRenameTab'), 30)
@@ -66,7 +72,8 @@ Mobile.delay(3)
 Mobile.swipe(300, 300, 300, 800)// swipe for refresh
 Mobile.delay(3)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
-Mobile.swipe(300, 451, 140, 451)
+Mobile.swipe(404, 609, 191, 609)
+Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)

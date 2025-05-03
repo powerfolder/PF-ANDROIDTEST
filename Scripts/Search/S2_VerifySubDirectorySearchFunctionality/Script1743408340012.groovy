@@ -17,8 +17,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
-
 import com.kms.katalon.core.configuration.RunConfiguration
 
 if(GlobalVariable.isExistingApp) {
@@ -60,7 +58,7 @@ Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(5)
 
 // delete created sub directory by swap method
-Mobile.swipe(300, 351, 140, 351)
+Mobile.swipe(404, 478, 191, 478)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)

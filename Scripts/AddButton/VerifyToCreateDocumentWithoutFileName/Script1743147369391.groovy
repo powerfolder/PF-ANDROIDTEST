@@ -32,7 +32,6 @@ if(GlobalVariable.isExistingApp) {
 	// click on home icon button 
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
-	
 	Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 	
 	// Click on plus icon button and select new Document

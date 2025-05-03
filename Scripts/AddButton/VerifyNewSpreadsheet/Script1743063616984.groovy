@@ -53,7 +53,7 @@ String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/Veri
 Mobile.verifyEqual(getFolderName, 'Test Document.xlsx')
 
 //Swipe to delete created docx.
-Mobile.swipe(568, 351, 140, 351)
+Mobile.swipe(588, 478, 191, 478)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(2)

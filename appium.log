@@ -1,19 +1,19 @@
 [35m[Appium][39m Welcome to Appium v1.22.3
 [35m[Appium][39m Non-default server args:
-[35m[Appium][39m   port: 52532
+[35m[Appium][39m   port: 54433
 [35m[Appium][39m   loglevel: info
-[35m[Appium][39m   tmpDir: C:\Users\eraji\AppData\Local\Temp\\Katalon\Appium\Temp1746167097600
-[35m[Appium][39m Appium REST http interface listener started on 0.0.0.0:52532
+[35m[Appium][39m   tmpDir: C:\Users\eraji\AppData\Local\Temp\\Katalon\Appium\Temp1746258133325
+[35m[Appium][39m Appium REST http interface listener started on 0.0.0.0:54433
 [35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/status[39m
 [35m[HTTP][39m [90m{}[39m
-[35m[HTTP][39m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m4 ms - 68[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m5 ms - 68[39m
 [35m[HTTP][39m [90m[39m
 [35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/status[39m
 [35m[HTTP][39m [90m{}[39m
-[35m[HTTP][39m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m2 ms - 68[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m1 ms - 68[39m
 [35m[HTTP][39m [90m[39m
 [35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m
-[35m[HTTP][39m [90m{"capabilities":{"firstMatch":[{"appium:appActivity":".Settings","appium:appPackage":"com.android.settings","appium:autoGrantPermissions":true,"appium:automationName":"uiautomator2","appium:deviceName":"vivo vivo 1904 (Android 11)","appium:newCommandTimeout":1800,"appium:platformVersion":"11","appium:systemPort":8221,"appium:udid":"TKX44XS8DAVWNRMZ","platformName":"ANDROID"}]},"desiredCapabilities":{"appActivity":".Settings","appPackage":"com.android.settings","autoGrantPermissions":true,"automationName":"uiautomator2","deviceId":"","deviceName":"vivo vivo 1904 (Android 11)","newCommandTimeout":1800,"platformName":"ANDROID","platformVersion":"11","property":"","systemPort":8221,"udid":"TKX44XS8DAVWNRMZ"}}[39m
+[35m[HTTP][39m [90m{"capabilities":{"firstMatch":[{"appium:appActivity":".Settings","appium:appPackage":"com.android.settings","appium:autoGrantPermissions":true,"appium:automationName":"uiautomator2","appium:deviceName":"samsung SM-M526B (Android 13)","appium:newCommandTimeout":1800,"appium:platformVersion":"13","appium:systemPort":8218,"appium:udid":"RFCR90XLF3V","platformName":"ANDROID"}]},"desiredCapabilities":{"appActivity":".Settings","appPackage":"com.android.settings","autoGrantPermissions":true,"automationName":"uiautomator2","deviceId":"","deviceName":"samsung SM-M526B (Android 13)","newCommandTimeout":1800,"platformName":"ANDROID","platformVersion":"13","property":"","systemPort":8218,"udid":"RFCR90XLF3V"}}[39m
 [35m[Appium][39m The following capabilities were provided in the JSONWP desired capabilities that are missing in W3C capabilities: ["deviceId","property"]
 [35m[Appium][39m Trying to fix W3C capabilities by merging them with JSONWP caps
 [35m[BaseDriver][39m The following capabilities are not standard capabilities and should have an extension prefix:
@@ -32,14 +32,14 @@
 [35m[BaseDriver][39m The following capabilities were provided, but are not recognized by Appium:
 [35m[BaseDriver][39m   deviceId
 [35m[BaseDriver][39m   property
-[35m[BaseDriver][39m Session created with session id: 88465834-5075-45e0-bb75-e8e52771f2c7
+[35m[BaseDriver][39m Session created with session id: a9b2a4dd-2007-44ac-8dc0-175f6c1274a4
 [35m[UiAutomator2][39m Starting 'com.android.settings' directly on the device
 [35m[ADB][39m Found 2 'build-tools' folders under 'C:\Users\eraji\AppData\Local\Android\Sdk' (newest first):
 [35m[ADB][39m     C:/Users/eraji/AppData/Local/Android/Sdk/build-tools/35.0.0
 [35m[ADB][39m     C:/Users/eraji/AppData/Local/Android/Sdk/build-tools/34.0.0
 [35m[ADB][39m Using 'adb.exe' from 'C:\Users\eraji\AppData\Local\Android\Sdk\platform-tools\adb.exe'
 [35m[AndroidDriver][39m Retrieving device list
-[35m[AndroidDriver][39m Using device: TKX44XS8DAVWNRMZ
+[35m[AndroidDriver][39m Using device: RFCR90XLF3V
 [35m[ADB][39m Using 'adb.exe' from 'C:\Users\eraji\AppData\Local\Android\Sdk\platform-tools\adb.exe'
 [35m[ADB][39m Getting device platform version
 [35m[UiAutomator2][39m Relaxing hidden api policy
@@ -52,64 +52,12 @@
 [35m[UiAutomator2][39m Starting UIAutomator2 server 4.27.0
 [35m[UiAutomator2][39m Using UIAutomator2 server from 'C:\Users\eraji\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v4.27.0.apk' and test from 'C:\Users\eraji\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
 [35m[UiAutomator2][39m Waiting up to 30000ms for UiAutomator2 to be online...
-[35m[WD Proxy][39m socket hang up
-[35m[WD Proxy][39m socket hang up
-[35m[WD Proxy][39m socket hang up
-[35m[WD Proxy][39m socket hang up
 [35m[WD Proxy][39m Determined the downstream protocol as 'W3C'
 [35m[AndroidDriver][39m Screen already unlocked, doing nothing
 [35m[UiAutomator2][39m Starting 'com.android.settings/.Settings and waiting for 'com.android.settings/.Settings'
-[35m[Appium][39m New AndroidUiautomator2Driver session created successfully, session 88465834-5075-45e0-bb75-e8e52771f2c7 added to master session list
-[35m[HTTP][39m [37m<-- POST /wd/hub/session [39m[32m200[39m [90m11479 ms - 1151[39m
-[35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/status[39m
-[35m[HTTP][39m [90m{}[39m
-[35m[HTTP][39m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m6 ms - 68[39m
-[35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/timeouts[39m
-[35m[HTTP][39m [90m{"implicit":60000}[39m
-[35m[HTTP][39m [37m<-- POST /wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/timeouts [39m[32m200[39m [90m10 ms - 14[39m
-[35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/execute/sync[39m
-[35m[HTTP][39m [90m{"script":"mobile: getSystemBars","args":[]}[39m
-[35m[AndroidDriver][39m Executing native command 'mobile: getSystemBars'
-[35m[HTTP][39m [37m<-- POST /wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/execute/sync [39m[33m404[39m [90m93 ms - 2908[39m
-[35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/appium/device/system_bars[39m
-[35m[HTTP][39m [90m{}[39m
-[35m[HTTP][39m [37m<-- GET /wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/appium/device/system_bars [39m[32m200[39m [90m250 ms - 145[39m
-[35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/execute/sync[39m
-[35m[HTTP][39m [90m{"script":"mobile: activateApp","args":[{"appId":"de.goddchen.android.powerfolder.A","bundleId":"de.goddchen.android.powerfolder.A"}]}[39m
-[35m[AndroidDriver][39m Executing native command 'mobile: activateApp'
-[35m[HTTP][39m [37m<-- POST /wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/execute/sync [39m[33m404[39m [90m3 ms - 2904[39m
-[35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/appium/device/activate_app[39m
-[35m[HTTP][39m [90m{"bundleId":"de.goddchen.android.powerfolder.A"}[39m
-[35m[HTTP][39m [37m<-- POST /wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/appium/device/activate_app [39m[32m200[39m [90m2243 ms - 14[39m
-[35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/source[39m
-[35m[HTTP][39m [90m{}[39m
-[35m[W3C (88465834)][39m Driver proxy active, passing request on via HTTP proxy
-[35m[WD Proxy][39m Replacing sessionId 850434a7-7c00-48e0-bd7a-e9b8e0d533a5 with 88465834-5075-45e0-bb75-e8e52771f2c7
-[35m[HTTP][39m [37m<-- GET /wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/source [39m[32m200[39m [90m1725 ms - 20260[39m
-[35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/screenshot[39m
-[35m[HTTP][39m [90m{}[39m
-[35m[HTTP][39m [37m<-- GET /wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/screenshot [39m[32m200[39m [90m921 ms - 103228[39m
-[35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/source[39m
-[35m[HTTP][39m [90m{}[39m
-[35m[W3C (88465834)][39m Driver proxy active, passing request on via HTTP proxy
-[35m[WD Proxy][39m Replacing sessionId 850434a7-7c00-48e0-bd7a-e9b8e0d533a5 with 88465834-5075-45e0-bb75-e8e52771f2c7
-[35m[HTTP][39m [37m<-- GET /wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/source [39m[32m200[39m [90m623 ms - 29384[39m
-[35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/screenshot[39m
-[35m[HTTP][39m [90m{}[39m
-[35m[HTTP][39m [37m<-- GET /wd/hub/session/88465834-5075-45e0-bb75-e8e52771f2c7/screenshot [39m[32m200[39m [90m687 ms - 105904[39m
-[35m[HTTP][39m [90m[39m
-[35m[BaseDriver][39m Shutting down because we waited 1800 seconds for a command
-[35m[Appium][39m Closing session, cause was 'New Command Timeout of 1800 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
-[35m[Appium][39m Removing session '88465834-5075-45e0-bb75-e8e52771f2c7' from our master session list
-[35m[UiAutomator2][39m Did not get confirmation UiAutomator2 deleteSession worked; Error was: UnknownError: An unknown server-side error occurred while processing the command. Original error: 'DELETE /' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+[35m[WD Proxy][39m socket hang up
+[35m[WD Proxy][39m socket hang up
+[35m[UiAutomator2][39m Did not get confirmation UiAutomator2 deleteSession worked; Error was: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
 [35m[UiAutomator2][39m Restoring hidden api policy to the device default configuration
+[35m[HTTP][39m [37m<-- POST /wd/hub/session [39m[31m500[39m [90m6484 ms - 1315[39m
+[35m[HTTP][39m [90m[39m

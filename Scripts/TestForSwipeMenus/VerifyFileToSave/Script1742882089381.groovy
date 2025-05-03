@@ -35,17 +35,52 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.delay(3)}
 
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
+Mobile.delay(3)
 
+// Create new text file with the help of plus icon coordinates
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
+Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewTextFile'),10)
+Mobile.tap(findTestObject('PlusIconMenus/NewTextFile'), 30)
+Mobile.delay(3)
+
+// Create new text file and verify .txt extension
+Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
+Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
+Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
+Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
+Mobile.delay(10)
+Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(5)
+String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/VerifyCreatedTextFileName'), 30)
+Mobile.verifyEqual(getFolderName, 'Test Document.txt')
 
-Mobile.swipe(140, 351, 568, 351)
-
+//Swape for save file
+Mobile.swipe(191, 478, 554, 478)
+Mobile.delay(1)
+Mobile.verifyElementExist(findTestObject('SwipeElements/SaveIcon'),10)
 Mobile.tap(findTestObject('SwipeElements/SaveIcon'), 30)
 
+// verify alert message as File successfully saved to "Downloads
 Mobile.delay(3)
 String alertTextForSaveFile= Mobile.getText(findTestObject('SwipeElements/VerifySaveFileAlertMsg'), 30)
 Mobile.verifyEqual(alertTextForSaveFile, 'File successfully saved to "Downloads"')
 
+// swipe to delete text file
+Mobile.swipe(554, 478, 191, 478)
+Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
+Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
+Mobile.delay(3)
+
+// Verifying delete alert message
+String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
+if (alertMsg.contains('Deleted')) {
+	println(alertMsg)
+}else {
+	print('File not deleted')
+}
+
+//Closing application 
 Mobile.closeApplication()
 
 def login() {
