@@ -11,64 +11,81 @@ import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
 import com.kms.katalon.core.configuration.RunConfiguration
 
-if(GlobalVariable.isExistingApp) {
-Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
+// Generate dynamic file name
+String randomName = "A" + System.currentTimeMillis()
+
+// Start application logic
+if (GlobalVariable.isExistingApp) {
+	Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
 } else {
-	String applocation = RunConfiguration.getProjectDir()+'/apks/'+GlobalVariable.AppName;
-	System.out.println("Applocation"+ applocation)
+	String applocation = RunConfiguration.getProjectDir() + '/apks/' + GlobalVariable.AppName
 	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
 	Mobile.delay(5)
-	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
+
+	if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
 		login()
 	}
-	// click on home icon button
-	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(4)}
+
+	Mobile.tap(findTestObject('LoginScreen/HomeIcon'), 30)
+	Mobile.delay(3)
+}
+
+// Rename flow
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
 
+// New directory creation with the help of plus icon coodinates
 Mobile.delay(3)
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
-Mobile.delay(3)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
-
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
-
 Mobile.delay(5)
+
+// verifying folder with there name
 String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
 Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(5)
-Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)
+
+// Rename flow
+Mobile.swipe(568, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/RenameIcon'), 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('SwipeElements/CrossIconRenameTab'), 30)
 Mobile.delay(3)
-Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), "RenameTestFolder", 30)
+Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), "", 30)
 Mobile.tap(findTestObject('SwipeElements/SaveButton'), 30)
+Mobile.delay(5)
+String getBlankFieldAlerMSG= Mobile.getText(findTestObject('SwipeElements/BlankRenameFieldAlertMsg'), 30)
+Mobile.verifyEqual(getBlankFieldAlerMSG, 'Name is required')
+Mobile.pressBack()
 Mobile.delay(3)
-
-/*Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)
+String verifyFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
+Mobile.verifyEqual(verifyFolderName, 'Test Folder')
 Mobile.delay(3)
+// delete created file with swape method
+Mobile.swipe(300, 300, 300, 800)// swipe for refresh
+Mobile.delay(3)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
+Mobile.swipe(568, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
-
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
-
 Mobile.delay(3)
+
+// verifying delete alert message
 String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
 if (alertMsg.contains('Deleted')) {
 	println(alertMsg)
 }else {
 	print('File not deleted')
-}*/
-
+}
 // closing application
 Mobile.closeApplication()
 
@@ -82,4 +99,3 @@ def login() {
 	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 	Mobile.delay(3)
 }
-

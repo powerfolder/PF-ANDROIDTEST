@@ -33,23 +33,34 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(4)}
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
-
+Mobile.pressBack()
 // New directory creation with the help of plus icon coodinates
 Mobile.delay(3)
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
-Mobile.delay(3)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
 Mobile.delay(5)
-
 // verifying folder with there name 
 String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
 Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(5)
 
+// Rename flow
+Mobile.swipe(300, 451, 140, 451)
+Mobile.tap(findTestObject('SwipeElements/RenameIcon'), 30)
+Mobile.delay(3)
+Mobile.tap(findTestObject('SwipeElements/CrossIconRenameTab'), 30)
+Mobile.delay(3)
+Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), "Rename Folder", 30)
+Mobile.tap(findTestObject('SwipeElements/SaveButton'), 30)
+Mobile.delay(5)
+String getRenameFolder= Mobile.getText(findTestObject('Folder_Menu/VerifyRenamedFolder'), 30)
+Mobile.verifyEqual(getRenameFolder, 'Rename Folder')
+
 // delete created file with swape method 
-Mobile.swipe(440, 332, 140, 332)
+Mobile.delay(3)
+Mobile.swipe(300, 451, 140, 451)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)

@@ -1,43 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MobileElementEntity>
    <description></description>
-   <name>DeleteSlide</name>
+   <name>VerifyRenamedFolder</name>
    <tag></tag>
-   <elementGuidId>9e95484a-692b-418c-b96e-9be254ef0e00</elementGuidId>
+   <elementGuidId>ce73a17a-02b1-4c97-a9d3-05b97980aeb5</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>(//android.view.View[@content-desc=&quot;chevron_right Style&quot;])[2]/android.view.View</locator>
+   <locator>//*[@class = 'android.widget.TextView' and (@text = 'Rename Folder' or . = 'Rename Folder')]</locator>
    <locatorCollection>
       <entry>
          <key>IOS_PREDICATE_STRING</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ID</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>(//android.view.View[@content-desc=&quot;chevron_right Style&quot;])[2]/android.view.View</value>
-      </entry>
-      <entry>
-         <key>ANDROID_UI_AUTOMATOR</key>
-         <value>new UiSelector()</value>
-      </entry>
-      <entry>
-         <key>IOS_CLASS_CHAIN</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CLASS_NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ATTRIBUTES</key>
-      </entry>
-      <entry>
-         <key>CUSTOM</key>
          <value></value>
       </entry>
       <entry>
@@ -45,12 +18,39 @@
          <value></value>
       </entry>
       <entry>
-         <key>ACCESSIBILITY</key>
+         <key>IOS_CLASS_CHAIN</key>
          <value></value>
       </entry>
       <entry>
          <key>ANDROID_VIEWTAG</key>
          <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.widget.TextView' and (@text = 'Rename Folder' or . = 'Rename Folder')]</value>
       </entry>
       <entry>
          <key>IMAGE</key>

@@ -211,7 +211,7 @@
       <guid>ad6f402a-0370-445a-aafa-3bf071f58b40</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Folders/FO8_VerifyToRenameFolder</testCaseId>
+      <testCaseId>Test Cases/Folders/FO8_VerifyToRenameSubFolder</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -407,7 +407,7 @@
       <guid>46358406-6952-4e15-a67f-64ea242b69df</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForSwipeMenus/VerifyToRenameFile</testCaseId>
+      <testCaseId>Test Cases/TestForSwipeMenus/VerifyToRenameSubFolder</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

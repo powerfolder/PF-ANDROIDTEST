@@ -29,27 +29,44 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
 		login()
 	}
-	// click on home icon button 
+	// click on home icon button
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(4)}
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
-
+Mobile.pressBack()
 // New directory creation with the help of plus icon coodinates
 Mobile.delay(3)
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
-Mobile.delay(3)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
 Mobile.delay(5)
-
-// verifying folder with there name 
+// verifying folder with there name
 String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
 Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(5)
 
-// delete created file with swape method 
-Mobile.swipe(440, 332, 140, 332)
+// Rename flow
+Mobile.swipe(300, 451, 140, 451)
+Mobile.tap(findTestObject('SwipeElements/RenameIcon'), 30)
+Mobile.delay(3)
+Mobile.tap(findTestObject('SwipeElements/CrossIconRenameTab'), 30)
+Mobile.delay(3)
+Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), "", 30)
+Mobile.tap(findTestObject('SwipeElements/SaveButton'), 30)
+Mobile.delay(5)
+String getBlankFieldAlerMSG= Mobile.getText(findTestObject('SwipeElements/BlankRenameFieldAlertMsg'), 30)
+Mobile.verifyEqual(getBlankFieldAlerMSG, 'Name is required')
+Mobile.pressBack()
+Mobile.delay(3)
+String verifyFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
+Mobile.verifyEqual(verifyFolderName, 'Test Folder')
+Mobile.delay(3)
+// delete created file with swape method
+Mobile.swipe(300, 300, 300, 800)// swipe for refresh
+Mobile.delay(3)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
+Mobile.swipe(300, 451, 140, 451)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)
@@ -61,7 +78,6 @@ if (alertMsg.contains('Deleted')) {
 }else {
 	print('File not deleted')
 }
-
 // closing application
 Mobile.closeApplication()
 

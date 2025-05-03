@@ -40,45 +40,57 @@ if (GlobalVariable.isExistingApp) {
 
 // Rename flow
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
-Mobile.delay(5)
-Mobile.swipe(568, 351, 140, 351)
 
+// New directory creation with the help of plus icon coodinates
+Mobile.delay(3)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
+Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
+Mobile.delay(5)
+
+// verifying folder with there name
+String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
+Mobile.verifyEqual(getFolderName, 'Test Folder')
+Mobile.delay(5)
+
+// Rename flow
+Mobile.swipe(568, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/RenameIcon'), 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('SwipeElements/CrossIconRenameTab'), 30)
 Mobile.delay(3)
-Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), randomName, 30)
+Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), "Rename Folder", 30)
 Mobile.tap(findTestObject('SwipeElements/SaveButton'), 30)
 Mobile.delay(5)
+String getRenameFolder= Mobile.getText(findTestObject('Folder_Menu/VerifyRenamedFolder'), 30)
+Mobile.verifyEqual(getRenameFolder, 'Rename Folder')
 
-/*// Create dynamic XPath
-String dynamicXpath = "//*[@class = 'android.widget.TextView' and (@text = '${randomName}' or . = '${randomName}')]"
-
-// Create dynamic TestObject
-TestObject dynamicFileObject = new TestObject("dynamicFile")
-dynamicFileObject.addProperty("xpath", ConditionType.EQUALS, dynamicXpath)
-
-// Get text and assert
-String getFolderName = Mobile.getText(dynamicFileObject, 30)
-Mobile.verifyEqual(getFolderName, randomName)
-
-Mobile.delay(5)
-
-// Delete the file to clean up
-Mobile.tap(findTestObject('SwipeElements/RenameFileDropdown'), 30)
+// delete created file with swape method
+Mobile.delay(3)
+Mobile.swipe(568, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
-Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)*/
+Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
+Mobile.delay(3)
 
+// verifying delete alert message
+String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
+if (alertMsg.contains('Deleted')) {
+	println(alertMsg)
+}else {
+	print('File not deleted')
+}
+
+// closing application
 Mobile.closeApplication()
 
-// Login method
 def login() {
-    Mobile.tap(findTestObject('LoginScreen/ServerURL'), 30)
-    Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
-    Mobile.tap(findTestObject('LoginScreen/ServerURL'), 30)
-    Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
-    Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
-    Mobile.hideKeyboard()
-    Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-    Mobile.delay(3)
+	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
+	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
+	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
+	Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
+	Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
+	Mobile.hideKeyboard()
+	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
+	Mobile.delay(3)
 }

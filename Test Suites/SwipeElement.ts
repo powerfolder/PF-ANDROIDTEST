@@ -43,7 +43,7 @@
       <guid>fa33c967-c753-470f-a152-89a76c764231</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForSwipeMenus/VerifyToRenameFile</testCaseId>
+      <testCaseId>Test Cases/TestForSwipeMenus/VerifyToRenameSubFolder</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

@@ -29,40 +29,32 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
 		login()
 	}
-	// click on home icon button 
+	// click on home icon button
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(4)}
-Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
+	Mobile.delay(3)}
+Mobile.tap(findTestObject('Folder_Menu/ClickSecondSubFloder'),30)
+Mobile.delay(3)
+Mobile.pressBack()
+Mobile.delay(3)
 
-// New directory creation with the help of plus icon coodinates
+// Create sub directory with file name with the help of plus icon coodinates
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
-Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
-Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'),5)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
-Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
-Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
-Mobile.delay(5)
-
-// verifying folder with there name 
-String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
-Mobile.verifyEqual(getFolderName, 'Test Folder')
-Mobile.delay(5)
-
-// delete created file with swape method 
-Mobile.swipe(440, 332, 140, 332)
-Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
-Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'),5)
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "", 30)
+Mobile.delay(3)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
 
-// verifying delete alert message
-String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
-if (alertMsg.contains('Deleted')) {
-	println(alertMsg)
-}else {
-	print('File not deleted')
-}
+//Verifying alert mesage as Please enter a name first.
+String alertMsg = Mobile.getText(findTestObject('CreateNewFile/VerifyFIleALertMsg'), 30)
+Mobile.verifyEqual(alertMsg, 'Please enter a name first.')
+Mobile.pressBack()
+Mobile.delay(2)
 
-// closing application
+// Closing application
 Mobile.closeApplication()
 
 def login() {

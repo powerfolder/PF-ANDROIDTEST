@@ -16,7 +16,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
 import com.kms.katalon.core.configuration.RunConfiguration
 
 if(GlobalVariable.isExistingApp) {
@@ -29,32 +28,51 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
 		login()
 	}
-	// click on home icon button 
+	// click on home icon button
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(4)}
-Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
+	Mobile.delay(3)}
+Mobile.tap(findTestObject('Folder_Menu/ClickSecondSubFloder'),30)
+Mobile.delay(5)
+Mobile.pressBack()
+Mobile.delay(3)
 
-// New directory creation with the help of plus icon coodinates
+//Verify and create subdirectory file with the help of plus icon coodinates
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
-Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
-Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'), 10)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
+Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'), 10)
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
 Mobile.delay(5)
 
-// verifying folder with there name 
+// Verify created folder name
 String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
 Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(5)
 
-// delete created file with swape method 
-Mobile.swipe(440, 332, 140, 332)
+//Verify and create duplicate subdirectory file with the help of plus icon coodinates
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
+Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'), 10)
+Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
+Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'), 10)
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
+
+//Verifying duplicate alert message
+String duplicateAlertMsg = Mobile.getText(findTestObject('CreateNewFile/DuplicateAlertMsg'), 30)
+Mobile.verifyEqual(duplicateAlertMsg, 'Cannot create directory')
+
+// delete created sub directory
+Mobile.tap(findTestObject('ThreeDotsMenu/ThirdFolderDropDown'), 30)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)
 
-// verifying delete alert message
+// Verifying delete alert message
 String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
 if (alertMsg.contains('Deleted')) {
 	println(alertMsg)
