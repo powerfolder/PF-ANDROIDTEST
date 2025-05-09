@@ -53,7 +53,7 @@ Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(5)
 
 // Delete diretory with the help of swape method
-Mobile.swipe(404, 478, 191, 478)
+Mobile.swipe(402, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 

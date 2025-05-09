@@ -87,7 +87,7 @@ Mobile.swipe(360, 1247, 360, 1600)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 
 //Swipe to delete created docx.
-Mobile.swipe(568, 351, 140, 351)
+Mobile.swipe(402, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(1)

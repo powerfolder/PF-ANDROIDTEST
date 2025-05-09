@@ -34,15 +34,16 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
 
-Mobile.swipe(210, 526, 639, 526)
-
+//Swipe to download folder
+Mobile.swipe(140, 351, 402, 351)
 Mobile.tap(findTestObject('SwipeElements/DownloadIcon'), 30)
-
 Mobile.delay(1)
+
+//verifying downlaod alert message
 /*String alertTextForSaveFile= Mobile.getText(findTestObject('SwipeElements/VerifyDownloadAlertMsg'), 30)
 Mobile.verifyEqual(alertTextForSaveFile, 'Checking files..This may take a while.')*/
 
-
+// closing application
 Mobile.closeApplication()
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)

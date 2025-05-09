@@ -16,7 +16,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
 import com.kms.katalon.core.configuration.RunConfiguration
 
 if(GlobalVariable.isExistingApp) {
@@ -53,7 +52,7 @@ Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(2)
 
 // Rename flow
-Mobile.swipe(404, 609, 191, 609)
+Mobile.swipe(290, 451, 150, 451)
 Mobile.tap(findTestObject('SwipeElements/RenameIcon'), 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('SwipeElements/CrossIconRenameTab'), 30)
@@ -66,7 +65,7 @@ Mobile.verifyEqual(getRenameFolder, 'Rename Folder')
 
 // delete created file with swape method 
 Mobile.delay(3)
-Mobile.swipe(404, 609, 191, 609)
+Mobile.swipe(290, 451, 150, 451)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)

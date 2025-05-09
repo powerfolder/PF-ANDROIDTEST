@@ -46,7 +46,21 @@ Mobile.verifyElementExist(findTestObject('PlusIconMenus/UploadHere'), 10)
 Mobile.tap(findTestObject('PlusIconMenus/UploadHere'), 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('CreateNewFile/SelectUploadFileFromDevice'), 30)
+Mobile.delay(7)
+
+// swipe to delete text file
+Mobile.swipe(402, 351, 140, 351)
+Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
+Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)
+
+// Verifying delete alert message
+String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
+if (alertMsg.contains('Deleted')) {
+	println(alertMsg)
+}else {
+	print('File not deleted')
+}
 
 //Closing application
 Mobile.closeApplication()

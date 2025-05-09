@@ -55,7 +55,7 @@ String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/Veri
 Mobile.verifyEqual(getFolderName, 'Test Document.txt')
 
 // Swipe to verify move
-Mobile.swipe(554, 478, 191, 478)
+Mobile.swipe(402, 351, 140, 351)
 Mobile.delay(3)
 Mobile.tap(findTestObject('SwipeElements/MoveIcon'), 30)
 Mobile.delay(3)
@@ -72,7 +72,7 @@ Mobile.pressBack()
 Mobile.delay(5)
 
 // swipe to delete text file
-Mobile.swipe(554, 478, 191, 478)
+Mobile.swipe(402, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)

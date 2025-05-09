@@ -39,9 +39,12 @@ Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
 Mobile.delay(3)
 Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'),10)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
+Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'),5)
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
 Mobile.delay(5)
+
+// verifying folder name
 String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
 Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(5)
@@ -53,10 +56,12 @@ Mobile.delay(3)
 Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), "Rename Folder", 30)
 Mobile.tap(findTestObject('SwipeElements/SaveButton'), 30)
 Mobile.delay(5)
+
+// Verify folder name as expected after renamed
 String getRenameFolder= Mobile.getText(findTestObject('Folder_Menu/VerifyRenamedFolder'), 30)
 Mobile.verifyEqual(getRenameFolder, 'Rename Folder')
 
-// delete created file with swape method
+// delete created file by dropdown menu
 Mobile.delay(3)
 Mobile.tap(findTestObject('ThreeDotsMenu/ThirdFolderDropDown'), 30)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)

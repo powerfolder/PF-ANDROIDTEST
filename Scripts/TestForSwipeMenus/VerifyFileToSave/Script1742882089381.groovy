@@ -16,8 +16,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
-
+import java.text.SimpleDateFormat
+import java.util.Date
 import com.kms.katalon.core.configuration.RunConfiguration
 
 if(GlobalVariable.isExistingApp) {
@@ -47,27 +47,27 @@ Mobile.delay(3)
 // Create new text file and verify .txt extension
 Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
 Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
-Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
+String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date())
+String randomDocName = "TestDoc_" + timestamp
+Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), randomDocName, 30)
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
 Mobile.delay(10)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(5)
-String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/VerifyCreatedTextFileName'), 30)
-Mobile.verifyEqual(getFolderName, 'Test Document.txt')
 
 //Swape for save file
-Mobile.swipe(191, 478, 554, 478)
+Mobile.swipe(140, 351, 402, 351)
 Mobile.delay(1)
 Mobile.verifyElementExist(findTestObject('SwipeElements/SaveIcon'),10)
 Mobile.tap(findTestObject('SwipeElements/SaveIcon'), 30)
 
 // verify alert message as File successfully saved to "Downloads
 Mobile.delay(1)
-/*String alertTextForSaveFile= Mobile.getText(findTestObject('SwipeElements/VerifySaveFileAlertMsg'), 30)
-Mobile.verifyEqual(alertTextForSaveFile, 'File successfully saved to "Downloads"')*/
+String alertTextForSaveFile= Mobile.getText(findTestObject('SwipeElements/VerifySaveFileAlertMsg'), 30)
+Mobile.verifyEqual(alertTextForSaveFile, 'File successfully saved to "Downloads"')
 
 // swipe to delete text file
-Mobile.swipe(554, 478, 191, 478)
+Mobile.swipe(402, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)

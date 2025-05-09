@@ -53,7 +53,7 @@ Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(5)
 
 // Rename flow
-Mobile.swipe(404, 609, 191, 609)
+Mobile.swipe(290, 451, 150, 451)
 Mobile.tap(findTestObject('SwipeElements/RenameIcon'), 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('SwipeElements/CrossIconRenameTab'), 30)
@@ -61,18 +61,23 @@ Mobile.delay(3)
 Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), "", 30)
 Mobile.tap(findTestObject('SwipeElements/SaveButton'), 30)
 Mobile.delay(5)
+
+// verifying alert message as Name is required
 String getBlankFieldAlerMSG= Mobile.getText(findTestObject('SwipeElements/BlankRenameFieldAlertMsg'), 30)
 Mobile.verifyEqual(getBlankFieldAlerMSG, 'Name is required')
 Mobile.pressBack()
 Mobile.delay(3)
+
+// Verifying folder name as expected 
 String verifyFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
 Mobile.verifyEqual(verifyFolderName, 'Test Folder')
 Mobile.delay(3)
+
 // delete created file with swape method
 Mobile.swipe(300, 300, 300, 800)// swipe for refresh
 Mobile.delay(3)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
-Mobile.swipe(404, 609, 191, 609)
+Mobile.swipe(290, 451, 150, 451)
 Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
@@ -85,6 +90,7 @@ if (alertMsg.contains('Deleted')) {
 }else {
 	print('File not deleted')
 }
+
 // closing application
 Mobile.closeApplication()
 

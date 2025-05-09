@@ -28,55 +28,59 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
 		login()
 	}
-	// click on home icon button 
+	// click on home icon button
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
 Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 
-// click on plus icon and select to New text file
+// CLick on plus icon and select to create spreadsheet
 Mobile.delay(3)
 Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
 Mobile.delay(3)
-Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewTextFile'), 10)
-Mobile.tap(findTestObject('PlusIconMenus/NewTextFile'), 30)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewSpreadsSheet'),10)
+Mobile.tap(findTestObject('PlusIconMenus/NewSpreadsSheet'), 30)
 Mobile.delay(3)
 
-// Create new text file and verify .txt extension
-Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
+//Creating document and verify with .xlsx extension
+Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'),5)
 Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
 Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
 Mobile.delay(10)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(5)
+String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/VerifyCreateSpreadSheetName'), 30)
+Mobile.verifyEqual(getFolderName, 'Test Document.xlsx')
 
-//verifying created text file with extension
-String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/VerifyCreatedTextFileName'), 30)
-Mobile.verifyEqual(getFolderName, 'Test Document.txt')
-Mobile.tap(findTestObject('VerifyCreatedFileNames/VerifyCreatedTextFileName'),30)
-
-//click on edit button
-Mobile.delay(20)
-Mobile.tap(findTestObject('VerifyCreatedFileNames/TextFileEditButton'),30)
+// Rename flow
+Mobile.swipe(402, 351, 140, 351)
+Mobile.tap(findTestObject('SwipeElements/RenameIcon'), 30)
+Mobile.delay(3)
+Mobile.tap(findTestObject('SwipeElements/CrossIconRenameTab'), 30)
+Mobile.delay(3)
+Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), "Rename Document", 30)
+Mobile.tap(findTestObject('SwipeElements/SaveButton'), 30)
 Mobile.delay(5)
-Mobile.verifyElementVisible(findTestObject('VerifyCreatedFileNames/EditTextArea'), 10)
-Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
+
+// Verify file name as expected after renamed
+String getRenameDocument= Mobile.getText(findTestObject('RenameFiles/GetRenameSpreadsheetFile'), 30)
+Mobile.verifyEqual(getRenameDocument, 'Rename Document.xlsx')
 
 //Swipe to delete created docx.
 Mobile.swipe(402, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
-Mobile.delay(1)
+Mobile.delay(2)
 
 //Verifying delete alert message
 String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
-if (alertMsg.contains('Deleted Test Document.txt')) {
+if (alertMsg.contains('Deleted Test Document.xlsx')) {
 	println(alertMsg)
 }else {
 	print('text File not deleted')
 }
 
-//Closing application 
+//Closing application
 Mobile.closeApplication()
 
 def login() {
@@ -89,3 +93,4 @@ def login() {
 	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 	Mobile.delay(3)
 }
+
