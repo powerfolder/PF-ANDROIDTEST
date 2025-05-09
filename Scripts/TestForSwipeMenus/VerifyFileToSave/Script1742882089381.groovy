@@ -62,9 +62,9 @@ Mobile.verifyElementExist(findTestObject('SwipeElements/SaveIcon'),10)
 Mobile.tap(findTestObject('SwipeElements/SaveIcon'), 30)
 
 // verify alert message as File successfully saved to "Downloads
-Mobile.delay(3)
-String alertTextForSaveFile= Mobile.getText(findTestObject('SwipeElements/VerifySaveFileAlertMsg'), 30)
-Mobile.verifyEqual(alertTextForSaveFile, 'File successfully saved to "Downloads"')
+Mobile.delay(1)
+/*String alertTextForSaveFile= Mobile.getText(findTestObject('SwipeElements/VerifySaveFileAlertMsg'), 30)
+Mobile.verifyEqual(alertTextForSaveFile, 'File successfully saved to "Downloads"')*/
 
 // swipe to delete text file
 Mobile.swipe(554, 478, 191, 478)

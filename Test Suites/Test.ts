@@ -414,7 +414,7 @@
       <guid>a550e884-4868-4ff0-9a37-b153b3e6369e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForSwipeMenus/VerifyFileToMove</testCaseId>
+      <testCaseId>Test Cases/TestForSwipeMenus/VerifyFileToShare</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>

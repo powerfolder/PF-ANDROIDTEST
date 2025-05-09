@@ -22,7 +22,7 @@
       <guid>b1e42fc1-2021-4d64-8c44-d63ea4c2cc51</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForSwipeMenus/VerifyFileToMove</testCaseId>
+      <testCaseId>Test Cases/TestForSwipeMenus/VerifyFileToShare</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
