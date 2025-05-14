@@ -323,7 +323,7 @@
       <guid>d7fb217f-fdeb-4f85-ac56-e03eab0edf4d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/LoginTestCases/TC3_VerifyToLoginWIthougServerURL</testCaseId>
+      <testCaseId>Test Cases/LoginTestCases/TC3_VerifyToLoginWithoutServerURL</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
