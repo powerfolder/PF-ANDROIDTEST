@@ -34,7 +34,25 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 
 // verifying to share file lin by share icon 
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 10)
+
+// click on plus icon and select to New text file
 Mobile.delay(3)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
+Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewTextFile'),10)
+Mobile.tap(findTestObject('PlusIconMenus/NewTextFile'), 30)
+Mobile.delay(3)
+// Create new text file and verify .txt extension
+Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
+Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
+Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
+Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
+Mobile.delay(10)
+Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
+Mobile.delay(5)
+String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/VerifyCreatedTextFileName'), 30)
+Mobile.verifyEqual(getFolderName, 'Test Document.txt')
+
 Mobile.tap(findTestObject('Folder_Menu/ShareIcon'), 30)
 /*Mobile.delay(7)
 String text = Mobile.getText(findTestObject('Folder_Menu/VerifyShareViaText'), 30)
@@ -45,6 +63,21 @@ if (text.contains('Share via')) {
 }*/
 Mobile.delay(3)
 Mobile.pressBack()
+
+// Delete text file
+Mobile.delay(3)
+Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)
+Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
+Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
+Mobile.delay(3)
+
+// Verifying delete alert message
+String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
+if (alertMsg.contains('Deleted')) {
+	println(alertMsg)
+}else {
+	print('File not deleted')
+}
 Mobile.closeApplication()
 
 def login() {

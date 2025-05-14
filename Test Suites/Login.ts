@@ -12,45 +12,52 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>a3d22dfe-cb69-49a8-b218-e33e513009d3</testSuiteGuid>
    <testCaseLink>
-      <guid>ea21ca14-002d-4396-afbe-2edd41eb50a5</guid>
+      <guid>f832f3b6-9bad-4c42-93c0-f642912f5df1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LoginTestCases/TC1_verifyLoginScreen</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>70bc960a-30e9-4237-8115-e4eb8f30eb78</guid>
+      <guid>9daac32a-04bc-4b26-b3aa-c410fd178e3d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LoginTestCases/TC2_VerifyLoginWithValidCredentials</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>4a0ae339-0843-435a-9534-75399769719c</guid>
+      <guid>712b321e-f602-4a69-a05f-3466109ef89f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/LoginTestCases/TC3_LoginWithCustomURLs</testCaseId>
+      <testCaseId>Test Cases/LoginTestCases/TC3_VerifyToLoginWIthougServerURL</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>c2135921-9045-41f9-9397-32b49b4a7b3c</guid>
+      <guid>a2bf5f49-c5ad-470e-97e3-b1f9ff42efbb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LoginTestCases/TC4_LoginWithInvalidCredentials</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>f22e37a7-04a2-4314-b208-cbf2389c2db7</guid>
+      <guid>5dac03f0-da86-47a0-8adc-c8ad7dbc5956</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LoginTestCases/TC5_VerifyLoginWIthoutInputCredentials</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>176373ed-732c-40d8-a2f0-667c0c0ad688</guid>
+      <guid>9e7f53b0-acba-4cdd-b835-0afe6230b0d5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LoginTestCases/TC6_VerifyLoginWithOutPassword</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a526c4f3-db2d-4759-9e7a-fd70613caf16</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LoginTestCases/TC7_EnsureAppVersionSame_BeforeAndAfterLogin</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

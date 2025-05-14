@@ -45,6 +45,8 @@ Mobile.delay(3)
 Mobile.verifyElementExist(findTestObject('PlusIconMenus/UploadHere'), 10)
 Mobile.tap(findTestObject('PlusIconMenus/UploadHere'), 30)
 Mobile.delay(3)
+
+// Selecting file from the device 
 Mobile.tap(findTestObject('CreateNewFile/SelectUploadFileFromDevice'), 30)
 Mobile.delay(7)
 

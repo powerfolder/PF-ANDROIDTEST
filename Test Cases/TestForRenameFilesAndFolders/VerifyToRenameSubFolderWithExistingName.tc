@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>SE4_VerifyChangeLanguageFunctionality</name>
+   <name>VerifyToRenameSubFolderWithExistingName</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>6b18a880-f955-4f83-a87a-c1f082715e06</testCaseGuid>
+   <testCaseGuid>1c20a8a0-6659-4a2b-b3f9-79b4fe13ec4f</testCaseGuid>
 </TestCaseEntity>

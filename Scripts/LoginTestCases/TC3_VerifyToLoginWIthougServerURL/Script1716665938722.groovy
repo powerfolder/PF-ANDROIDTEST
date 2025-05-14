@@ -16,10 +16,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
-
 import com.kms.katalon.core.configuration.RunConfiguration
-
 if(GlobalVariable.isExistingApp) {
 Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
 } else {
@@ -27,41 +24,41 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	System.out.println("Applocation"+ applocation)
 	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
 	Mobile.delay(5)
-	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
-		login()
+	if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
+		logout()
 	}
-	// click on home icon button 
-	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(3)}
-Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
-Mobile.delay(2)
+	
+	// enter server URL
+	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
+	
+	// Removing server URL
+	Mobile.delay(2)
+	Mobile.tap(findTestObject('LoginScreen/CrossIcon'),30)
+}
 
-// There is no any option for change language 
-/*
-Mobile.tap(findTestObject('Settings/LanguageselectButton'), 45)
-Mobile.delay(2)
-Mobile.tap(findTestObject('Settings/GermanLanguageBtn'), 45)
-Mobile.delay(5)
-Mobile.verifyElementExist(findTestObject('Settings/VerifyGermanLanguage'), 45, FailureHandling.CONTINUE_ON_FAILURE)
-Mobile.delay(5) 
-Mobile.tap(findTestObject('Settings/LanguageselectButton'), 45)
-Mobile.delay(2)
-Mobile.tap(findTestObject('Settings/GermanLanguageBtn'), 45)
-Mobile.delay(5)
-Mobile.tap(findTestObject('Settings/englishSelectGerman'), 45)
-Mobile.delay(5)
-Mobile.verifyElementVisible(findTestObject('Settings/settingsHeader'), 30)
-Mobile.tap(findTestObject('Settings/settingsHeader'), 30)
-Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'),30)*/
+// login with credentials
+Mobile.tap(findTestObject('LoginScreen/enterUserNameCustomServer'),30)
+Mobile.setText(findTestObject('LoginScreen/enterUserNameCustomServer'), GlobalVariable.userid, 30)
+Mobile.setText(findTestObject('LoginScreen/enterPasswordCustomServer'), GlobalVariable.password, 30)
+Mobile.hideKeyboard()
+Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
+Mobile.delay(3)
+
+// Verifying alert message as Server cannot be found
+String errorAlertMessage= Mobile.getText(findTestObject('LoginScreen/ServerNotFoundErrorAlertMsg'), 45)
+Mobile.verifyEqual(errorAlertMessage, 'Server cannot be found')
+Mobile.delay(3)
+
+//Closing application
 Mobile.closeApplication()
-def login() {
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
-	Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
-	Mobile.hideKeyboard()
-	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-	Mobile.delay(3)
+
+def  logout() {
+	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
+	Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
+	Mobile.delay(5)
+	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
+	String confirmationMessage= Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
+	Mobile.tap(findTestObject('Settings/LogoutConfirmationYes'), 30)
+	Mobile.delay(5)
+	Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?')
 }

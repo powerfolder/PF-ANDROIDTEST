@@ -14,9 +14,12 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.kms.katalon.entity.global.GlobalVariableEntity
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration
+
+String loginScreenVersion = ''
 if(GlobalVariable.isExistingApp) {
 Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
 } else {
@@ -28,31 +31,43 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 		logout()
 	}
 	
-	// enter server URL
+	//Get app version on Login screen
+	Mobile.delay(3)
+	loginScreenVersion = Mobile.getText(findTestObject('LoginScreen/GetAppVersion'),30)
+
+	// click on enter server URL
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
+	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 }
 
-// login with credentials
-Mobile.tap(findTestObject('LoginScreen/enterUserNameCustomServer'),30)
-Mobile.setText(findTestObject('LoginScreen/enterUserNameCustomServer'), GlobalVariable.userid, 30)
-Mobile.setText(findTestObject('LoginScreen/enterPasswordCustomServer'), GlobalVariable.password, 30)
+// enter login credentials
+Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
+Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
 Mobile.hideKeyboard()
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 Mobile.delay(3)
-String mobileUploadsText = Mobile.getText(findTestObject('MainScreen/MobileUploads'), 30)
-Mobile.verifyEqual(mobileUploadsText, 'Mobile Uploads')
-Mobile.delay(3)
 
-//Logout from the application
+//Get app version in my account menu
 Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
 Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
-Mobile.delay(5)
-Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
-String confirmationMessage= Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
-Mobile.tap(findTestObject('Settings/LogoutConfirmationYes'), 30)
-Mobile.delay(5)
-Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?')
+Mobile.delay(1)
+
+//Get app version from my account menu
+String myAccountVersion = Mobile.getText(findTestObject('ThreeDotsMenu/GetAppVersion'),30)
+
+// Clean versions to ensure consistent format
+loginScreenVersion = loginScreenVersion.replace("v", "").trim()
+myAccountVersion = myAccountVersion.replace("v", "").trim()
+
+// Log both versions
+println("Cleaned Login Version: " + loginScreenVersion)
+println("Cleaned MyAccount Version: " + myAccountVersion)
+
+// verify version match
+Mobile.verifyMatch(loginScreenVersion, myAccountVersion, false)
+
+// clossing application
 Mobile.closeApplication()
 
 def  logout() {
@@ -62,6 +77,6 @@ def  logout() {
 	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
 	String confirmationMessage= Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
 	Mobile.tap(findTestObject('Settings/LogoutConfirmationYes'), 30)
-	Mobile.delay(5)
+	Mobile.delay(3)
 	Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?')
 }

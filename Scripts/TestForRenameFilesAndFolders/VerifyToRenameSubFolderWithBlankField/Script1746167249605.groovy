@@ -59,14 +59,14 @@ Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(5)
 
 // Rename flow
-Mobile.swipe(404, 478, 191, 478)
+Mobile.swipe(402, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/RenameIcon'), 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('SwipeElements/CrossIconRenameTab'), 30)
 Mobile.delay(3)
 Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), "", 30)
 Mobile.tap(findTestObject('SwipeElements/SaveButton'), 30)
-Mobile.delay(5)
+Mobile.delay(3)
 
 // Verifying alert message as Name is required
 String getBlankFieldAlerMSG= Mobile.getText(findTestObject('SwipeElements/BlankRenameFieldAlertMsg'), 30)
@@ -82,7 +82,7 @@ Mobile.delay(3)
 Mobile.swipe(300, 300, 300, 800)// swipe for refresh
 Mobile.delay(3)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
-Mobile.swipe(404, 478, 191, 478)
+Mobile.swipe(402, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)
