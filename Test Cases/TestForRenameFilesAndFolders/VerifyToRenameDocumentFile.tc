@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>VerifyToRenameDocumentFile</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>2f5823ba-9680-4349-acde-3682095f2127</testCaseGuid>
-</TestCaseEntity>

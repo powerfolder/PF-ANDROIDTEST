@@ -12,38 +12,38 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>845f512f-9172-4952-b158-4be4a25b6d65</testSuiteGuid>
    <testCaseLink>
-      <guid>da656958-9f8a-4219-969e-fbecee609331</guid>
+      <guid>6962740d-c069-4314-8138-1c59d01f39da</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForSwipeMenus/VerifyFileToDelete</testCaseId>
+      <testCaseId>Test Cases/TestForSwipeMenus/SM1_VerifyFileToDelete</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>b530894d-eea9-4c97-b142-f71368405199</guid>
+      <guid>64dcecb5-b8ab-413b-97a4-f972eb9e922a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForSwipeMenus/VerifyFileToSave</testCaseId>
+      <testCaseId>Test Cases/TestForSwipeMenus/SM2_VerifyFileToSave</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>cbd366c2-bfd8-4d7e-adcc-b296e663f39c</guid>
+      <guid>fbaab7df-ed98-4b1d-81bc-7056f046fa75</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForSwipeMenus/VerifyFileToShare</testCaseId>
+      <testCaseId>Test Cases/TestForSwipeMenus/SM3_VerifyFileToShare</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>d192131a-5cd0-4d08-83a0-a0f8204436ac</guid>
+      <guid>3eb1f654-c7f7-4828-926b-cb33e852e3ec</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForSwipeMenus/VerifyToDownloadFolder</testCaseId>
+      <testCaseId>Test Cases/TestForSwipeMenus/SM4_VerifyToDownloadFolder</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>38f82c96-f47f-4a2a-84a5-62b8d3292396</guid>
+      <guid>b726b087-ad32-48dc-a652-948cef813a47</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForSwipeMenus/VerifyToRenameFolder</testCaseId>
+      <testCaseId>Test Cases/TestForSwipeMenus/SM5_VerifyToRenameFolder</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

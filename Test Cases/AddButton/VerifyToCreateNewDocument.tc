@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>VerifyToCreateNewDocument</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>4a47faaa-ba4e-4773-9519-d9ee902f68f1</testCaseGuid>
-</TestCaseEntity>

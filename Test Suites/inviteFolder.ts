@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>inviteFolder</name>
+   <name>InviteFolder</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -12,59 +12,66 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>c773ad90-abc1-4a42-b2f0-05b41b61fa3f</testSuiteGuid>
    <testCaseLink>
-      <guid>4ad94ed0-f278-4bb6-9597-08158c4f331e</guid>
+      <guid>52d0a0f6-78f1-419e-8c36-04b291d6f6af</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/InviteFolder/InviteFolderByThreeDotMenuWithBlankEmailField</testCaseId>
+      <testCaseId>Test Cases/InviteFolder/IF1_InviteFolderByThreeDotMenuWithBlankEmailField</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>c2687ea4-b9e7-4cd3-bb12-3f8df739a666</guid>
+      <guid>c1b889f2-f23d-4df4-933d-83ddb836b960</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/InviteFolder/InviteFolderWithAdminPermission</testCaseId>
+      <testCaseId>Test Cases/InviteFolder/IF2_InviteFolderWithAdminPermission</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>9e503503-bfea-49aa-b258-40f6822970e8</guid>
+      <guid>054e0e4a-4e6a-4236-97e7-28199e4024bd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/InviteFolder/InviteFolderWithAdminPermissionByThreeDotMenus</testCaseId>
+      <testCaseId>Test Cases/InviteFolder/IF3_InviteFolderWithAdminPermissionByThreeDotMenus</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>43f023ba-c268-411c-beca-6273a55eeaac</guid>
+      <guid>37a85a2b-b3ab-4074-94d2-f2cb40892f61</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/InviteFolder/InviteFolderWithBlankEmailField</testCaseId>
+      <testCaseId>Test Cases/InviteFolder/IF4_InviteFolderWithBlankEmailField</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>1cc60ddf-ee69-4096-8729-42796ccc8736</guid>
+      <guid>f6ed41fe-4b21-495c-8d7b-e4824e25bb6b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/InviteFolder/InviteFolderWithReadAndWritePermission</testCaseId>
+      <testCaseId>Test Cases/InviteFolder/IF5_InviteFolderWithReadAndWritePermission</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>11f4c47b-01dd-455a-b189-ed7d1edef8c5</guid>
+      <guid>24849b0f-f98c-4764-b889-405c1257843a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/InviteFolder/InviteFolderWithReadAndWritePermissionByThreeDotMenu</testCaseId>
+      <testCaseId>Test Cases/InviteFolder/IF6_InviteFolderWithReadAndWritePermissionByThreeDotMenu</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>1e809caa-33bc-4900-a8e9-474ce997cd65</guid>
+      <guid>18c42c97-a6f6-49b1-b199-7a7298f05e7a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/InviteFolder/InviteFolderWithReadOnlyPermission</testCaseId>
+      <testCaseId>Test Cases/InviteFolder/IF7_InviteFolderWithReadOnlyPermission</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>669c8a16-5b5e-4bf7-a022-af60f85d6aff</guid>
+      <guid>4bb52e18-f5fc-4485-9984-d1cf828b7760</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/InviteFolder/InviteFolderWithReadOnlyPermissionByThreeDotMenu</testCaseId>
+      <testCaseId>Test Cases/InviteFolder/IF8_InviteFolderWithReadOnlyPermissionByThreeDotMenu</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c4b91518-63e9-44c5-9647-065496f9241a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/InviteFolder/IF9_VerifyCrossIconButtonOnInvitePopup</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

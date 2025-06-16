@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>VerifyToRenameSpreadSheetFile</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>bd3e3bb7-f69c-4285-bca4-10d7a0c21b57</testCaseGuid>
-</TestCaseEntity>

@@ -12,21 +12,21 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>700d9ac4-20d6-489c-82c0-7eafbd9090cc</testSuiteGuid>
    <testCaseLink>
-      <guid>71eaa956-85d3-410d-a3d1-6e72f6f0c3f3</guid>
+      <guid>c898a793-5cae-4eb1-af0c-37f9fab1fec0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search/S1_VerifyDirectorySearchFunctionality</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>73c9cc47-28cc-478f-835a-3aa6bbc8d735</guid>
+      <guid>239612a6-330a-42d2-90ef-c3aa51e2a5ff</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search/S2_VerifySubDirectorySearchFunctionality</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>9774d35e-ede9-47f9-9589-d0d84431336d</guid>
+      <guid>acf33d69-5204-4401-9bf6-6bc868ddb52c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search/S3_VerifyInvalidSearch</testCaseId>

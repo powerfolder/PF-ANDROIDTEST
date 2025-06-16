@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>VerifyToRenameSubFolderWithExistingName</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>1c20a8a0-6659-4a2b-b3f9-79b4fe13ec4f</testCaseGuid>
-</TestCaseEntity>

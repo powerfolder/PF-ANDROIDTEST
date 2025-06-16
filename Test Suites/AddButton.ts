@@ -12,157 +12,157 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>a4a8b9f4-ee8f-4089-82ae-95a99f4cc258</testSuiteGuid>
    <testCaseLink>
-      <guid>ee100fb5-ec3c-4e39-9bac-cd83963caaf9</guid>
+      <guid>d4a44a63-44da-44fe-8001-8cbce9a4bb32</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyNewPresentation</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB10_VerifyToCreateSpreadsheetWithoutFileName</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>234c88bd-67a4-498c-abe1-49462f83ce03</guid>
+      <guid>bab38f22-d76f-48d5-a14d-d8cd9652c899</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyNewSpreadsheet</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB11_VerifyToCreateSubDirectory</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>e42b49d7-815e-4bf4-a2a6-08a52575d4c2</guid>
+      <guid>bf7f6634-4ea5-48ee-9a25-71daae38a794</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyNewTextFile</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB12_VerifyToCreateSubDirectoryWithoutFileName</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>41857bb0-2100-4aea-983f-63a91b833848</guid>
+      <guid>cc185073-4345-424f-939e-2a47c939b0b9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyTakePictureButton</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB13_VerifyToCreateTextFileWithoutFileName</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>19fb3faf-95c3-41c8-bd17-f74d53064413</guid>
+      <guid>b1b39bd7-ca3e-475c-86f5-61e15efd89bf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToCreateDocumentWithoutFileName</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB14_VerifyToEditDocumentFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>c8d7a2a2-5297-429b-abf3-ab6a10b9990d</guid>
+      <guid>6bb8a915-1783-4787-823b-f83802535718</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToCreateDuplicateSlideForPresentationFile</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB15_VerifyToEditLayoutOfPresentationFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>58ba360b-be11-4551-a81a-f463355eedf1</guid>
+      <guid>f0fe60f2-5154-4ecc-8bfe-90b85bcc64c9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToCreateDuplicateSubDirectory</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB16_VerifyToEditNewPresentationFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>27956cb3-3899-4756-8c0d-a2ca10c6aaf8</guid>
+      <guid>b9df93a1-8012-4e5d-94fc-0959e2182ffc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToCreateNewDocument</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB17_VerifyToEditNewSpreadsheetFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>17da4f31-f4f9-4692-a392-6d57a22f4c4b</guid>
+      <guid>aba6e8dc-e25a-4bcc-a4db-c2b9e0f9a909</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToCreatePresentationWithoutFileName</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB18_VerifyToEditNewTextFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>c6e03064-9e26-45b6-8929-55c2ea852b95</guid>
+      <guid>cfba5d2b-edbf-48ea-be52-e15b8a23dc5f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToCreateSpreadsheetWithoutFileName</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB19_VerifyToEditStyleOfPresentationFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>3b79ee30-455b-4696-b996-29f19ebc7bd7</guid>
+      <guid>71efd205-a1c1-4dc6-9aa2-03fc93f9c6e7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToCreateSubDirectory</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB1_VerifyNewPresentation</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>757c5fab-124a-4fba-bb97-f8e75952bfbb</guid>
+      <guid>b488293d-b357-4e74-a1b3-dea4c98c0d31</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToCreateSubDirectoryWithoutFileName</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB20_VerifyToEditThemeOfPresentationFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>b019ff0d-d035-480c-af1b-41032362b84b</guid>
+      <guid>2184120c-c5f1-4a23-8094-ec4160ea1ef2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToCreateTextFileWithoutFileName</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB21_VerifyToEditTransitionOfPresentationFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>77c9240f-6f2c-4a30-b0b7-353693eec27e</guid>
+      <guid>4b9a0967-6042-4c07-8763-adc14208e5ac</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToEditDocumentFile</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB22_VerifyUploadHereButton</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>64f1b8ee-80ea-4958-867b-9c68a18d11b2</guid>
+      <guid>06c80f6e-fd7a-4683-9bf4-c6c92892839d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToEditLayoutOfPresentationFile</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB2_VerifyNewSpreadsheet</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>e366751d-d656-4025-bbd8-f7260769c458</guid>
+      <guid>01fb7db2-6e07-408e-a0a5-59bb77ef0a35</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToEditNewPresentationFile</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB3_VerifyNewTextFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>c73d25ef-e61f-4620-b281-1a855adfc8c0</guid>
+      <guid>1882cb62-13f2-4dd1-98ef-66dd986aabcf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToEditNewSpreadsheetFile</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB4_VerifyTakePictureButton</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>b9f06c3d-b03c-47d3-9503-f6935e859222</guid>
+      <guid>1d8cf813-33d0-4bed-9aa4-dcf4fad1483a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToEditNewTextFile</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB5_VerifyToCreateDocumentWithoutFileName</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>b3c3d2ab-dee4-4278-a016-c29968336018</guid>
+      <guid>9a717155-f127-454b-9cdd-155a94d8a61d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToEditStyleOfPresentationFile</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB6_VerifyToCreateDuplicateSlideForPresentationFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>8fe07a24-be08-43d6-978a-38da8eb6c836</guid>
+      <guid>94d07681-3d00-4740-b19b-dedc305a73d9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToEditThemeOfPresentationFile</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB7_VerifyToCreateDuplicateSubDirectory</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>657d8e5b-6467-4ff3-8de5-62c0b684f739</guid>
+      <guid>7b9c14a7-603f-49f2-9386-a3204c0af55c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyToEditTransitionOfPresentationFile</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB8_VerifyToCreateNewDocument</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>5480bdbf-343a-4a3d-bc61-f4a9c48b4d1d</guid>
+      <guid>06ce9fca-4c92-40d1-9ecc-b7dd3cacee9d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddButton/VerifyUploadHereButton</testCaseId>
+      <testCaseId>Test Cases/AddButton/AB9_VerifyToCreatePresentationWithoutFileName</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

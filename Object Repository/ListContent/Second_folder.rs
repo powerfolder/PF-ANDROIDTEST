@@ -3,18 +3,23 @@
    <description></description>
    <name>Second_folder</name>
    <tag></tag>
-   <elementGuidId>e6084467-9a0c-4810-b3d6-25c1d221627a</elementGuidId>
+   <elementGuidId>3b93fd66-6dcc-491a-bc4f-d1e78bc80846</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>(//*[@class = 'android.widget.Image' and (@text = 'Icon' or . = 'Icon')])[2]</locator>
+   <locator>(//android.widget.Image[@text=&quot;root&quot;])[2]&#xd;
+</locator>
    <locatorCollection>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
       <entry>
          <key>IOS_CLASS_CHAIN</key>
          <value></value>
       </entry>
       <entry>
-         <key>CUSTOM</key>
+         <key>IMAGE</key>
          <value></value>
       </entry>
       <entry>
@@ -22,7 +27,7 @@
          <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
+         <key>CUSTOM</key>
          <value></value>
       </entry>
       <entry>
@@ -33,6 +38,10 @@
          <key>ATTRIBUTES</key>
       </entry>
       <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>ANDROID_VIEWTAG</key>
          <value></value>
       </entry>
@@ -41,20 +50,13 @@
          <value></value>
       </entry>
       <entry>
-         <key>IMAGE</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//android.widget.Image[@text=&quot;root&quot;])[2]&#xd;
+</value>
       </entry>
       <entry>
          <key>ANDROID_UI_AUTOMATOR</key>
          <value>new UiSelector()</value>
-      </entry>
-      <entry>
-         <key>NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CLASS_NAME</key>
-         <value></value>
       </entry>
    </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>

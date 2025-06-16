@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>VerifyNewTextFileOnWeb</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>26b79ddf-41bc-426b-ab98-e21b85ef7522</testCaseGuid>
-</TestCaseEntity>

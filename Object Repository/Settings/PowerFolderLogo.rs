@@ -3,16 +3,12 @@
    <description></description>
    <name>PowerFolderLogo</name>
    <tag></tag>
-   <elementGuidId>bad2e464-6264-4596-b477-7a13f33106f0</elementGuidId>
+   <elementGuidId>d24e13fd-981c-4819-a01e-eee6b87f2083</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//*[@class = 'android.widget.Image' and (@text = 'PowerFolder Logo' or . = 'PowerFolder Logo')]</locator>
+   <locator>//android.view.View[@content-desc=&quot;PowerFolder Logo&quot;]</locator>
    <locatorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>//*[@class = 'android.widget.Image' and (@text = 'PowerFolder Logo' or . = 'PowerFolder Logo')]</value>
-      </entry>
       <entry>
          <key>ATTRIBUTES</key>
       </entry>
@@ -25,6 +21,14 @@
          <value></value>
       </entry>
       <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>ID</key>
          <value></value>
       </entry>
@@ -33,27 +37,23 @@
          <value></value>
       </entry>
       <entry>
-         <key>ACCESSIBILITY</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>ANDROID_UI_AUTOMATOR</key>
          <value>new UiSelector()</value>
-      </entry>
-      <entry>
-         <key>IMAGE</key>
-         <value></value>
       </entry>
       <entry>
          <key>IOS_PREDICATE_STRING</key>
          <value></value>
       </entry>
       <entry>
-         <key>IOS_CLASS_CHAIN</key>
+         <key>XPATH</key>
+         <value>//android.view.View[@content-desc=&quot;PowerFolder Logo&quot;]</value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
          <value></value>
       </entry>
       <entry>
-         <key>CUSTOM</key>
+         <key>IMAGE</key>
          <value></value>
       </entry>
    </locatorCollection>

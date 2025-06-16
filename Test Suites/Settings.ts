@@ -12,35 +12,35 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>30b459d9-3dd3-4705-b319-679cd17c5f79</testSuiteGuid>
    <testCaseLink>
-      <guid>1a7464f1-b03b-404d-ba16-2e35c4c4fca5</guid>
+      <guid>75204956-2bad-47d2-918b-5b04de9a127c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Setting/SE1_VerifyClearCacheFunctionality</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>e2f35dd5-5efc-4333-9cff-a70702b8064f</guid>
+      <guid>8656e558-d2e6-47e6-b88d-6c79d6cec13e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Setting/SE2_VerifyLockCodeFunctionality</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>63e405e1-405b-49e5-952a-227e7c6eee83</guid>
+      <guid>d017c005-355c-4f3f-946b-0a54adbc4134</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Setting/SE3_VerifyLockCodeDeactivateFunctionality</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>6ea95373-77c6-442a-9edf-7402b83af61f</guid>
+      <guid>4b800cc3-da55-42c1-95db-f3dc866ab083</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Setting/SE4_VerifyToUpgradeAccountButtonShouldClickable</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>7f4f9a07-d1f9-4990-8b3b-a736759d8f89</guid>
+      <guid>0a10df82-5431-4c4b-ad94-2eaffebbab8a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Setting/SE5_VerifySyncFunctionality</testCaseId>

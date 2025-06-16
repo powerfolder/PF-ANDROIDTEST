@@ -3,18 +3,14 @@
    <description></description>
    <name>ThirdFolderDropDown</name>
    <tag></tag>
-   <elementGuidId>83bf513a-43fb-4bee-8f49-42211981be77</elementGuidId>
+   <elementGuidId>d0edb7a3-99df-4149-98bc-07c7e14c9935</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[3]</locator>
+   <locator>(//android.widget.Image[@text=&quot;dots&quot;])[3]</locator>
    <locatorCollection>
       <entry>
-         <key>IOS_PREDICATE_STRING</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>NAME</key>
+         <key>CLASS_NAME</key>
          <value></value>
       </entry>
       <entry>
@@ -22,7 +18,7 @@
          <value></value>
       </entry>
       <entry>
-         <key>ANDROID_VIEWTAG</key>
+         <key>IMAGE</key>
          <value></value>
       </entry>
       <entry>
@@ -30,8 +26,8 @@
          <value></value>
       </entry>
       <entry>
-         <key>ANDROID_UI_AUTOMATOR</key>
-         <value>new UiSelector()</value>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
       </entry>
       <entry>
          <key>CUSTOM</key>
@@ -41,20 +37,24 @@
          <key>ATTRIBUTES</key>
       </entry>
       <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>ID</key>
          <value></value>
       </entry>
       <entry>
-         <key>CLASS_NAME</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>XPATH</key>
-         <value>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[3]</value>
+         <value>(//android.widget.Image[@text=&quot;dots&quot;])[3]</value>
       </entry>
       <entry>
-         <key>IMAGE</key>
-         <value></value>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
       </entry>
    </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>

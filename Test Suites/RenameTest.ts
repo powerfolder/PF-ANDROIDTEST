@@ -12,66 +12,66 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>d12c0cad-8e52-495e-9ffe-e30611f68261</testSuiteGuid>
    <testCaseLink>
-      <guid>c93d9224-3de3-49e3-9693-bd5b69d29cf7</guid>
+      <guid>e92ab396-863c-481b-af9c-729ab9b5fbe4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/VerifyToRenameDocumentFile</testCaseId>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF1_VerifyToRenameDocumentFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>b91ae3c3-213f-480b-9d4f-557d2f460ef2</guid>
+      <guid>8c19d3ad-4eea-4f7a-bcae-b5ff5e63b97d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/VerifyToRenameFolderWithBlankField</testCaseId>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF2_VerifyToRenameFolderWithBlankField</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>c48a4f4d-ed53-4595-a008-985c59ea1c6b</guid>
+      <guid>dbeb4f08-e4ec-4cec-814a-eddbf23059b8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/VerifyToRenameFolderWithExistingName</testCaseId>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF3_VerifyToRenameFolderWithExistingName</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>228f96ad-5122-4ae2-bd86-aa8ee09b9f36</guid>
+      <guid>02f4f4f7-aba6-4278-bfad-5a0d33547359</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/VerifyToRenamePresentationFile</testCaseId>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF4_VerifyToRenamePresentationFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>0eeb916f-8f94-4726-b8f8-bbc2c42f6034</guid>
+      <guid>cfa4e2bb-4575-4d49-86de-b4dda09c829c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/VerifyToRenameSpreadSheetFile</testCaseId>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF5_VerifyToRenameSpreadSheetFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>638553da-5f41-493d-af95-b04a0f19276b</guid>
+      <guid>9e460287-b033-4b5a-a4c0-43aaebea2331</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/VerifyToRenameSubFolder</testCaseId>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF6_VerifyToRenameSubFolder</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>22a30011-2aa2-4647-a5ef-bc37c9a6adea</guid>
+      <guid>5f6907a0-93c8-454f-bcf3-1cd2e345f8b4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/VerifyToRenameSubFolderWithBlankField</testCaseId>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF7_VerifyToRenameSubFolderWithBlankField</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>4cfeef36-2244-4d30-a981-da43d22a4705</guid>
+      <guid>09e9a299-d1e9-499f-b060-ddf7385b6099</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/VerifyToRenameSubFolderWithExistingName</testCaseId>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF8_VerifyToRenameSubFolderWithExistingName</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>76fa57cb-f2ad-4f8b-a638-df43c75aae11</guid>
+      <guid>053ab43c-ba48-4286-a634-9790ae288f66</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/VerifyToRenameTextFile</testCaseId>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF9_VerifyToRenameTextFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

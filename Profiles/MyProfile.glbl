@@ -36,27 +36,27 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>1358</initValue>
+      <initValue>1364</initValue>
       <name>plusIcontapY</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>369</initValue>
+      <initValue>471</initValue>
       <name>PresentationEditButtontapX</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>171</initValue>
+      <initValue>228</initValue>
       <name>PresentationEditButtontapY</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>375</initValue>
+      <initValue>368</initValue>
       <name>SpreadSheetEditButtontapX</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>184</initValue>
+      <initValue>212</initValue>
       <name>SpreadSheetEditButtontapY</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
