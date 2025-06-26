@@ -6,12 +6,12 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'ajit091@gmail.com'</initValue>
+      <initValue>'qa@powerfolder.com'</initValue>
       <name>userid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Alexa@131190'</initValue>
+      <initValue>'PowerFolder12345!'</initValue>
       <name>password</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
