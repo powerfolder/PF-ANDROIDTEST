@@ -62,8 +62,9 @@ Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
 
 //Verifying duplicate alert message
-String duplicateAlertMsg = Mobile.getText(findTestObject('CreateNewFile/DuplicateAlertMsg'), 30)
-Mobile.verifyEqual(duplicateAlertMsg, 'Cannot create directory')
+boolean duplicateAlertMsg = Mobile.getText(findTestObject('CreateNewFile/DuplicateAlertMsg'), 30)
+assert duplicateAlertMsg == true
+Mobile.pressBack()
 
 // delete created sub directory
 Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)

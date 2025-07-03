@@ -3,34 +3,31 @@
    <description></description>
    <name>DuplicateAlertMsg</name>
    <tag></tag>
-   <elementGuidId>9da24b0a-8183-4b20-bbc3-e1c2d92fc076</elementGuidId>
+   <elementGuidId>9b06b4a3-f925-43d9-b794-940eb3078e3e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//*[@class = 'android.widget.TextView' and (@text = 'Cannot create directory' or . = 'Cannot create directory')]</locator>
+   <locator>//*[@class = 'android.widget.TextView' and (@text = 'A file or folder with this name already exists. Please choose a different name or modify the existing one.' or . = 'A file or folder with this name already exists. Please choose a different name or modify the existing one.')]</locator>
    <locatorCollection>
       <entry>
-         <key>ATTRIBUTES</key>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@class = 'android.widget.TextView' and (@text = 'Cannot create directory' or . = 'Cannot create directory')]</value>
-      </entry>
-      <entry>
-         <key>IOS_PREDICATE_STRING</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CUSTOM</key>
-         <value></value>
+         <value>//*[@class = 'android.widget.TextView' and (@text = 'A file or folder with this name already exists. Please choose a different name or modify the existing one.' or . = 'A file or folder with this name already exists. Please choose a different name or modify the existing one.')]</value>
       </entry>
       <entry>
          <key>ACCESSIBILITY</key>
          <value></value>
       </entry>
       <entry>
-         <key>ANDROID_UI_AUTOMATOR</key>
-         <value>new UiSelector()</value>
+         <key>ID</key>
+         <value></value>
       </entry>
       <entry>
          <key>IOS_CLASS_CHAIN</key>
@@ -41,11 +38,11 @@
          <value></value>
       </entry>
       <entry>
-         <key>ID</key>
+         <key>CUSTOM</key>
          <value></value>
       </entry>
       <entry>
-         <key>ANDROID_VIEWTAG</key>
+         <key>IOS_PREDICATE_STRING</key>
          <value></value>
       </entry>
       <entry>
@@ -53,7 +50,10 @@
          <value></value>
       </entry>
       <entry>
-         <key>IMAGE</key>
+         <key>ATTRIBUTES</key>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
          <value></value>
       </entry>
    </locatorCollection>

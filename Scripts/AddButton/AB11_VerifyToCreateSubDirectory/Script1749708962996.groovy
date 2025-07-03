@@ -29,9 +29,9 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
 		login()
 	}
-	// click on home icon button 
-	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(3)}
+// click on home icon button 
+Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
+Mobile.delay(3)}
 Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 Mobile.delay(3)
 

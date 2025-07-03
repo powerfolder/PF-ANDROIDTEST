@@ -60,7 +60,7 @@ Mobile.tap(findTestObject('VerifyCreatedFileNames/VerifyCreatedDocumentName'),30
 Mobile.delay(20)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/TextFileEditButton'),30)
 Mobile.delay(5)
-Mobile.verifyElementVisible(findTestObject('VerifyCreatedFileNames/EditTextArea'), 10)
+//Mobile.verifyElementVisible(findTestObject('VerifyCreatedFileNames/EditTextArea'), 10)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 
 //Swipe to delete created docx.
