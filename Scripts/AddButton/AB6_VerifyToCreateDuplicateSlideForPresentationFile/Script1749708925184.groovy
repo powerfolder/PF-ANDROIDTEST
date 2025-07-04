@@ -85,6 +85,7 @@ Mobile.tap(findTestObject('EditPresentationFile/DuplicateSlideButton'),30)
 Mobile.delay(2)
 Mobile.swipe(360, 1247, 360, 1600)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
+Mobile.delay(5)
 
 //Swipe to delete created docx.
 Mobile.swipe(402, 351, 140, 351)

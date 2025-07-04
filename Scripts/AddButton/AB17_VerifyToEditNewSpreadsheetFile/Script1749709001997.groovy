@@ -62,9 +62,12 @@ Mobile.tapAtPosition(GlobalVariable.SpreadSheetEditButtontapX,GlobalVariable.Spr
 Mobile.delay(5)
 Mobile.verifyElementVisible(findTestObject('VerifyCreatedFileNames/CellDropDown'), 10)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
+Mobile.delay(5)
 
 //Swipe to delete created docx.
-Mobile.swipe(402, 351, 140, 351)
+//Mobile.swipe(402, 351, 140, 351)
+Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)
+Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(2)

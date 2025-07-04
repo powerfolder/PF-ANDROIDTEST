@@ -67,6 +67,7 @@ Mobile.tap(findTestObject('EditPresentationFile/Transitions'),30)
 Mobile.delay(3)
 Mobile.verifyElementExist(findTestObject('EditPresentationFile/HeaderOfTransitionPopup'), 10)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
+Mobile.delay(5)
 
 //Swipe to delete created docx.
 Mobile.swipe(402, 351, 140, 351)

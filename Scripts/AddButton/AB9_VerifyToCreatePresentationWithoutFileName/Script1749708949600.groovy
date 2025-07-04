@@ -28,34 +28,33 @@ if(GlobalVariable.isExistingApp) {
 	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
 		login()
 	}
-	// click on home icon button 
-	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(3)}
+// click on home icon button 
+Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
+Mobile.delay(3)}
+Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 	
-	Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
+// Click on plus icon button and select new presentation
+Mobile.delay(3)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
+Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewPresentation'),5)
+Mobile.tap(findTestObject('PlusIconMenus/NewPresentation'), 30)
+Mobile.delay(3)
 	
-	// Click on plus icon button and select new presentation
-	Mobile.delay(3)
-	Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
-	Mobile.delay(3)
-	Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewPresentation'),5)
-	Mobile.tap(findTestObject('PlusIconMenus/NewPresentation'), 30)
-	Mobile.delay(3)
+//Create and verify new file without name
+Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'),5)
+Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
+Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "", 30)
+Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
+String alertMsg = Mobile.getText(findTestObject('CreateNewFile/ValidFieldAlertMsg'), 30)
+Mobile.verifyEqual(alertMsg, 'Please enter valid file name')
+Mobile.pressBack()
+Mobile.delay(2)
 	
-	//Create and verify new file without name
-	Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'),5)
-	Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
-	Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "", 30)
-	Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
-	String alertMsg = Mobile.getText(findTestObject('CreateNewFile/ValidFieldAlertMsg'), 30)
-	Mobile.verifyEqual(alertMsg, 'Please enter valid file name')
-	Mobile.pressBack()
-	Mobile.delay(2)
+//Closing application
+Mobile.closeApplication()
 	
-	//Closing application
-	Mobile.closeApplication()
-	
-	def login() {
+def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)

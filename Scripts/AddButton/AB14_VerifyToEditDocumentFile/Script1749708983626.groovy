@@ -29,9 +29,9 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
 		login()
 	}
-	// click on home icon button 
-	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(3)}
+// click on home icon button 
+Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
+Mobile.delay(3)}
 Mobile.tap(findTestObject('ListContent/Second_folder'), 30)
 
 // click on plus icon and select new document 
@@ -60,11 +60,15 @@ Mobile.tap(findTestObject('VerifyCreatedFileNames/VerifyCreatedDocumentName'),30
 Mobile.delay(20)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/TextFileEditButton'),30)
 Mobile.delay(5)
+
 //Mobile.verifyElementVisible(findTestObject('VerifyCreatedFileNames/EditTextArea'), 10)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
+Mobile.delay(5)
 
 //Swipe to delete created docx.
-Mobile.swipe(402, 351, 140, 351)
+//Mobile.swipe(402, 351, 140, 351)
+Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)
+Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(1)

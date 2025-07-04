@@ -67,9 +67,12 @@ Mobile.tap(findTestObject('EditPresentationFile/Style'),30)
 Mobile.delay(3)
 Mobile.verifyElementExist(findTestObject('EditPresentationFile/HeaderOfStylePopup'), 10)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
+Mobile.delay(5)
 
 //Swipe to delete created docx.
-Mobile.swipe(402, 351, 140, 351)
+//Mobile.swipe(402, 351, 140, 351)
+Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)
+Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(1)

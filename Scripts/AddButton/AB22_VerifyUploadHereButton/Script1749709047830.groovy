@@ -48,7 +48,7 @@ Mobile.delay(3)
 
 // Selecting file from the device 
 Mobile.tap(findTestObject('CreateNewFile/SelectUploadFileFromDevice'), 30)
-Mobile.delay(10)
+Mobile.delay(20)
 
 // swipe to delete text file
 Mobile.swipe(402, 351, 140, 351)
