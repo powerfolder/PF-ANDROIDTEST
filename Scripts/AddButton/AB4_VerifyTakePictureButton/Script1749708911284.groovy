@@ -44,8 +44,8 @@ Mobile.tap(findTestObject('PlusIconMenus/TakePicture'), 30)
 Mobile.delay(3)
 Mobile.pressBack()
 
-//closing application
-Mobile.closeApplication()
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
