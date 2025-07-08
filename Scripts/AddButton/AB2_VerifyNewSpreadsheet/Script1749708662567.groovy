@@ -67,7 +67,7 @@ if (alertMsg.contains('Deleted Test Document.xlsx')) {
 }
 
 //Closing application 
-Mobile.closeApplication()
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
