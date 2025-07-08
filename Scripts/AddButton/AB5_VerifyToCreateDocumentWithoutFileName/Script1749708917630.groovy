@@ -53,8 +53,8 @@ if(GlobalVariable.isExistingApp) {
 	Mobile.pressBack()
 	Mobile.delay(2)
 	
-	//Closing application
-	Mobile.closeApplication()
+	//logout and close app
+    WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 	
 	def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
