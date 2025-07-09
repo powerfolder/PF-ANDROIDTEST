@@ -53,31 +53,8 @@ Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 
 Mobile.delay(3)
 
-// logout from the application 
-Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-
-Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
-
-Mobile.delay(3)
-
-Mobile.verifyElementExist(findTestObject('ThreeDotsMenu/android.widget.TextView - Username'), 0)
-
-Mobile.verifyElementExist(findTestObject('ThreeDotsMenu/android.widget.TextView - qapowerfolder.com'), 0)
-
-Mobile.verifyElementText(findTestObject('ThreeDotsMenu/android.widget.TextView - qapowerfolder.com'), 'qa@powerfolder.com')
-
-Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
-
-String confirmationMessage = Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
-
-Mobile.tap(findTestObject('Settings/LogoutConfirmationYes'), 30)
-
-Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?')
-
-Mobile.delay(3)
-
-// clossing application
-Mobile.closeApplication()
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 def logout() {
     Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)

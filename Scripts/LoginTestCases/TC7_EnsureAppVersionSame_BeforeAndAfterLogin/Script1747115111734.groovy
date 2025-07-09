@@ -67,8 +67,9 @@ println("Cleaned MyAccount Version: " + myAccountVersion)
 // verify version match
 Mobile.verifyMatch(loginScreenVersion, myAccountVersion, false)
 
-// clossing application
-Mobile.closeApplication()
+Mobile.tap(findTestObject('MainScreen/PowerFolderHomeButton'), 45)
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 def  logout() {
 	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
