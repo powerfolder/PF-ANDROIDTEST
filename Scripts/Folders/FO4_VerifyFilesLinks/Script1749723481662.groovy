@@ -56,8 +56,8 @@ if (link.contains('https://titan.powerfolder.net')) {
 Mobile.delay(5)*/
 Mobile.pressBack()
 
-// closing application
-Mobile.closeApplication()
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 
 def login() {
