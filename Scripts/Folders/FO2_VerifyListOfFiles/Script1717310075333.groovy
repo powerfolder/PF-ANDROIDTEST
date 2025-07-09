@@ -43,7 +43,8 @@ String List2 = Mobile.getText(findTestObject('ListContent/Content2'), 30)
 //Mobile.verifyEqual(List1, 'Mobile Uploads')
 Mobile.delay(2)
 
-Mobile.closeApplication()
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 
 def login() {
