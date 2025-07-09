@@ -34,7 +34,7 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 }
 
-// enter inavlid or wrong password
+// enter invalid or wrong password
 Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
 Mobile.setText(findTestObject('LoginScreen/InputPassword'), 'WrongPassword', 30)
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
