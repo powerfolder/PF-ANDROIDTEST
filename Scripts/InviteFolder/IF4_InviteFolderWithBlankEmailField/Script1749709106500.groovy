@@ -43,7 +43,8 @@ String permissionAlertText= Mobile.getText(findTestObject('InviteFolder/VerifyBl
 Mobile.verifyEqual(permissionAlertText, 'Please enter an email address first.')
 Mobile.tap(findTestObject('InviteFolder/CancelButton'), 0)
 
-Mobile.closeApplication()
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
