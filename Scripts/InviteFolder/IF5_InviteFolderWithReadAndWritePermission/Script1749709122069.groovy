@@ -65,7 +65,8 @@ Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)
 String permissionAlertText= Mobile.getText(findTestObject('InviteFolder/VerifyInvitationSentText'), 30)
 Mobile.verifyEqual(permissionAlertText, 'Invitation sent')
 
-Mobile.closeApplication()
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
