@@ -40,7 +40,8 @@ Mobile.tap(findTestObject('ThreeDotsMenu/DownloadAll'), 45)
 Mobile.delay(1)
 /*String alertTextForDownloadAll= Mobile.getText(findTestObject('SwipeElements/VerifyDownloadAlertMsg'), 30)
 Mobile.verifyEqual(alertTextForDownloadAll, 'Checking files..This may take a while.')*/
-Mobile.closeApplication()
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
