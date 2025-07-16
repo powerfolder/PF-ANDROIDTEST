@@ -44,8 +44,8 @@ Mobile.delay(3)
 // verifying no result found text
 Mobile.verifyElementExist(findTestObject('Search/VerifyNoResultFoundText'), 10)
 
-// closing application
-Mobile.closeApplication()
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
