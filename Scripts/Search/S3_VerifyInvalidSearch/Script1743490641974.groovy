@@ -40,12 +40,12 @@ Mobile.setText(findTestObject('Search/SearchInput'), 'InvalidSearch', 30)
 Mobile.delay(5)
 Mobile.pressKeyCode('ENTER', FailureHandling.CONTINUE_ON_FAILURE)
 Mobile.delay(3)
-
 // verifying no result found text
 Mobile.verifyElementExist(findTestObject('Search/VerifyNoResultFoundText'), 10)
 
-//logout and close app
-WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+Mobile.delay(3)
+// clossing application
+Mobile.closeApplication()
 
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)

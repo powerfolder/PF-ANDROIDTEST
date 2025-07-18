@@ -33,6 +33,7 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	
 	//Get app version on Login screen
 	Mobile.delay(3)
+	Mobile.hideKeyboard()
 	loginScreenVersion = Mobile.getText(findTestObject('LoginScreen/GetAppVersion'),30)
 
 	// click on enter server URL
@@ -67,9 +68,8 @@ println("Cleaned MyAccount Version: " + myAccountVersion)
 // verify version match
 Mobile.verifyMatch(loginScreenVersion, myAccountVersion, false)
 
-Mobile.tap(findTestObject('MainScreen/PowerFolderHomeButton'), 45)
-//logout and close app
-WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+// clossing application
+Mobile.closeApplication()
 
 def  logout() {
 	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)

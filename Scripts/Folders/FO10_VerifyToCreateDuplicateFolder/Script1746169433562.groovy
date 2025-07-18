@@ -69,6 +69,7 @@ Mobile.pressBack()
 
 // delete created sub directory
 Mobile.tap(findTestObject('ThreeDotsMenu/ThirdFolderDropDown'), 30)
+Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)
