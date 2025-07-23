@@ -69,6 +69,7 @@ Mobile.pressBack()
 
 // delete created sub directory
 Mobile.tap(findTestObject('ThreeDotsMenu/ThirdFolderDropDown'), 30)
+Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)
@@ -81,8 +82,8 @@ if (alertMsg.contains('Deleted')) {
 	print('File not deleted')
 }
 
-// closing application
-Mobile.closeApplication()
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)

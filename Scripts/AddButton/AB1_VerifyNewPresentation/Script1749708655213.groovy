@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 if (GlobalVariable.isExistingApp) {
-    Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE // click on home icon button 
+    Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE 
         )
 } else {
     String applocation = (RunConfiguration.getProjectDir() + '/apks/') + GlobalVariable.AppName
