@@ -15,6 +15,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.testobject.ConditionType
 import org.openqa.selenium.Keys as Keys
 
 import com.kms.katalon.core.configuration.RunConfiguration
@@ -42,47 +43,66 @@ Mobile.delay(3)
 Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewTextFile'),10)
 Mobile.tap(findTestObject('PlusIconMenus/NewTextFile'), 30)
 Mobile.delay(3)
+// ================== Create New Text File ==================
+String documentName = "Test Document " + System.currentTimeMillis()
 
-// Create new text file and verify .txt extension
 Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
 Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
-Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
-Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
-Mobile.delay(10)
-Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
-Mobile.delay(5)
-String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/VerifyCreatedTextFileName'), 30)
-Mobile.verifyEqual(getFolderName, 'Test Document.txt')
+Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), documentName, 30)
+Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'), 30)
 
-// Swipe to verify move
-Mobile.swipe(402, 351, 140, 351)
-Mobile.delay(3)
+Mobile.delay(10)
+Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'), 30)
+Mobile.delay(5)
+
+// ================== Verify Created File Name ==================
+String expectedFolderName = documentName
+TestObject dynamicFolder = new TestObject()
+dynamicFolder.addProperty("xpath", ConditionType.EQUALS,
+	"//*[@class = 'android.widget.TextView' and (@text = '${expectedFolderName}.txt' or . = '${expectedFolderName}.txt')]")
+
+String getFolderName = Mobile.getText(dynamicFolder, 30)
+Mobile.verifyEqual(getFolderName, expectedFolderName+ ".txt")
+
+// ================== Get Element Coordinates ==================
+int startX = Mobile.getElementLeftPosition(dynamicFolder, 10)
+int startY = Mobile.getElementTopPosition(dynamicFolder, 10)
+int elementWidth = Mobile.getElementWidth(dynamicFolder, 10)
+int elementHeight = Mobile.getElementHeight(dynamicFolder, 10)
+int centerY = startY + (elementHeight / 2)
+
+// ================== Swipe Right to Left (Move Action) ==================
+int moveFromX = startX + elementWidth - 10
+int moveToX = startX + 10
+
+Mobile.swipe(moveFromX, centerY, moveToX, centerY)
+Mobile.delay(1)
+
 Mobile.tap(findTestObject('SwipeElements/MoveIcon'), 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('Folder_Menu/VerifyshareLinkButton'), 30)
 
-/*String link = Mobile.getText(findTestObject('Folder_Menu/FloderLink'), 30)
-if (link.contains('https://titan.powerfolder.net')) {
-	println(link)
-}else {
-	print('The header link is not present')
-}*/
 Mobile.delay(3)
 Mobile.pressBack()
 Mobile.delay(5)
 
-// swipe to delete text file
-Mobile.swipe(402, 351, 140, 351)
+// ================== Swipe Right to Left (Delete Action) ==================
+int deleteFromX = startX + elementWidth - 10
+int deleteToX = startX + 10
+
+Mobile.swipe(deleteFromX, centerY, deleteToX, centerY)
+Mobile.delay(1)
+
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)
 
-// Verifying delete alert message
+// ================== Verify Delete Alert Message ==================
 String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
 if (alertMsg.contains('Deleted')) {
 	println(alertMsg)
-}else {
-	print('File not deleted')
+} else {
+	println('File not deleted')
 }
 
 //logout and close app

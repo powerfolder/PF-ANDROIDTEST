@@ -15,6 +15,11 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.testobject.ConditionType
+import com.kms.katalon.core.testobject.TestObject
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory
 import org.openqa.selenium.Keys as Keys
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -47,37 +52,62 @@ Mobile.delay(3)
 // Create new text file and verify .txt extension
 Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
 Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
-String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date())
-String randomDocName = "TestDoc_" + timestamp
+String randomDocName = "TestDoc_ " + System.currentTimeMillis()
+//String randomDocName = "TestDoc_" + timestamp
 Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), randomDocName, 30)
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
 Mobile.delay(10)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(5)
 
-//Swape for save file
-Mobile.swipe(140, 351, 402, 351)
+// Create TestObject using dynamic folder/document name
+TestObject testFolder = new TestObject()
+testFolder.addProperty("xpath", ConditionType.EQUALS,
+	"//*[@class = 'android.widget.TextView' and (@text = '${randomDocName}.txt'  or . = '${randomDocName}.txt')]")
+
+// Get element position and size
+int startX = Mobile.getElementLeftPosition(testFolder, 10)
+int startY = Mobile.getElementTopPosition(testFolder, 10)
+int elementWidth = Mobile.getElementWidth(testFolder, 10)
+int elementHeight = Mobile.getElementHeight(testFolder, 10)
+
+// Calculate common swipe center
+int centerY = startY + (elementHeight / 2)
+
+// ================== Swipe Left to Right (for Save action) ==================
+int leftToRight_FromX = startX + 10
+int leftToRight_ToX = startX + elementWidth - 10
+
+Mobile.swipe(leftToRight_FromX, centerY, leftToRight_ToX, centerY)
 Mobile.delay(1)
-Mobile.verifyElementExist(findTestObject('SwipeElements/SaveIcon'),10)
+
+// Verify and tap Save icon
+Mobile.verifyElementExist(findTestObject('SwipeElements/SaveIcon'), 10)
 Mobile.tap(findTestObject('SwipeElements/SaveIcon'), 30)
 
-// verify alert message as File successfully saved to "Downloads
+// Verify alert message for Save
 Mobile.delay(1)
-String alertTextForSaveFile= Mobile.getText(findTestObject('SwipeElements/VerifySaveFileAlertMsg'), 30)
+String alertTextForSaveFile = Mobile.getText(findTestObject('SwipeElements/VerifySaveFileAlertMsg'), 30)
 Mobile.verifyEqual(alertTextForSaveFile, 'File successfully saved to "Downloads"')
 
-// swipe to delete text file
-Mobile.swipe(402, 351, 140, 351)
+// ================== Swipe Right to Left (for Delete action) ==================
+int rightToLeft_FromX = startX + elementWidth - 10
+int rightToLeft_ToX = startX + 10
+
+Mobile.swipe(rightToLeft_FromX, centerY, rightToLeft_ToX, centerY)
+Mobile.delay(1)
+
+// Tap Delete icon and confirm
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)
 
-// Verifying delete alert message
+// Verify Delete alert message
 String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
 if (alertMsg.contains('Deleted')) {
 	println(alertMsg)
-}else {
-	print('File not deleted')
+} else {
+	println('File not deleted')
 }
 
 //logout and close app

@@ -14,7 +14,20 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import internal.GlobalVariable as GlobalVariable
+import internal.GlobalVariable
+import io.appium.java_client.touch.WaitOptions
+import io.appium.java_client.touch.offset.PointOption
+import java.time.Duration
+import com.kms.katalon.core.testobject.ConditionType
+import com.kms.katalon.core.testobject.TestObject
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory
+import org.openqa.selenium.By
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
+import java.time.Duration;
+import org.openqa.selenium.By
 import org.openqa.selenium.Keys as Keys
 
 import com.kms.katalon.core.configuration.RunConfiguration
@@ -43,17 +56,39 @@ Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'),10)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
 Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'),5)
 Mobile.delay(1)
-Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
+
+String folderName = "Test Folder " + System.currentTimeMillis()
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), folderName, 30)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
 Mobile.delay(5)
 
 //Verifying new directory name
-String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
-Mobile.verifyEqual(getFolderName, 'Test Folder')
-Mobile.delay(5)
+String expectedFolderName =   folderName
+// Create dynamic TestObject for that folder name
+TestObject dynamicFolder = new TestObject()
+dynamicFolder.addProperty("xpath", ConditionType.EQUALS, "//*[@class = 'android.widget.TextView' and (@text = '${expectedFolderName}' or . = '${expectedFolderName}')]")
+// Get the actual text displayed on UI
+String getFolderName = Mobile.getText(dynamicFolder, 30)
+// Verify
+Mobile.verifyEqual(getFolderName, expectedFolderName)
 
-// Delete diretory with the help of swape method
-Mobile.swipe(402, 351, 140, 351)
+// Find the element 
+TestObject testFolder = new TestObject().addProperty("xpath", ConditionType.EQUALS, "//*[@class = 'android.widget.TextView' and (@text = '${folderName}' or . = '${folderName}')]")
+// Get element position and size
+int startX = Mobile.getElementLeftPosition(testFolder, 10)
+int startY = Mobile.getElementTopPosition(testFolder, 10)
+int elementWidth = Mobile.getElementWidth(testFolder, 10)
+int elementHeight = Mobile.getElementHeight(testFolder, 10)
+
+// Right to left swipe
+int fromX = startX + elementWidth - 10
+int toX = startX + 10
+int centerY = startY + (elementHeight / 2)
+
+// Perform swipe
+Mobile.swipe(fromX, centerY, toX, centerY)
+
+//Mobile.swipe(402, 351, 140, 351)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 
