@@ -3,7 +3,7 @@
    <description></description>
    <name>DropdownUnderFolder</name>
    <tag></tag>
-   <elementGuidId>16f86804-7147-4897-a660-d06a60dd07f3</elementGuidId>
+   <elementGuidId>cf3a36ca-ea89-41fe-be99-1b6c42d82439</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -13,8 +13,59 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[1]</value>
-      <webElementGuid>09b8e659-71d7-41ad-a749-6fb84d391382</webElementGuid>
+      <webElementGuid>3bf14525-d1ff-40cb-834b-593d48938ca5</webElementGuid>
    </webElementProperties>
-   <locator>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[1]</locator>
+   <locator>//*[@class = 'android.widget.Image' and (@text = 'dots' or . = 'dots')]</locator>
+   <locatorCollection>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.widget.Image' and (@text = 'dots' or . = 'dots')]</value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+         <value>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[1]</value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+   </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>
+   <platform>ANDROID</platform>
 </MobileElementEntity>

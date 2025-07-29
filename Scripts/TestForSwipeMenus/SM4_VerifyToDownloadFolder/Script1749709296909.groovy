@@ -16,8 +16,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
-
+import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.configuration.RunConfiguration
 
 if(GlobalVariable.isExistingApp) {
@@ -33,15 +32,78 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	// click on home icon button 
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 	Mobile.delay(3)}
+Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
 
-//Swipe to download folder
-Mobile.swipe(140, 351, 402, 351)
+// Create new directory with the help of plus icon coordinates
+Mobile.delay(3)
+Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
+Mobile.delay(3)
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'),10)
+Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
+Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'),5)
+Mobile.delay(1)
+
+String folderName = "Test Folder " + System.currentTimeMillis()
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), folderName, 30)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
+Mobile.delay(5)
+
+//Verifying new directory name
+String expectedFolderName =   folderName
+// Create dynamic TestObject for that folder name
+TestObject dynamicFolder = new TestObject()
+dynamicFolder.addProperty("xpath", ConditionType.EQUALS, "//*[@class = 'android.widget.TextView' and (@text = '${expectedFolderName}' or . = '${expectedFolderName}')]")
+// Get the actual text displayed on UI
+String getFolderName = Mobile.getText(dynamicFolder, 30)
+// Verify
+Mobile.verifyEqual(getFolderName, expectedFolderName)
+
+// Get the folder by xpath
+TestObject testFolder = new TestObject()
+testFolder.addProperty("xpath", ConditionType.EQUALS,
+	"//*[@class = 'android.widget.TextView' and (@text = '${folderName}' or . = '${folderName}')]")
+
+// Get element position and size
+int startX = Mobile.getElementLeftPosition(testFolder, 10)
+int startY = Mobile.getElementTopPosition(testFolder, 10)
+int elementWidth = Mobile.getElementWidth(testFolder, 10)
+int elementHeight = Mobile.getElementHeight(testFolder, 10)
+
+// Calculate common swipe center
+int centerY = startY + (elementHeight / 2)
+
+// ================== Swipe Left to Right (For Download button) ==================
+int leftToRight_FromX = startX + 10
+int leftToRight_ToX = startX + elementWidth - 10
+
+Mobile.swipe(leftToRight_FromX, centerY, leftToRight_ToX, centerY)
+Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DownloadIcon'), 30)
 Mobile.delay(1)
 
 //verifying downlaod alert message
 /*String alertTextForSaveFile= Mobile.getText(findTestObject('SwipeElements/VerifyDownloadAlertMsg'), 30)
 Mobile.verifyEqual(alertTextForSaveFile, 'Checking files..This may take a while.')*/
+
+// ================== Swipe Right to Left (for Delete action) ==================
+int rightToLeft_FromX = startX + elementWidth - 10
+int rightToLeft_ToX = startX + 10
+
+Mobile.swipe(rightToLeft_FromX, centerY, rightToLeft_ToX, centerY)
+Mobile.delay(1)
+
+// Tap Delete icon and confirm
+Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
+Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
+Mobile.delay(3)
+
+// Verify Delete alert message
+String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
+if (alertMsg.contains('Deleted')) {
+	println(alertMsg)
+} else {
+	println('File not deleted')
+}
 
 //logout and close app
 WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)

@@ -50,8 +50,8 @@ Mobile.delay(3)
 Mobile.tap(findTestObject('CreateNewFile/SelectUploadFileFromDevice'), 30)
 Mobile.delay(20)
 
-// swipe to delete text file
-Mobile.swipe(402, 351, 140, 351)
+// Delete Uploaded file
+Mobile.tap(findTestObject('Folder_Menu/DropdownUnderFolder'), 30)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)

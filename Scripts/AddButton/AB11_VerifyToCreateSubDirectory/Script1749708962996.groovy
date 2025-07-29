@@ -16,7 +16,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
+import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.configuration.RunConfiguration
 
 if(GlobalVariable.isExistingApp) {
@@ -42,24 +42,32 @@ Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'),5)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
 Mobile.delay(3)
 Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'),5)
-Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
-Mobile.delay(3)
+String folderName = "Test Folder " + System.currentTimeMillis()
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), folderName, 30)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
-
-//Verifying Created sub directory
-Mobile.delay(5)
-String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
-Mobile.verifyEqual(getFolderName, 'Test Folder')
 Mobile.delay(5)
 
-// deleting create sub directory by three dot drop down menu 
-Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)
+//Verifying new directory name
+String expectedFolderName =   folderName
+// Create dynamic TestObject for that folder name
+TestObject dynamicFolder = new TestObject()
+dynamicFolder.addProperty("xpath", ConditionType.EQUALS, "//*[@class = 'android.widget.TextView' and (@text = '${expectedFolderName}' or . = '${expectedFolderName}')]")
+// Get the actual Folder name
+String getFolderName = Mobile.getText(dynamicFolder, 30)
+// Verify
+Mobile.verifyEqual(getFolderName, expectedFolderName)
+
+// delete created file
+TestObject threeDot = new TestObject()
+threeDot.addProperty("xpath", ConditionType.EQUALS,
+	"//*[@class = 'android.widget.TextView' and (@text = '${folderName}'  or . = '${folderName}')]/following::android.widget.Image[@text='dots'][1]")
+Mobile.tap(threeDot, 30)
 Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
-Mobile.delay(1)
+Mobile.delay(3)
 
-// Asserting delete alert message
+// verifying delete alert message
 String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
 if (alertMsg.contains('Deleted')) {
 	println(alertMsg)

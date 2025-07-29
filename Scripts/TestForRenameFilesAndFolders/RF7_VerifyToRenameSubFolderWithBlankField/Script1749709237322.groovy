@@ -49,41 +49,49 @@ Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'),10)
 Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
 Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'),5)
 Mobile.delay(1)
-Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
+String folderName = "Test Folder " + System.currentTimeMillis()
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), folderName, 30)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
 Mobile.delay(5)
 
-// verifying folder with there name
-String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
-Mobile.verifyEqual(getFolderName, 'Test Folder')
-Mobile.delay(5)
+//Verifying new directory name
+String expectedFolderName =   folderName
+// Create dynamic TestObject for that folder name
+TestObject dynamicFolder = new TestObject()
+dynamicFolder.addProperty("xpath", ConditionType.EQUALS, "//*[@class = 'android.widget.TextView' and (@text = '${expectedFolderName}' or . = '${expectedFolderName}')]")
+// Get the actual Folder name
+String getFolderName = Mobile.getText(dynamicFolder, 30)
+// Verify
+Mobile.verifyEqual(getFolderName, expectedFolderName)
 
 // Rename flow
-Mobile.swipe(402, 351, 140, 351)
-Mobile.delay(2)
+TestObject threeDot = new TestObject()
+threeDot.addProperty("xpath", ConditionType.EQUALS, "//*[@class = 'android.widget.TextView' and (@text = '${expectedFolderName}' or . = '${expectedFolderName}')]/following::android.widget.Image[@text='dots'][1]")
+Mobile.tap(threeDot, 30)
 Mobile.tap(findTestObject('SwipeElements/RenameIcon'), 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('SwipeElements/CrossIconRenameTab'), 30)
 Mobile.delay(3)
 Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), "", 30)
 Mobile.tap(findTestObject('SwipeElements/SaveButton'), 30)
-Mobile.delay(3)
+Mobile.delay(5)
 
-// Verifying alert message as Name is required
+// verifying alert message as Name is required
 String getBlankFieldAlerMSG= Mobile.getText(findTestObject('SwipeElements/BlankRenameFieldAlertMsg'), 30)
 Mobile.verifyEqual(getBlankFieldAlerMSG, 'Name is required')
 Mobile.pressBack()
 Mobile.delay(3)
 
-// Verifying folder name as expected 
-String verifyFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
-Mobile.verifyEqual(verifyFolderName, 'Test Folder')
+// Verifying folder name as expected
+Mobile.verifyEqual(getFolderName, expectedFolderName)
 Mobile.delay(3)
-// delete created file with swape method
+
+// delete created Folder
 Mobile.swipe(300, 300, 300, 800)// swipe for refresh
 Mobile.delay(3)
-Mobile.tap(findTestObject('Folder_Menu/ClickOn1stSubFolder'), 30)
-Mobile.swipe(402, 351, 140, 351)
+Mobile.tap(threeDot, 30)
+Mobile.tap(threeDot, 30)
+Mobile.delay(2)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)

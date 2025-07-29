@@ -16,6 +16,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.configuration.RunConfiguration
 
 if(GlobalVariable.isExistingApp) {
@@ -44,39 +45,62 @@ Mobile.delay(3)
 //Creating document and verify with .xlsx extension
 Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'),5)
 Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
-Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
+String randomDocName = "TestDoc_ " + System.currentTimeMillis()
+Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), randomDocName, 30)
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
 Mobile.delay(10)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(5)
-String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/VerifyCreateSpreadSheetName'), 30)
-Mobile.verifyEqual(getFolderName, 'Test Document.xlsx')
 
-//Swipe to delete created docx.
-Mobile.swipe(402, 351, 140, 351)
+TestObject docName = new TestObject()
+docName.addProperty("xpath", ConditionType.EQUALS,
+	"//*[@class = 'android.widget.TextView' and (@text = '${randomDocName}.xlsx'  or . = '${randomDocName}.xlsx')]")
+
+// Get the actual File name
+String actualFileName = Mobile.getText(docName, 30)
+
+// Define expected file name
+String expectedFileName = randomDocName + ".xlsx"
+
+// Verify the file name matches
+assert actualFileName == expectedFileName : "Expected: ${expectedFileName}, but found: ${actualFileName}"
+
+//delete created docx.
+TestObject threeDot = new TestObject()
+threeDot.addProperty("xpath", ConditionType.EQUALS,
+	"//*[@class = 'android.widget.TextView' and (@text = '${randomDocName}.xlsx'  or . = '${randomDocName}.xlsx')]/following::android.widget.Image[@text='dots'][1]")
+Mobile.tap(threeDot, 30)
+Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
-Mobile.delay(2)
+Mobile.delay(1)
 
-//Verifying delete alert message
+//Verify delete aleart messsage
 String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
 if (alertMsg.contains('Deleted Test Document.xlsx')) {
 	println(alertMsg)
-}else {
+} else {
 	print('text File not deleted')
 }
 
-//Closing application 
+//logout and close app
 WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 def login() {
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
+	Mobile.tap(findTestObject('LoginScreen/ServerURL'), 30)
+
 	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
+
+	Mobile.tap(findTestObject('LoginScreen/ServerURL'), 30)
+
 	Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
+
 	Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
+
 	Mobile.hideKeyboard()
+
 	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
+
 	Mobile.delay(3)
 }
 

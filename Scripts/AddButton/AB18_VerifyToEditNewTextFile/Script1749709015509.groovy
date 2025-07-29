@@ -16,6 +16,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.configuration.RunConfiguration
 
 if(GlobalVariable.isExistingApp) {
@@ -44,16 +45,28 @@ Mobile.delay(3)
 // Create new text file and verify .txt extension
 Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
 Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
-Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "Test Document", 30)
+String randomDocName = "TestDoc_ " + System.currentTimeMillis()
+Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), randomDocName, 30)
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
 Mobile.delay(10)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(5)
 
-//verifying created text file with extension
-String getFolderName= Mobile.getText(findTestObject('VerifyCreatedFileNames/VerifyCreatedTextFileName'), 30)
-Mobile.verifyEqual(getFolderName, 'Test Document.txt')
-Mobile.tap(findTestObject('VerifyCreatedFileNames/VerifyCreatedTextFileName'),30)
+TestObject docName = new TestObject()
+docName.addProperty("xpath", ConditionType.EQUALS,
+	"//*[@class = 'android.widget.TextView' and (@text = '${randomDocName}.txt'  or . = '${randomDocName}.txt')]")
+
+// Get the actual File name
+String actualFileName = Mobile.getText(docName, 30)
+
+// Define expected file name
+String expectedFileName = randomDocName + ".txt"
+
+// Verify the file name matches
+assert actualFileName == expectedFileName : "Expected: ${expectedFileName}, but found: ${actualFileName}"
+
+//Tap to open file
+Mobile.tap(docName,30)
 
 //click on edit button
 Mobile.delay(20)
@@ -63,9 +76,14 @@ Mobile.verifyElementVisible(findTestObject('VerifyCreatedFileNames/EditTextArea'
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(5)
 
-//Swipe to delete created docx.
-//Mobile.swipe(402, 351, 140, 351)
-Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)
+
+//Delete created doc.
+TestObject threeDot = new TestObject()
+threeDot.addProperty("xpath", ConditionType.EQUALS,
+	"//*[@class = 'android.widget.TextView' and (@text = '${randomDocName}.txt'  or . = '${randomDocName}.txt')]/following::android.widget.Image[@text='dots'][1]")
+Mobile.delay(1)
+Mobile.tap(threeDot, 30)
+Mobile.delay(1)
 Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)

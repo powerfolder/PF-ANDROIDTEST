@@ -67,7 +67,7 @@ String expectedFolderName =   folderName
 // Create dynamic TestObject for that folder name
 TestObject dynamicFolder = new TestObject()
 dynamicFolder.addProperty("xpath", ConditionType.EQUALS, "//*[@class = 'android.widget.TextView' and (@text = '${expectedFolderName}' or . = '${expectedFolderName}')]")
-// Get the actual text displayed on UI
+// Get the actual Folder name
 String getFolderName = Mobile.getText(dynamicFolder, 30)
 // Verify
 Mobile.verifyEqual(getFolderName, expectedFolderName)
@@ -88,7 +88,7 @@ int centerY = startY + (elementHeight / 2)
 // Perform swipe
 Mobile.swipe(fromX, centerY, toX, centerY)
 
-//Mobile.swipe(402, 351, 140, 351)
+// Delete created folder
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 

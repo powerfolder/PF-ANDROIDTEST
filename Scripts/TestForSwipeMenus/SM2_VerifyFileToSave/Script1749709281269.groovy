@@ -53,14 +53,13 @@ Mobile.delay(3)
 Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
 Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
 String randomDocName = "TestDoc_ " + System.currentTimeMillis()
-//String randomDocName = "TestDoc_" + timestamp
 Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), randomDocName, 30)
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
 Mobile.delay(10)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(5)
 
-// Create TestObject using dynamic folder/document name
+// Create TestObject using dynamic document name
 TestObject testFolder = new TestObject()
 testFolder.addProperty("xpath", ConditionType.EQUALS,
 	"//*[@class = 'android.widget.TextView' and (@text = '${randomDocName}.txt'  or . = '${randomDocName}.txt')]")
