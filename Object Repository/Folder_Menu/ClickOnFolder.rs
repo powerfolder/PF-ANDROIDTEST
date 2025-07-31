@@ -3,7 +3,7 @@
    <description></description>
    <name>ClickOnFolder</name>
    <tag></tag>
-   <elementGuidId>c4475695-85b5-490f-bc43-7f31905e0281</elementGuidId>
+   <elementGuidId>2069adaa-1bca-4c35-aebe-962f651fcdb1</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -13,24 +13,24 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>(//*[@class = 'android.widget.Image' and (@text = 'Icon' or . = 'Icon')])[1]</value>
-      <webElementGuid>18bf5f1e-e556-4d4d-b1b6-ff4a4c2d464e</webElementGuid>
+      <webElementGuid>e1c6228f-59e0-4bec-8db6-e6b0fc2442f7</webElementGuid>
    </webElementProperties>
-   <locator>(//android.widget.Image[@text=&quot;root&quot;])[1]</locator>
+   <locator>//*[@class = 'android.widget.TextView' and (@text = 'Base' or . = 'Base')]</locator>
    <locatorCollection>
       <entry>
-         <key>ANDROID_UI_AUTOMATOR</key>
-         <value>new UiSelector()</value>
+         <key>NAME</key>
+         <value></value>
       </entry>
       <entry>
-         <key>ATTRIBUTES</key>
-         <value>(//*[@class = 'android.widget.Image' and (@text = 'Icon' or . = 'Icon')])[1]</value>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.widget.TextView' and (@text = 'Base' or . = 'Base')]</value>
       </entry>
       <entry>
          <key>IMAGE</key>
          <value></value>
       </entry>
       <entry>
-         <key>CUSTOM</key>
+         <key>ANDROID_VIEWTAG</key>
          <value></value>
       </entry>
       <entry>
@@ -42,7 +42,7 @@
          <value></value>
       </entry>
       <entry>
-         <key>ANDROID_VIEWTAG</key>
+         <key>ACCESSIBILITY</key>
          <value></value>
       </entry>
       <entry>
@@ -50,20 +50,20 @@
          <value></value>
       </entry>
       <entry>
-         <key>NAME</key>
+         <key>CUSTOM</key>
          <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//android.widget.Image[@text=&quot;root&quot;])[1]</value>
-      </entry>
-      <entry>
-         <key>ACCESSIBILITY</key>
-         <value></value>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
       </entry>
       <entry>
          <key>CLASS_NAME</key>
          <value></value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+         <value>(//*[@class = 'android.widget.Image' and (@text = 'Icon' or . = 'Icon')])[1]</value>
       </entry>
    </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>

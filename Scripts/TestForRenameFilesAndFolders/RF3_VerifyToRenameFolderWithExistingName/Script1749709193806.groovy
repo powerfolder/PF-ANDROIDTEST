@@ -78,7 +78,7 @@ Mobile.delay(5)
 String expectedRenamedFileName = "Second${folderName}"
 TestObject renameFileThreeDot = new TestObject()
 renameFileThreeDot.addProperty("xpath", ConditionType.EQUALS,
-	"//*[@class = 'android.widget.TextView' and (@text = '${expectedRenamedFileName}' or . = '${expectedRenamedFileName}')]/following::android.widget.Image[@text='dots'][1]")
+	"//*[@class = 'android.widget.TextView' and (@text = '${expectedRenamedFileName}' or . = '${expectedRenamedFileName}')]/following::android.widget.Image[@text='Context'][1]")
 Mobile.tap(renameFileThreeDot, 30)
 Mobile.delay(1)
 
@@ -108,7 +108,7 @@ Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 
 // delete folder
 TestObject threeDot = new TestObject()
-threeDot.addProperty("xpath", ConditionType.EQUALS, "//*[@class = 'android.widget.TextView' and (@text = '${folderName}' or . = '${folderName}')]/following::android.widget.Image[@text='dots'][1]")
+threeDot.addProperty("xpath", ConditionType.EQUALS, "//*[@class = 'android.widget.TextView' and (@text = '${folderName}' or . = '${folderName}')]/following::android.widget.Image[@text='Context'][1]")
 Mobile.delay(3)
 Mobile.tap(threeDot, 30)
 Mobile.delay(1)

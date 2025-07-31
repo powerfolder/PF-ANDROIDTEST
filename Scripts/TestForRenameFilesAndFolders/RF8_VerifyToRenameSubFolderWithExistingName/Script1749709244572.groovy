@@ -77,7 +77,7 @@ Mobile.delay(5)
 String expectedRenamedFileName = "Second${folderName}"
 TestObject renameFileThreeDot = new TestObject()
 renameFileThreeDot.addProperty("xpath", ConditionType.EQUALS,
-	"//*[@class = 'android.widget.TextView' and (@text = '${expectedRenamedFileName}' or . = '${expectedRenamedFileName}')]/following::android.widget.Image[@text='dots'][1]")
+	"//*[@class = 'android.widget.TextView' and (@text = '${expectedRenamedFileName}' or . = '${expectedRenamedFileName}')]/following::android.widget.Image[@text='Context'][1]")
 Mobile.tap(renameFileThreeDot, 30)
 Mobile.delay(1)
 

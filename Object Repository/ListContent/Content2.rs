@@ -3,22 +3,30 @@
    <description></description>
    <name>Content2</name>
    <tag></tag>
-   <elementGuidId>de7b6ff9-bf72-4db3-8911-b69fbc3c33a7</elementGuidId>
+   <elementGuidId>d8e51251-f278-4fed-95a0-6a3f79157823</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>(//*[@class = 'android.widget.TextView' and (@text = '' or . = '')])[2]</locator>
+   <locator>(//*[@class = 'android.widget.TextView' and (@text = 'Mobile Uploads' or . = 'Mobile Uploads')]</locator>
    <locatorCollection>
       <entry>
-         <key>CLASS_NAME</key>
+         <key>NAME</key>
          <value></value>
       </entry>
       <entry>
-         <key>ID</key>
+         <key>XPATH</key>
+         <value>(//*[@class = 'android.widget.TextView' and (@text = 'Mobile Uploads' or . = 'Mobile Uploads')]</value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
          <value></value>
       </entry>
       <entry>
-         <key>ACCESSIBILITY</key>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
          <value></value>
       </entry>
       <entry>
@@ -26,7 +34,19 @@
          <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CLASS_NAME</key>
          <value></value>
       </entry>
       <entry>
@@ -35,26 +55,6 @@
       </entry>
       <entry>
          <key>ATTRIBUTES</key>
-      </entry>
-      <entry>
-         <key>IMAGE</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CUSTOM</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_CLASS_CHAIN</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ANDROID_VIEWTAG</key>
-         <value></value>
       </entry>
    </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>

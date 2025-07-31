@@ -3,42 +3,22 @@
    <description></description>
    <name>Second_folder</name>
    <tag></tag>
-   <elementGuidId>3b93fd66-6dcc-491a-bc4f-d1e78bc80846</elementGuidId>
+   <elementGuidId>b02a10e1-2d34-4c64-b48c-45d0462c257d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>(//android.widget.Image[@text=&quot;root&quot;])[2]&#xd;
-</locator>
+   <locator>//*[@class = 'android.widget.TextView' and (@text = 'Mobile Uploads' or . = 'Mobile Uploads')]</locator>
    <locatorCollection>
       <entry>
-         <key>CLASS_NAME</key>
+         <key>NAME</key>
          <value></value>
       </entry>
       <entry>
-         <key>IOS_CLASS_CHAIN</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.widget.TextView' and (@text = 'Mobile Uploads' or . = 'Mobile Uploads')]</value>
       </entry>
       <entry>
          <key>IMAGE</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ACCESSIBILITY</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CUSTOM</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_PREDICATE_STRING</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ATTRIBUTES</key>
-      </entry>
-      <entry>
-         <key>NAME</key>
          <value></value>
       </entry>
       <entry>
@@ -46,17 +26,35 @@
          <value></value>
       </entry>
       <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>ID</key>
          <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//android.widget.Image[@text=&quot;root&quot;])[2]&#xd;
-</value>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
       </entry>
       <entry>
          <key>ANDROID_UI_AUTOMATOR</key>
          <value>new UiSelector()</value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
       </entry>
    </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>

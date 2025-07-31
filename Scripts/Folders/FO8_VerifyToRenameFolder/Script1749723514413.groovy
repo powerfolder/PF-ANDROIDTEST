@@ -108,7 +108,7 @@ Mobile.verifyEqual(getFolderName, expectedFolderName)
 
 TestObject threeDot = new TestObject()
 threeDot.addProperty("xpath", ConditionType.EQUALS,
-	"//*[@class = 'android.widget.TextView' and (@text = '${folderName}'  or . = '${folderName}')]/following::android.widget.Image[@text='dots'][1]")
+	"//*[@class = 'android.widget.TextView' and (@text = '${folderName}'  or . = '${folderName}')]/following::android.widget.Image[@text='Context'][1]")
 
 // Rename flow
 Mobile.delay(1)
@@ -139,7 +139,7 @@ assert actualRenamedFolderName == expectedRenamedFolderName : "Expected: ${expec
 // Tap on the three-dot menu associated with the renamed file
 TestObject renameFolderThreeDot = new TestObject()
 renameFolderThreeDot.addProperty("xpath", ConditionType.EQUALS,
-	"//*[@class = 'android.widget.TextView' and (@text = '${expectedRenamedFolderName}' or . = '${expectedRenamedFolderName}')]/following::android.widget.Image[@text='dots'][1]")
+	"//*[@class = 'android.widget.TextView' and (@text = '${expectedRenamedFolderName}' or . = '${expectedRenamedFolderName}')]/following::android.widget.Image[@text='Context'][1]")
 Mobile.tap(renameFolderThreeDot, 30)
 Mobile.delay(1)
 

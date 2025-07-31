@@ -78,7 +78,7 @@ Mobile.delay(5)
 //delete created doc
 TestObject threeDot = new TestObject()
 threeDot.addProperty("xpath", ConditionType.EQUALS,
-	"//*[@class = 'android.widget.TextView' and (@text = '${randomDocName}.docx'  or . = '${randomDocName}.docx')]/following::android.widget.Image[@text='dots'][1]")
+	"//*[@class = 'android.widget.TextView' and (@text = '${randomDocName}.docx'  or . = '${randomDocName}.docx')]/following::android.widget.Image[@text='Context'][1]")
 Mobile.tap(threeDot, 30)
 Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)

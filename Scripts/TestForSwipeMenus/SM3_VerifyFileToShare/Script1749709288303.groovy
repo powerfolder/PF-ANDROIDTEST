@@ -92,7 +92,6 @@ int deleteToX = startX + 10
 
 Mobile.swipe(deleteFromX, centerY, deleteToX, centerY)
 Mobile.delay(1)
-
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)

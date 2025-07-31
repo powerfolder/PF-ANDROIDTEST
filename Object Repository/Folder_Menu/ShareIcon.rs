@@ -3,14 +3,34 @@
    <description></description>
    <name>ShareIcon</name>
    <tag></tag>
-   <elementGuidId>eb2e8251-d1c5-49c1-908a-36955555b337</elementGuidId>
+   <elementGuidId>66fcd50b-1f6e-4fe4-9297-65881cba3246</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//*[@class = 'android.widget.Image' and (@text = 'share' or . = 'share')]</locator>
+   <locator>//*[@class = 'android.widget.Image' and (@text = 'Share' or . = 'Share')]</locator>
    <locatorCollection>
       <entry>
-         <key>ID</key>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.widget.Image' and (@text = 'Share' or . = 'Share')]</value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
          <value></value>
       </entry>
       <entry>
@@ -18,7 +38,7 @@
          <value></value>
       </entry>
       <entry>
-         <key>NAME</key>
+         <key>ID</key>
          <value></value>
       </entry>
       <entry>
@@ -30,31 +50,11 @@
          <value>new UiSelector()</value>
       </entry>
       <entry>
-         <key>IMAGE</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_PREDICATE_STRING</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>CLASS_NAME</key>
          <value></value>
       </entry>
       <entry>
-         <key>IOS_CLASS_CHAIN</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>ATTRIBUTES</key>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//*[@class = 'android.widget.Image' and (@text = 'share' or . = 'share')]</value>
-      </entry>
-      <entry>
-         <key>ANDROID_VIEWTAG</key>
-         <value></value>
       </entry>
    </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>

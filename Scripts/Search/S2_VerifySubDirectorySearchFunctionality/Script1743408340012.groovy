@@ -49,7 +49,7 @@ Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
 
 //Verify search
 Mobile.tap(findTestObject('Search/SearchBtn'), 30)
-Mobile.setText(findTestObject('Search/SearchInput'), "Folder", 30)
+Mobile.setText(findTestObject('Search/SearchInput'), "Test", 30)
 Mobile.delay(5)
 Mobile.pressKeyCode('ENTER', FailureHandling.CONTINUE_ON_FAILURE)
 Mobile.delay(3)
@@ -68,7 +68,7 @@ Mobile.verifyEqual(getFolderName, expectedFolderName)
 // delete created Folder
 TestObject threeDot = new TestObject()
 threeDot.addProperty("xpath", ConditionType.EQUALS,
-	"//*[@class = 'android.widget.TextView' and (@text = '${folderName}'  or . = '${folderName}')]/following::android.widget.Image[@text='dots'][1]")
+	"//*[@class = 'android.widget.TextView' and (@text = '${folderName}'  or . = '${folderName}')]/following::android.widget.Image[@text='Context'][1]")
 Mobile.tap(threeDot, 30)
 Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)

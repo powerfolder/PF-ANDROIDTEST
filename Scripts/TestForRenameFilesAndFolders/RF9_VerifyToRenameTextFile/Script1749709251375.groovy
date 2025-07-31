@@ -69,7 +69,7 @@ assert actualFileName == expectedFileName : "Expected: ${expectedFileName}, but 
 
 TestObject threeDot = new TestObject()
 threeDot.addProperty("xpath", ConditionType.EQUALS,
-	"//*[@class = 'android.widget.TextView' and (@text = '${randomDocName}.txt'  or . = '${randomDocName}.txt')]/following::android.widget.Image[@text='dots'][1]")
+	"//*[@class = 'android.widget.TextView' and (@text = '${randomDocName}.txt'  or . = '${randomDocName}.txt')]/following::android.widget.Image[@text='Context'][1]")
 
 // Rename flow
 Mobile.delay(1)
@@ -100,7 +100,7 @@ assert actualRenamedFileName == expectedRenamedFileName : "Expected: ${expectedR
 // Tap on the three-dot menu associated with the renamed file
 TestObject renameFileThreeDot = new TestObject()
 renameFileThreeDot.addProperty("xpath", ConditionType.EQUALS,
-	"//*[@class = 'android.widget.TextView' and (@text = '${expectedRenamedFileName}' or . = '${expectedRenamedFileName}')]/following::android.widget.Image[@text='dots'][1]")
+	"//*[@class = 'android.widget.TextView' and (@text = '${expectedRenamedFileName}' or . = '${expectedRenamedFileName}')]/following::android.widget.Image[@text='Context'][1]")
 Mobile.tap(renameFileThreeDot, 30)
 Mobile.delay(1)
 

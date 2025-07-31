@@ -80,7 +80,7 @@ Mobile.pressBack()
 // Delete text file
 TestObject threeDot = new TestObject()
 threeDot.addProperty("xpath", ConditionType.EQUALS,
-	"//*[@class = 'android.widget.TextView' and (@text = '${randomDocName}.txt'  or . = '${randomDocName}.txt')]/following::android.widget.Image[@text='dots'][1]")
+	"//*[@class = 'android.widget.TextView' and (@text = '${randomDocName}.txt'  or . = '${randomDocName}.txt')]/following::android.widget.Image[@text='Context'][1]")
 Mobile.tap(threeDot, 30)
 Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
