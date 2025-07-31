@@ -39,9 +39,9 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 String List1 = Mobile.getText(findTestObject('ListContent/Content1'), 30)
 Mobile.verifyEqual(List1, 'Base')
 Mobile.delay(1)
-String List2 = Mobile.getText(findTestObject('ListContent/Content2'), 30)
-//Mobile.verifyEqual(List1, 'Mobile Uploads')
-Mobile.delay(2)
+String mobileUploadsText = Mobile.getText(findTestObject('MainScreen/MobileUploads'), 30)
+Mobile.delay(3)
+Mobile.verifyEqual(mobileUploadsText, 'Mobile Uploads')
 
 //logout and close app
 WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
