@@ -25,7 +25,7 @@ CustomKeywords.'utils.Startup_app.start'()
 
 // proceed login not logged in
 if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
-	CustomKeywords.'utils.Process_login.login'()
+	CustomKeywords.'utils.Process_login.login'(GlobalVariable.ServerURL,GlobalVariable.userid, GlobalVariable.password)
 }
 
 // tab on fab_button - plus-button
