@@ -6,22 +6,44 @@ import internal.GlobalVariable
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 
+import java.nio.file.Files
+import java.nio.file.Paths
 
 class Startup_app {
 	/**
 	 * Check if app is installed
-	 * if yes: start it
-	 * if no: install it from path (applocation)
+	 * if yes: remove it and install newest
+	 * if no: install it from web dl
 	 * call via: CustomKeywords.'utils.Startup_app.start'()
 	 */
 	@Keyword
-	def start(){
-		if (GlobalVariable.isExistingApp) {
-			Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
-		} else {
-			String applocation = (RunConfiguration.getProjectDir() + '/apks/') + GlobalVariable.AppName
-			Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
-			Mobile.delay(5)
-		}
-	}
+	def start() {
+        // set dl-link and storage path to store apk temporary
+        String apkUrl = "https://my.powerfolder.com/dl/fiQ2zfs8zNQovEH8o4o9vy/android/development/PowerFolder.apk"
+        String apkFilePath = RunConfiguration.getProjectDir() + "/apks/PowerFolder.apk"
+
+        // download apk
+        println "INFO: Downloading APK: $apkUrl"
+        new URL(apkUrl).withInputStream { input ->
+            new File(apkFilePath).withOutputStream { out ->
+                out << input
+            }
+        }
+        println "INFO: Saved APK under: $apkFilePath"
+
+        // reinstall app if needed
+        Mobile.startApplication(apkFilePath, true, FailureHandling.STOP_ON_FAILURE)
+
+        // remove downloaded apk
+        File apkFile = new File(apkFilePath)
+        if (apkFile.exists()) {
+            boolean deleted = apkFile.delete()
+            if (deleted) {
+                println "INFO: deleted apk"
+            } else {
+                println "WARN: cloud not del apk"
+            }
+        }
+        Mobile.delay(5)
+    }
 }
