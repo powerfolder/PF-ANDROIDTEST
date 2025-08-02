@@ -60,7 +60,6 @@ String presentationName = 'Presentation_' + timestamp_presentation
 Mobile.delay(4)
 Mobile.tapAtPosition(GlobalVariable.EMU_P8_plusIconTabX, GlobalVariable.EMU_P8_plusIconTabY)
 Mobile.delay(6)
-//Mobile.tapAtPosition(GlobalVariable.EMU_P8_plusIconTabX, GlobalVariable.EMU_P8_plusIconTabY)
 Mobile.tap(findTestObject('PlusIconMenus/NewPresentation'), 30)
 Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
 Mobile.delay(2)
@@ -73,11 +72,12 @@ Mobile.delay(15)
 
 // verifying presentation is existing
 TestObject presentation_obj = new TestObject()
-top_folder_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + presentationName + "']")
+presentation_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + presentationName + ".pptx']")
 Mobile.verifyElementExist(presentation_obj, 5)
 
 // go to home - toplvl
 Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
+Mobile.delay(2)
 
 // delete created toplvl-folder with presentation inside
 CustomKeywords.'utils.Delete_object.swipeAndDelete'(top_folder_obj)
