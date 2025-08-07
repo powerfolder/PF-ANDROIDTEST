@@ -79,7 +79,9 @@ int leftToRight_ToX = startX + elementWidth - 10
 Mobile.swipe(leftToRight_FromX, centerY, leftToRight_ToX, centerY)
 Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DownloadIcon'), 30)
-Mobile.delay(1)
+Mobile.delay(5)
+Mobile.swipe(300, 300, 300, 1000);
+Mobile.tap(testFolder,10)
 
 //verifying downlaod alert message
 /*String alertTextForSaveFile= Mobile.getText(findTestObject('SwipeElements/VerifyDownloadAlertMsg'), 30)
@@ -90,9 +92,9 @@ int rightToLeft_FromX = startX + elementWidth - 10
 int rightToLeft_ToX = startX + 10
 
 Mobile.swipe(rightToLeft_FromX, centerY, rightToLeft_ToX, centerY)
-Mobile.delay(1)
 
 // Tap Delete icon and confirm
+Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)

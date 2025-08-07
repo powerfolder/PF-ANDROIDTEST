@@ -3,7 +3,7 @@
    <description></description>
    <name>ServerURL</name>
    <tag></tag>
-   <elementGuidId>4a86eedf-3e01-467a-aa33-7712f495b35a</elementGuidId>
+   <elementGuidId>a24c70f0-c9a6-43ca-9f2d-e8817d7d9db1</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -13,28 +13,12 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>//*[@class = 'android.widget.TextView' and (@text = 'Server: powerfolder.com' or . = 'Server: powerfolder.com')]</value>
-      <webElementGuid>7b1b7ffb-d41e-45bf-8b86-a66296e76de1</webElementGuid>
+      <webElementGuid>e15786ac-15e1-434d-a7b5-e065501a887c</webElementGuid>
    </webElementProperties>
-   <locator>//*[@class = 'android.widget.TextView' and (contains(@text, 'Server:'))]</locator>
+   <locator>//*[@class = 'android.widget.TextView' and (@text = 'Server: powerfolder.net' or . = 'Server: powerfolder.net') and @resource-id = 'login_server_info']</locator>
    <locatorCollection>
       <entry>
-         <key>IOS_PREDICATE_STRING</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ANDROID_VIEWTAG</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>NAME</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>CLASS_NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ID</key>
          <value></value>
       </entry>
       <entry>
@@ -42,15 +26,19 @@
          <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
+         <key>ATTRIBUTES</key>
          <value>//*[@class = 'android.widget.TextView' and (@text = 'Server: powerfolder.com' or . = 'Server: powerfolder.com')]</value>
       </entry>
       <entry>
-         <key>CUSTOM</key>
+         <key>NAME</key>
          <value></value>
       </entry>
       <entry>
-         <key>ACCESSIBILITY</key>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.widget.TextView' and (@text = 'Server: powerfolder.net' or . = 'Server: powerfolder.net') and @resource-id = 'login_server_info']</value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
          <value></value>
       </entry>
       <entry>
@@ -58,11 +46,23 @@
          <value>new UiSelector()</value>
       </entry>
       <entry>
-         <key>ATTRIBUTES</key>
-         <value>//*[@class = 'android.widget.TextView' and (@text = 'Server: powerfolder.com' or . = 'Server: powerfolder.com')]</value>
+         <key>CUSTOM</key>
+         <value></value>
       </entry>
       <entry>
          <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
          <value></value>
       </entry>
    </locatorCollection>

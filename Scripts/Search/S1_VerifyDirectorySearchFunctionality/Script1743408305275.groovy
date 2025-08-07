@@ -39,10 +39,12 @@ Mobile.setText(findTestObject('Search/SearchInput'), 'Base', 30)
 String FilterName = Mobile.getText(findTestObject('Search/SearchInput'), 30)
 String ListName = Mobile.getText(findTestObject('Search/VerifyListName'), 30)
 
+// Verifying search result
 if(FilterName == ListName) {
 	return true;
 }
 
+// closing search bar 
 Mobile.tap(findTestObject('Search/BackButtonSearch'), 30)
 Mobile.delay(2)
 

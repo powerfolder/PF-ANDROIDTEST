@@ -8,60 +8,83 @@
       <description></description>
       <initValue>'qa@powerfolder.com'</initValue>
       <name>userid</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'PowerFolder12345!'</initValue>
       <name>password</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'https://titan.powerfolder.net'</initValue>
       <name>ServerURL</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>false</initValue>
       <name>isExistingApp</name>
+      <protected>false</protected>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'PowerFolder_v23.2.2.apk'</initValue>
       <name>AppName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>639</initValue>
       <name>plusIcontapX</name>
+      <protected>false</protected>
+      <valueType>NUMBER</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>1364</initValue>
       <name>plusIcontapY</name>
+      <protected>false</protected>
+      <valueType>NUMBER</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>469</initValue>
       <name>PresentationEditButtontapX</name>
+      <protected>false</protected>
+      <valueType>NUMBER</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>221</initValue>
       <name>PresentationEditButtontapY</name>
+      <protected>false</protected>
+      <valueType>NUMBER</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>368</initValue>
       <name>SpreadSheetEditButtontapX</name>
+      <protected>false</protected>
+      <valueType>NUMBER</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>212</initValue>
       <name>SpreadSheetEditButtontapY</name>
+      <protected>false</protected>
+      <valueType>NUMBER</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'https://titan.powerfolder.net/login'</initValue>
       <name>WebURL</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

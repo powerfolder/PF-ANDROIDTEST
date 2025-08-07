@@ -1,37 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MobileElementEntity>
    <description></description>
-   <name>Button_Dropdown</name>
+   <name>ShareIconButton</name>
    <tag></tag>
-   <elementGuidId>eb157d4f-329c-4a1f-9055-7dcb089b90c1</elementGuidId>
+   <elementGuidId>18fbc8d8-196d-410f-a7cb-c03f76ade427</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>XPATH</name>
-      <type>Main</type>
-      <value>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[1]</value>
-      <webElementGuid>7ab6dc68-5e6f-4713-b535-f1ef496ff2b1</webElementGuid>
-   </webElementProperties>
-   <locator>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[1]</locator>
+   <locator>//*[@class = 'android.widget.TextView' and (@text = 'Share link' or . = 'Share link') and @resource-id = 'share_apps']</locator>
    <locatorCollection>
       <entry>
          <key>IOS_CLASS_CHAIN</key>
          <value></value>
-      </entry>
-      <entry>
-         <key>CLASS_NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ATTRIBUTES</key>
-         <value>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[1]</value>
-      </entry>
-      <entry>
-         <key>ANDROID_UI_AUTOMATOR</key>
-         <value>new UiSelector()</value>
       </entry>
       <entry>
          <key>CUSTOM</key>
@@ -47,7 +27,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[1]</value>
+         <value>//*[@class = 'android.widget.TextView' and (@text = 'Share link' or . = 'Share link') and @resource-id = 'share_apps']</value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+      </entry>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
       </entry>
       <entry>
          <key>IMAGE</key>
@@ -60,6 +47,10 @@
       <entry>
          <key>ID</key>
          <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
       </entry>
       <entry>
          <key>NAME</key>

@@ -31,7 +31,7 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	}
 	// click on home icon button 
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(3)}
+	Mobile.delay(3)}                             
 
 // verifying to share file lin by share icon 
 Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 10)
@@ -65,22 +65,25 @@ String expectedFileName = randomDocName + ".txt"
 
 // Verify the file name matches
 assert actualFileName == expectedFileName : "Expected: ${expectedFileName}, but found: ${actualFileName}"
-
+Mobile.delay(3)
 Mobile.tap(findTestObject('Folder_Menu/ShareIcon'), 30)
-Mobile.delay(7)
+Mobile.delay(3)
+Mobile.tap(findTestObject('Folder_Menu/ShareIconButton'), 30)
+Mobile.delay(3)
 String text = Mobile.getText(findTestObject('Folder_Menu/VerifyShareViaText'), 30)
 if (text.contains('Share via')) {
 	println(text)
 }else {
 	print('The header text is not present')
 }
-Mobile.delay(3)
+Mobile.delay(5)
 Mobile.pressBack()
 
 // Delete text file
 TestObject threeDot = new TestObject()
 threeDot.addProperty("xpath", ConditionType.EQUALS,
 	"//*[@class = 'android.widget.TextView' and (@text = '${randomDocName}.txt'  or . = '${randomDocName}.txt')]/following::android.widget.Image[@text='Context'][1]")
+Mobile.delay(2)
 Mobile.tap(threeDot, 30)
 Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)

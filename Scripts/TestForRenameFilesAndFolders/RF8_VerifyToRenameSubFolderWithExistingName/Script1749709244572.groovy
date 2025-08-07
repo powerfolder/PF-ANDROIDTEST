@@ -104,10 +104,10 @@ Mobile.tap(renameFileThreeDot, 30)
 Mobile.tap(renameFileThreeDot, 30)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
-
+Mobile.delay(3)
 // delete nd folder with swape method
 TestObject threeDot = new TestObject()
-threeDot.addProperty("xpath", ConditionType.EQUALS, "//*[@class = 'android.widget.TextView' and (@text = '${folderName}' or . = '${folderName}')]/following::android.widget.Image[@text='dots'][1]")
+threeDot.addProperty("xpath", ConditionType.EQUALS, "//*[@class = 'android.widget.TextView' and (@text = '${folderName}' or . = '${folderName}')]/following::android.widget.Image[@text='Context'][1]")
 Mobile.tap(threeDot, 30)
 Mobile.delay(1)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)

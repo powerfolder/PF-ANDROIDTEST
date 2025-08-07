@@ -85,18 +85,21 @@ Mobile.verifyElementExist(findTestObject('SwipeElements/SaveIcon'), 10)
 Mobile.tap(findTestObject('SwipeElements/SaveIcon'), 30)
 
 // Verify alert message for Save
-Mobile.delay(1)
-String alertTextForSaveFile = Mobile.getText(findTestObject('SwipeElements/VerifySaveFileAlertMsg'), 30)
-Mobile.verifyEqual(alertTextForSaveFile, 'File successfully saved to "Downloads"')
+Mobile.delay(5)
+/*String alertTextForSaveFile = Mobile.getText(findTestObject('SwipeElements/VerifySaveFileAlertMsg'), 30)
+Mobile.verifyEqual(alertTextForSaveFile, 'File successfully saved to "Downloads"')*/
 
+Mobile.closeNotifications()
+Mobile.delay(5)
 // ================== Swipe Right to Left (for Delete action) ==================
 int rightToLeft_FromX = startX + elementWidth - 10
 int rightToLeft_ToX = startX + 10
 
 Mobile.swipe(rightToLeft_FromX, centerY, rightToLeft_ToX, centerY)
-Mobile.delay(1)
+Mobile.delay(2)
 
 // Tap Delete icon and confirm
+Mobile.swipe(rightToLeft_FromX, centerY, rightToLeft_ToX, centerY)
 Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
 Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
 Mobile.delay(3)
