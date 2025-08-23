@@ -29,6 +29,7 @@ if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, Fail
 }
 
 // tab on fab_button - plus-button
+Mobile.delay(3)
 Mobile.tapAtPosition(GlobalVariable.EMU_P8_plusIconTabX, GlobalVariable.EMU_P8_plusIconTabY)
 Mobile.delay(3)
 
@@ -40,6 +41,7 @@ String timestamp_folder = CustomKeywords.'utils.Get_timestamp.generateTimestamp'
 String folderName = 'Folder_' + timestamp_folder
 
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), folderName, 30)
+Mobile.delay(2)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'), 30)
 
 // wait some seconds after setting up new toplvl folder

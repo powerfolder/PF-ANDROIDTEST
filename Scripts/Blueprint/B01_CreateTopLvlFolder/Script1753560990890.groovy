@@ -21,7 +21,7 @@ import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.testobject.TestObject
 
 // start up app
-CustomKeywords.'utils.Startup_app.start'()
+CustomKeywords.'utils.Startup_app.start'('PowerFolder_v23.1.101.apk')
 
 // proceed login not logged in
 if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
@@ -29,6 +29,7 @@ if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, Fail
 }
 
 // tab on fab_button - plus-button
+Mobile.delay(3)
 Mobile.tapAtPosition(GlobalVariable.EMU_P8_plusIconTabX, GlobalVariable.EMU_P8_plusIconTabY)
 Mobile.delay(3)
 
@@ -40,10 +41,11 @@ String timestamp = CustomKeywords.'utils.Get_timestamp.generateTimestamp'()
 String folderName = 'Folder_' + timestamp
 
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), folderName, 30)
+Mobile.delay(2)
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'), 30)
 
 // wait some seconds after setting up new toplvl folder
-Mobile.delay(5)
+Mobile.delay(3)
 
 // verifying folder is existing
 TestObject obj = new TestObject()
