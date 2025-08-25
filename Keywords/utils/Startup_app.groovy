@@ -24,37 +24,36 @@ class Startup_app {
 		if (localAppVersion != null && !localAppVersion.trim().isEmpty()) {
 			String apkFilePath = apksDir + localAppVersion
 			println "INFO: Using local APK: $apkFilePath"
-	
+
 			Mobile.startApplication(apkFilePath, true, FailureHandling.STOP_ON_FAILURE)
-	
 		} else {
 			// set dl-link and storage path to store apk temporary
-		    String apkUrl = "https://my.powerfolder.com/dl/fiQ2zfs8zNQovEH8o4o9vy/android/development/PowerFolder.apk"
-		    String apkFilePath = apksDir + "PowerFolder.apk"
+			String apkUrl = "https://my.powerfolder.com/dl/fiQ2zfs8zNQovEH8o4o9vy/android/development/PowerFolder.apk"
+			String apkFilePath = apksDir + "PowerFolder.apk"
 
-		    // download apk
-		    println "INFO: Downloading APK: $apkUrl"
-		    new URL(apkUrl).withInputStream { input ->
-			    new File(apkFilePath).withOutputStream { out ->
-				   out << input
-			    }
-		    }
-		    println "INFO: Saved APK under: $apkFilePath"
+			// download apk
+			println "INFO: Downloading APK: $apkUrl"
+			new URL(apkUrl).withInputStream { input ->
+				new File(apkFilePath).withOutputStream { out ->
+					out << input
+				}
+			}
+			println "INFO: Saved APK under: $apkFilePath"
 
-		    // reinstall app if needed
-		    Mobile.startApplication(apkFilePath, true, FailureHandling.STOP_ON_FAILURE)
+			// reinstall app if needed
+			Mobile.startApplication(apkFilePath, true, FailureHandling.STOP_ON_FAILURE)
 
-		    // remove downloaded apk
-		    File apkFile = new File(apkFilePath)
-		    if (apkFile.exists()) {
-			    boolean deleted = apkFile.delete()
-			    if (deleted) {
-				   println "INFO: deleted apk"
-			    } else {
-				   println "WARN: cloud not del apk"
-			    }
-		    }
-		Mobile.delay(5)
-	    }
+			// remove downloaded apk
+			File apkFile = new File(apkFilePath)
+			if (apkFile.exists()) {
+				boolean deleted = apkFile.delete()
+				if (deleted) {
+					println "INFO: deleted apk"
+				} else {
+					println "WARN: cloud not del apk"
+				}
+			}
+			Mobile.delay(5)
+		}
 	}
 }
