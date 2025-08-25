@@ -18,7 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 // start up app
-CustomKeywords.'utils.Startup_app.start'()
+CustomKeywords.'utils.Startup_app.start'('PowerFolder_v23.1.101.apk')
 
 // proceed login with wrong creds
 if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
