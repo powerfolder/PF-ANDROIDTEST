@@ -53,7 +53,7 @@ class Startup_app {
 					println "WARN: cloud not del apk"
 				}
 			}
-			Mobile.delay(5)
 		}
+		Mobile.delay(20)
 	}
 }
