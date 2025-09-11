@@ -54,28 +54,28 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>369</initValue>
+      <initValue>575</initValue>
       <name>PresentationEditButtontapX</name>
       <protected>false</protected>
       <valueType>NUMBER</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>171</initValue>
+      <initValue>384</initValue>
       <name>PresentationEditButtontapY</name>
       <protected>false</protected>
       <valueType>NUMBER</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>375</initValue>
+      <initValue>625</initValue>
       <name>SpreadSheetEditButtontapX</name>
       <protected>false</protected>
       <valueType>NUMBER</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>184</initValue>
+      <initValue>361</initValue>
       <name>SpreadSheetEditButtontapY</name>
       <protected>false</protected>
       <valueType>NUMBER</valueType>
@@ -100,5 +100,12 @@
       <name>EMU_P8_plusIconTabY</name>
       <protected>false</protected>
       <valueType>NUMBER</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'com.your.package.name'</initValue>
+      <name>APP_PACKAGE_ID</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

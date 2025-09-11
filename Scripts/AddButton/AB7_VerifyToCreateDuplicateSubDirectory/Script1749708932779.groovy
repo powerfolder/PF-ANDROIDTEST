@@ -16,80 +16,94 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
+import com.kms.katalon.core.testobject.ConditionType
+import com.kms.katalon.core.testobject.TestObject
 
-import com.kms.katalon.core.configuration.RunConfiguration
+// start up app
+CustomKeywords.'utils.Startup_app.start'('PowerFolder_v23.1.101.apk')
 
-if(GlobalVariable.isExistingApp) {
-Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
-} else {
-	String applocation = RunConfiguration.getProjectDir()+'/apks/'+GlobalVariable.AppName;
-	System.out.println("Applocation"+ applocation)
-	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
-	Mobile.delay(5)
-	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
-		login()
-	}
-	// click on home icon button 
-	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(3)}
-Mobile.tap(findTestObject('Folder_Menu/ClickSecondSubFloder'),30)
+// proceed login not logged in
+if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
+	CustomKeywords.'utils.Process_login.login'(GlobalVariable.ServerURL,GlobalVariable.userid, GlobalVariable.password)
+}
+
+// tab on fab_button - plus-button
+Mobile.delay(3)
+Mobile.tapAtPosition(GlobalVariable.EMU_P8_plusIconTabX, GlobalVariable.EMU_P8_plusIconTabY)
 Mobile.delay(3)
 
-//Verify and create subdirectory file with the help of plus icon coodinates
-Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
+// tab on menu-entry New-Directory to start Toplvl-folder-creation dialog
+Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'), 30)
+
+// create foldername based on timestamp
+String timestamp = CustomKeywords.'utils.Get_timestamp.generateTimestamp'()
+String folderName = 'Folder_' + timestamp
+
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), folderName, 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'), 30)
+
+// wait some seconds after setting up new toplvl folder
 Mobile.delay(3)
-Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'), 10)
-Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
-Mobile.delay(3)
-Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'), 10)
-Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
-Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
+
+// verifying folder is existing
+TestObject obj = new TestObject()
+obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + folderName + "']")
+Mobile.verifyElementExist(obj, 5)
+Mobile.tap(obj, 5) 
 Mobile.delay(5)
 
-// Verify created folder name
-String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
-Mobile.verifyEqual(getFolderName, 'Test Folder')
-Mobile.delay(5)
+// tab on fab_button - plus-button
+Mobile.delay(3)
+Mobile.tapAtPosition(GlobalVariable.EMU_P8_plusIconTabX, GlobalVariable.EMU_P8_plusIconTabY)
+Mobile.delay(3)
 
-//Verify and create duplicate subdirectory file with the help of plus icon coodinates
-Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
+// tab on menu-entry New-Directory to start sub-folder-creation dialog
+Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'), 30)
+
+// create foldername based on timestamp
+String subfolderName = 'Folder_' + timestamp
+
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), subfolderName, 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'), 30)
+
+// wait some seconds after setting up new toplvl folder
 Mobile.delay(3)
-Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'), 10)
-Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
+
+// verifying folder is existing
+TestObject subObj = new TestObject()
+obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + subfolderName + "']")
+Mobile.verifyElementExist(subObj, 5)
+
+
+// tab on fab_button - plus-button
 Mobile.delay(3)
-Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'), 10)
-Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
-Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
+Mobile.tapAtPosition(GlobalVariable.EMU_P8_plusIconTabX, GlobalVariable.EMU_P8_plusIconTabY)
+Mobile.delay(3)
+
+// tab on menu-entry New-Directory to start duplicatesub-folder-creation dialog
+Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'), 30)
+
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), subfolderName, 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'), 30)
+
+// wait some seconds for duplicate alert msg
+Mobile.delay(2)
 
 //Verifying duplicate alert message
 boolean duplicateAlertMsg = Mobile.getText(findTestObject('CreateNewFile/DuplicateAlertMsg'), 30)
 assert duplicateAlertMsg == true
 Mobile.pressBack()
 
-// delete created sub directory
-Mobile.tap(findTestObject('Folder_Menu/Button_Dropdown'), 30)
-Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
-Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
-Mobile.delay(3)
+// go to home - toplvl
+Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
+Mobile.delay(2)
 
-// Verifying delete alert message
-String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
-if (alertMsg.contains('Deleted')) {
-	println(alertMsg)
-}else {
-	print('File not deleted')
-}
+// remove created folder
+CustomKeywords.'utils.Delete_object.swipeAndDelete'(obj)
 
 //logout and close app
 WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-
-def login() {
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
-	Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
-	Mobile.hideKeyboard()
-	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-	Mobile.delay(3)
-}
