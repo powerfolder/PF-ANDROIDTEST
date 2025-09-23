@@ -22,7 +22,7 @@ import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 // start up app
-CustomKeywords.'utils.Startup_app.start'('PowerFolder_v23.1.101.apk')
+CustomKeywords.'utils.Startup_app.install'('PowerFolder_v23.1.101.apk')
 
 // proceed login not logged in
 if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
@@ -72,7 +72,7 @@ Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), docxName,
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
 Mobile.delay(10)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
-Mobile.delay(15)
+Mobile.delay(5)
 
 // verifying presentation is existing
 TestObject presentation_obj = new TestObject()
