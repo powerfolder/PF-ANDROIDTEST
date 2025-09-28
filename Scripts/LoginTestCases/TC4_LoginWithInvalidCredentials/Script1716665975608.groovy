@@ -27,22 +27,29 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
 		logout()
 	}
+	
+	// enter server URL
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 }
 
+// enter invalid or wrong password
 Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
 Mobile.setText(findTestObject('LoginScreen/InputPassword'), 'WrongPassword', 30)
 Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
+
+// verify error message as Incorrect username or password
 String toastMessage= Mobile.getText(findTestObject('LoginScreen/incorrectToastMessage'), 45)
 Mobile.verifyEqual(toastMessage, 'Incorrect username or password')
+
+// closing application
 Mobile.closeApplication() 
 
 
 def  logout() {
 	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-	Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)
+	Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 	Mobile.delay(5)
 	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
 	String confirmationMessage= Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)

@@ -3,7 +3,7 @@
    <description></description>
    <name>ClickOnFolder</name>
    <tag></tag>
-   <elementGuidId>b463243f-c951-4fe3-b523-ee19d2fab17a</elementGuidId>
+   <elementGuidId>c4475695-85b5-490f-bc43-7f31905e0281</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -13,8 +13,59 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>(//*[@class = 'android.widget.Image' and (@text = 'Icon' or . = 'Icon')])[1]</value>
-      <webElementGuid>b27d6299-af66-4b27-a138-a767c8553c52</webElementGuid>
+      <webElementGuid>18bf5f1e-e556-4d4d-b1b6-ff4a4c2d464e</webElementGuid>
    </webElementProperties>
-   <locator>(//*[@class = 'android.widget.Image' and (@text = 'Icon' or . = 'Icon')])[1]</locator>
+   <locator>(//android.widget.Image[@text=&quot;root&quot;])[1]</locator>
+   <locatorCollection>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+         <value>(//*[@class = 'android.widget.Image' and (@text = 'Icon' or . = 'Icon')])[1]</value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//android.widget.Image[@text=&quot;root&quot;])[1]</value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+   </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>
+   <platform>ANDROID</platform>
 </MobileElementEntity>

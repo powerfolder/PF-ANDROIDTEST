@@ -3,17 +3,60 @@
    <description></description>
    <name>Content2</name>
    <tag></tag>
-   <elementGuidId>fd5f435d-d025-4951-ad62-e4ba1bebb221</elementGuidId>
+   <elementGuidId>de7b6ff9-bf72-4db3-8911-b69fbc3c33a7</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>XPATH</name>
-      <type>Main</type>
-      <value>//*[@class = 'android.widget.TextView' and (@text = 'Mobile Uploads' or . = 'Mobile Uploads')]</value>
-      <webElementGuid>5a0bd090-17f8-48d0-823e-8e77cd238f88</webElementGuid>
-   </webElementProperties>
-   <locator>//*[@class = 'android.widget.TextView' and (@text = 'Mobile Uploads' or . = 'Mobile Uploads')]</locator>
+   <locator>(//*[@class = 'android.widget.TextView' and (@text = '' or . = '')])[2]</locator>
+   <locatorCollection>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+   </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>
+   <platform>ANDROID</platform>
 </MobileElementEntity>

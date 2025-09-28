@@ -3,9 +3,9 @@
    <description></description>
    <name>SelectReadAndWriteToggleButton</name>
    <tag></tag>
-   <elementGuidId>00000000-0000-0000-0000-000000000000</elementGuidId>
+   <elementGuidId>d3c3f3aa-8120-4f93-a65c-11c42ec54096</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
-   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <locator>//*[@class = 'android.widget.TextView' and @resource-id = 'invite_readwrite' and (@text = '' or . = '')]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
 </MobileElementEntity>

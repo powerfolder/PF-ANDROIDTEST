@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>IF5_InviteFolderWithReadAndWritePermission</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d6e1a0af-fe7c-4172-9503-b1fbc9e83e89</testCaseGuid>
+</TestCaseEntity>

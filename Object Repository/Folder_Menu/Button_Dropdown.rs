@@ -3,7 +3,7 @@
    <description></description>
    <name>Button_Dropdown</name>
    <tag></tag>
-   <elementGuidId>a0f57635-6806-400a-9871-95a5ccd139ed</elementGuidId>
+   <elementGuidId>3e846e9e-9deb-4a7c-b84f-e35806018cb6</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -13,8 +13,59 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[1]</value>
-      <webElementGuid>f68b9f90-f2ef-43a8-804a-da8bbc916f1e</webElementGuid>
+      <webElementGuid>cfebfd0b-66fc-4f6e-bfd2-02870b5cc504</webElementGuid>
    </webElementProperties>
-   <locator>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[1]</locator>
+   <locator>(//*[@class = 'android.widget.Image' and (@text = 'dots' or . = 'dots')])[1]</locator>
+   <locatorCollection>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+         <value>(//*[@class = 'android.widget.Image' and (@text = 'Context' or . = 'Context')])[1]</value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//*[@class = 'android.widget.Image' and (@text = 'dots' or . = 'dots')])[1]</value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+   </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>
+   <platform>ANDROID</platform>
 </MobileElementEntity>

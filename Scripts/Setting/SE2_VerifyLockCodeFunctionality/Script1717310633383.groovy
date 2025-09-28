@@ -26,73 +26,76 @@ Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHand
 	System.out.println("Applocation"+ applocation)
 	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
 	Mobile.delay(5)
-	if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
-		logoutF()
+	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
+		login()
 	}
+	// click on home icon button 
+	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
+	Mobile.delay(5)}
+Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
+Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
+Mobile.delay(2)
+
+// verifying code protection functionality
+Mobile.tap(findTestObject('Settings/ClickCheckbox'), 30)
+Mobile.delay(2)
+Mobile.verifyElementExist(findTestObject('Settings/CodeProtectionPopupText'), 5)
+Mobile.tap(findTestObject('Settings/InputPassword'), 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Settings/InputPassword'), 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Settings/InputPassword'), 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Settings/InputPassword'), 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Settings/LockSaveButton') , 30)
+Mobile.delay(5)
+Mobile.verifyElementExist(findTestObject('Settings/CodeProtectionPopupText'), 5)
+Mobile.tap(findTestObject('Settings/ClickCheckbox'), 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Settings/InputPassword'), 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Settings/InputPassword'), 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Settings/InputPassword'), 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Settings/InputPassword'), 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Settings/VerifyButtonPassCode') , 30)
+Mobile.delay(2)
+Mobile.verifyElementExist(findTestObject('Settings/ReEnterCodeProtectionPopupText'), 5)
+Mobile.tap(findTestObject('Settings/InputPassword'), 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Settings/InputPassword'), 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Settings/InputPassword'), 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Settings/InputPassword'), 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Settings/LockSaveButton') , 30)
+Mobile.delay(2)
+
+logout()
+
+// closing application
+Mobile.closeApplication()
+
+def  logout() {
+	Mobile.delay(3)
+	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
+	String confirmationMessage= Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
+	Mobile.tap(findTestObject('Settings/LogoutConfirmationYes'), 30)
+	Mobile.delay(3)
+	Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?')
+}
+
+def login() {
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
 	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
 	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-}
-
-Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
-Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
-Mobile.hideKeyboard()
-Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-Mobile.delay(5)
-Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)
-Mobile.delay(2)
-
-Mobile.tap(findTestObject('Settings/ClickCheckbox'), 30)
-Mobile.tap(findTestObject('Settings/InputPassword'), 30)
-Mobile.tap(findTestObject('Settings/InputPassword'), 30)
-Mobile.tap(findTestObject('Settings/InputPassword'), 30)
-Mobile.tap(findTestObject('Settings/InputPassword'), 30)
-
-Mobile.tap(findTestObject('Settings/LockSaveButton') , 30)
-Mobile.delay(5)
-
-Mobile.tap(findTestObject('Settings/ClickCheckbox'), 30)
-Mobile.tap(findTestObject('Settings/InputPassword'), 30)
-Mobile.tap(findTestObject('Settings/InputPassword'), 30)
-Mobile.tap(findTestObject('Settings/InputPassword'), 30)
-Mobile.tap(findTestObject('Settings/InputPassword'), 30)
-
-Mobile.tap(findTestObject('Settings/VerifyButtonPassCode') , 30)
-Mobile.delay(2)
-
-Mobile.tap(findTestObject('Settings/InputPassword'), 30)
-Mobile.tap(findTestObject('Settings/InputPassword'), 30)
-Mobile.tap(findTestObject('Settings/InputPassword'), 30)
-Mobile.tap(findTestObject('Settings/InputPassword'), 30)
-
-Mobile.tap(findTestObject('Settings/LockSaveButton') , 30)
-
-
-Mobile.delay(2)
-logout()
-
-Mobile.closeApplication()
-
-
-def logout() { 
-    Mobile.delay(5)
-    Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
-    String confirmationMessage = Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
-    Mobile.tap(findTestObject('Settings/LogoutConfirmationYes'), 30)
-    Mobile.delay(5)
-    Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?')
-}
-
-
-def logoutF() {
+	Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
+	Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
+	Mobile.hideKeyboard()
+	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 	Mobile.delay(3)
-	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-	Mobile.tap(findTestObject('ThreeDotsMenu/Settings'), 45)
-	Mobile.delay(5)
-	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
-	String confirmationMessage = Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
-	Mobile.tap(findTestObject('Settings/LogoutConfirmationYes'), 30)
-	Mobile.delay(5)
-	Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?')
 }

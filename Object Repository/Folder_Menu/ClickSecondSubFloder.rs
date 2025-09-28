@@ -3,12 +3,29 @@
    <description></description>
    <name>ClickSecondSubFloder</name>
    <tag></tag>
-   <elementGuidId>54c1ea63-b764-4a63-81d0-725e2c6efabc</elementGuidId>
+   <elementGuidId>ae4eebf1-8245-4244-a9ae-963d8ea998d3</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>(//*[@class = 'android.widget.Image' and (@text = 'Icon' or . = 'Icon')])[2]</locator>
+   <locator>(//android.widget.Image[@text=&quot;root&quot;])[2]&#xd;
+</locator>
    <locatorCollection>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
       <entry>
          <key>CUSTOM</key>
          <value></value>
@@ -18,22 +35,14 @@
          <value></value>
       </entry>
       <entry>
-         <key>IOS_CLASS_CHAIN</key>
+         <key>ATTRIBUTES</key>
+      </entry>
+      <entry>
+         <key>NAME</key>
          <value></value>
       </entry>
       <entry>
          <key>ANDROID_VIEWTAG</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CLASS_NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ATTRIBUTES</key>
-      </entry>
-      <entry>
-         <key>IMAGE</key>
          <value></value>
       </entry>
       <entry>
@@ -42,19 +51,12 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>NAME</key>
-         <value></value>
+         <value>(//android.widget.Image[@text=&quot;root&quot;])[2]&#xd;
+</value>
       </entry>
       <entry>
          <key>ANDROID_UI_AUTOMATOR</key>
          <value>new UiSelector()</value>
-      </entry>
-      <entry>
-         <key>ACCESSIBILITY</key>
-         <value></value>
       </entry>
    </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>InviteFolderWithReadOnlyPermission</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>72fda9e7-bb87-4c2c-b0fd-3e0dc690f169</testCaseGuid>
-</TestCaseEntity>

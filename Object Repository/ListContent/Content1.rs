@@ -3,9 +3,8 @@
    <description></description>
    <name>Content1</name>
    <tag></tag>
-   <elementGuidId>d6bf6eba-837d-455a-abf7-a5e6e721f6a8</elementGuidId>
+   <elementGuidId>d06e49cb-2d12-46fa-879d-d4a19d82c8d6</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
-   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -13,59 +12,8 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>//*[@class = 'android.widget.TextView' and (@text = 'Base' or . = 'Base')]</value>
-      <webElementGuid>bef22e5d-dfae-4444-a337-d18801c73c9e</webElementGuid>
+      <webElementGuid>a31b8ffb-7442-4106-8aed-9c6ea2c9edf8</webElementGuid>
    </webElementProperties>
-   <locator>//*[@class = 'android.widget.TextView' and (@text = 'Base1' or . = 'Base1')]</locator>
-   <locatorCollection>
-      <entry>
-         <key>ANDROID_UI_AUTOMATOR</key>
-         <value>new UiSelector()</value>
-      </entry>
-      <entry>
-         <key>ATTRIBUTES</key>
-         <value>//*[@class = 'android.widget.TextView' and (@text = 'Base' or . = 'Base')]</value>
-      </entry>
-      <entry>
-         <key>IOS_CLASS_CHAIN</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CLASS_NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ID</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ACCESSIBILITY</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//*[@class = 'android.widget.TextView' and (@text = 'Base' or . = 'Base')]</value>
-      </entry>
-      <entry>
-         <key>IMAGE</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CUSTOM</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ANDROID_VIEWTAG</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_PREDICATE_STRING</key>
-         <value></value>
-      </entry>
-   </locatorCollection>
+   <locator>//*[@class = 'android.widget.TextView' and (@text = 'Base' or . = 'Base')]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
-   <platform>ANDROID</platform>
 </MobileElementEntity>
