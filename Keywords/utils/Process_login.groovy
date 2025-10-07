@@ -12,11 +12,14 @@ class Process_login {
 	 */
 	@Keyword
 	def login(String serverurl, String username, String password){
+		Mobile.delay(2)
 		Mobile.tap(findTestObject('LoginScreen/ServerURL'), 30)
 		Mobile.setText(findTestObject('LoginScreen/enterServerURL'), serverurl, 30)
 		Mobile.delay(2)
 		Mobile.tap(findTestObject('LoginScreen/ServerURL'), 30)
+		Mobile.delay(2)
 		Mobile.setText(findTestObject('LoginScreen/EnterEmail'), username, 30)
+		Mobile.delay(2)
 		Mobile.setText(findTestObject('LoginScreen/InputPassword'), password, 30)
 		Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 		Mobile.delay(3)
