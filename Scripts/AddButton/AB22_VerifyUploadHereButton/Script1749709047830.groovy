@@ -73,6 +73,11 @@ Mobile.delay(3)
 Mobile.tap(findTestObject('CreateNewFile/SelectUploadFileFromDevice'), 30)
 Mobile.delay(20)
 
+// verifying file upload (filename needs to be screenshot.*)
+TestObject file_obj = new TestObject()
+file_obj.addProperty("xpath", ConditionType.EQUALS, "//*[contains(@text, 'Screenshot')]")
+Mobile.verifyElementExist(file_obj, 5)
+
 // go to home - toplvl
 Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 Mobile.delay(2)
