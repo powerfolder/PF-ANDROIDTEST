@@ -31,22 +31,43 @@ class Startup_app {
 	 */
 	private boolean isAppInstalled(String packageId) {
 		try {
+			// get adb path dynamically based on OS-Path
+			String adbExecutable
+	
+			if (System.properties['os.name'].toLowerCase().contains('windows')) {
+				adbExecutable = System.getProperty("user.home") + "\\.katalon\\tools\\android_sdk\\platform-tools\\adb.exe"
+			} else {
+				adbExecutable = System.getProperty("user.home") + "/.katalon/tools/android_sdk/platform-tools/adb"
+			}
+	
+			File adbFile = new File(adbExecutable)
+			if (!adbFile.exists()) {
+				println "⚠️  Attention: Clound find adb unter the following path: ${adbExecutable}"
+				return false
+			}
+	
 			def process = [
-				"adb",
+				adbExecutable,
 				"shell",
 				"pm",
 				"list",
 				"packages",
 				packageId
 			].execute()
+	
 			process.waitFor()
-			def output = process.text.trim()
+	
+			// trim output to show package id
+			def output = process.text?.trim()
+			println "ADB output: ${output}"
+	
 			return output.contains("package:" + packageId)
 		} catch (Exception e) {
-			println "ERROR: Failed to check if app is installed: ${e.message}"
+			println "❌ ERROR: Failed to check if app is installed: ${e.message}"
 			return false
 		}
 	}
+
 
 	/**
 	 * Installs the app.
@@ -62,7 +83,7 @@ class Startup_app {
 		//  Check if app is already installed
 		if (!forceReinstall && isAppInstalled(APP_PACKAGE_ID)) {
 			println "INFO: App is already installed. Skipping installation."
-			return
+			startExisting()
 		}
 
 		if (localAppVersion != null && !localAppVersion.trim().isEmpty()) {
