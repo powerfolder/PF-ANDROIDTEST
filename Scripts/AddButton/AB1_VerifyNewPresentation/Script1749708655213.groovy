@@ -24,7 +24,7 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 // start up app
 //CustomKeywords.'utils.Startup_app.install'()
-CustomKeywords.'utils.Startup_app.install'('PowerFolder_v23.1.101.apk')
+CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 
 // proceed login not logged in
 if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
