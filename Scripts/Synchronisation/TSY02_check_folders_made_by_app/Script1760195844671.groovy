@@ -77,7 +77,7 @@ CustomKeywords.'utils.WebDav.createFolder'(base, folderName_app + '/' + folderNa
 Mobile.delay(5)
 
 // sync
-Mobile.swipe(200, 400, 200, 700)
+Mobile.swipe(200, 400, 200, 1000)
 
 // verify if folder is shown
 TestObject sub_folder_obj = new TestObject()
@@ -130,9 +130,9 @@ for (int i = 1; i <= 7; i++) {
     folderName_app_org = folderName_app_renamed
 
     // --- Sync (Pull-to-Refresh) ---
-    Mobile.swipe(200, 400, 200, 700)
+    Mobile.swipe(200, 400, 200, 1100)
     Mobile.delay(5)
-
+	Mobile.swipe(200, 400, 200, 1100)
     // --- WebDAV-Überprüfung: existiert der Ordner auf dem Server? ---
     boolean web_toplvl_present = CustomKeywords.'utils.WebDav.exists'(
         base,
