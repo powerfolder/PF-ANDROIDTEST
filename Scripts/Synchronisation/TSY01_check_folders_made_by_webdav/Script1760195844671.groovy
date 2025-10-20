@@ -26,7 +26,8 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import org.openqa.selenium.By
 import org.openqa.selenium.WebElement
 
-CustomKeywords.'utils.Startup_app.install'()
+CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
+//CustomKeywords.'utils.Startup_app.install'()
 
 // proceed login when not logged in
 if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
@@ -80,7 +81,7 @@ Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'), 30)
 Mobile.delay(3)
 
 // sync via swipe down
-Mobile.swipe(200, 400, 200, 700)
+Mobile.swipe(200, 400, 200, 1100)
 
 // prepair for renaming-sync test
 String folderName_base = "TSY01_renamed_"
@@ -113,17 +114,17 @@ for (int i = 1; i <= 7; i++) {
             true
         )
     }
-
-    folderName_webdav_org = folderName_webdav_renamed
-
+	Mobile.delay(10)
     // sync via pull down
-    Mobile.swipe(200, 400, 200, 700)
-    Mobile.delay(3)
-
+    Mobile.swipe(200, 400, 200, 1100)
+    Mobile.delay(2)
+	Mobile.swipe(200, 400, 200, 1100)
+	
     // verify if folder is shown
     TestObject top_folder_renamed_obj = new TestObject()
     top_folder_renamed_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + folderName_webdav_renamed + "']")
     Mobile.verifyElementExist(top_folder_renamed_obj, 5)
+	folderName_webdav_org = folderName_webdav_renamed
 }
 
 String getRandomFolderName() {
