@@ -144,7 +144,14 @@ for (int i = 1; i <= 7; i++) {
     assert web_toplvl_present : "Ordner '${folderName_app_renamed}' wurde auf WebDAV nicht gefunden!"
 }
 
+// return to root
+Mobile.tap(findTestObject('LoginScreen/HomeIcon'), 30)
 
+// delete toplvl folder
+CustomKeywords.'utils.Delete_object.swipeAndDelete'(top_folder_obj)
+
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 String getRandomFolderName() {
     String folderName = 'TSY02_' + getTimestamp()

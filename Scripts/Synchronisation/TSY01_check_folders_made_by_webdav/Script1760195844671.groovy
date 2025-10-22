@@ -26,8 +26,8 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import org.openqa.selenium.By
 import org.openqa.selenium.WebElement
 
+// start or install package
 CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
-//CustomKeywords.'utils.Startup_app.install'()
 
 // proceed login when not logged in
 if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
@@ -126,6 +126,15 @@ for (int i = 1; i <= 7; i++) {
     Mobile.verifyElementExist(top_folder_renamed_obj, 5)
 	folderName_webdav_org = folderName_webdav_renamed
 }
+
+// return to root
+Mobile.tap(findTestObject('LoginScreen/HomeIcon'), 30)
+
+// delete toplvl folder
+CustomKeywords.'utils.Delete_object.swipeAndDelete'(top_folder_obj)
+
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 String getRandomFolderName() {
     String folderName = 'TSY01_' + getTimestamp()
