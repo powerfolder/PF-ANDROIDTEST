@@ -27,29 +27,29 @@ class WebDav {
 	}
 
 	private getToken(String username, String password) {
-        // create API-URL
-        String url = "https://mimas.powerfolder.net/login?Username=${username}&Password=${password}&json=1"
+		// create API-URL
+		String url = "https://mimas.powerfolder.net/login?Username=${username}&Password=${password}&json=1"
 
-        // Request-Objekt erstellen
-        RequestObject request = new RequestObject("loginRequest")
-        request.setRestUrl(url)
-        request.setRestRequestMethod("GET")
+		// create request-object
+		RequestObject request = new RequestObject("loginRequest")
+		request.setRestUrl(url)
+		request.setRestRequestMethod("GET")
 
-        // Request ausführen
-        def response = WS.sendRequest(request)
+		// do request
+		def response = WS.sendRequest(request)
 
-        // JSON parsen
-        def json = new JsonSlurper().parseText(response.getResponseBodyContent())
+		// JSON parsen
+		def json = new JsonSlurper().parseText(response.getResponseBodyContent())
 
-        // Token extrahieren
-        String token = json.account.token
+		// extract token
+		String token = json.account.token
 
-        println "INFO: erhaltenes Token = ${token}"
+		println "INFO: erhaltenes Token = ${token}"
 
-        return token
-    }
+		return token
+	}
 
-	
+
 	private RequestObject req(String name, String method, String url, Map<String,String> headers = [:], String body = null) {
 		RequestObject r = new RequestObject(name)
 		r.setRestUrl(url)
@@ -167,5 +167,64 @@ class WebDav {
 		int code = resp.getStatusCode()
 		KeywordUtil.logInfo("PROPFIND ${url} -> ${code}")
 		return (code == 200 || code == 207)
+	}
+	/**
+	 * Creates a text file of the given size (in KB) directly in memory,
+	 * adds a timestamp header, fills it with readable text, and uploads it via WebDAV.
+	 *
+	 * @param baseUrl     WebDAV URL
+	 * @param remotePath  target path (z. B. "/folder/file.txt")
+	 * @param username    username
+	 * @param password    password
+	 * @param sizeInKB    size of file in kb
+	 * @return true if upload was successfull
+	 */
+	@Keyword
+	def createAndUploadTextFile(String baseUrl, String remotePath, String username, String password, int sizeInKB) {
+		try {
+			int sizeInBytes = sizeInKB * 1024
+
+			// create timestamp
+			String timestamp = new Date().format("yyyy-MM-dd HH:mm:ss")
+			String header = "### testfile created at: ${timestamp} ###\n\n"
+
+			// create some content
+			List<String> sentences = [
+				"Dies ist eine automatisch generierte Testdatei für Upload-Tests.",
+			]
+
+			StringBuilder sb = new StringBuilder()
+			sb.append(header)
+
+			Random rand = new Random()
+
+			// fill up the file with text until wanted size is accomplished
+			while (sb.length() < sizeInBytes) {
+				String sentence = sentences[rand.nextInt(sentences.size())]
+				sb.append(sentence).append("\n")
+			}
+
+			// trim to correct size
+			String text = sb.toString()
+			byte[] data = text.getBytes("UTF-8")
+
+			if (data.length > sizeInBytes) {
+				data = Arrays.copyOfRange(data, 0, sizeInBytes)
+			}
+
+			// upload file
+			boolean success = uploadFile(baseUrl, remotePath, username, password, data, "text/plain")
+
+			if (success) {
+				KeywordUtil.logInfo("✅ Uploaded: ${remotePath} (${sizeInKB} KB) at ${timestamp}")
+				return true
+			} else {
+				KeywordUtil.markWarning("⚠️ error uploading for ${remotePath}")
+				return false
+			}
+		} catch (Exception e) {
+			KeywordUtil.markFailed("❌ Error with file or upload: " + e.message)
+			return false
+		}
 	}
 }
