@@ -3,12 +3,32 @@
    <description></description>
    <name>ShareIcon</name>
    <tag></tag>
-   <elementGuidId>b89770c9-e040-498f-b31e-3b2d4744c0fb</elementGuidId>
+   <elementGuidId>3ab64719-01ce-4e72-a9bd-2c808970d071</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//android.widget.Image[@text=&quot;dots&quot;]</locator>
+   <locator>//*[@class = 'android.widget.Image' and (@text = 'Share' or . = 'Share')]</locator>
    <locatorCollection>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
       <entry>
          <key>ANDROID_UI_AUTOMATOR</key>
          <value>new UiSelector()</value>
@@ -17,15 +37,7 @@
          <key>ATTRIBUTES</key>
       </entry>
       <entry>
-         <key>IMAGE</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>CUSTOM</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_CLASS_CHAIN</key>
          <value></value>
       </entry>
       <entry>
@@ -33,27 +45,15 @@
          <value></value>
       </entry>
       <entry>
-         <key>ANDROID_VIEWTAG</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ID</key>
+         <key>CLASS_NAME</key>
          <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//android.widget.Image[@text=&quot;dots&quot;]</value>
+         <value>//*[@class = 'android.widget.Image' and (@text = 'Share' or . = 'Share')]</value>
       </entry>
       <entry>
          <key>NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ACCESSIBILITY</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CLASS_NAME</key>
          <value></value>
       </entry>
    </locatorCollection>
