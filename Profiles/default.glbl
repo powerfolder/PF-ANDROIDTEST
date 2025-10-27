@@ -108,4 +108,11 @@
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://titan.powerfolder.net/webdav'</initValue>
+      <name>WebdavURL</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
