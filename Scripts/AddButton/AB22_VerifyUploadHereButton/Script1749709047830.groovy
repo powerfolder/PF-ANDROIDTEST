@@ -27,7 +27,7 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 // start up app
-CustomKeywords.'utils.Startup_app.install'('PowerFolder_v23.1.101.apk')
+CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 
 // proceed login not logged in
 if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
@@ -72,6 +72,11 @@ Mobile.delay(3)
 // Selecting file from the device 
 Mobile.tap(findTestObject('CreateNewFile/SelectUploadFileFromDevice'), 30)
 Mobile.delay(20)
+
+// verifying file upload (filename needs to be screenshot.*)
+TestObject file_obj = new TestObject()
+file_obj.addProperty("xpath", ConditionType.EQUALS, "//*[contains(@text, 'Screenshot')]")
+Mobile.verifyElementExist(file_obj, 5)
 
 // go to home - toplvl
 Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
