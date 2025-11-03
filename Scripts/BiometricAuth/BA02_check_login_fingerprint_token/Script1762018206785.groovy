@@ -40,7 +40,8 @@ Mobile.useFingerprint(1)
 Mobile.delay(5)
 
 // open up my account
-Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
+Mobile.tap(findTestObject('MainScreen/ThreeDots'), 20)
+Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 20)
 Mobile.delay(5)
 
 // check username in my account to verify if we are logged in

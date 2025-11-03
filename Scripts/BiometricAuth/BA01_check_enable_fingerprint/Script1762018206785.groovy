@@ -53,8 +53,8 @@ Mobile.useFingerprint(1)
 TestObject msg = new TestObject()
 msg.addProperty("xpath", ConditionType.EQUALS, "//*[contains(@text, 'protection enabled')]")
 Mobile.verifyElementExist(msg, 10)
-
 Mobile.delay(5)
+Mobile.swipe(10, 330, 80, 330)
 
 // close app without logout
 Mobile.closeApplication()
