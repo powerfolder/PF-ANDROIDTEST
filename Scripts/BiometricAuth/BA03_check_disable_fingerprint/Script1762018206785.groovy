@@ -61,8 +61,3 @@ Mobile.swipe(10, 330, 80, 330)
 
 //logout and close app
 WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-Mobile.swipe(10, 330, 80, 330)
-
-
-// close app without logout
-Mobile.closeApplication()
