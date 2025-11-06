@@ -7,6 +7,7 @@ import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.TestObjectProperty
 import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
 import com.kms.katalon.core.testobject.ConditionType
+import com.kms.katalon.core.testobject.ResponseObject
 import groovy.json.JsonSlurper
 import java.nio.file.Files
 import java.nio.file.Paths
@@ -224,6 +225,53 @@ class WebDav {
 			}
 		} catch (Exception e) {
 			KeywordUtil.markFailed("❌ Error with file or upload: " + e.message)
+			return false
+		}
+	}
+	/**
+	 * Creates an account via REST API.
+	 *
+	 * @param baseUrl  Base API URL (e.g. "https://server/api/accounts")
+	 * @param username Account email
+	 * @param password Account password
+	 * @return true if account created (200/201) or (409) account exists already, false otherwise
+	 */
+	@Keyword
+	def createAccount(String baseUrl, String username, String password, String apiuser, String apipass) {
+		try {
+			// build api-url
+			String url = "${baseUrl}/accounts?action=store&username=${URLEncoder.encode(username, 'UTF-8')}&password=${URLEncoder.encode(password, 'UTF-8')}"
+
+			// build basic auth-header
+			String auth = "Basic " + "${apiuser}:${apipass}".getBytes("UTF-8").encodeBase64().toString()
+
+			KeywordUtil.logInfo("➡️ Creating account via: ${url}")
+
+			// create request-obj
+			RequestObject req = new RequestObject("createAccount")
+			req.setRestUrl(url)
+			req.setRestRequestMethod("GET")
+			req.setHttpHeaderProperties([
+				new com.kms.katalon.core.testobject.TestObjectProperty("Authorization", ConditionType.EQUALS, auth)
+			])
+
+			// send request
+			def resp = WS.sendRequest(req)
+			int code = resp.getStatusCode()
+
+			// check return of api-call
+			if (code == 200 || code == 201) {
+				KeywordUtil.logInfo("✅ Account successfully created (${code}) for user: ${username}")
+				return true
+			} else if (code == 409) {
+				KeywordUtil.logInfo("ℹ️ Account already exists (${code}) for user: ${username}")
+				return true // kein Fehler
+			} else {
+				KeywordUtil.markWarning("⚠️ Account creation failed (${code}) for user: ${username}")
+				return false
+			}
+		} catch (Exception e) {
+			KeywordUtil.markFailed("❌ Error while creating account: " + e.message)
 			return false
 		}
 	}

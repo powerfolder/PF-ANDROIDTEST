@@ -4,6 +4,8 @@ import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.configuration.RunConfiguration
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling
+import com.kms.katalon.core.util.KeywordUtil
+import internal.GlobalVariable
 
 class Startup_app {
 
@@ -33,19 +35,19 @@ class Startup_app {
 		try {
 			// get adb path dynamically based on OS-Path
 			String adbExecutable
-	
+
 			if (System.properties['os.name'].toLowerCase().contains('windows')) {
 				adbExecutable = System.getProperty("user.home") + "\\.katalon\\tools\\android_sdk\\platform-tools\\adb.exe"
 			} else {
 				adbExecutable = System.getProperty("user.home") + "/.katalon/tools/android_sdk/platform-tools/adb"
 			}
-	
+
 			File adbFile = new File(adbExecutable)
 			if (!adbFile.exists()) {
 				println "⚠️  Attention: Clound find adb unter the following path: ${adbExecutable}"
 				return false
 			}
-	
+
 			def process = [
 				adbExecutable,
 				"shell",
@@ -54,13 +56,13 @@ class Startup_app {
 				"packages",
 				packageId
 			].execute()
-	
+
 			process.waitFor()
-	
+
 			// trim output to show package id
 			def output = process.text?.trim()
 			println "ADB output: ${output}"
-	
+
 			return output.contains("package:" + packageId)
 		} catch (Exception e) {
 			println "❌ ERROR: Failed to check if app is installed: ${e.message}"
@@ -101,7 +103,15 @@ class Startup_app {
 			}
 			println "INFO: Saved APK under: $apkFilePath"
 		}
-
+		// make sure account exists for test
+		WebDav webdav = new WebDav()
+		webdav.createAccount(
+			GlobalVariable.ApiURL,
+			GlobalVariable.userid,
+			GlobalVariable.password,
+			GlobalVariable.ApiAccount,
+			GlobalVariable.ApiPassword
+		)
 		// Install APK
 		Mobile.startApplication(apkFilePath, true, FailureHandling.STOP_ON_FAILURE)
 
@@ -123,6 +133,15 @@ class Startup_app {
 	 */
 	@Keyword
 	def startExisting() {
+		// make sure account exists for test
+		WebDav webdav = new WebDav()
+		webdav.createAccount(
+			GlobalVariable.ApiURL,
+			GlobalVariable.userid,
+			GlobalVariable.password,
+			GlobalVariable.ApiAccount,
+			GlobalVariable.ApiPassword
+		)
 		try {
 			Mobile.startExistingApplication(APP_PACKAGE_ID, FailureHandling.STOP_ON_FAILURE)
 			println "INFO: Successfully started existing app: $APP_PACKAGE_ID"
