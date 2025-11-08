@@ -3,7 +3,7 @@
    <description></description>
    <name>ShareButton</name>
    <tag></tag>
-   <elementGuidId>79ea854d-a5a5-4bbe-a42c-288f7482e76c</elementGuidId>
+   <elementGuidId>5c4d2f6d-6a1f-48f1-8528-ba086b59e16c</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -13,25 +13,16 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>//*[@class = 'android.widget.TextView' and (@text = 'Invite' or . = 'Invite')]</value>
-      <webElementGuid>719972b5-cea4-4c17-b296-e27fac1f7977</webElementGuid>
+      <webElementGuid>3f2b1b43-05fa-4fdb-a898-8fb9ffac22b7</webElementGuid>
    </webElementProperties>
-   <locator>(//android.widget.Image[@text=&quot;share&quot;])[2]&#xd;
-</locator>
+   <locator>(//*[@class = 'android.widget.Image' and (@text = 'Share' or . = 'Share')])[2]</locator>
    <locatorCollection>
       <entry>
-         <key>IOS_CLASS_CHAIN</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ANDROID_UI_AUTOMATOR</key>
-         <value>new UiSelector()</value>
-      </entry>
-      <entry>
-         <key>IOS_PREDICATE_STRING</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
          <value></value>
       </entry>
       <entry>
@@ -39,20 +30,7 @@
          <value></value>
       </entry>
       <entry>
-         <key>ATTRIBUTES</key>
-         <value>//*[@class = 'android.widget.TextView' and (@text = 'Invite' or . = 'Invite')]</value>
-      </entry>
-      <entry>
-         <key>NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>(//android.widget.Image[@text=&quot;share&quot;])[2]&#xd;
-</value>
-      </entry>
-      <entry>
-         <key>ACCESSIBILITY</key>
+         <key>IOS_CLASS_CHAIN</key>
          <value></value>
       </entry>
       <entry>
@@ -60,11 +38,31 @@
          <value></value>
       </entry>
       <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+         <value>//*[@class = 'android.widget.TextView' and (@text = 'Invite' or . = 'Invite')]</value>
+      </entry>
+      <entry>
          <key>CUSTOM</key>
          <value></value>
       </entry>
       <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//*[@class = 'android.widget.Image' and (@text = 'Share' or . = 'Share')])[2]</value>
+      </entry>
+      <entry>
+         <key>NAME</key>
          <value></value>
       </entry>
    </locatorCollection>
