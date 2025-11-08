@@ -3,23 +3,19 @@
    <description></description>
    <name>TextFileEditButton</name>
    <tag></tag>
-   <elementGuidId>cd11f66e-9327-400c-a9d3-12a9087cb927</elementGuidId>
+   <elementGuidId>eb3f6860-1dc8-4b42-b527-d15c2fbfcf3d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//android.view.View[@content-desc=&quot;titan.powerfolder&quot;]&#xd;
+   <locator>//android.view.View[@content-desc=&quot;mimas.powerfolder&quot;]&#xd;
 </locator>
    <locatorCollection>
-      <entry>
-         <key>CLASS_NAME</key>
-         <value></value>
-      </entry>
       <entry>
          <key>IMAGE</key>
          <value></value>
       </entry>
       <entry>
-         <key>IOS_CLASS_CHAIN</key>
+         <key>CLASS_NAME</key>
          <value></value>
       </entry>
       <entry>
@@ -31,7 +27,28 @@
          <value></value>
       </entry>
       <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//android.view.View[@content-desc=&quot;mimas.powerfolder&quot;]&#xd;
+</value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
          <value></value>
       </entry>
       <entry>
@@ -39,24 +56,7 @@
          <value></value>
       </entry>
       <entry>
-         <key>IOS_PREDICATE_STRING</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CUSTOM</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>ATTRIBUTES</key>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//android.view.View[@content-desc=&quot;titan.powerfolder&quot;]&#xd;
-</value>
-      </entry>
-      <entry>
-         <key>ANDROID_UI_AUTOMATOR</key>
-         <value>new UiSelector()</value>
       </entry>
    </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>
