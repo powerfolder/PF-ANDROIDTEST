@@ -16,16 +16,15 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.Keys as Keys
+import utils.PowerFolderAPI
 import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-//String randomEmail = "user" + System.currentTimeMillis() + "@powerfoldertest.com"
-String randomEmail = "staude@powerfolder.com"
+String randomEmail = "user" + System.currentTimeMillis() + "@powerfoldertest.com"
 
 //start up app
-//CustomKeywords.'utils.Startup_app.install'()
 CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 
 // proceed login not logged in
@@ -57,23 +56,34 @@ TestObject top_folder_obj = new TestObject()
 top_folder_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + folderName + "']")
 Mobile.verifyElementExist(top_folder_obj, 5)
 
-// Tap on top-level folder to open
-Mobile.delay(2)
-Mobile.tap(top_folder_obj, 5)
-
-// Selecting InviteTofolder By Three Dot menu
-Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-Mobile.verifyElementExist(findTestObject('ThreeDotsMenu/InviteToFolder'),5)
-Mobile.tap(findTestObject('ThreeDotsMenu/InviteToFolder'), 45)
-
-// Invite folder with Read only permission
+// Verify invite popup header and send invitation (with 5 seconds timeout)
+Mobile.tap(findTestObject('Folder_Menu/ShareIcon'), 45)
 Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),5)
 Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
-Mobile.setText(findTestObject('LoginScreen/EnterEmail'), randomEmail, 30)
-Mobile.tap(findTestObject('InviteFolder/SelectReadToggleButton') , 30)
+Mobile.setText(findTestObject('LoginScreen/EnterEmail'),randomEmail, 30)
+Mobile.tap(findTestObject('InviteFolder/SelectAdminToggleButton') , 30)
 Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)
 String permissionAlertText= Mobile.getText(findTestObject('InviteFolder/VerifyInvitationSentText'), 30)
 Mobile.verifyEqual(permissionAlertText, 'Invitation sent')
+Mobile.delay(5)
+
+// get folderID by api
+PowerFolderAPI api = new PowerFolderAPI()
+def folderID = api.getFolderIdByName(
+	GlobalVariable.ApiURL + '/folders',
+	GlobalVariable.userid,
+	GlobalVariable.password,
+	folderName
+)
+
+// get Invitations byFolderID and check if user is listed by api
+def invited = api.isUserInvitedToFolder(
+	"${GlobalVariable.ApiURL}/invitations",
+	folderID,
+	GlobalVariable.userid,
+	GlobalVariable.password,
+	randomEmail
+)
 
 // go to home - toplvl
 Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)

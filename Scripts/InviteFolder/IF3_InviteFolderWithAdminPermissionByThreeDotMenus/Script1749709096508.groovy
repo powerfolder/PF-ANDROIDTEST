@@ -16,18 +16,17 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.Keys as Keys
+import utils.PowerFolderAPI
+import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.testobject.ConditionType
+import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-
-//String randomEmail = "user" + System.currentTimeMillis() + "@powerfoldertest.com"
-String randomEmail = "staude@powerfolder.com"
 // start up app
-//CustomKeywords.'utils.Startup_app.install'()
 CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
-
+String randomEmail = "user" + System.currentTimeMillis() + "@powerfoldertest.com"
 // proceed login not logged in
 if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
 	CustomKeywords.'utils.Process_login.login'(GlobalVariable.ServerURL,GlobalVariable.userid, GlobalVariable.password)
@@ -75,6 +74,24 @@ Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)
 String permissionAlertText= Mobile.getText(findTestObject('InviteFolder/VerifyInvitationSentText'), 30)
 Mobile.verifyEqual(permissionAlertText, 'Invitation sent')
 
+// get folderID by api
+PowerFolderAPI api = new PowerFolderAPI()
+def folderID = api.getFolderIdByName(
+	GlobalVariable.ApiURL + '/folders',
+	GlobalVariable.userid,
+	GlobalVariable.password,
+	folderName
+)
+
+// get Invitations byFolderID and check if user is listed by api
+def invited = api.isUserInvitedToFolder(
+	"${GlobalVariable.ApiURL}/invitations",
+	folderID,
+	GlobalVariable.userid,
+	GlobalVariable.password,
+	randomEmail
+)
+
 // go to home - toplvl
 Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 Mobile.delay(2)
@@ -84,14 +101,3 @@ CustomKeywords.'utils.Delete_object.swipeAndDelete'(top_folder_obj)
 
 //logout and close app
 WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-
-def login() {
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
-	Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
-	Mobile.hideKeyboard()
-	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-	Mobile.delay(3)
-}
