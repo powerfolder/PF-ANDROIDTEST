@@ -275,4 +275,84 @@ class WebDav {
 			return false
 		}
 	}
+	/**
+	 * Deletes all top-level folders of the account via WebDAV,
+	 * except the special "webdav" folder itself.
+	 *
+	 * It performs a PROPFIND on the root folder ("/") and deletes each collection (folder)
+	 * except "webdav".
+	 *
+	 * @param baseUrl   Base WebDAV URL (e.g. "https://mimas.powerfolder.net/webdav/qa@powerfolder.com")
+	 * @param username  Account username
+	 * @param password  Account password
+	 * @return true if all deletions succeeded, false if any failed
+	 */
+	@Keyword
+	def deleteAllFolders(String baseUrl, String username, String password) {
+		try {
+			String rootUrl = baseUrlJoin(baseUrl, "/")
+
+			// === Schritt 1: PROPFIND depth=1 (list folders) ===
+			def r = req("LIST_ROOT", "PROPFIND", rootUrl,
+					[
+						"Authorization": basicAuth(username, password),
+						"Depth"        : "1"
+					],
+					"""<?xml version="1.0" encoding="utf-8" ?>
+				<d:propfind xmlns:d="DAV:">
+					<d:prop><d:displayname/><d:resourcetype/></d:prop>
+				</d:propfind>"""
+					)
+			def resp = WS.sendRequest(r)
+			int code = resp.getStatusCode()
+			if (code != 207 && code != 200) {
+				KeywordUtil.markWarning("⚠️ PROPFIND root failed -> HTTP ${code}")
+				return false
+			}
+
+			// === Schritt 2: XML auswerten (alle Ordner finden) ===
+			def xml = new XmlSlurper().parseText(resp.getResponseBodyContent())
+
+			def folders = []
+			xml.'**'.findAll { it.name() == 'response' }.each { node ->
+				def href = node.'href'.text()
+				def isCollection = node.'**'.find { it.name() == 'collection' } != null
+
+				// Skip root itself
+				if (isCollection) {
+					def folderName = href.tokenize("/").findAll { it }?.last()
+
+					// exclude "webdav" itself
+					if (folderName && folderName != "webdav") {
+						folders << folderName
+					}
+				}
+			}
+
+			if (folders.isEmpty()) {
+				KeywordUtil.logInfo("ℹ️ No folders to delete (only 'webdav' exists or empty root) for user ${username}")
+				return true
+			}
+
+			KeywordUtil.logInfo("🗂 Found ${folders.size()} folders to delete (excluding 'webdav'): ${folders}")
+
+			// === Schritt 3: alle Ordner löschen ===
+			boolean allDeleted = true
+			folders.each { folder ->
+				boolean ok = deletePath(baseUrl, folder, username, password)
+				if (!ok) allDeleted = false
+			}
+
+			if (allDeleted) {
+				KeywordUtil.logInfo("✅ All folders (except 'webdav') deleted successfully for ${username}")
+				return true
+			} else {
+				KeywordUtil.markWarning("⚠️ Some folders could not be deleted for ${username}")
+				return false
+			}
+		} catch (Exception e) {
+			KeywordUtil.markFailed("❌ Error deleting folders: ${e.message}")
+			return false
+		}
+	}
 }
