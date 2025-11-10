@@ -106,12 +106,18 @@ class Startup_app {
 		// make sure account exists for test
 		WebDav webdav = new WebDav()
 		webdav.createAccount(
-			GlobalVariable.ApiURL,
-			GlobalVariable.userid,
-			GlobalVariable.password,
-			GlobalVariable.ApiAccount,
-			GlobalVariable.ApiPassword
-		)
+				GlobalVariable.ApiURL,
+				GlobalVariable.userid,
+				GlobalVariable.password,
+				GlobalVariable.ApiAccount,
+				GlobalVariable.ApiPassword
+				)
+		// remove old folders
+		webdav.deleteAllFolders(
+				GlobalVariable.WebdavURL,
+				GlobalVariable.userid,
+				GlobalVariable.password
+				)
 		// Install APK
 		Mobile.startApplication(apkFilePath, true, FailureHandling.STOP_ON_FAILURE)
 
@@ -136,12 +142,18 @@ class Startup_app {
 		// make sure account exists for test
 		WebDav webdav = new WebDav()
 		webdav.createAccount(
-			GlobalVariable.ApiURL,
-			GlobalVariable.userid,
-			GlobalVariable.password,
-			GlobalVariable.ApiAccount,
-			GlobalVariable.ApiPassword
-		)
+				GlobalVariable.ApiURL,
+				GlobalVariable.userid,
+				GlobalVariable.password,
+				GlobalVariable.ApiAccount,
+				GlobalVariable.ApiPassword
+				)
+		// remove old folders
+		webdav.deleteAllFolders(
+				GlobalVariable.WebdavURL,
+				GlobalVariable.userid,
+				GlobalVariable.password
+				)
 		try {
 			Mobile.startExistingApplication(APP_PACKAGE_ID, FailureHandling.STOP_ON_FAILURE)
 			println "INFO: Successfully started existing app: $APP_PACKAGE_ID"
