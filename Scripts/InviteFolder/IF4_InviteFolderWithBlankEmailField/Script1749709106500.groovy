@@ -55,8 +55,8 @@ top_folder_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + folder
 Mobile.verifyElementExist(top_folder_obj, 5)
 
 //Verify email field with black details
-Mobile.tap(findTestObject('InviteFolder/ShareButton'), 30)
-Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),5)
+Mobile.tap(findTestObject('Folder_Menu/ShareIcon'), 45)
+Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),15)
 Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
 Mobile.tap(findTestObject('InviteFolder/SelectAdminToggleButton') , 30)
 Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)

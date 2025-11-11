@@ -24,7 +24,6 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 String randomEmail = "user" + System.currentTimeMillis() + "@powerfoldertest.com"
 // start up app
-//CustomKeywords.'utils.Startup_app.install'()
 CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 
 // proceed login not logged in
@@ -55,8 +54,9 @@ Mobile.delay(3)
 TestObject top_folder_obj = new TestObject()
 top_folder_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + folderName + "']")
 Mobile.verifyElementExist(top_folder_obj, 5)
+
 //Verifying cross icon button
-Mobile.tap(findTestObject('InviteFolder/ShareButton'), 30)
+Mobile.tap(findTestObject('Folder_Menu/ShareIcon'), 45)
 Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),5)
 Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
 Mobile.setText(findTestObject('LoginScreen/EnterEmail'), randomEmail, 30)

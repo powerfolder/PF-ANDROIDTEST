@@ -16,16 +16,15 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.Keys as Keys
+import utils.PowerFolderAPI
 import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-//String randomEmail = "user" + System.currentTimeMillis() + "@powerfoldertest.com"
-String randomEmail = "staude@powerfolder.com"
+String randomEmail = "user" + System.currentTimeMillis() + "@powerfoldertest.com"
 
 //start up app
-//CustomKeywords.'utils.Startup_app.install'()
 CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 
 // proceed login not logged in
@@ -74,6 +73,24 @@ Mobile.tap(findTestObject('InviteFolder/SelectReadAndWriteToggleButton') , 30)
 Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)
 String permissionAlertText= Mobile.getText(findTestObject('InviteFolder/VerifyInvitationSentText'), 30)
 Mobile.verifyEqual(permissionAlertText, 'Invitation sent')
+
+// get folderID by api
+PowerFolderAPI api = new PowerFolderAPI()
+def folderID = api.getFolderIdByName(
+	GlobalVariable.ApiURL + '/folders',
+	GlobalVariable.userid,
+	GlobalVariable.password,
+	folderName
+)
+
+// get Invitations byFolderID and check if user is listed by api
+def invited = api.isUserInvitedToFolder(
+	"${GlobalVariable.ApiURL}/invitations",
+	folderID,
+	GlobalVariable.userid,
+	GlobalVariable.password,
+	randomEmail
+)
 
 // go to home - toplvl
 Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)

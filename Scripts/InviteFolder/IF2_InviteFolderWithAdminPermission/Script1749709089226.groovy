@@ -14,6 +14,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import utils.PowerFolderAPI
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.testobject.ConditionType
@@ -21,11 +22,9 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
+String randomEmail = "user" + System.currentTimeMillis() + "@powerfoldertest.com"
 
-//String randomEmail = "user" + System.currentTimeMillis() + "@powerfoldertest.com"
-String randomEmail = "staude@powerfolder.com"
 // start up app
-//CustomKeywords.'utils.Startup_app.install'()
 CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 
 // proceed login not logged in
@@ -57,16 +56,8 @@ TestObject top_folder_obj = new TestObject()
 top_folder_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + folderName + "']")
 Mobile.verifyElementExist(top_folder_obj, 5)
 
-// Tap on top-level folder to open
-Mobile.delay(2)
-Mobile.tap(top_folder_obj, 5)
-
-// Selecting InviteTofolder By Three Dot menu
-Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-Mobile.verifyElementExist(findTestObject('ThreeDotsMenu/InviteToFolder'),5)
-Mobile.tap(findTestObject('ThreeDotsMenu/InviteToFolder'), 45)
-
 // Verify invite popup header and send invitation (with 5 seconds timeout)
+Mobile.tap(findTestObject('Folder_Menu/ShareIcon'), 45)
 Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),5)
 Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
 Mobile.setText(findTestObject('LoginScreen/EnterEmail'),randomEmail, 30)
@@ -76,8 +67,23 @@ String permissionAlertText= Mobile.getText(findTestObject('InviteFolder/VerifyIn
 Mobile.verifyEqual(permissionAlertText, 'Invitation sent')
 Mobile.delay(5)
 
-// here we need an api-call. i'm gonna prepair one to check if folder invitation is synced to backend server
-// api-call
+// get folderID by api
+PowerFolderAPI api = new PowerFolderAPI()
+def folderID = api.getFolderIdByName(
+	GlobalVariable.ApiURL + '/folders',
+	GlobalVariable.userid,
+	GlobalVariable.password,
+	folderName
+)
+
+// get Invitations byFolderID and check if user is listed by api
+def invited = api.isUserInvitedToFolder(
+	"${GlobalVariable.ApiURL}/invitations",
+	folderID,
+	GlobalVariable.userid,
+	GlobalVariable.password,
+	randomEmail
+)
 
 // tab on toplvl folder - there is a UI bug which makes swiping unavailabe when shared so moving in and back to root
 Mobile.delay(2)
