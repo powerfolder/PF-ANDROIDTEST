@@ -1,4 +1,5 @@
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -17,32 +18,15 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration
-if(GlobalVariable.isExistingApp) {
-Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
-} else {
-	String applocation = RunConfiguration.getProjectDir()+'/apks/'+GlobalVariable.AppName;
-	System.out.println("Applocation"+ applocation)
-	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
-	Mobile.delay(5)
-	if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
-		logout()
-	}
-	
-	// enter server URL
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	
-	// Removing server URL
-	Mobile.delay(2)
-	Mobile.tap(findTestObject('LoginScreen/CrossIcon'),30)
-}
 
-// login with credentials
-Mobile.tap(findTestObject('LoginScreen/enterUserNameCustomServer'),30)
-Mobile.setText(findTestObject('LoginScreen/enterUserNameCustomServer'), GlobalVariable.userid, 30)
-Mobile.setText(findTestObject('LoginScreen/enterPasswordCustomServer'), GlobalVariable.password, 30)
-Mobile.hideKeyboard()
-Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-Mobile.delay(3)
+// start up app
+//CustomKeywords.'utils.Startup_app.install'()
+CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
+
+// proceed login not logged in
+if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
+	CustomKeywords.'utils.Process_login.login'(" ",GlobalVariable.userid, GlobalVariable.password)
+}
 
 // Verifying alert message as Server cannot be found
 String errorAlertMessage= Mobile.getText(findTestObject('LoginScreen/ServerNotFoundErrorAlertMsg'), 45)
@@ -51,14 +35,3 @@ Mobile.delay(3)
 
 //Closing application
 Mobile.closeApplication()
-
-def  logout() {
-	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-	Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
-	Mobile.delay(5)
-	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
-	String confirmationMessage= Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
-	Mobile.tap(findTestObject('Settings/LogoutConfirmationYes'), 30)
-	Mobile.delay(5)
-	Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?')
-}
