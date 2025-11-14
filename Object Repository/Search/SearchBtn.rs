@@ -3,11 +3,11 @@
    <description></description>
    <name>SearchBtn</name>
    <tag></tag>
-   <elementGuidId>893086b9-1970-409c-bddd-0785766c8cfa</elementGuidId>
+   <elementGuidId>29d4c016-04d0-4317-bfb1-c5a9ee542010</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>(//*[@class = 'android.widget.Button' and (@text = ' ' or . = ' ')])[2]&#xd;
+   <locator>//*[@class = 'android.widget.Button' and (@text = ' ' or . = ' ') and @resource-id = 'ab_search']&#xd;
 </locator>
    <locatorCollection>
       <entry>
@@ -15,23 +15,7 @@
          <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IMAGE</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>ANDROID_VIEWTAG</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ACCESSIBILITY</key>
          <value></value>
       </entry>
       <entry>
@@ -39,22 +23,39 @@
          <value>new UiSelector()</value>
       </entry>
       <entry>
-         <key>IOS_PREDICATE_STRING</key>
+         <key>CLASS_NAME</key>
          <value></value>
       </entry>
       <entry>
-         <key>IOS_CLASS_CHAIN</key>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.widget.Button' and (@text = ' ' or . = ' ') and @resource-id = 'ab_search']&#xd;
+</value>
+      </entry>
+      <entry>
+         <key>NAME</key>
          <value></value>
       </entry>
       <entry>
          <key>ATTRIBUTES</key>
       </entry>
       <entry>
-         <key>CLASS_NAME</key>
+         <key>IOS_CLASS_CHAIN</key>
          <value></value>
       </entry>
       <entry>
-         <key>ID</key>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
          <value></value>
       </entry>
    </locatorCollection>
