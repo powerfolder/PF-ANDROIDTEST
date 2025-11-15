@@ -16,23 +16,16 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
-
 import com.kms.katalon.core.configuration.RunConfiguration
 
-if(GlobalVariable.isExistingApp) {
-Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
-} else {
-	String applocation = RunConfiguration.getProjectDir()+'/apks/'+GlobalVariable.AppName;
-	System.out.println("Applocation"+ applocation)
-	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
-	Mobile.delay(5)
-	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
-		login()
-	}
-	// click on home icon button 
-	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(3)}
+// start up app
+//CustomKeywords.'utils.Startup_app.install'()
+CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
+
+// proceed login not logged in
+if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
+	CustomKeywords.'utils.Process_login.login'(GlobalVariable.ServerURL,GlobalVariable.userid, GlobalVariable.password)
+}
 
 //Verify search with invalid input
 Mobile.tap(findTestObject('Search/SearchBtn'), 30)
@@ -42,20 +35,10 @@ Mobile.pressKeyCode('ENTER', FailureHandling.CONTINUE_ON_FAILURE)
 Mobile.delay(3)
 // verifying no result found text
 Mobile.verifyElementExist(findTestObject('Search/VerifyNoResultFoundText'), 10)
-
 Mobile.delay(3)
-// clossing application
-Mobile.closeApplication()
 
-def login() {
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
-	Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
-	Mobile.hideKeyboard()
-	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-	Mobile.delay(3)
-}
+Mobile.tap(findTestObject('Search/BackButtonSearch'), 30)
+Mobile.delay(2)
 
-
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
