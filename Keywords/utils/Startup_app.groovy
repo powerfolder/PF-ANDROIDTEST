@@ -14,6 +14,64 @@ class Startup_app {
 	private static final String DEFAULT_APK_NAME = "PowerFolder.apk"
 
 	/**
+	 * Reads a key:value file from the user's HOME directory
+	 * and returns all values as a Map<String, String>.
+	 *
+	 * @param filename  the name of the file located in HOME
+	 * @return Map with key/value pairs
+	 */
+	@Keyword
+	def loadKeyValueFile(String filename) {
+		String homeDir = System.getProperty("user.home")
+		File file = new File(homeDir, filename)
+
+		if (!file.exists()) {
+			KeywordUtil.markFailed("❌ File not found: " + file.absolutePath)
+			return [:]
+		}
+
+		KeywordUtil.logInfo("🔍 Loading key:value file from: ${file.absolutePath}")
+
+		Map<String, String> result = [:]
+
+		file.eachLine { line ->
+			line = line.trim()
+
+			// skip empty lines and comments
+			if (line.isEmpty() || line.startsWith("#")) return
+
+				if (!line.contains(":")) {
+					KeywordUtil.markWarning("⚠️ Invalid entry (ignored): ${line}")
+					return
+				}
+
+			def parts = line.split(":", 2)
+			String key = parts[0].trim()
+			String value = parts[1].trim()
+
+			result[key] = value
+		}
+
+		KeywordUtil.logInfo("✅ Loaded ${result.size()} entries.")
+		return result
+	}
+	def loadCredsIntoGlobals(String filename) {
+		def creds = loadKeyValueFile(filename)
+
+		if (!creds || creds.isEmpty()) {
+			KeywordUtil.markFailed("❌ No credentials found in file: $filename")
+			return
+		}
+
+		GlobalVariable.userid      = creds["userid"]
+		GlobalVariable.password    = creds["password"]
+		GlobalVariable.ApiAccount  = creds["ApiAccount"]
+		GlobalVariable.ApiPassword = creds["ApiPassword"]
+
+		KeywordUtil.logInfo("✅ Credentials loaded into GlobalVariables")
+	}
+
+	/**
 	 * Usage examples:
 	 * - Install latest APK only if not already installed:
 	 *     CustomKeywords.'utils.Startup_app.install'()
@@ -103,6 +161,7 @@ class Startup_app {
 			}
 			println "INFO: Saved APK under: $apkFilePath"
 		}
+		
 		// make sure account exists for test
 		WebDav webdav = new WebDav()
 		webdav.createAccount(
