@@ -62,10 +62,10 @@ class PowerFolderAPI {
 		def folder = result.find { it.name == folderName }
 
 		if (folder) {
-			KeywordUtil.logInfo("✅ Folder '${folderName}' gefunden: ID = ${folder.folderID}")
+			KeywordUtil.logInfo("✅ Folder '${folderName}' found with ID = ${folder.folderID}")
 			return folder.folderID
 		} else {
-			KeywordUtil.markWarning("⚠️ Folder '${folderName}' nicht gefunden.")
+			KeywordUtil.markWarning("⚠️ Folder '${folderName}' not found.")
 			return null
 		}
 	}
