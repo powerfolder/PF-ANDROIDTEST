@@ -6,14 +6,14 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'qa@powerfolder.com'</initValue>
+      <initValue>''</initValue>
       <name>userid</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'PowerFolder123!'</initValue>
+      <initValue>''</initValue>
       <name>password</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
@@ -124,14 +124,14 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'admin'</initValue>
+      <initValue>''</initValue>
       <name>ApiAccount</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'password'</initValue>
+      <initValue>''</initValue>
       <name>ApiPassword</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
