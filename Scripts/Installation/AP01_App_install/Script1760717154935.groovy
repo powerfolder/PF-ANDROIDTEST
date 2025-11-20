@@ -16,6 +16,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+
+// get info about qa-system
+CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
+
 // start or install if package is not installed
 //CustomKeywords.'utils.Startup_app.install'()
 CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)

@@ -24,9 +24,14 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
+// get info about qa-system
+CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
+
 // start up app
 CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
+
 String randomEmail = "user" + System.currentTimeMillis() + "@powerfoldertest.com"
+
 // proceed login not logged in
 if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
 	CustomKeywords.'utils.Process_login.login'(GlobalVariable.ServerURL,GlobalVariable.userid, GlobalVariable.password)

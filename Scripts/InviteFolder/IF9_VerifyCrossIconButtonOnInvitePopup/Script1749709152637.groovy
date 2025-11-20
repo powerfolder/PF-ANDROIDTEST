@@ -21,8 +21,11 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
+// get info about qa-system
+CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
 
 String randomEmail = "user" + System.currentTimeMillis() + "@powerfoldertest.com"
+
 // start up app
 CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 
