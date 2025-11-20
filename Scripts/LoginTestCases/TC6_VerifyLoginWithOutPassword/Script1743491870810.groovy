@@ -19,8 +19,10 @@ import org.openqa.selenium.Keys as Keys
 
 import com.kms.katalon.core.configuration.RunConfiguration
 
+// get info about qa-system
+CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
+
 // start up app
-//CustomKeywords.'utils.Startup_app.install'()
 CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 
 // proceed login not logged in
