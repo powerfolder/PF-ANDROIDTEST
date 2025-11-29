@@ -144,6 +144,7 @@ class Startup_app {
 		if (!forceReinstall && isAppInstalled(APP_PACKAGE_ID)) {
 			println "INFO: App is already installed. Skipping installation."
 			startExisting()
+			return
 		}
 
 		if (localAppVersion != null && !localAppVersion.trim().isEmpty()) {
@@ -161,7 +162,7 @@ class Startup_app {
 			}
 			println "INFO: Saved APK under: $apkFilePath"
 		}
-		
+
 		// make sure account exists for test
 		WebDav webdav = new WebDav()
 		webdav.createAccount(
