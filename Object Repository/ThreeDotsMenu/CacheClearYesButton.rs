@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MobileElementEntity>
    <description></description>
-   <name>UpgradeAccountButton</name>
+   <name>CacheClearYesButton</name>
    <tag></tag>
-   <elementGuidId>1c7bbd38-19c7-40df-a42e-59f14b70fff5</elementGuidId>
+   <elementGuidId>3c989456-f3e3-4576-9995-f75f5ffacec6</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//*[@class = 'android.widget.Button' and (@text = 'Upgrade account' or . = 'Upgrade account') and @resource-id = 'upgrade_button']</locator>
+   <locator>//*[@class = 'android.widget.TextView' and (@text = 'Yes' or . = 'Yes') and @resource-id = 'confirm_yes']</locator>
    <locatorCollection>
       <entry>
          <key>ID</key>
@@ -22,12 +22,12 @@
          <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@class = 'android.widget.Button' and (@text = 'Upgrade account' or . = 'Upgrade account') and @resource-id = 'upgrade_button']</value>
-      </entry>
-      <entry>
          <key>IOS_PREDICATE_STRING</key>
          <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.widget.TextView' and (@text = 'Yes' or . = 'Yes') and @resource-id = 'confirm_yes']</value>
       </entry>
       <entry>
          <key>CUSTOM</key>

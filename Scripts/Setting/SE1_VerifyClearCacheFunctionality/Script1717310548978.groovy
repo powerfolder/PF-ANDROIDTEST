@@ -16,45 +16,27 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
-
-
 import com.kms.katalon.core.configuration.RunConfiguration
 
-if(GlobalVariable.isExistingApp) {
-Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
-} else {
-	String applocation = RunConfiguration.getProjectDir()+'/apks/'+GlobalVariable.AppName;
-	System.out.println("Applocation"+ applocation)
-	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
-	Mobile.delay(5)
-	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
-		login()
-	}
-	// click on home icon button 
-	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(3)}
+// get info about qa-system
+CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
+
+// start up app
+CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
+
+// proceed login not logged in
+if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
+	CustomKeywords.'utils.Process_login.login'(GlobalVariable.ServerURL,GlobalVariable.userid, GlobalVariable.password)
+}
 
 // Reset cache and verify alert message
 Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
 Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
-Mobile.delay(2)
+Mobile.delay(5)
 Mobile.tap(findTestObject('ThreeDotsMenu/ClearCache'),30)
-Mobile.verifyElementExist(findTestObject('ThreeDotsMenu/ClearCatcheAlertMessage'), 5)
-Mobile.tap(findTestObject('ThreeDotsMenu/CacheClearOKButton'),30)
-
+Mobile.verifyElementExist(findTestObject('ThreeDotsMenu/ClearCatcheAlertMessage'), 10)
+Mobile.tap(findTestObject('ThreeDotsMenu/CacheClearYesButton'),30)
 Mobile.delay(2)
 
-// closing application 
-Mobile.closeApplication()
-
-def login() {
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
-	Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
-	Mobile.hideKeyboard()
-	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-	Mobile.delay(3)
-}
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
