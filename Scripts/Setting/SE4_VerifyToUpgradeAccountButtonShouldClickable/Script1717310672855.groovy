@@ -48,5 +48,12 @@ Mobile.delay(10)
 // Verify landed should have power folder logo
 //Mobile.verifyElementExist(findTestObject('Settings/PowerFolderLogo'), 5) // webpage not found
 
-// Closing application
-Mobile.closeApplication()
+Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
+Mobile.delay(5)
+
+// go to home - toplvl
+Mobile.pressBack()
+Mobile.delay(2)
+
+//logout and close app
+WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
