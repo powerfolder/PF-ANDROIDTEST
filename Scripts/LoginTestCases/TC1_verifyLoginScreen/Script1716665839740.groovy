@@ -27,7 +27,7 @@ CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 // verifying login screen
 Mobile.verifyElementExist(findTestObject('LoginScreen/PowerFolderLogo'), 30)
 Mobile.verifyElementExist(findTestObject('LoginScreen/HomeIcon'), 30)
-Mobile.verifyElementExist(findTestObject('LoginScreen/ServerURLTMP'), 30)
+Mobile.verifyElementExist(findTestObject('LoginScreen/ServerURL'), 30)
 Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 30)
 
 //closing application 
