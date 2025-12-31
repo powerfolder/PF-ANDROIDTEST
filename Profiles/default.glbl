@@ -33,7 +33,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'PowerFolder_v23.4.100.apk'</initValue>
+      <initValue>'PowerFolder_v26.0.100.apk'</initValue>
       <name>AppName</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
