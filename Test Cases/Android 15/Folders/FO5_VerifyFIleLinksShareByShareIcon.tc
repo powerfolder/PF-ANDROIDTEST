@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FO5_VerifyFIleLinksShareByShareIcon</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>18dd5e8d-c7b5-44bc-82d2-df59d940fee8</testCaseGuid>
+</TestCaseEntity>

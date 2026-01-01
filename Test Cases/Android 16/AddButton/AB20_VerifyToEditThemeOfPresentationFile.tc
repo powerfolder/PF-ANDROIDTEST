@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB20_VerifyToEditThemeOfPresentationFile</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>45011a10-bb0b-498f-9e2c-9cdeb37b36f3</testCaseGuid>
+</TestCaseEntity>

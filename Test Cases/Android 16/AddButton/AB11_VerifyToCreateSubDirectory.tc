@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB11_VerifyToCreateSubDirectory</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e65309e9-e33c-46f8-a5ed-1f19ccdce824</testCaseGuid>
+</TestCaseEntity>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>B01_CreateTopLvlFolder</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>f18202f7-1787-4a09-9f9a-0470e7dcc0e2</testCaseGuid>
-</TestCaseEntity>
