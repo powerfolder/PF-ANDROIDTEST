@@ -63,4 +63,4 @@ Mobile.delay(5)
 Mobile.swipe(10, 330, 80, 330)
 
 //logout and close app
-WebUI.callTestCase(findTestCase('Android 16/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Android 15/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
