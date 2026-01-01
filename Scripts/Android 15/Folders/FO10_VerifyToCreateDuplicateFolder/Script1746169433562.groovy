@@ -92,4 +92,4 @@ if (alertMsg.contains('Deleted')) {
 }
 
 //logout and close app
-WebUI.callTestCase(findTestCase('Android 16/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Android 15/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)

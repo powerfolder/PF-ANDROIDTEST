@@ -61,4 +61,4 @@ Mobile.verifyElementExist(top_folder_obj, 5)
 CustomKeywords.'utils.Delete_object.swipeAndDelete'(top_folder_obj)
 
 //logout and close app
-WebUI.callTestCase(findTestCase('Android 16/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Android 15/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)

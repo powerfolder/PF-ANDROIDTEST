@@ -69,15 +69,4 @@ if (alertMsg.contains('Deleted')) {
 }
 
 //logout and close app
-WebUI.callTestCase(findTestCase('Android 16/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-
-def login() {
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
-	Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
-	Mobile.hideKeyboard()
-	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-	Mobile.delay(3)
-}
+WebUI.callTestCase(findTestCase('Android 15/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
