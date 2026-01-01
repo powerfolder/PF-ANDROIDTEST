@@ -34,4 +34,4 @@ if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, Fail
 Mobile.verifyElementExist(findTestObject('LoginScreen/HomeIcon'), 30)
 
 //logout and close app
-WebUI.callTestCase(findTestCase('Android 16/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Android 14/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
