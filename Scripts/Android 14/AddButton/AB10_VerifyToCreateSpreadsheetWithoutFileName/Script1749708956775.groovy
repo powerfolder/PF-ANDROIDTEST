@@ -16,26 +16,25 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.configuration.RunConfiguration
-import com.kms.katalon.core.testobject.TestObject
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
+import com.kms.katalon.core.testobject.ConditionType as ConditionType
 
 // get info about qa-system
-CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
+CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'('katalon.txt')
 
 // start up app
 CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 
 // proceed login not logged in
 if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
-	CustomKeywords.'utils.Process_login.login'(GlobalVariable.ServerURL,GlobalVariable.userid, GlobalVariable.password)
+    CustomKeywords.'utils.Process_login.login'(GlobalVariable.ServerURL, GlobalVariable.userid, GlobalVariable.password)
 }
 
 // tab on fab_button - plus-button
 Mobile.delay(3)
+
 Mobile.tapAtPosition(GlobalVariable.EMU_P8_plusIconTabX, GlobalVariable.EMU_P8_plusIconTabY)
+
 Mobile.delay(3)
 
 // tab on menu-entry New-Directory to start Toplvl-folder-creation dialog
@@ -43,10 +42,13 @@ Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'), 30)
 
 // create foldername based on timestamp
 String timestamp_folder = CustomKeywords.'utils.Get_timestamp.generateTimestamp'()
+
 String folderName = 'Folder_' + timestamp_folder
 
 Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), folderName, 30)
+
 Mobile.delay(2)
+
 Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'), 30)
 
 // wait some seconds after setting up new toplvl folder
@@ -54,37 +56,56 @@ Mobile.delay(3)
 
 // verifying folder is existing
 TestObject top_folder_obj = new TestObject()
-top_folder_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + folderName + "']")
+
+top_folder_obj.addProperty('xpath', ConditionType.EQUALS, ('//*[@text=\'' + folderName) + '\']')
+
 Mobile.verifyElementExist(top_folder_obj, 5)
 
 // tab on toplvl folder
 Mobile.delay(2)
+
 Mobile.tap(top_folder_obj, 5)
 
 // create new spreadsheet without file name
 Mobile.delay(4)
+
 Mobile.tapAtPosition(GlobalVariable.EMU_P8_plusIconTabX, GlobalVariable.EMU_P8_plusIconTabY)
+
 Mobile.delay(6)
-Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewSpreadsSheet'),10)
+
+Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewSpreadsSheet'), 10)
+
 Mobile.tap(findTestObject('PlusIconMenus/NewSpreadsSheet'), 30)
+
 Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
+
 Mobile.delay(2)
+
 Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
-Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), "", 30)
-Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
+
+Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), '', 30)
+
+Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'), 30)
+
 Mobile.delay(5)
 
 // Verify alert message as Please enter valid file name
 String alertMsg = Mobile.getText(findTestObject('CreateNewFile/ValidFieldAlertMsg'), 30)
+
 Mobile.verifyEqual(alertMsg, 'Please enter valid file name')
+
 Mobile.pressBack()
+
 Mobile.delay(2)
+
 // go to home - toplvl
-Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
+Mobile.tap(findTestObject('LoginScreen/HomeIcon'), 30)
+
 Mobile.delay(2)
 
 // delete created toplvl-folder with presentation inside
 CustomKeywords.'utils.Delete_object.swipeAndDelete'(top_folder_obj)
 
 //logout and close app
-WebUI.callTestCase(findTestCase('Android 16/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Android 14/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+
