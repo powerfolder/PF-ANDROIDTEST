@@ -44,4 +44,4 @@ Mobile.tap(findTestObject('Search/BackButtonSearch'), 30)
 Mobile.delay(2)
 
 //logout and close app
-WebUI.callTestCase(findTestCase('Android 16/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Android 14/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
