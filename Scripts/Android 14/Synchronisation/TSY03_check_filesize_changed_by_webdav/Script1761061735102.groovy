@@ -109,7 +109,7 @@ Mobile.tap(findTestObject('LoginScreen/HomeIcon'), 30)
 CustomKeywords.'utils.Delete_object.swipeAndDelete'(top_folder_obj)
 
 //logout and close app
-WebUI.callTestCase(findTestCase('Android 16/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Android 14/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 String getRandomFolderName() {
 	String folderName = 'TSY03_' + getTimestamp()
