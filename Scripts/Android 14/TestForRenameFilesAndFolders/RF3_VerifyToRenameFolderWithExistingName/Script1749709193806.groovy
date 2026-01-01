@@ -104,4 +104,4 @@ Mobile.delay(5)
 CustomKeywords.'utils.Delete_object.swipeAndDelete'(sec_folder_obj)
 
 // Logout and close the app
-WebUI.callTestCase(findTestCase('Android 16/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Android 14/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
