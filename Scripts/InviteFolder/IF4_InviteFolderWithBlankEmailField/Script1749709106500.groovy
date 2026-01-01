@@ -1,4 +1,3 @@
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -16,26 +15,50 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.configuration.RunConfiguration
+import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.testobject.ConditionType
+import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-if(GlobalVariable.isExistingApp) {
-Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
-} else {
-	String applocation = RunConfiguration.getProjectDir()+'/apks/'+GlobalVariable.AppName;
-	System.out.println("Applocation"+ applocation)
-	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
-	Mobile.delay(5)
-	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
-		login()
-	}
-	// click on home icon button 
-	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(3)}
+// get info about qa-system
+CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
+
+// start up app
+CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
+
+// proceed login not logged in
+if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
+	CustomKeywords.'utils.Process_login.login'(GlobalVariable.ServerURL,GlobalVariable.userid, GlobalVariable.password)
+}
+
+// tab on fab_button - plus-button
+Mobile.delay(3)
+Mobile.tapAtPosition(GlobalVariable.EMU_P8_plusIconTabX, GlobalVariable.EMU_P8_plusIconTabY)
+Mobile.delay(3)
+
+// tab on menu-entry New-Directory to start Toplvl-folder-creation dialog
+Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'), 30)
+
+// create foldername based on timestamp
+String timestamp_folder = CustomKeywords.'utils.Get_timestamp.generateTimestamp'()
+String folderName = 'Folder_' + timestamp_folder
+
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), folderName, 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'), 30)
+
+// wait some seconds after setting up new toplvl folder
+Mobile.delay(3)
+
+// verifying folder is existing
+TestObject top_folder_obj = new TestObject()
+top_folder_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + folderName + "']")
+Mobile.verifyElementExist(top_folder_obj, 5)
 
 //Verify email field with black details
-Mobile.tap(findTestObject('InviteFolder/ShareButton'), 30)
-Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),5)
+Mobile.tap(findTestObject('Folder_Menu/ShareIcon'), 45)
+Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),15)
 Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
 Mobile.tap(findTestObject('InviteFolder/SelectAdminToggleButton') , 30)
 Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)
@@ -43,16 +66,13 @@ String permissionAlertText= Mobile.getText(findTestObject('InviteFolder/VerifyBl
 Mobile.verifyEqual(permissionAlertText, 'Please enter an email address first.')
 Mobile.tap(findTestObject('InviteFolder/CancelButton'), 0)
 
+
+// go to home - toplvl
+Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
+Mobile.delay(2)
+
+// delete created toplvl-folder
+CustomKeywords.'utils.Delete_object.swipeAndDelete'(top_folder_obj)
+
 //logout and close app
 WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-
-def login() {
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
-	Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
-	Mobile.hideKeyboard()
-	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-	Mobile.delay(3)
-}

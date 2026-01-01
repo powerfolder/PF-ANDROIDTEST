@@ -4,12 +4,72 @@ import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.configuration.RunConfiguration
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling
+import com.kms.katalon.core.util.KeywordUtil
+import internal.GlobalVariable
 
 class Startup_app {
 
 	private static final String APP_PACKAGE_ID = "de.goddchen.android.powerfolder.A"
 	private static final String APK_URL = "https://my.powerfolder.com/dl/fiQ2zfs8zNQovEH8o4o9vy/android/development/PowerFolder.apk"
 	private static final String DEFAULT_APK_NAME = "PowerFolder.apk"
+
+	/**
+	 * Reads a key:value file from the user's HOME directory
+	 * and returns all values as a Map<String, String>.
+	 *
+	 * @param filename  the name of the file located in HOME
+	 * @return Map with key/value pairs
+	 */
+	@Keyword
+	def loadKeyValueFile(String filename) {
+		String homeDir = System.getProperty("user.home")
+		File file = new File(homeDir, filename)
+
+		if (!file.exists()) {
+			KeywordUtil.markFailed("❌ File not found: " + file.absolutePath)
+			return [:]
+		}
+
+		KeywordUtil.logInfo("🔍 Loading key:value file from: ${file.absolutePath}")
+
+		Map<String, String> result = [:]
+
+		file.eachLine { line ->
+			line = line.trim()
+
+			// skip empty lines and comments
+			if (line.isEmpty() || line.startsWith("#")) return
+
+				if (!line.contains(":")) {
+					KeywordUtil.markWarning("⚠️ Invalid entry (ignored): ${line}")
+					return
+				}
+
+			def parts = line.split(":", 2)
+			String key = parts[0].trim()
+			String value = parts[1].trim()
+
+			result[key] = value
+		}
+
+		KeywordUtil.logInfo("✅ Loaded ${result.size()} entries.")
+		return result
+	}
+	def loadCredsIntoGlobals(String filename) {
+		def creds = loadKeyValueFile(filename)
+
+		if (!creds || creds.isEmpty()) {
+			KeywordUtil.markFailed("❌ No credentials found in file: $filename")
+			return
+		}
+
+		GlobalVariable.userid      = creds["userid"]
+		GlobalVariable.password    = creds["password"]
+		GlobalVariable.ApiAccount  = creds["ApiAccount"]
+		GlobalVariable.ApiPassword = creds["ApiPassword"]
+
+		KeywordUtil.logInfo("✅ Credentials loaded into GlobalVariables")
+	}
 
 	/**
 	 * Usage examples:
@@ -33,19 +93,19 @@ class Startup_app {
 		try {
 			// get adb path dynamically based on OS-Path
 			String adbExecutable
-	
+
 			if (System.properties['os.name'].toLowerCase().contains('windows')) {
 				adbExecutable = System.getProperty("user.home") + "\\.katalon\\tools\\android_sdk\\platform-tools\\adb.exe"
 			} else {
 				adbExecutable = System.getProperty("user.home") + "/.katalon/tools/android_sdk/platform-tools/adb"
 			}
-	
+
 			File adbFile = new File(adbExecutable)
 			if (!adbFile.exists()) {
 				println "⚠️  Attention: Clound find adb unter the following path: ${adbExecutable}"
 				return false
 			}
-	
+
 			def process = [
 				adbExecutable,
 				"shell",
@@ -54,13 +114,13 @@ class Startup_app {
 				"packages",
 				packageId
 			].execute()
-	
+
 			process.waitFor()
-	
+
 			// trim output to show package id
 			def output = process.text?.trim()
 			println "ADB output: ${output}"
-	
+
 			return output.contains("package:" + packageId)
 		} catch (Exception e) {
 			println "❌ ERROR: Failed to check if app is installed: ${e.message}"
@@ -84,6 +144,7 @@ class Startup_app {
 		if (!forceReinstall && isAppInstalled(APP_PACKAGE_ID)) {
 			println "INFO: App is already installed. Skipping installation."
 			startExisting()
+			return
 		}
 
 		if (localAppVersion != null && !localAppVersion.trim().isEmpty()) {
@@ -102,6 +163,21 @@ class Startup_app {
 			println "INFO: Saved APK under: $apkFilePath"
 		}
 
+		// make sure account exists for test
+		WebDav webdav = new WebDav()
+		webdav.createAccount(
+				GlobalVariable.ApiURL,
+				GlobalVariable.userid,
+				GlobalVariable.password,
+				GlobalVariable.ApiAccount,
+				GlobalVariable.ApiPassword
+				)
+		// remove old folders
+		webdav.deleteAllFolders(
+				GlobalVariable.WebdavURL,
+				GlobalVariable.userid,
+				GlobalVariable.password
+				)
 		// Install APK
 		Mobile.startApplication(apkFilePath, true, FailureHandling.STOP_ON_FAILURE)
 
@@ -123,6 +199,21 @@ class Startup_app {
 	 */
 	@Keyword
 	def startExisting() {
+		// make sure account exists for test
+		WebDav webdav = new WebDav()
+		webdav.createAccount(
+				GlobalVariable.ApiURL,
+				GlobalVariable.userid,
+				GlobalVariable.password,
+				GlobalVariable.ApiAccount,
+				GlobalVariable.ApiPassword
+				)
+		// remove old folders
+		webdav.deleteAllFolders(
+				GlobalVariable.WebdavURL,
+				GlobalVariable.userid,
+				GlobalVariable.password
+				)
 		try {
 			Mobile.startExistingApplication(APP_PACKAGE_ID, FailureHandling.STOP_ON_FAILURE)
 			println "INFO: Successfully started existing app: $APP_PACKAGE_ID"

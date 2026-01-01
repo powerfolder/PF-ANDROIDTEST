@@ -18,17 +18,11 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration
 
-if(GlobalVariable.isExistingApp) {
-Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
-} else {
-	String applocation = RunConfiguration.getProjectDir()+'/apks/'+GlobalVariable.AppName;
-	System.out.println("Applocation"+ applocation)
-	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
-	Mobile.delay(5)
-}
-	if(!(Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
-	logout()
-}
+// get info about qa-system
+CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
+
+// start up app
+CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 
 // verifying login screen
 Mobile.verifyElementExist(findTestObject('LoginScreen/PowerFolderLogo'), 30)
@@ -36,16 +30,5 @@ Mobile.verifyElementExist(findTestObject('LoginScreen/HomeIcon'), 30)
 Mobile.verifyElementExist(findTestObject('LoginScreen/ServerURL'), 30)
 Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 30)
 
-// closing application
+//closing application 
 Mobile.closeApplication()
-
-def  logout() {
-	Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
-	Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
-	Mobile.delay(3)
-	Mobile.tap(findTestObject('Settings/LogoutButton'), 45)
-	String confirmationMessage= Mobile.getText(findTestObject('Settings/logoutConfirmationMessage'), 30)
-	Mobile.tap(findTestObject('Settings/LogoutConfirmationYes'), 30)
-	Mobile.delay(3)
-	Mobile.verifyEqual(confirmationMessage, 'Do you really want to log out and remove all user data?')
-}

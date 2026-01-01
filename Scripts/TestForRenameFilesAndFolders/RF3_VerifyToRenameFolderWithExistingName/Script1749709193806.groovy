@@ -19,106 +19,89 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration
 
-// Start application logic
-if (GlobalVariable.isExistingApp) {
-	Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
-} else {
-	String applocation = RunConfiguration.getProjectDir() + '/apks/' + GlobalVariable.AppName
-	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
-	Mobile.delay(5)
+// get info about qa-system
+CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
 
-	if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
-		login()
-	}
+// Start up the app
+CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 
-	Mobile.tap(findTestObject('LoginScreen/HomeIcon'), 30)
-	Mobile.delay(3)
+// Proceed with login if not already logged in
+if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
+	CustomKeywords.'utils.Process_login.login'(GlobalVariable.ServerURL, GlobalVariable.userid, GlobalVariable.password)
 }
 
+// Tap on the FAB button - plus-button
+Mobile.delay(3)
+Mobile.tapAtPosition(GlobalVariable.EMU_P8_plusIconTabX, GlobalVariable.EMU_P8_plusIconTabY)
+Mobile.delay(3)
+
+// Tap on menu-entry "New Directory" to start Toplvl-folder-creation dialog
+Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'), 30)
+
+// Create folder name based on timestamp
+String timestamp_folder = CustomKeywords.'utils.Get_timestamp.generateTimestamp'()
+String folderName = 'Folder_' + timestamp_folder
+
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), folderName, 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'), 30)
+
+// Wait a few seconds after setting up the new Toplvl folder
+Mobile.delay(3)
+
+// Verifying the folder exists
+TestObject top_folder_obj = new TestObject()
+top_folder_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + folderName + "']")
+Mobile.verifyElementExist(top_folder_obj, 5, FailureHandling.OPTIONAL)
+
+
+// Create 2nd directory based on timestamp
+Mobile.delay(3)
+Mobile.tapAtPosition(GlobalVariable.EMU_P8_plusIconTabX, GlobalVariable.EMU_P8_plusIconTabY)
+Mobile.delay(3)
+
+// Tap on menu-entry "New Directory" to start Toplvl-folder-creation dialog
+Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'), 30)
+String timestamp_2folder = CustomKeywords.'utils.Get_timestamp.generateTimestamp'()
+String secfolderName = 'Folder_' + timestamp_2folder
+
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), secfolderName, 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'), 30)
+
+// Verifying the secfolder exists
+TestObject sec_folder_obj = new TestObject()
+sec_folder_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + secfolderName + "']")
+Mobile.verifyElementExist(sec_folder_obj, 5, FailureHandling.OPTIONAL)
+
+
 // Rename flow
-Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
-Mobile.delay(1)
-Mobile.pressBack()
-
-// Create new directory with the help of plus icon coordinates
-Mobile.delay(3)
-Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
-Mobile.delay(3)
-Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'),10)
-Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
-Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'),5)
-Mobile.delay(1)
-Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Test Folder", 30)
-Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
-Mobile.delay(5)
-
-// verifying folder with there name
-String getFolderName= Mobile.getText(findTestObject('Folder_Menu/VerifyCreatedFolderName'), 30)
-Mobile.verifyEqual(getFolderName, 'Test Folder')
-
-// Create 2nd directory with the help of plus icon coordinates
-Mobile.delay(3)
-Mobile.tapAtPosition(GlobalVariable.plusIcontapX,GlobalVariable.plusIcontapY)
-Mobile.delay(3)
-Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewDirectory'),10)
-Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'),30)
-Mobile.verifyElementExist(findTestObject('Folder_Menu/CreateFolderPopUpHeader'),5)
-Mobile.delay(1)
-Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), "Second Test Folder", 30)
-Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'),30)
-Mobile.delay(5)
-
-// Rename flow
-Mobile.swipe(290, 451, 150, 451)
+// Swipe file to open rename icon
+CustomKeywords.'utils.Swipe_object.swipe'(sec_folder_obj)
 Mobile.tap(findTestObject('SwipeElements/RenameIcon'), 30)
 Mobile.delay(3)
 Mobile.tap(findTestObject('SwipeElements/CrossIconRenameTab'), 30)
 Mobile.delay(3)
-Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), "Test Folder", 30)
-Mobile.delay(2)
+
+// renaming file based on existing folder
+Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), folderName, 30)
 Mobile.tap(findTestObject('SwipeElements/SaveButton'), 30)
-Mobile.delay(3)
-
-// Verify file name as expected after renamed
-/*String getErrorALertMessage= Mobile.getText(findTestObject('SwipeElements/AlreadyExistAlertMsg'), 30)
-Mobile.verifyEqual(getErrorALertMessage, 'Server error')*/
-
-// delete created file with swape method
-Mobile.pressBack()
 Mobile.delay(5)
-Mobile.swipe(300, 300, 300, 800)// swipe for refresh
-Mobile.delay(3)
-Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
-Mobile.swipe(290, 451, 150, 451)
-Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
-Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
+Mobile.pressBack()
 
-// delete 2nd folder with swape method
-Mobile.delay(3)
-Mobile.swipe(290, 451, 150, 451)
-Mobile.delay(1)
-Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
-Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
-Mobile.delay(3)
+// click on home icon button
+Mobile.tap(findTestObject('LoginScreen/HomeIcon'), 30)
 
-// verifying delete alert message
-String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
-if (alertMsg.contains('Deleted')) {
-	println(alertMsg)
-}else {
-	print('File not deleted')
-}
+// Verify error message is shown
+String getErrorALertMessage= Mobile.getText(findTestObject('SwipeElements/ServerError'), 30)
+Mobile.verifyEqual(getErrorALertMessage, 'Server error')
 
-//logout and close app
+// Delete created Toplvl-folder
+CustomKeywords.'utils.Delete_object.swipeAndDelete'(top_folder_obj)
+Mobile.delay(5)
+
+// Delete created sec-folder
+CustomKeywords.'utils.Delete_object.swipeAndDelete'(sec_folder_obj)
+
+// Logout and close the app
 WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-
-def login() {
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
-	Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
-	Mobile.hideKeyboard()
-	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-	Mobile.delay(3)
-}

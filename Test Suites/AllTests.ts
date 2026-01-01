@@ -12,514 +12,528 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>28bab8ef-7798-425a-a25d-cffcd6688afe</testSuiteGuid>
    <testCaseLink>
-      <guid>ec7402c9-a6f9-4ff4-af79-764269a6c2aa</guid>
+      <guid>94e5fc31-1977-4b68-8438-b3746eee3f54</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Installation/AP01_App_install</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ec8f2ad3-e7b9-4f3d-a75c-41e7ab23163a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB1_VerifyNewPresentation</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>4da1af42-47fd-4d02-b804-1b140ec688f8</guid>
+      <guid>8747bfaa-87e5-4a96-954f-3cb422f2aa41</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB2_VerifyNewSpreadsheet</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>1d112856-192d-427b-864b-2d92fa99cf45</guid>
+      <guid>26cb080e-3f0c-4eaf-8153-e8ec1f10c650</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB3_VerifyNewTextFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>4bf4d833-21cf-4355-8ea2-a670da34691c</guid>
+      <guid>33681de5-3d13-4ed0-8929-603847c15ee3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB4_VerifyTakePictureButton</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>30544aa6-5e7c-4f08-b2db-cb0826c74493</guid>
+      <guid>0b1d7e59-c8ff-49af-9088-f59f8cb36a5e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB5_VerifyToCreateDocumentWithoutFileName</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>4550ca78-5107-4d7a-aca5-296c4dabd064</guid>
+      <guid>8638de59-b190-496b-abb9-247b95a8f41a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB6_VerifyToCreateDuplicateSlideForPresentationFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>164bdd22-8463-444e-9357-cbf934eed727</guid>
+      <guid>71d0e44f-8458-4a9c-9b72-120c3e4183e8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB7_VerifyToCreateDuplicateSubDirectory</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>b968369f-8d0a-44d1-8fc5-0a88303d8c6c</guid>
+      <guid>b14e0b78-3ed1-4c3c-bab8-9fd4f5beb757</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB8_VerifyToCreateNewDocument</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>9cb8c4ab-8fb7-4d3b-a972-0f1537bba85d</guid>
+      <guid>fae55dd6-8e4a-4e5f-b43d-b892adf7ea9f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB9_VerifyToCreatePresentationWithoutFileName</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>d6de2d44-dd89-44f9-b3b0-337fd35f2277</guid>
+      <guid>ad920507-98b9-4f6e-9f20-1d8f88ed4cc7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB10_VerifyToCreateSpreadsheetWithoutFileName</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>0bb32786-15a7-4847-9eee-1e8fa8e3d368</guid>
+      <guid>bba47e3b-867c-415e-bb9b-669b0df56209</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB11_VerifyToCreateSubDirectory</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>f199ed86-8c53-4824-98ef-ca125c716e11</guid>
+      <guid>683ddd0a-8f9c-43cc-883c-a810faed6bce</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB12_VerifyToCreateSubDirectoryWithoutFileName</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>d9aaa92b-bb7f-4205-b516-04616839e689</guid>
+      <guid>6fff2e19-ead3-4968-bd25-8bcb67d45fd6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB13_VerifyToCreateTextFileWithoutFileName</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>a7643b87-46f4-4226-bf96-aaa6d36f496e</guid>
+      <guid>cfeb6064-fc04-4fe9-93cb-8056165fbbf2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB14_VerifyToEditDocumentFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>865f47dd-c306-4c26-948d-3e1cf17b8367</guid>
+      <guid>7d49e69a-1c6d-4003-8546-daaf9a78dc08</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB15_VerifyToEditLayoutOfPresentationFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>94570776-d941-471f-929b-aaccf707c139</guid>
+      <guid>8124f19f-c814-416e-968c-a846f002b67d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB16_VerifyToEditNewPresentationFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>43262363-f336-4eee-a2cb-2e583f55f431</guid>
+      <guid>c6b57644-a126-4fbd-97c0-fdf09377a48d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB17_VerifyToEditNewSpreadsheetFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>134ba890-4d86-4bd8-a10e-23384d71ffce</guid>
+      <guid>da82fae0-7d46-4bc3-bdea-92ec506c5107</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB18_VerifyToEditNewTextFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>c7314b78-ac38-4b6a-9f00-f3fb07c716fa</guid>
+      <guid>c7de8182-da50-49d1-a1f2-f7d9db000c0e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB19_VerifyToEditStyleOfPresentationFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>fa2d8732-6704-48b8-b401-1fdf5b7325df</guid>
+      <guid>7f795b85-bf2d-4c47-82ab-8dfc17fa403b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB20_VerifyToEditThemeOfPresentationFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>7615d735-6355-4152-8d02-79c39cae426d</guid>
+      <guid>b95991f4-f48a-4993-9c7a-7717a616a84b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB21_VerifyToEditTransitionOfPresentationFile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>b04c72dc-06d9-4600-9906-43262f233da3</guid>
+      <guid>0e0e33d5-5f1f-4322-97d5-44fc0563490e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddButton/AB22_VerifyUploadHereButton</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>8db09dc6-dcb2-4f9b-93d3-afd3946224ee</guid>
+      <guid>7d51f45c-cb58-4d2b-8e75-d83be47eec40</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO1_VerifyFolderList</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>8cd745b4-830c-40a6-8618-649a9ba45311</guid>
+      <guid>a5c3158f-5904-4736-a92e-fd0912742120</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO2_VerifyListOfFiles</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>d5dd3535-aeaa-44b3-80bf-81af329beffd</guid>
+      <guid>5af586fe-8b49-49a7-af59-a2c237273cdc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO3_VerifyFolderCreationAndDeletion</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>8f153f0e-461f-4917-a53f-8431ca91845a</guid>
+      <guid>2349cd37-83db-4093-a160-adead6dfafad</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO4_VerifyFilesLinks</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>7cea924c-f4ad-4567-a1ad-381b46bb35f6</guid>
+      <guid>952ef3e3-b7c1-43ba-bf26-8aa47106cf37</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO5_VerifyFIleLinksShareByShareIcon</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>2719a255-6b59-4f09-8250-449ec45dd73d</guid>
+      <guid>1ab609de-d384-4a78-9adb-ab18a37a471a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO6_VerifyDownloadAllFeature</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>9403e574-dc0d-4114-b052-012d58273788</guid>
+      <guid>67818a57-bb0b-4c27-a260-22fb5750d92d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO7_VerifyToRenameSubFolder</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>bc9b0af5-b1d2-414b-b5fb-fb90e7bd1985</guid>
+      <guid>a6dc697e-3b4b-4753-8ea7-449b3b6ce8d5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO8_VerifyToRenameFolder</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>5d056f86-f054-4dd4-928c-907323070bb6</guid>
+      <guid>251c1af2-8cf2-4256-92da-fe0dd780739f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO10_VerifyToCreateDuplicateFolder</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>58e364e1-1018-48ed-a1f1-2a99d3027c4e</guid>
+      <guid>c2ebf3dc-2dc3-4fea-ad96-7024fc087c10</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Folders/FO11_VerifyToCreateFolderWithBlankField</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>50cb3514-0226-4c46-9140-278df4fb80de</guid>
+      <guid>337cf440-77c4-4756-8598-cbaa93dc54ee</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/InviteFolder/IF1_InviteFolderByThreeDotMenuWithBlankEmailField</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>88d43bc2-2009-4db5-8f80-191e1c162c20</guid>
+      <guid>dda04d8d-9842-4b8b-b3fe-55572fd563c5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/InviteFolder/IF2_InviteFolderWithAdminPermission</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>627be94e-cd38-49bb-83a5-27a18883b66a</guid>
+      <guid>3ac9477c-1db2-4298-9efd-b30683bb8e70</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/InviteFolder/IF3_InviteFolderWithAdminPermissionByThreeDotMenus</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>911f1850-762e-4099-8de1-b48e39e28d0c</guid>
+      <guid>69912ecd-6e76-41db-8bcb-41e128e01031</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/InviteFolder/IF4_InviteFolderWithBlankEmailField</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>96d79255-99fc-4c8a-99af-cde61c79fec2</guid>
+      <guid>91aa8f2a-e864-4ebf-af86-4ae00d05c3b5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/InviteFolder/IF5_InviteFolderWithReadAndWritePermission</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>72e47d72-3395-4c7d-aed6-a8d05b659e91</guid>
+      <guid>b10411fd-6225-4ec2-a498-3b598f083c22</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/InviteFolder/IF6_InviteFolderWithReadAndWritePermissionByThreeDotMenu</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>103f0edb-a65f-4975-838e-a7b82ea9d99e</guid>
+      <guid>7043d4f3-6e04-4669-a153-9d90bf47371f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/InviteFolder/IF7_InviteFolderWithReadOnlyPermission</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>10e69450-e999-48ca-9be9-7c562d7c1260</guid>
+      <guid>bb0f8330-9ee0-455e-8a26-6d36705ce2db</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/InviteFolder/IF8_InviteFolderWithReadOnlyPermissionByThreeDotMenu</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>1d25faf3-f83b-48f6-980a-cfcb07df3cd8</guid>
+      <guid>873524c4-a723-431f-a306-3bce17f2c9f5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/InviteFolder/IF9_VerifyCrossIconButtonOnInvitePopup</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>8dd3eeca-8800-4172-b3a9-480cfd04dab3</guid>
+      <guid>99d7b3b4-fd7e-4184-9327-c3d7248dc314</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LoginTestCases/TC1_verifyLoginScreen</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>431f7235-3771-4d1d-a009-fe42a2043020</guid>
+      <guid>e1964171-8a2d-4502-813c-30afe3a639d0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LoginTestCases/TC2_VerifyLoginWithValidCredentials</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>f82ed1ce-8e24-41ab-ae98-ed70d971c768</guid>
+      <guid>39cd3d1b-0670-47fc-99e1-30928c4a15e3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LoginTestCases/TC3_VerifyToLoginWithoutServerURL</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>b46630eb-258a-465c-ba9c-3f1352bed40c</guid>
+      <guid>317a190f-6852-4de3-9ed5-e243260b36a9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LoginTestCases/TC4_LoginWithInvalidCredentials</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>b02261d7-8846-403a-ab95-c622d218f0ec</guid>
+      <guid>d7576086-e162-4294-b708-fe8f9b42a865</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LoginTestCases/TC5_VerifyLoginWIthoutInputCredentials</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>cec2e0c9-25cd-43e7-8f5a-921b4b489f06</guid>
+      <guid>04cc7ede-1d47-4370-b075-807f86c9000c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LoginTestCases/TC6_VerifyLoginWithOutPassword</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>97e00e5f-d1a1-42e6-b93d-1f80279bdbb6</guid>
+      <guid>fdb4c9ba-6528-48e9-9506-3875c1f3494e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LoginTestCases/TC7_EnsureAppVersionSame_BeforeAndAfterLogin</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>65bf8267-0636-49de-a29a-b020fb945431</guid>
+      <guid>d76df5cf-04be-4813-be34-4c38c62e1019</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search/S1_VerifyDirectorySearchFunctionality</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>15510911-8e47-4017-b014-6442ac2306c4</guid>
+      <guid>4e14d83a-b0d5-4ca3-87e8-9ba8c81e7426</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search/S2_VerifySubDirectorySearchFunctionality</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>970e2833-9e26-4428-b1a0-dd3be965eda6</guid>
+      <guid>7edee466-3a4e-450f-adaf-37eb5159d592</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search/S3_VerifyInvalidSearch</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>8477d2dd-a3fd-4f2b-8fa5-6afb09c07e70</guid>
+      <guid>bc8baf4b-e866-4b7b-b49c-d1ef1c812867</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Setting/SE1_VerifyClearCacheFunctionality</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>02136031-9003-4ab4-99d2-05988490ec92</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Setting/SE2_VerifyLockCodeFunctionality</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>164f7e07-5b73-464a-8f4b-de45417e2441</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Setting/SE3_VerifyLockCodeDeactivateFunctionality</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>94835018-2fd4-4d90-be4d-2358cfc4264a</guid>
+      <guid>3cc15d02-0c86-4a8a-af83-7718c5bcf025</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Setting/SE4_VerifyToUpgradeAccountButtonShouldClickable</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>762776a6-cd27-4e2b-a85b-be65415ce645</guid>
+      <guid>f8d668e1-22f2-466e-871e-46bcdd39ef81</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Setting/SE5_VerifySyncFunctionality</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>a513108e-8a01-4bdd-82db-0aa6740ca5f6</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF1_VerifyToRenameDocumentFile</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>2fec6978-c6ed-4a35-8c13-705209808574</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF2_VerifyToRenameFolderWithBlankField</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>d47046fe-4b9c-4a16-b980-6d9137b500c5</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF3_VerifyToRenameFolderWithExistingName</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>3fc2d144-d1e5-45ca-b7ed-8de6b79ca5ff</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF4_VerifyToRenamePresentationFile</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>c2d78d27-71d5-4f53-976b-91be16e7d643</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF5_VerifyToRenameSpreadSheetFile</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>5124e64d-30c2-4366-997b-87021f9e28fc</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF6_VerifyToRenameSubFolder</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>759612d6-ca78-4d8c-bf4b-0bca95759a30</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF7_VerifyToRenameSubFolderWithBlankField</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>5bdae83d-251e-4383-9bc6-8304306c4adb</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF8_VerifyToRenameSubFolderWithExistingName</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>22fd170f-921a-46d3-867f-914f15c0dfcd</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF9_VerifyToRenameTextFile</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>b091788a-631e-4e54-9ade-35febb59834c</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForSwipeMenus/SM1_VerifyFileToDelete</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>d8efe915-ed2a-46eb-b86e-8a0d6642e20d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForSwipeMenus/SM2_VerifyFileToSave</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>c02dde0b-10e6-4db1-a41f-bc8cb3b0a300</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForSwipeMenus/SM3_VerifyFileToShare</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>1bb6a497-4921-418e-86d0-f714101bef55</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForSwipeMenus/SM4_VerifyToDownloadFolder</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>445a3052-9bbd-41aa-8edd-b855c660f484</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestForSwipeMenus/SM5_VerifyToRenameFolder</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>0e7179e4-07d0-4582-a52e-863efc3c7245</guid>
+      <guid>040ad0c1-77ce-4c0f-8148-4d598cda393e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Synchronisation/TSY01_check_folders_made_by_webdav</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>ce4a5943-9c7d-482b-becd-2d6d6d35954b</guid>
+      <guid>3fe2adfb-7d55-4c5d-a6b5-bbb3648a3a55</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Synchronisation/TSY02_check_folders_made_by_app</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>07091f21-8d57-43c5-8200-7e80aded7347</guid>
+      <guid>8f598f48-b098-4016-b8ed-d5852cbf2d83</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Synchronisation/TSY03_check_filesize_changed_by_webdav</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>04418768-1108-4557-81fe-606c5c06ec79</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF1_VerifyToRenameDocumentFile</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1cc12ac1-793a-450f-b1ec-c1b8ef9fc11a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF2_VerifyToRenameFolderWithBlankField</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a27c6d02-3842-4d76-8903-9e7d7dcc7874</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF3_VerifyToRenameFolderWithExistingName</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>bee7ffa5-5fc3-43be-b951-0f8b48e471f1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF4_VerifyToRenamePresentationFile</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>6afd5cf9-7a11-45a1-9a85-fcfb417b5b96</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF5_VerifyToRenameSpreadSheetFile</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7e20da77-39c9-48b6-af95-e125e6aa012c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF6_VerifyToRenameSubFolder</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7ce3c347-8e43-4333-b442-61e1fd3d5761</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF7_VerifyToRenameSubFolderWithBlankField</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>0d222da8-c08e-4559-8da1-58044450f044</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF8_VerifyToRenameSubFolderWithExistingName</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>4ddb85bf-63ae-4ed1-a2f9-4c46a60ca6d4</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForRenameFilesAndFolders/RF9_VerifyToRenameTextFile</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>79f822ea-e825-4868-8f35-81920655759f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForSwipeMenus/SM1_VerifyFileToDelete</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ac624b85-3264-46aa-b1e9-831798010df4</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForSwipeMenus/SM2_VerifyFileToSave</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f170f45c-f03e-4398-abb1-eea46d536330</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForSwipeMenus/SM3_VerifyFileToShare</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>4da1abf3-0039-41f8-8b97-90ed137eab66</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForSwipeMenus/SM4_VerifyToDownloadFolder</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>cb9d1654-b9ac-4ae8-8635-7865eaade007</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestForSwipeMenus/SM5_VerifyToRenameFolder</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7122efdb-17ab-47fd-ae69-67a462979cb1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/BiometricAuth/BA01_check_enable_fingerprint</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>b65eb031-f4d7-40d4-86a5-b05b11333dd6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/BiometricAuth/BA02_check_login_fingerprint_token</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>6c6d9dc8-777a-4956-b871-dfa626a7734f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/BiometricAuth/BA03_check_disable_fingerprint</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

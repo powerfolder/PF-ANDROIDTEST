@@ -1,3 +1,4 @@
+
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -16,48 +17,74 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import java.text.SimpleDateFormat
-import java.util.Date
 import com.kms.katalon.core.configuration.RunConfiguration
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.testobject.ConditionType
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-if(GlobalVariable.isExistingApp) {
-Mobile.startExistingApplication('de.goddchen.android.powerfolder.A', FailureHandling.STOP_ON_FAILURE)
-} else {
-	String applocation = RunConfiguration.getProjectDir()+'/apks/'+GlobalVariable.AppName;
-	System.out.println("Applocation"+ applocation)
-	Mobile.startApplication(applocation, false, FailureHandling.CONTINUE_ON_FAILURE)
-	Mobile.delay(5)
-	if((Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL))) {
-		login()
-	}
-	// click on home icon button 
-	Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
-	Mobile.delay(3)}
+// get info about qa-system
+CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
 
-Mobile.tap(findTestObject('Folder_Menu/ClickOnFolder'), 30)
+// start up app
+CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
+
+// proceed login not logged in
+if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
+	CustomKeywords.'utils.Process_login.login'(GlobalVariable.ServerURL,GlobalVariable.userid, GlobalVariable.password)
+}
+
+// tab on fab_button - plus-button
+Mobile.delay(3)
+Mobile.tapAtPosition(GlobalVariable.EMU_P8_plusIconTabX, GlobalVariable.EMU_P8_plusIconTabY)
 Mobile.delay(3)
 
-// Create new text file with the help of plus icon coordinates
-Mobile.tapAtPosition(GlobalVariable.plusIcontapX , GlobalVariable.plusIcontapY)
+// tab on menu-entry New-Directory to start Toplvl-folder-creation dialog
+Mobile.tap(findTestObject('PlusIconMenus/NewDirectory'), 30)
+
+// create foldername based on timestamp
+String timestamp_folder = CustomKeywords.'utils.Get_timestamp.generateTimestamp'()
+String folderName = 'Folder_' + timestamp_folder
+
+Mobile.setText(findTestObject('Folder_Menu/EnterNewFolderName'), folderName, 30)
+Mobile.delay(2)
+Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'), 30)
+
+// wait some seconds after setting up new toplvl folder
 Mobile.delay(3)
+
+// verifying folder is existing
+TestObject top_folder_obj = new TestObject()
+top_folder_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + folderName + "']")
+Mobile.verifyElementExist(top_folder_obj, 5)
+
+// tab on toplvl folder
+Mobile.delay(2)
+Mobile.tap(top_folder_obj, 5)
+
+// create new text file
+String timestamp_text = CustomKeywords.'utils.Get_timestamp.generateTimestamp'()
+String textFileName = 'text_' + timestamp_text
+Mobile.delay(4)
+Mobile.tapAtPosition(GlobalVariable.EMU_P8_plusIconTabX, GlobalVariable.EMU_P8_plusIconTabY)
+Mobile.delay(6)
 Mobile.verifyElementExist(findTestObject('PlusIconMenus/NewTextFile'),10)
 Mobile.tap(findTestObject('PlusIconMenus/NewTextFile'), 30)
-Mobile.delay(3)
-
-// Create new text file and verify .txt extension
 Mobile.verifyElementExist(findTestObject('CreateNewFile/CreateNewFilePopUpHeader'), 10)
+Mobile.delay(2)
 Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
-String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date())
-String randomDocName = "TestDoc_" + timestamp
-Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), randomDocName, 30)
+Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), textFileName, 30)
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
 Mobile.delay(10)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(5)
 
-//Swape for save file
-Mobile.swipe(140, 351, 402, 351)
-Mobile.delay(1)
+// verifying text is existing
+TestObject text_obj = new TestObject()
+text_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + textFileName + ".txt']")
+Mobile.verifyElementExist(text_obj, 5)
+
+// swipe left right file for save file
+CustomKeywords.'utils.SwipeLeftToRight.swipe'(text_obj)
 Mobile.verifyElementExist(findTestObject('SwipeElements/SaveIcon'),10)
 Mobile.tap(findTestObject('SwipeElements/SaveIcon'), 30)
 
@@ -66,30 +93,13 @@ Mobile.delay(1)
 String alertTextForSaveFile= Mobile.getText(findTestObject('SwipeElements/VerifySaveFileAlertMsg'), 30)
 Mobile.verifyEqual(alertTextForSaveFile, 'File successfully saved to "Downloads"')
 
-// swipe to delete text file
-Mobile.swipe(402, 351, 140, 351)
-Mobile.tap(findTestObject('SwipeElements/DeleteIcon'), 30)
-Mobile.tap(findTestObject('SwipeElements/YesButton'), 30)
+
+// go to home - toplvl
+Mobile.tap(findTestObject('LoginScreen/HomeIcon'),30)
 Mobile.delay(3)
 
-// Verifying delete alert message
-String alertMsg = Mobile.getText(findTestObject('SwipeElements/DeleteAlertMsg'), 30)
-if (alertMsg.contains('Deleted')) {
-	println(alertMsg)
-}else {
-	print('File not deleted')
-}
+// delete created toplvl-folder with presentation inside
+CustomKeywords.'utils.Delete_object.swipeAndDelete'(top_folder_obj)
 
 //logout and close app
 WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-
-def login() {
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), GlobalVariable.ServerURL, 30)
-	Mobile.tap(findTestObject('LoginScreen/ServerURL'),30)
-	Mobile.setText(findTestObject('LoginScreen/EnterEmail'), GlobalVariable.userid, 30)
-	Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
-	Mobile.hideKeyboard()
-	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
-	Mobile.delay(3)
-}

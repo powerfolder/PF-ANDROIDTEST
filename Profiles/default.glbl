@@ -6,21 +6,21 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'qa@powerfolder.com'</initValue>
+      <initValue>''</initValue>
       <name>userid</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'PowerFolder123!'</initValue>
+      <initValue>''</initValue>
       <name>password</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://titan.powerfolder.net'</initValue>
+      <initValue>'https://mimas.powerfolder.net'</initValue>
       <name>ServerURL</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
@@ -33,7 +33,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'PowerFolder_v23.4.100.apk'</initValue>
+      <initValue>'PowerFolder_v26.0.100.apk'</initValue>
       <name>AppName</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
@@ -82,7 +82,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://titan.powerfolder.net/login'</initValue>
+      <initValue>'https://mimas.powerfolder.net/login'</initValue>
       <name>WebURL</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
@@ -110,8 +110,29 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://titan.powerfolder.net/webdav'</initValue>
+      <initValue>'https://mimas.powerfolder.net/webdav'</initValue>
       <name>WebdavURL</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://mimas.powerfolder.net/api'</initValue>
+      <name>ApiURL</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>ApiAccount</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>ApiPassword</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
