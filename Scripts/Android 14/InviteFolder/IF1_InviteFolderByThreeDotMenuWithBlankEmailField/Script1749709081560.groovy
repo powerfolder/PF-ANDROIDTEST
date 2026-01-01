@@ -65,7 +65,7 @@ Mobile.tap(findTestObject('MainScreen/ThreeDots'), 45)
 Mobile.verifyElementExist(findTestObject('ThreeDotsMenu/InviteToFolder'),15)
 Mobile.tap(findTestObject('ThreeDotsMenu/InviteToFolder'), 45)
 
-//Verify email field with black details
+//Verify email field with blank details
 Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),5)
 Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
 Mobile.tap(findTestObject('InviteFolder/SelectAdminToggleButton') , 30)
@@ -79,4 +79,4 @@ Mobile.pressBack()
 CustomKeywords.'utils.Delete_object.swipeAndDelete'(top_folder_obj)
 
 //logout and close app
-WebUI.callTestCase(findTestCase('Android 16/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Android 14/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
