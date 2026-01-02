@@ -74,7 +74,7 @@ Mobile.delay(2)
 Mobile.tap(findTestObject('CreateNewFile/CreateNewFileNameField'), 30)
 Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), spreadsheetName, 30)
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
-Mobile.delay(10)
+Mobile.delay(20)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(15)
 
