@@ -45,8 +45,8 @@ Mobile.verifyElementExist(findTestObject('Settings/UpgradeAccountButton'), 5)
 Mobile.tap(findTestObject('Settings/UpgradeAccountButton'), 45)
 Mobile.delay(10)
 
-// Verify landed should have power folder logo
-//Mobile.verifyElementExist(findTestObject('Settings/PowerFolderLogo'), 5) // webpage not found
+// Verify landed should have powerfolder logo
+Mobile.verifyElementExist(findTestObject('Settings/PowerFolderLogo'), 5)
 
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(5)
