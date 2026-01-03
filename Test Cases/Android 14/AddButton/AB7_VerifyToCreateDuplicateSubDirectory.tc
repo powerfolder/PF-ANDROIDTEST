@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB7_VerifyToCreateDuplicateSubDirectory</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1a3ab6a2-563e-49d8-87e9-22f527503b16</testCaseGuid>
+</TestCaseEntity>

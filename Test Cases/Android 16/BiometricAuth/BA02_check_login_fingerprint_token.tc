@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>BA02_check_login_fingerprint_token</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a69fbca2-fed8-440f-a17e-51a82cd52b56</testCaseGuid>
+</TestCaseEntity>

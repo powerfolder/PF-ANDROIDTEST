@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB8_VerifyToCreateNewDocument</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>849852e8-4426-4fa4-955d-ee259c17188a</testCaseGuid>
+</TestCaseEntity>

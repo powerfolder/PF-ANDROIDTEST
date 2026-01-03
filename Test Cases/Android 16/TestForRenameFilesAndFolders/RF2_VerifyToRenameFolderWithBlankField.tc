@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RF2_VerifyToRenameFolderWithBlankField</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3cb63ea3-7299-4cd4-9f88-9c89c18c2be9</testCaseGuid>
+</TestCaseEntity>

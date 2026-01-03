@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>IF4_InviteFolderWithBlankEmailField</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>cbf0a63f-8b03-4994-bfa9-93298c49784b</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SM5_VerifyToRenameFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d578a34c-a2cb-46cd-80fd-5ff22d863042</testCaseGuid>
+</TestCaseEntity>

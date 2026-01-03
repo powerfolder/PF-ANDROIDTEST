@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB16_VerifyToEditNewPresentationFile</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d343ba1e-df11-498b-96a8-b9f8a34ec90c</testCaseGuid>
+</TestCaseEntity>

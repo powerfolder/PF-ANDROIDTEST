@@ -56,4 +56,4 @@ Mobile.pressBack()
 Mobile.delay(2)
 
 //logout and close app
-WebUI.callTestCase(findTestCase('Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Android 16/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)

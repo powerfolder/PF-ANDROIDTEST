@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>IF9_VerifyCrossIconButtonOnInvitePopup</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c3c085e1-c26a-4db3-ba39-c4483f1b116b</testCaseGuid>
+</TestCaseEntity>

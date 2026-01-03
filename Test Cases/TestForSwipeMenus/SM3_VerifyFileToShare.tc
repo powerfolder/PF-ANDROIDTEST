@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>SM3_VerifyFileToShare</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>1dc39e19-d0bc-43aa-8adf-c367afe67344</testCaseGuid>
-</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AP01_App_install</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>084cc1aa-b368-437c-8983-eb50d4437fcd</testCaseGuid>
+</TestCaseEntity>

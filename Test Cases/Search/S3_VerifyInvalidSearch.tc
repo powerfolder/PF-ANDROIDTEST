@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>S3_VerifyInvalidSearch</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>b6891f6a-c833-4462-8ad9-b48eff24d861</testCaseGuid>
-</TestCaseEntity>

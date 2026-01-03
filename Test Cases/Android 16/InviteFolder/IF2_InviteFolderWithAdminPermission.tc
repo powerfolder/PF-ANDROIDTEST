@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>IF2_InviteFolderWithAdminPermission</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>18349a57-0759-46fa-a3b5-62043f5fdc6a</testCaseGuid>
+</TestCaseEntity>
