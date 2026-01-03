@@ -77,6 +77,7 @@ Mobile.delay(20)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 
 // verifying presentation is existing
+Mobile.delay(5)
 TestObject presentation_obj = new TestObject()
 presentation_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + presentationName + ".pptx']")
 Mobile.verifyElementExist(presentation_obj, 5)
