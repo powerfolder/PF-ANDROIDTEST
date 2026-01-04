@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TSY05_upload_big_file_from_device</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8e9430ea-dc02-4311-b300-c705d4a746d5</testCaseGuid>
+</TestCaseEntity>
