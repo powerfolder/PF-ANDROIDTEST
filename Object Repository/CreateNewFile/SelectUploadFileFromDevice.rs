@@ -3,39 +3,19 @@
    <description></description>
    <name>SelectUploadFileFromDevice</name>
    <tag></tag>
-   <elementGuidId>2ba0cd56-1ba1-40f9-9813-3ebc0a1c552f</elementGuidId>
+   <elementGuidId>eac2f65c-b7cf-4603-8334-38dfa5622bd6</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>(//*[@class = 'android.widget.LinearLayout' and @resource-id = 'com.google.android.documentsui:id/item_root' and (@text = '' or . = '')])[1]</locator>
+   <locator>new UiSelector().className(&quot;android.widget.TextView&quot;).textContains(&quot;Screenshot&quot;).resourceId(&quot;android:id/title&quot;)</locator>
    <locatorCollection>
-      <entry>
-         <key>CLASS_NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IMAGE</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_CLASS_CHAIN</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ACCESSIBILITY</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ID</key>
-         <value></value>
-      </entry>
       <entry>
          <key>ANDROID_VIEWTAG</key>
          <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector().className(&quot;android.widget.TextView&quot;).textContains(&quot;Screenshot&quot;).resourceId(&quot;android:id/title&quot;)</value>
       </entry>
       <entry>
          <key>IOS_PREDICATE_STRING</key>
@@ -53,10 +33,30 @@
          <value>(//*[@class = 'android.widget.LinearLayout' and @resource-id = 'com.google.android.documentsui:id/item_root' and (@text = '' or . = '')])[1]</value>
       </entry>
       <entry>
-         <key>ANDROID_UI_AUTOMATOR</key>
-         <value>new UiSelector()</value>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
       </entry>
    </locatorCollection>
-   <locatorStrategy>XPATH</locatorStrategy>
+   <locatorStrategy>ANDROID_UI_AUTOMATOR</locatorStrategy>
    <platform>ANDROID</platform>
 </MobileElementEntity>
