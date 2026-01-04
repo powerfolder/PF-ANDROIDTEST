@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TSY04_upload_multiple_photos_made_with_camera</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2f921bdd-a680-4963-9151-e8e73944fda7</testCaseGuid>
+</TestCaseEntity>
