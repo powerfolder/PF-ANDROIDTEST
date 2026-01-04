@@ -29,6 +29,9 @@ import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 import java.util.Locale
 
+// get info about qa-system
+CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
+
 // start or install package
 CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 
