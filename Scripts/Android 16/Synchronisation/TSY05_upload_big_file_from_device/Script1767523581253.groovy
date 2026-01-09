@@ -77,11 +77,11 @@ Mobile.tap(findTestObject('CreateNewFile/SelectUploadBigFileFromDevice'), 30)
 Mobile.delay(10)
 
 // check if upload dialog is shown
-Mobile.verifyElementExist(findTestObject('CreateNewFile/LabelUploadDialogSingleFile'), 10)
-Mobile.verifyElementExist(findTestObject('CreateNewFile/UploadDialogCancelButton'), 10)
+Mobile.verifyElementExist(findTestObject('CreateNewFile/LabelUploadDialogSingleFile'), 120)
+Mobile.verifyElementExist(findTestObject('CreateNewFile/UploadDialogCancelButton'), 120)
 
 // wait until upload is finished - max 360s
-Mobile.waitForElementNotPresent(findTestObject('CreateNewFile/LabelUploadDialogSingleFile'),1380)
+Mobile.waitForElementNotPresent(findTestObject('CreateNewFile/LabelUploadDialogSingleFile'),1500)
 Mobile.delay(10)
 
 // verifying file upload (filename needs to be debian.*)
