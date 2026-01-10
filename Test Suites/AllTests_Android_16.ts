@@ -418,6 +418,20 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
+      <guid>a6652fde-cd00-4177-847f-a0933885dc49</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Android 16/Synchronisation/TSY04_upload_multiple_photos_made_with_camera</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1b0a1837-ea72-4b46-9146-868fdb2a9e02</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Android 16/Synchronisation/TSY05_upload_big_file_from_device</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
       <guid>04418768-1108-4557-81fe-606c5c06ec79</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
