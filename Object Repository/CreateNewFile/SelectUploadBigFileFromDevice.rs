@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MobileElementEntity>
    <description></description>
-   <name>SelectUploadFileFromDevice</name>
+   <name>SelectUploadBigFileFromDevice</name>
    <tag></tag>
-   <elementGuidId>eac2f65c-b7cf-4603-8334-38dfa5622bd6</elementGuidId>
+   <elementGuidId>95e4a728-b9a2-4c07-bad8-2b3ae2683258</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>new UiSelector().className(&quot;android.widget.TextView&quot;).textContains(&quot;Screenshot&quot;).resourceId(&quot;android:id/title&quot;)</locator>
+   <locator>new UiSelector().className(&quot;android.widget.TextView&quot;).textContains(&quot;debian&quot;).resourceId(&quot;android:id/title&quot;)</locator>
    <locatorCollection>
       <entry>
          <key>ANDROID_VIEWTAG</key>
@@ -15,7 +15,7 @@
       </entry>
       <entry>
          <key>ANDROID_UI_AUTOMATOR</key>
-         <value>new UiSelector().className(&quot;android.widget.TextView&quot;).textContains(&quot;Screenshot&quot;).resourceId(&quot;android:id/title&quot;)</value>
+         <value>new UiSelector().className(&quot;android.widget.TextView&quot;).textContains(&quot;debian&quot;).resourceId(&quot;android:id/title&quot;)</value>
       </entry>
       <entry>
          <key>IOS_PREDICATE_STRING</key>
