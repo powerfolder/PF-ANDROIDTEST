@@ -30,7 +30,7 @@ CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
 // start up app
 CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 
-String randomEmail = "user" + System.currentTimeMillis() + "@powerfoldertest.com"
+String randomEmail = "user" + System.currentTimeMillis() + "@qa-automated-mobiletest-A15.com"
 
 // proceed login not logged in
 if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
