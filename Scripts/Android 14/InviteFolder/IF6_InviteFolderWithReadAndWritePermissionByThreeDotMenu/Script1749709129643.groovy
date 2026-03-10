@@ -71,7 +71,7 @@ Mobile.tap(findTestObject('ThreeDotsMenu/InviteToFolder'), 45)
 //Invite folder with Read and Write permission
 Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'),5)
 Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
-Mobile.setText(findTestObject('LoginScreen/EnterEmail'), randomEmail, 30)
+Mobile.setText(findTestObject('InviteFolder/Email_InputField'), randomEmail, 30)
 Mobile.tap(findTestObject('InviteFolder/SelectReadAndWriteToggleButton') , 30)
 Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)
 String permissionAlertText= Mobile.getText(findTestObject('InviteFolder/VerifyInvitationSentText'), 30)

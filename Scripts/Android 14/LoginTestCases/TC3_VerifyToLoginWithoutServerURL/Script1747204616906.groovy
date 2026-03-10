@@ -27,7 +27,16 @@ CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 
 // proceed login not logged in
 if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, FailureHandling.OPTIONAL)) {
-	CustomKeywords.'utils.Process_login.login'(" ",GlobalVariable.userid, GlobalVariable.password)
+	Mobile.delay(2)
+	Mobile.tap(findTestObject('LoginScreen/ServerURLTMP'), 30)
+	Mobile.setText(findTestObject('LoginScreen/enterServerURL'), " ", 30)
+	Mobile.delay(2)
+	Mobile.tap(findTestObject('LoginScreen/ServerURLTMP'), 30)
+	Mobile.delay(2)
+	Mobile.setText(findTestObject('LoginScreen/EnterEmailTMP'), GlobalVariable.userid, 30)
+	Mobile.delay(2)
+	Mobile.setText(findTestObject('LoginScreen/InputPassword'), GlobalVariable.password, 30)
+	Mobile.tap(findTestObject('LoginScreen/LoginButton'), 45)
 }
 
 // Verifying alert message as Server cannot be found
