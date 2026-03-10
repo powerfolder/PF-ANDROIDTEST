@@ -16,8 +16,6 @@ class Process_login {
 		Mobile.tap(findTestObject('LoginScreen/ServerURLTMP'), 30)
 		Mobile.setText(findTestObject('LoginScreen/enterServerURL'), serverurl, 30)
 		Mobile.delay(2)
-		Mobile.tap(findTestObject('LoginScreen/ServerURLTMP'), 30)
-		Mobile.delay(2)
 		Mobile.setText(findTestObject('LoginScreen/EnterEmail'), username, 30)
 		Mobile.delay(2)
 		Mobile.setText(findTestObject('LoginScreen/InputPassword'), password, 30)
