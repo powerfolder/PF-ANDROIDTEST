@@ -32,7 +32,8 @@ if (Mobile.verifyElementExist(findTestObject('LoginScreen/LoginButton'), 5, Fail
 
 //Verify search with invalid input
 Mobile.tap(findTestObject('Search/SearchBtn'), 30)
-Mobile.setText(findTestObject('Search/SearchInput'), 'InvalidSearch', 30)
+Mobile.sendKeys(findTestObject('Search/SearchInput'),'InvalidSearch')
+//Mobile.setText(findTestObject('Search/SearchInput'), 'InvalidSearch', 30)
 Mobile.delay(5)
 Mobile.pressKeyCode('ENTER', FailureHandling.CONTINUE_ON_FAILURE)
 Mobile.delay(3)

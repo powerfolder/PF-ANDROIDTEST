@@ -58,8 +58,7 @@ Mobile.verifyElementExist(top_folder_obj, 5)
 
 //Verify search
 Mobile.tap(findTestObject('Search/SearchBtn'), 30)
-Mobile.delay(3)
-Mobile.setText(findTestObject('Search/SearchInput'), folderName, 30)
+Mobile.sendKeys(findTestObject('Search/SearchInput'), folderName)
 Mobile.delay(3)
 String FilterName = Mobile.getText(findTestObject('Search/SearchInput'), 30)
 Mobile.delay(3)

@@ -50,7 +50,7 @@ println("Cleaned MyAccount Version: " + myAccountVersion)
 
 // verify version match
 Mobile.verifyMatch(loginScreenVersion, myAccountVersion, false)
-Mobile.pressBack()
+Mobile.swipe(50, 530, 200, 530)
 
 //logout and close app
 WebUI.callTestCase(findTestCase('Android 16/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)

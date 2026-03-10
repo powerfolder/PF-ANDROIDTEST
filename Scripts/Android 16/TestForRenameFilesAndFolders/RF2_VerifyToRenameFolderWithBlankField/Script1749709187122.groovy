@@ -68,7 +68,7 @@ Mobile.delay(5)
 // verifying alert message as Name is required
 String getBlankFieldAlerMSG= Mobile.getText(findTestObject('SwipeElements/BlankRenameFieldAlertMsg'), 30)
 Mobile.verifyEqual(getBlankFieldAlerMSG, 'Name is required')
-Mobile.pressBack()
+Mobile.swipe(50, 530, 200, 530)
 Mobile.delay(3)
 
 // click on home icon button

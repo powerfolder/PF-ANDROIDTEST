@@ -87,7 +87,7 @@ Mobile.delay(3)
 Mobile.setText(findTestObject('SwipeElements/EnterNewNameField'), folderName, 30)
 Mobile.tap(findTestObject('SwipeElements/SaveButton'), 30)
 Mobile.delay(5)
-Mobile.pressBack()
+Mobile.swipe(50, 530, 200, 530)
 
 // click on home icon button
 Mobile.tap(findTestObject('LoginScreen/HomeIcon'), 30)

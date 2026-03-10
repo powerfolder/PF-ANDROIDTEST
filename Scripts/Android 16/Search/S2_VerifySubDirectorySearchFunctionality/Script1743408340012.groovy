@@ -88,7 +88,7 @@ for (String sfolderName : createdFolders) {
 
 //Verify search
 Mobile.tap(findTestObject('Search/SearchBtn'), 30)
-Mobile.setText(findTestObject('Search/SearchInput'), createdFolders[1], 30)
+Mobile.sendKeys(findTestObject('Search/SearchInput'), createdFolders[1])
 Mobile.delay(5)
 Mobile.pressKeyCode('ENTER', FailureHandling.CONTINUE_ON_FAILURE)
 Mobile.delay(3)
