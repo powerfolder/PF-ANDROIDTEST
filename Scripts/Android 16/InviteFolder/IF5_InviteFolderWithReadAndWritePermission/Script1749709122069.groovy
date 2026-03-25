@@ -66,15 +66,15 @@ Mobile.verifyElementExist(top_folder_obj, 5)
 // Verify invite popup header and send invitation (with 5 seconds timeout)
 Mobile.tap(findTestObject('Folder_Menu/ShareIcon'), 45)
 
+Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
+
+Mobile.setText(findTestObject('InviteFolder/Email_InputField'), randomEmail, 30)
+
+Mobile.tap(findTestObject('InviteFolder/SelectAdminToggleButton'), 30)
+
 Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)
 
 Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'), 5)
-
-Mobile.tap(findTestObject('InviteFolder/Email_InputField'), 30)
-
-Mobile.setText(findTestObject('LoginScreen/EnterEmail'), randomEmail, 30)
-
-Mobile.tap(findTestObject('InviteFolder/SelectAdminToggleButton'), 30)
 
 String permissionAlertText = Mobile.getText(findTestObject('InviteFolder/VerifyInvitationSentText'), 30)
 

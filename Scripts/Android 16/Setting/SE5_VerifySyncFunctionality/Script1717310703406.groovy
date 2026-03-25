@@ -37,7 +37,7 @@ Mobile.tap(findTestObject('ThreeDotsMenu/MyAccount'), 45)
 Mobile.delay(2)
 Mobile.tap(findTestObject('Settings/SyncBtn'), 30)
 Mobile.delay(2)
-Mobile.pressBack()
+Mobile.swipe(50, 530, 200, 530)
 
 //logout and close app
 WebUI.callTestCase(findTestCase('Android 16/Logout/Logout'), [:], FailureHandling.CONTINUE_ON_FAILURE)

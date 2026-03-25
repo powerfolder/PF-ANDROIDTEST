@@ -52,7 +52,7 @@ Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
 Mobile.delay(5)
 
 // go to home - toplvl
-Mobile.pressBack()
+Mobile.swipe(50, 530, 200, 530)
 Mobile.delay(2)
 
 //logout and close app

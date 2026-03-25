@@ -52,7 +52,7 @@ Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'), 30)
 //Verifying alert mesage as Please enter a name first.
 String alertMsg = Mobile.getText(findTestObject('CreateNewFile/VerifyFIleALertMsg'), 30)
 Mobile.verifyEqual(alertMsg, 'Please enter a name first.')
-Mobile.pressBack()
+Mobile.swipe(50, 530, 200, 530)
 Mobile.delay(2)
 
 //logout and close app

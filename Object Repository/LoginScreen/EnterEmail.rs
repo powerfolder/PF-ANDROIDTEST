@@ -3,8 +3,9 @@
    <description></description>
    <name>EnterEmail</name>
    <tag></tag>
-   <elementGuidId>8f693b57-376f-4b70-a2b3-827415837c1e</elementGuidId>
+   <elementGuidId>a019500f-bc7f-4606-ae43-256acf0a18ab</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -12,8 +13,59 @@
       <name>XPATH</name>
       <type>Main</type>
       <value>(//*[@class='android.widget.EditText'])[1]</value>
-      <webElementGuid>8d623ef7-535f-4907-9ebd-6d589365cf44</webElementGuid>
+      <webElementGuid>413fdc07-f15a-4e7f-b02b-086c16aa70a5</webElementGuid>
    </webElementProperties>
-   <locator>(//*[@class='android.widget.EditText'])[1]</locator>
+   <locator>(//*[@class='android.widget.EditText'])[2]</locator>
+   <locatorCollection>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//*[@class='android.widget.EditText'])[2]</value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+         <value></value>
+      </entry>
+   </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>
+   <platform>ANDROID</platform>
 </MobileElementEntity>
