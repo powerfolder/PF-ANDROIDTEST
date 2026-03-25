@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FO10_VerifyToCreateDuplicateFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f1019c5e-29fa-41db-b74b-7aab0b7caba3</testCaseGuid>
+</TestCaseEntity>

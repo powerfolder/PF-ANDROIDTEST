@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>RF7_VerifyToRenameSubFolderWithBlankField</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>d82cc439-13e7-4dc0-9ed2-21382527f402</testCaseGuid>
-</TestCaseEntity>

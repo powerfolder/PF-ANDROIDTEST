@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SE5_VerifySyncFunctionality</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>dec513c5-82a9-4109-a37f-2c83e0f81c94</testCaseGuid>
+</TestCaseEntity>

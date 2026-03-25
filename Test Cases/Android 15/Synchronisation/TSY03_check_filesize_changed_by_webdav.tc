@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TSY03_check_filesize_changed_by_webdav</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d7c3d00f-9547-4633-b92d-b27cb2a9d2c0</testCaseGuid>
+</TestCaseEntity>

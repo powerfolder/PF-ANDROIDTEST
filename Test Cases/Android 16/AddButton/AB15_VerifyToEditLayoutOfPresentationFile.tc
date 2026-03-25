@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB15_VerifyToEditLayoutOfPresentationFile</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>bf858b79-dc44-4556-b9fd-a21f94697bfa</testCaseGuid>
+</TestCaseEntity>

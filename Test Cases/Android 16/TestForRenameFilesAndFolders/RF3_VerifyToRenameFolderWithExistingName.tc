@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RF3_VerifyToRenameFolderWithExistingName</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e24f671d-c174-42ec-8c5d-90ccb73ee198</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB17_VerifyToEditNewSpreadsheetFile</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7b6a848f-e129-4d42-aaa4-484a6a0185b3</testCaseGuid>
+</TestCaseEntity>

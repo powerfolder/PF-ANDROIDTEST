@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB21_VerifyToEditTransitionOfPresentationFile</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>66893be4-d81d-48ad-a03e-4fcf2f9e3be8</testCaseGuid>
+</TestCaseEntity>

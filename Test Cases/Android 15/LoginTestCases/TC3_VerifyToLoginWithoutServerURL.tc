@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC3_VerifyToLoginWithoutServerURL</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3ae95086-b27a-482f-ac20-7f7eb3c51759</testCaseGuid>
+</TestCaseEntity>

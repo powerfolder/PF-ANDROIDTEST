@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB12_VerifyToCreateSubDirectoryWithoutFileName</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b81329cf-b68e-4c85-a265-72a8b6db4e00</testCaseGuid>
+</TestCaseEntity>

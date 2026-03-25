@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RF5_VerifyToRenameSpreadSheetFile</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a56d6538-bec5-4d90-a256-64a56c20e908</testCaseGuid>
+</TestCaseEntity>

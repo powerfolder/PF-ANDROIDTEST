@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>IF1_InviteFolderByThreeDotMenuWithBlankEmailField</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>82e63dd8-ad8f-40fe-b39f-f539e783524a</testCaseGuid>
-</TestCaseEntity>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>FO2_VerifyListOfFiles</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>d08e4b05-a60f-44c8-81e5-b747746a8ea5</testCaseGuid>
-</TestCaseEntity>

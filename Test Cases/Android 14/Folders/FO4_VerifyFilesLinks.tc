@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FO4_VerifyFilesLinks</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fe8b9d13-20f1-4e57-9d30-5216a362f50b</testCaseGuid>
+</TestCaseEntity>

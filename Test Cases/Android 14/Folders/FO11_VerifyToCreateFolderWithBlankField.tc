@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FO11_VerifyToCreateFolderWithBlankField</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3cafa11c-2321-4cad-a8ec-1699df29ec7d</testCaseGuid>
+</TestCaseEntity>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>RF6_VerifyToRenameSubFolder</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>097c4610-4e56-40bc-8a3b-3b8b6c35ccf2</testCaseGuid>
-</TestCaseEntity>

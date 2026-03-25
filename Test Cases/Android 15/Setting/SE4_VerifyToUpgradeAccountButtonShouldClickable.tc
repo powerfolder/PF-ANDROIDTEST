@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SE4_VerifyToUpgradeAccountButtonShouldClickable</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>9813420f-2489-4623-a283-2b5231dd74c3</testCaseGuid>
+</TestCaseEntity>

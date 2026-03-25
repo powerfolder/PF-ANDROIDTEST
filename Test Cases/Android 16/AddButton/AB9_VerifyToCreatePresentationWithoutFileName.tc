@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB9_VerifyToCreatePresentationWithoutFileName</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ab73d922-a4b1-4816-bc98-f4a6fb01767b</testCaseGuid>
+</TestCaseEntity>

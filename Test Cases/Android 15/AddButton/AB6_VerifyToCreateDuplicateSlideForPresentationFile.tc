@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB6_VerifyToCreateDuplicateSlideForPresentationFile</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5ede37a8-a562-4e98-ae19-773a1afcad15</testCaseGuid>
+</TestCaseEntity>

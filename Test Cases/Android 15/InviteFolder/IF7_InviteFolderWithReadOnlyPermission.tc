@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>IF7_InviteFolderWithReadOnlyPermission</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>42ee02b4-ac8b-442a-8def-6eea9033435e</testCaseGuid>
+</TestCaseEntity>

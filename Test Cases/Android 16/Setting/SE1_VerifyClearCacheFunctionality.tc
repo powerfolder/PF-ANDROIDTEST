@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SE1_VerifyClearCacheFunctionality</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8e1fb3b5-4f36-4155-9fa6-c97c8c29b2f3</testCaseGuid>
+</TestCaseEntity>
