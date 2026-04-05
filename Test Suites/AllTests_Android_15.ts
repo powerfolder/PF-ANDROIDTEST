@@ -530,6 +530,27 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
+      <guid>2b587a29-9085-4fea-a866-51c7946dfce0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Android 15/VerfiyFileShare/FS1_VerifyShareFileInApp</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8e6a6e00-5cd0-4cfa-a420-9deef107d3c6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Android 15/VerfiyFileShare/FS2_VerifyCancelSharefile</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>2667c051-24df-47cb-a3ee-943e79406073</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Android 15/VerfiyFileShare/FS3_VerifyShareWithoutDesignatedFolder</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
       <guid>572d3a56-fb30-4a78-b9a1-b54c4da904f1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
