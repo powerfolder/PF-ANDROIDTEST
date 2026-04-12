@@ -355,6 +355,13 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
+      <guid>b0cc1739-df5b-4f37-badd-fab492ed7897</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Android 16/LoginTestCases/TC8_VerifyLoginWithoutServerProtocol</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
       <guid>d76df5cf-04be-4813-be34-4c38c62e1019</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
