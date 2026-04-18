@@ -72,9 +72,9 @@ Mobile.setText(findTestObject('InviteFolder/Email_InputField'), randomEmail, 30)
 
 Mobile.tap(findTestObject('InviteFolder/SelectAdminToggleButton'), 30)
 
-Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)
-
 Mobile.verifyElementExist(findTestObject('InviteFolder/InvitePopUpHeader'), 5)
+
+Mobile.tap(findTestObject('InviteFolder/VerifyOkButton'), 0)
 
 String permissionAlertText = Mobile.getText(findTestObject('InviteFolder/VerifyInvitationSentText'), 30)
 
