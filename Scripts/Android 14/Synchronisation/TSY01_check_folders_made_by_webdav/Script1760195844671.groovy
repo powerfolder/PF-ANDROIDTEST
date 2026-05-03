@@ -84,7 +84,7 @@ Mobile.tap(findTestObject('Folder_Menu/ClickOnOkButton'), 30)
 Mobile.delay(3)
 
 // sync via swipe down
-Mobile.swipe(200, 400, 200, 1100)
+Mobile.swipe(200, 500, 200, 1100)
 
 // prepair for renaming-sync test
 String folderName_base = "TSY01_renamed_"
@@ -119,9 +119,9 @@ for (int i = 1; i <= 7; i++) {
     }
 	Mobile.delay(10)
     // sync via pull down
-    Mobile.swipe(200, 400, 200, 1100)
+    Mobile.swipe(200, 500, 200, 1100)
     Mobile.delay(2)
-	Mobile.swipe(200, 400, 200, 1100)
+	Mobile.swipe(200, 500, 200, 1100)
 	
     // verify if folder is shown
     TestObject top_folder_renamed_obj = new TestObject()
