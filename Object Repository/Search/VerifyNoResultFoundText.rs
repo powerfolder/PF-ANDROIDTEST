@@ -7,14 +7,14 @@
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//*[@class = 'android.widget.TextView' and (@text = 'No files found' or . = 'No files found')]</locator>
+   <locator>//*[@class = 'android.view.View' and (@text = 'No files found' or . = 'No files found')]</locator>
    <locatorCollection>
       <entry>
          <key>ATTRIBUTES</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@class = 'android.widget.TextView' and (@text = 'No files found' or . = 'No files found')]</value>
+         <value>//*[@class = 'android.view.View' and (@text = 'No files found' or . = 'No files found')]</value>
       </entry>
       <entry>
          <key>IOS_PREDICATE_STRING</key>
