@@ -75,6 +75,7 @@ Mobile.setText(findTestObject('CreateNewFile/CreateNewFileNameField'), presentat
 Mobile.tap(findTestObject('CreateNewFile/ClickOnOkButton'),30)
 Mobile.delay(20)
 Mobile.tap(findTestObject('VerifyCreatedFileNames/CloseButton'),30)
+Mobile.delay(5)
 
 // verifying presentation is existing
 TestObject presentation_obj = new TestObject()
