@@ -89,9 +89,9 @@ for (int i = 1; i <= 7; i++) {
 	Mobile.delay(10)
 	
 	// sync via pull down
-	Mobile.swipe(200, 400, 200, 1100)
+	Mobile.swipe(200, 500, 200, 1100)
 	Mobile.delay(2)
-	Mobile.swipe(200, 400, 200, 1100)
+	Mobile.swipe(200, 500, 200, 1100)
 	
 	println("🔎 Suche nach: ${search_size}")
 

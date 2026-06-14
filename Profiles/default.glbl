@@ -33,7 +33,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'PowerFolder_v26.1.100.apk'</initValue>
+      <initValue>'PowerFolder_v26.2.100.apk'</initValue>
       <name>AppName</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
@@ -96,7 +96,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>2283</initValue>
+      <initValue>2136</initValue>
       <name>EMU_P8_plusIconTabY</name>
       <protected>false</protected>
       <valueType>NUMBER</valueType>
