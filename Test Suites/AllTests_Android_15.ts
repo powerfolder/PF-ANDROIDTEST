@@ -572,6 +572,13 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
+      <guid>458ee381-d661-4df0-9c48-3619c1bce8c5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Android 15/PDFViewer/PV1_Verify_UserCanOpenPDFInPDFViewer</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
       <guid>572d3a56-fb30-4a78-b9a1-b54c4da904f1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
