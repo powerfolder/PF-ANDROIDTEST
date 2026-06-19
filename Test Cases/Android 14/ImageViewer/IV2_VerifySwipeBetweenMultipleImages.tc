@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>IV2_VerifySwipeBetweenMultipleImages</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e14be61a-193b-4e3f-9466-19b2d56dc261</testCaseGuid>
+</TestCaseEntity>

@@ -558,6 +558,20 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
+      <guid>2717ea12-1ea0-43bd-823e-f931870a9fd7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Android 15/ImageViewer/IV1_VerifyOpenAndCloseImageViaCloseButton</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c8f38aea-3baf-4438-b299-2d6d1568b8a3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Android 15/ImageViewer/IV2_VerifySwipeBetweenMultipleImages</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
       <guid>572d3a56-fb30-4a78-b9a1-b54c4da904f1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

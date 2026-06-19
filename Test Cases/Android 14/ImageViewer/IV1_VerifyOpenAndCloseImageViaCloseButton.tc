@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>IV1_VerifyOpenAndCloseImageViaCloseButton</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7f43b286-7726-4523-b021-125a417eb1b4</testCaseGuid>
+</TestCaseEntity>
