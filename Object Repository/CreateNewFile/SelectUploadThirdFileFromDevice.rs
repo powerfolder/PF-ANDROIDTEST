@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MobileElementEntity>
    <description></description>
-   <name>SelectUploadFileFromDevice</name>
+   <name>SelectUploadThirdFileFromDevice</name>
    <tag></tag>
-   <elementGuidId>b3e88017-a9bf-460f-ba84-ec0dbd734ee1</elementGuidId>
+   <elementGuidId>feb114f0-81d3-43a6-b7e0-a8d812a5584c</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//*[@resource-id='android:id/title' and contains(@text,'Screenshot1')]</locator>
+   <locator>//*[@resource-id='android:id/title' and contains(@text,'Screenshot3')]</locator>
    <locatorCollection>
       <entry>
          <key>ATTRIBUTES</key>
-      </entry>
-      <entry>
-         <key>ANDROID_VIEWTAG</key>
          <value></value>
       </entry>
       <entry>
          <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
          <value></value>
       </entry>
       <entry>
@@ -26,7 +27,7 @@
       </entry>
       <entry>
          <key>ANDROID_UI_AUTOMATOR</key>
-         <value>//*[@resource-id='android:id/title' and contains(@text,'Screenshot1')]</value>
+         <value></value>
       </entry>
       <entry>
          <key>IMAGE</key>
@@ -54,7 +55,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@resource-id='android:id/title' and contains(@text,'Screenshot1')]</value>
+         <value>//*[@resource-id='android:id/title' and contains(@text,'Screenshot3')]</value>
       </entry>
    </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>
