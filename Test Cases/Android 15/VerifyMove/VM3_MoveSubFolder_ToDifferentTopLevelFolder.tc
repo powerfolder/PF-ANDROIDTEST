@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VM3_MoveSubFolder_ToDifferentTopLevelFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c77e0957-2b3e-44d4-98be-ae9896d4a037</testCaseGuid>
+</TestCaseEntity>

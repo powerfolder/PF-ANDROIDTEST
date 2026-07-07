@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VM7_VerrifyMoveOnceCancel</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f6c75295-7a27-41c4-9a23-bb4a543dae16</testCaseGuid>
+</TestCaseEntity>
