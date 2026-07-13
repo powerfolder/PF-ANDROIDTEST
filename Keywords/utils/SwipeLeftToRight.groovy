@@ -29,8 +29,11 @@ public class SwipeLeftToRight {
 		Mobile.delay(1)
 
 		// Calculate swipe coordinates
-		int startX = Mobile.getElementLeftPosition(obj, 5) - 100   // Start from left side
-		int endX   = Mobile.getElementLeftPosition(obj, 5) + 200   // Swipe towards right
+		int elementLeft = Mobile.getElementLeftPosition(obj, 5)
+		// Keep the start point away from the screen edge, otherwise Android's
+		// edge back-gesture is triggered instead of a swipe on the element (seen on Android 15)
+		int startX = Math.max(elementLeft - 100, 150)
+		int endX   = startX + 300   // Swipe towards right
 		int y      = Mobile.getElementTopPosition(obj, 5)
 
 		// Perform swipe left → right
