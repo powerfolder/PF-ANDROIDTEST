@@ -1,23 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MobileElementEntity>
    <description></description>
-   <name>SelectUploadFileFromDevice</name>
+   <name>PDFBackButton</name>
    <tag></tag>
-   <elementGuidId>b3e88017-a9bf-460f-ba84-ec0dbd734ee1</elementGuidId>
+   <elementGuidId>c7b2c7f8-dfbf-4f2b-86f8-e1972286ebdf</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//*[@resource-id='android:id/title' and contains(@text,'Screenshot1')]</locator>
+   <locator>//*[@resource-id = &quot;backButton&quot;]</locator>
    <locatorCollection>
       <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>ATTRIBUTES</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
       </entry>
       <entry>
          <key>ANDROID_VIEWTAG</key>
          <value></value>
       </entry>
       <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@resource-id = &quot;backButton&quot;]</value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
          <value></value>
       </entry>
       <entry>
@@ -26,35 +55,7 @@
       </entry>
       <entry>
          <key>ANDROID_UI_AUTOMATOR</key>
-         <value>//*[@resource-id='android:id/title' and contains(@text,'Screenshot1')]</value>
-      </entry>
-      <entry>
-         <key>IMAGE</key>
          <value></value>
-      </entry>
-      <entry>
-         <key>ID</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CLASS_NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_CLASS_CHAIN</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_PREDICATE_STRING</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CUSTOM</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//*[@resource-id='android:id/title' and contains(@text,'Screenshot1')]</value>
       </entry>
    </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>

@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MobileElementEntity>
    <description></description>
-   <name>SelectUploadFileFromDevice</name>
+   <name>SelectUploadPDFFileFromDevice</name>
    <tag></tag>
-   <elementGuidId>b3e88017-a9bf-460f-ba84-ec0dbd734ee1</elementGuidId>
+   <elementGuidId>48f55534-4b97-46e4-9cdf-a1d0a7b8daf6</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//*[@resource-id='android:id/title' and contains(@text,'Screenshot1')]</locator>
+   <locator>//*[@resource-id='android:id/title' and contains(@text,'PDFViewer1')]</locator>
    <locatorCollection>
       <entry>
          <key>ATTRIBUTES</key>
       </entry>
       <entry>
-         <key>ANDROID_VIEWTAG</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ACCESSIBILITY</key>
+         <key>IOS_CLASS_CHAIN</key>
          <value></value>
       </entry>
       <entry>
@@ -26,10 +22,10 @@
       </entry>
       <entry>
          <key>ANDROID_UI_AUTOMATOR</key>
-         <value>//*[@resource-id='android:id/title' and contains(@text,'Screenshot1')]</value>
+         <value>new UiSelector()</value>
       </entry>
       <entry>
-         <key>IMAGE</key>
+         <key>CLASS_NAME</key>
          <value></value>
       </entry>
       <entry>
@@ -37,24 +33,28 @@
          <value></value>
       </entry>
       <entry>
-         <key>CLASS_NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_CLASS_CHAIN</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_PREDICATE_STRING</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>CUSTOM</key>
          <value></value>
       </entry>
       <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>XPATH</key>
-         <value>//*[@resource-id='android:id/title' and contains(@text,'Screenshot1')]</value>
+         <value>//*[@resource-id='android:id/title' and contains(@text,'PDFViewer1')]</value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
       </entry>
    </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>

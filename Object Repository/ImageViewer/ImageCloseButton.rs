@@ -1,39 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MobileElementEntity>
    <description></description>
-   <name>SelectUploadFileFromDevice</name>
+   <name>ImageCloseButton</name>
    <tag></tag>
-   <elementGuidId>b3e88017-a9bf-460f-ba84-ec0dbd734ee1</elementGuidId>
+   <elementGuidId>7acf0126-feed-4c85-85d6-00154926d5d6</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//*[@resource-id='android:id/title' and contains(@text,'Screenshot1')]</locator>
+   <locator>//*[contains(@content-desc,'Close')]</locator>
    <locatorCollection>
       <entry>
          <key>ATTRIBUTES</key>
-      </entry>
-      <entry>
-         <key>ANDROID_VIEWTAG</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ACCESSIBILITY</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ANDROID_UI_AUTOMATOR</key>
-         <value>//*[@resource-id='android:id/title' and contains(@text,'Screenshot1')]</value>
-      </entry>
-      <entry>
-         <key>IMAGE</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ID</key>
          <value></value>
       </entry>
       <entry>
@@ -41,7 +18,27 @@
          <value></value>
       </entry>
       <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
          <value></value>
       </entry>
       <entry>
@@ -54,7 +51,11 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@resource-id='android:id/title' and contains(@text,'Screenshot1')]</value>
+         <value>//*[contains(@content-desc,'Close')]</value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
       </entry>
    </locatorCollection>
    <locatorStrategy>XPATH</locatorStrategy>
