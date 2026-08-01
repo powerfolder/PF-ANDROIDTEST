@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SH9_Sorting_Verify_Size_Small_SubFolders</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d59e4668-9e13-4d20-b1d6-c28c98149235</testCaseGuid>
+</TestCaseEntity>

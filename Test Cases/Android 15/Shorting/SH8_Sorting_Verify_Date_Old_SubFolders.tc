@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SH8_Sorting_Verify_Date_Old_SubFolders</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>20e8a388-ca0c-4b30-a1d1-86e7227f0386</testCaseGuid>
+</TestCaseEntity>

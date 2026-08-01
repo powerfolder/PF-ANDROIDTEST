@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SH4_Sorting_Verify_Size_Large_TopLevelFolders</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b8807d5f-341b-40dc-ab97-3ed04c8877b1</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SH3_Sorting_Verify_Size_Small_TopLevelFolders</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>00120519-290a-4d04-a989-d1f271072ce8</testCaseGuid>
+</TestCaseEntity>
