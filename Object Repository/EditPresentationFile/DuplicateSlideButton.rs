@@ -3,18 +3,29 @@
    <description></description>
    <name>DuplicateSlideButton</name>
    <tag></tag>
-   <elementGuidId>cc85c9f8-f66b-4109-a2a4-55ec8aade249</elementGuidId>
+   <elementGuidId>35923359-18e0-457b-9c4b-c2013bb621b4</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>(//*[@class = 'android.widget.TextView' and (@text = 'DUPLICATE SLIDE' or . = 'DUPLICATE SLIDE')])[2]</locator>
+   <locator>//*[@class = 'android.widget.TextView' and (@text = 'DUPLICATE SLIDE' or . = 'DUPLICATE SLIDE')]</locator>
    <locatorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@class = 'android.widget.TextView' and (@text = 'DUPLICATE SLIDE' or . = 'DUPLICATE SLIDE')])[2]</value>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
       </entry>
       <entry>
          <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>NAME</key>
          <value></value>
       </entry>
       <entry>
@@ -22,18 +33,19 @@
          <value></value>
       </entry>
       <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>IMAGE</key>
          <value></value>
       </entry>
       <entry>
-         <key>ATTRIBUTES</key>
+         <key>XPATH</key>
+         <value>//*[@class = 'android.widget.TextView' and (@text = 'DUPLICATE SLIDE' or . = 'DUPLICATE SLIDE')]</value>
       </entry>
       <entry>
-         <key>IOS_PREDICATE_STRING</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ANDROID_VIEWTAG</key>
+         <key>CLASS_NAME</key>
          <value></value>
       </entry>
       <entry>
@@ -41,19 +53,7 @@
          <value>new UiSelector()</value>
       </entry>
       <entry>
-         <key>ACCESSIBILITY</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_CLASS_CHAIN</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CLASS_NAME</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>NAME</key>
+         <key>IOS_PREDICATE_STRING</key>
          <value></value>
       </entry>
    </locatorCollection>
