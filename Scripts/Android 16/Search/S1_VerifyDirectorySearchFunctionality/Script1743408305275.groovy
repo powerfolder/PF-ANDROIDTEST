@@ -70,6 +70,8 @@ if(FilterName != ListName) {
 
 Mobile.tap(findTestObject('Search/BackButtonSearch'), 30)
 Mobile.delay(2)
+Mobile.tap(findTestObject('LoginScreen/HomeIcon'), 30)
+Mobile.delay(2)
 
 // delete created toplvl-folder
 CustomKeywords.'utils.Delete_object.swipeAndDelete'(top_folder_obj)

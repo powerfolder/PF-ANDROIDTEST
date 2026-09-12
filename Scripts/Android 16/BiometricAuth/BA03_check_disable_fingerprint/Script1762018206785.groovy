@@ -30,6 +30,9 @@ CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
 // Requirement: Setup finderprint as shown in docu
 // https://docs.katalon.com/katalon-studio/manage-projects/set-up-projects/mobile-testing/android/configure-fingerprint-setting-in-an-android-emulator
 
+// wait until fingerprint is activated
+Mobile.delay(185)
+
 // start up app
 CustomKeywords.'utils.Startup_app.install'(GlobalVariable.AppName)
 

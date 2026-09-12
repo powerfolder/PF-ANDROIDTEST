@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SH1_Sorting_Verify_Name_AtoZ_TopLevelFolders</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>39c5dc89-c5d8-4031-9bcf-6d57c6a085fc</testCaseGuid>
+</TestCaseEntity>

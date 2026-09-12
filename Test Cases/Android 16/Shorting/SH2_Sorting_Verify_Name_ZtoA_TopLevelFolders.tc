@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SH2_Sorting_Verify_Name_ZtoA_TopLevelFolders</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ca4d0323-9eab-4015-bb9f-6a7d6ecdc4dd</testCaseGuid>
+</TestCaseEntity>

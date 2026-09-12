@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SH12_Sorting_Verify_Type_ZToA_SubFolders</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b1eca038-dc7e-4b1a-9240-61ad43288fc5</testCaseGuid>
+</TestCaseEntity>
