@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>BA03_check_disable_fingerprint</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>606069d5-3d81-45be-83f5-47b5ec87cdcd</testCaseGuid>
+</TestCaseEntity>

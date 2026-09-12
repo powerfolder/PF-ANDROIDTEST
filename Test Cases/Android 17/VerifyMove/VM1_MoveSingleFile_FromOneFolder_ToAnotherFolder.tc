@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VM1_MoveSingleFile_FromOneFolder_ToAnotherFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>89662f31-f029-4b41-ae2d-2e6f1ac0bf33</testCaseGuid>
+</TestCaseEntity>
