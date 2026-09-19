@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FS3_VerifyShareWithoutDesignatedFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>46dc7d21-7532-43ec-a54c-3d475bb3e54f</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FO1_VerifyFolderList</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ec06bc52-9f3e-458b-a432-65a1ff99de52</testCaseGuid>
+</TestCaseEntity>

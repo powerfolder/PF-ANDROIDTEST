@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RF9_VerifyToRenameTextFile</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fd695cf1-8631-455d-9de4-5aed0d770e73</testCaseGuid>
+</TestCaseEntity>

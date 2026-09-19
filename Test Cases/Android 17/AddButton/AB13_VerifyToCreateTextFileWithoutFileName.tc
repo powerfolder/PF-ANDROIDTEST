@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB13_VerifyToCreateTextFileWithoutFileName</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b258b289-0e8e-40c9-ad59-1c646f8d3fb1</testCaseGuid>
+</TestCaseEntity>
