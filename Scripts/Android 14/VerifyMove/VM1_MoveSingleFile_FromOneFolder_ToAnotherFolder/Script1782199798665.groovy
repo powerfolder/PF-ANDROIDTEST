@@ -124,13 +124,8 @@ Mobile.tap(findTestObject('SwipeMove/MoveButton'), 30)
 
 Mobile.delay(5)
 
-// verify target alert message
-String alertMsg = Mobile.getText(findTestObject('SwipeMove/TargetAlertMsg'), 30)
-Mobile.verifyEqual(alertMsg, 'Target directory not found.')
-
-// click to cancel move
-Mobile.tap(findTestObject('SwipeMove/MoveCancelButton'), 30)
-Mobile.delay(2)
+// verify sub folder is now listed inside the target folder (second sub folder)
+Mobile.verifyElementExist(sub_folder_obj, 5)
 
 // go to home - toplvl
 Mobile.tap(findTestObject('LoginScreen/HomeIcon'), 30)
