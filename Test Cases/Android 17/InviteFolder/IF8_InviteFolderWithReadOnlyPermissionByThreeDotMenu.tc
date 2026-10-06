@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>IF8_InviteFolderWithReadOnlyPermissionByThreeDotMenu</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b95ea223-2e89-479e-8f10-abd18387bf95</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SH6_Sorting_Verify_Name_ZtoA_SubFolders</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5e335abc-687b-4c02-a50d-59a459040a77</testCaseGuid>
+</TestCaseEntity>

@@ -7,7 +7,7 @@
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//*[contains(@content-desc,'Close')]</locator>
+   <locator>//*[contains(translate(@content-desc,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'close') or contains(translate(@text,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'close') or contains(@class,'close') or contains(@resource-id,'close')]</locator>
    <locatorCollection>
       <entry>
          <key>ATTRIBUTES</key>
@@ -51,7 +51,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[contains(@content-desc,'Close')]</value>
+         <value>//*[contains(translate(@content-desc,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'close') or contains(translate(@text,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'close') or contains(@class,'close') or contains(@resource-id,'close')]</value>
       </entry>
       <entry>
          <key>ID</key>

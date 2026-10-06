@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC8_VerifyLoginWithoutServerProtocol</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2f07a241-a336-484e-b201-3d3ab8d40d43</testCaseGuid>
+</TestCaseEntity>

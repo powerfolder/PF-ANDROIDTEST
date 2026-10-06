@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>IF6_InviteFolderWithReadAndWritePermissionByThreeDotMenu</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>536bcb21-5948-4f34-b415-d37ef061a6bb</testCaseGuid>
+</TestCaseEntity>

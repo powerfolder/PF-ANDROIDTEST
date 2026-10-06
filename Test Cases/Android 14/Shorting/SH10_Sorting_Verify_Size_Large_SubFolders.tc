@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SH10_Sorting_Verify_Size_Large_SubFolders</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3328c82b-962a-47e8-8c59-0f2dba5aea19</testCaseGuid>
+</TestCaseEntity>

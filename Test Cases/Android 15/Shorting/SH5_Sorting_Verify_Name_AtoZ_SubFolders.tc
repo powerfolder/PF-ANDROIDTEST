@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SH5_Sorting_Verify_Name_AtoZ_SubFolders</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>11d35001-c1f1-4e92-a79e-c7d2c38991b6</testCaseGuid>
+</TestCaseEntity>
