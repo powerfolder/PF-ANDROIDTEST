@@ -137,6 +137,20 @@
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
+      <description>Bearer token of the admin (API) account, filled at runtime by utils.WebDav.createAdminToken</description>
+      <initValue>''</initValue>
+      <name>AdminToken</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Expiry of AdminToken as epoch milliseconds, 0 = no token</description>
+      <initValue>0</initValue>
+      <name>AdminTokenValidTo</name>
+      <protected>false</protected>
+      <valueType>NUMBER</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
       <description></description>
       <initValue>'mimas.powerfolder.net'</initValue>
       <name>ServerURLWithoutProtocol</name>

@@ -9,11 +9,16 @@ import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
 import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.testobject.ResponseObject
 import groovy.json.JsonSlurper
+import internal.GlobalVariable
 import java.nio.file.Files
 import java.nio.file.Paths
 import java.net.HttpURLConnection
 
 class WebDav {
+
+	// admin bearer token lives in GlobalVariable.AdminToken / AdminTokenValidTo (shared by all test cases of a run)
+	private static final int ADMIN_TOKEN_VALIDITY_SECONDS = 1800
+	private static final long ADMIN_TOKEN_REFRESH_MARGIN_MS = 60_000L
 
 	// ========= Helper =========
 
@@ -50,6 +55,25 @@ class WebDav {
 		return token
 	}
 
+
+	/**
+	 * Returns the admin token from GlobalVariable.AdminToken if it is still valid for at least
+	 * the refresh margin, otherwise null.
+	 */
+	private String loadCachedAdminToken() {
+		String token = GlobalVariable.AdminToken as String
+		long validTo = GlobalVariable.AdminTokenValidTo as long
+
+		if (token && validTo > System.currentTimeMillis() + ADMIN_TOKEN_REFRESH_MARGIN_MS) {
+			return token
+		}
+		return null
+	}
+
+	private void invalidateAdminToken() {
+		GlobalVariable.AdminToken = ''
+		GlobalVariable.AdminTokenValidTo = 0L
+	}
 
 	private RequestObject req(String name, String method, String url, Map<String,String> headers = [:], String body = null) {
 		RequestObject r = new RequestObject(name)
@@ -229,11 +253,62 @@ class WebDav {
 		}
 	}
 	/**
-	 * Creates an account via REST API.
+	 * Returns a bearer token of the admin (API) account.
+	 * The token is created via POST /api/accounts?action=createTokenForAccount (server admin only),
+	 * authenticated with basic auth, and kept in GlobalVariable.AdminToken until shortly before it expires.
 	 *
-	 * @param baseUrl  Base API URL (e.g. "https://server/api/accounts")
+	 * @param baseUrl  Base API URL (e.g. "https://server/api")
+	 * @param apiuser  Admin account username
+	 * @param apipass  Admin account password (only used to request the token)
+	 * @return the token, or null if it could not be created
+	 */
+	@Keyword
+	def createAdminToken(String baseUrl, String apiuser, String apipass) {
+		try {
+			String cached = loadCachedAdminToken()
+			if (cached) {
+				KeywordUtil.logInfo("♻️ Reusing admin token for ${apiuser} (valid until ${new Date(GlobalVariable.AdminTokenValidTo as long)})")
+				return cached
+			}
+
+			String url = "${baseUrl}/accounts?action=createTokenForAccount" +
+					"&name=${URLEncoder.encode(apiuser, 'UTF-8')}" +
+					"&validitySeconds=${ADMIN_TOKEN_VALIDITY_SECONDS}" +
+					"&notes=katalon-test"
+
+			KeywordUtil.logInfo("➡️ Requesting admin token for ${apiuser}")
+
+			def resp = WS.sendRequest(req("createTokenForAccount", "POST", url, ["Authorization": basicAuth(apiuser, apipass)]))
+			int code = resp.getStatusCode()
+
+			if (code != 200) {
+				KeywordUtil.markWarning("⚠️ Admin token creation failed (HTTP ${code}) for ${apiuser}")
+				return null
+			}
+
+			def json = new JsonSlurper().parseText(resp.getResponseBodyContent())
+			if (!json?.token) {
+				KeywordUtil.markWarning("⚠️ Admin token response contains no token")
+				return null
+			}
+
+			GlobalVariable.AdminToken = json.token as String
+			GlobalVariable.AdminTokenValidTo = json.validTo as long
+			KeywordUtil.logInfo("✅ Admin token created for ${apiuser} (valid until ${new Date(GlobalVariable.AdminTokenValidTo as long)})")
+			return GlobalVariable.AdminToken as String
+		} catch (Exception e) {
+			KeywordUtil.markFailed("❌ Error while creating admin token: " + e.message)
+			return null
+		}
+	}
+	/**
+	 * Creates an account via REST API, authenticated with a bearer token of the admin account.
+	 *
+	 * @param baseUrl  Base API URL (e.g. "https://server/api")
 	 * @param username Account email
 	 * @param password Account password
+	 * @param apiuser  Admin account username (used to obtain the bearer token)
+	 * @param apipass  Admin account password (used to obtain the bearer token)
 	 * @return true if account created (200/201) or (409) account exists already, false otherwise
 	 */
 	@Keyword
@@ -242,22 +317,35 @@ class WebDav {
 			// build api-url
 			String url = "${baseUrl}/accounts?action=store&username=${URLEncoder.encode(username, 'UTF-8')}&password=${URLEncoder.encode(password, 'UTF-8')}"
 
-			// build basic auth-header
-			String auth = "Basic " + "${apiuser}:${apipass}".getBytes("UTF-8").encodeBase64().toString()
+			int code = 0
+			// 2nd attempt only if a cached token was rejected (revoked / expired on the server)
+			for (int attempt = 0; attempt < 2; attempt++) {
+				String token = createAdminToken(baseUrl, apiuser, apipass)
+				if (!token) {
+					return false
+				}
 
-			KeywordUtil.logInfo("➡️ Creating account via: ${url}")
+				KeywordUtil.logInfo("➡️ Creating account for user: ${username}")
 
-			// create request-obj
-			RequestObject req = new RequestObject("createAccount")
-			req.setRestUrl(url)
-			req.setRestRequestMethod("GET")
-			req.setHttpHeaderProperties([
-				new com.kms.katalon.core.testobject.TestObjectProperty("Authorization", ConditionType.EQUALS, auth)
-			])
+				// create request-obj with bearer auth-header
+				RequestObject req = new RequestObject("createAccount")
+				req.setRestUrl(url)
+				req.setRestRequestMethod("GET")
+				req.setHttpHeaderProperties([
+					new com.kms.katalon.core.testobject.TestObjectProperty("Authorization", ConditionType.EQUALS, "Bearer " + token)
+				])
 
-			// send request
-			def resp = WS.sendRequest(req)
-			int code = resp.getStatusCode()
+				// send request
+				def resp = WS.sendRequest(req)
+				code = resp.getStatusCode()
+
+				if (code == 401 && attempt == 0) {
+					KeywordUtil.logInfo("ℹ️ Admin token rejected (401), requesting a new one")
+					invalidateAdminToken()
+					continue
+				}
+				break
+			}
 
 			// check return of api-call
 			if (code == 200 || code == 201) {
