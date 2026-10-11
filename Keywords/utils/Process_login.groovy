@@ -7,7 +7,7 @@ import internal.GlobalVariable
 
 class Process_login {
 	/**
-	 * Procceed login on PFM
+	 * Performs the login in the app
 	 * call via: CustomKeywords.'utils.Process_login.login'(serverurl,username, password)
 	 */
 	@Keyword

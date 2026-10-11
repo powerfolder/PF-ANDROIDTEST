@@ -26,7 +26,7 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import org.openqa.selenium.By
 import org.openqa.selenium.WebElement
 
-// get info about qa-system
+// load credentials for the test environment
 CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'('katalon.txt')
 
 // start or install package

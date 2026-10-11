@@ -22,7 +22,7 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-// get info about qa-system
+// load credentials for the test environment
 CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
 
 // start up app
@@ -71,14 +71,6 @@ Mobile.verifyElementExist(findTestObject('Folder_Menu/ShareLinkQRCode'),5)
 Mobile.tap(findTestObject('Folder_Menu/VerifyshareLinkButton'), 30)
 Mobile.delay(5)
 
-// verifying file link on share popup
-/*String link = Mobile.getText(findTestObject('Folder_Menu/FloderLink'), 30)
-if (link.contains('https://titan.powerfolder.net')) {
-    println(link)
-} else {
-    println('The header text does not contain the expected substring.')
-}
-Mobile.delay(5)*/
 Mobile.pressBack()
 
 //logout and close app

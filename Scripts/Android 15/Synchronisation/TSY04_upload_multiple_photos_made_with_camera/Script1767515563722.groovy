@@ -23,7 +23,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
 
-// get info about qa-system
+// load credentials for the test environment
 CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'('katalon.txt')
 
 // start or install package

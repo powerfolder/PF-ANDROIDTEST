@@ -24,7 +24,7 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 String randomEmail = "user" + System.currentTimeMillis() + "@qa-automated-mobiletest-A14.com"
 
-// get info about qa-system
+// load credentials for the test environment
 CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
 
 // start up app
@@ -88,7 +88,7 @@ def invited = api.isUserInvitedToFolder(
 	randomEmail
 )
 
-// tab on toplvl folder - there is a UI bug which makes swiping unavailabe when shared so moving in and back to root
+// tap on toplvl folder, then go back to root
 Mobile.delay(2)
 Mobile.tap(top_folder_obj, 5)
 

@@ -26,7 +26,7 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import org.openqa.selenium.By
 import org.openqa.selenium.WebElement
 
-// get info about qa-system
+// load credentials for the test environment
 CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'('katalon.txt')
 
 // start or install package
@@ -88,19 +88,19 @@ TestObject sub_folder_obj = new TestObject()
 sub_folder_obj.addProperty("xpath", ConditionType.EQUALS, "//*[@text='" + folderName_webdav + "']")
 Mobile.verifyElementExist(top_folder_obj, 5)
 
-// === Konfiguration ===
+// === Configuration ===
 String folderName_base = "TSY02_renamed_"
-String folderName_app_org = folderName_base + "1"    // Startordner
+String folderName_app_org = folderName_base + "1"    // Start folder
 String folderName_app_renamed = ""
 
-// === Rename-Schleife ===
+// === Rename loop ===
 for (int i = 1; i <= 7; i++) {
 
     int startX
     int endX
     int y
 
-    // --- SWIPE nach links auf das aktuelle Element ---
+    // --- Swipe left on the current element ---
 	if (i == 1) {
 		startX = Mobile.getElementLeftPosition(sub_folder_obj, 5) + 200
 		endX   = Mobile.getElementLeftPosition(sub_folder_obj, 5) - 100
@@ -117,10 +117,10 @@ for (int i = 1; i <= 7; i++) {
     Mobile.swipe(startX, y, endX, y)
     Mobile.delay(1)
 
-    // --- Neuen Ordnernamen festlegen ---
+    // --- Define new folder name ---
     folderName_app_renamed = folderName_base + i
 
-    // --- Rename-Dialog öffnen und Text setzen ---
+    // --- Open rename dialog and set text ---
     Mobile.tap(findTestObject('SwipeElements/RenameIcon'), 30)
     Mobile.tap(findTestObject('SwipeElements/CrossIconRenameTab'), 30)
     Mobile.delay(2)
@@ -130,14 +130,14 @@ for (int i = 1; i <= 7; i++) {
 
     println("Renamed folder: ${folderName_app_org} → ${folderName_app_renamed}")
 
-    // --- Lokale Variable aktualisieren ---
+    // --- Update local variable ---
     folderName_app_org = folderName_app_renamed
 
     // --- Sync (Pull-to-Refresh) ---
     Mobile.swipe(200, 500, 200, 1100)
     Mobile.delay(5)
 	Mobile.swipe(200, 500, 200, 1100)
-    // --- WebDAV-Überprüfung: existiert der Ordner auf dem Server? ---
+    // --- WebDAV check: does the folder exist on the server? ---
     boolean web_toplvl_present = CustomKeywords.'utils.WebDav.exists'(
         base,
         folderName_app + '/' + folderName_app_renamed,

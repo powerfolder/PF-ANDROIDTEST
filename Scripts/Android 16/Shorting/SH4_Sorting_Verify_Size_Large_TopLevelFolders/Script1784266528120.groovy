@@ -47,7 +47,7 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import org.openqa.selenium.By
 import org.openqa.selenium.WebElement
 
-// get info about qa-system
+// load credentials for the test environment
 CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
 
 // start up app

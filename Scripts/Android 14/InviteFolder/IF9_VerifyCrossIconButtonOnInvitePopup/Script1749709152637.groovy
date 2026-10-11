@@ -21,7 +21,7 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-// get info about qa-system
+// load credentials for the test environment
 CustomKeywords.'utils.Startup_app.loadCredsIntoGlobals'("katalon.txt")
 
 String randomEmail = "user" + System.currentTimeMillis() + "@qa-automated-mobiletest-A14.com"

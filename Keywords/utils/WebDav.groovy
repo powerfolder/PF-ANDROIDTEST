@@ -44,7 +44,7 @@ class WebDav {
 		// do request
 		def response = WS.sendRequest(request)
 
-		// JSON parsen
+		// parse JSON
 		def json = new JsonSlurper().parseText(response.getResponseBodyContent())
 
 		// extract token
@@ -182,7 +182,7 @@ class WebDav {
 		def r = req("PROPFIND", "PROPFIND", url,
 				["Authorization": basicAuth(username, password),
 					"Depth"        : "0"],
-				// minimaler PROPFIND-Body
+				// minimal PROPFIND body
 				"""<?xml version="1.0" encoding="utf-8" ?>
                    <d:propfind xmlns:d="DAV:">
                      <d:prop><d:resourcetype/></d:prop>
@@ -198,7 +198,7 @@ class WebDav {
 	 * adds a timestamp header, fills it with readable text, and uploads it via WebDAV.
 	 *
 	 * @param baseUrl     WebDAV URL
-	 * @param remotePath  target path (z. B. "/folder/file.txt")
+	 * @param remotePath  target path (e.g. "/folder/file.txt")
 	 * @param username    username
 	 * @param password    password
 	 * @param sizeInKB    size of file in kb
@@ -353,7 +353,7 @@ class WebDav {
 				return true
 			} else if (code == 409) {
 				KeywordUtil.logInfo("ℹ️ Account already exists (${code}) for user: ${username}")
-				return true // kein Fehler
+				return true // not an error
 			} else {
 				KeywordUtil.markWarning("⚠️ Account creation failed (${code}) for user: ${username}")
 				return false
@@ -370,7 +370,7 @@ class WebDav {
 	 * It performs a PROPFIND on the root folder ("/") and deletes each collection (folder)
 	 * except "webdav".
 	 *
-	 * @param baseUrl   Base WebDAV URL (e.g. "https://mimas.powerfolder.net/webdav/qa@powerfolder.com")
+	 * @param baseUrl   Base WebDAV URL (e.g. "https://server.example.com/webdav/user@example.com")
 	 * @param username  Account username
 	 * @param password  Account password
 	 * @return true if all deletions succeeded, false if any failed
@@ -380,7 +380,7 @@ class WebDav {
 		try {
 			String rootUrl = baseUrlJoin(baseUrl, "/")
 
-			// === Schritt 1: PROPFIND depth=1 (list folders) ===
+			// === Step 1: PROPFIND depth=1 (list folders) ===
 			def r = req("LIST_ROOT", "PROPFIND", rootUrl,
 					[
 						"Authorization": basicAuth(username, password),
@@ -398,7 +398,7 @@ class WebDav {
 				return false
 			}
 
-			// === Schritt 2: XML auswerten (alle Ordner finden) ===
+			// === Step 2: parse XML (find all folders) ===
 			def xml = new XmlSlurper().parseText(resp.getResponseBodyContent())
 
 			def folders = []
@@ -424,7 +424,7 @@ class WebDav {
 
 			KeywordUtil.logInfo("🗂 Found ${folders.size()} folders to delete (excluding 'webdav'): ${folders}")
 
-			// === Schritt 3: alle Ordner löschen ===
+			// === Step 3: delete all folders ===
 			boolean allDeleted = true
 			folders.each { folder ->
 				boolean ok = deletePath(baseUrl, folder, username, password)

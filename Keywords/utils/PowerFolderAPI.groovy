@@ -21,7 +21,7 @@ class PowerFolderAPI {
 	 * Calls the PowerFolder API to get all folders and extracts name + folderID.
 	 * Equivalent to: curl -v -u username 'https://.../api/folders?action=getAll'
 	 *
-	 * @param baseUrl e.g. "https://mimas.powerfolder.net/api/folders"
+	 * @param baseUrl e.g. "https://server.example.com/api/folders"
 	 * @param username PowerFolder username (Basic Auth)
 	 * @param password PowerFolder password (Basic Auth)
 	 * @return a List of Maps [ [name: 'tmp', folderID: '2AzCh...'], ... ]
