@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VM6_VerifyErrorMessage_WhenMovingFileToSameLocation</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fa638cfa-5fb9-4c0c-bd5b-af74778ed76f</testCaseGuid>
+</TestCaseEntity>

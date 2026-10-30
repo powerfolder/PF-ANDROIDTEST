@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>This test case verify the login screen mobile elements</description>
+   <name>TC1_verifyLoginScreen</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4784d990-8b3a-4f9f-b4dd-9139d9a8489c</testCaseGuid>
+</TestCaseEntity>

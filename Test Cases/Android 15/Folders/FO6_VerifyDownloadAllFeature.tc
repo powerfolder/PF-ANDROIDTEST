@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FO6_VerifyDownloadAllFeature</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a9cf6c21-ba1b-4cd7-adbf-4cc4745725e5</testCaseGuid>
+</TestCaseEntity>

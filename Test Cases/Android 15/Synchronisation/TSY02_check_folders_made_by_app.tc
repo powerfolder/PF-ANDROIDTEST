@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TSY02_check_folders_made_by_app</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>076f56a2-0785-4607-ac5f-fe00823dea39</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RF8_VerifyToRenameSubFolderWithExistingName</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>55aefc0f-41b4-4efd-950e-3a46a1814d8c</testCaseGuid>
+</TestCaseEntity>

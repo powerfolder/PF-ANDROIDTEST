@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SH11_Sorting_Verify_Type_AtoZ_SubFolders</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7e6cec0a-228b-4b24-a4ad-ee77025c3d5a</testCaseGuid>
+</TestCaseEntity>

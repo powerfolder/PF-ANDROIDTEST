@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SE3_VerifyLockCodeDeactivateFunctionality_obsolete</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a58f498b-427b-41a5-a77c-1acfcd0c9c51</testCaseGuid>
+</TestCaseEntity>

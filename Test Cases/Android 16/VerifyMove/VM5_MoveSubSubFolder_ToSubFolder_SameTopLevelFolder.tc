@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VM5_MoveSubSubFolder_ToSubFolder_SameTopLevelFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d4f3bc3e-03ce-4879-81a6-93d9328445e5</testCaseGuid>
+</TestCaseEntity>

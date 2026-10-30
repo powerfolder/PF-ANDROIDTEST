@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SE2_VerifyLockCodeFunctionality_obsolete</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>223352e8-12a4-42e9-af13-4e3636e6a374</testCaseGuid>
+</TestCaseEntity>

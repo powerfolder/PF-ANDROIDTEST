@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FS2_VerifyToCancelSharefile</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>895fd55b-c7be-4568-95c6-7c653260cd02</testCaseGuid>
+</TestCaseEntity>

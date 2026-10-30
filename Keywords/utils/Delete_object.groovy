@@ -38,30 +38,4 @@ class ElementSwipeHandler {
 			println("❌ NO SUCESS")
 		}
 	}
-
-	/**
-	 * Leave a toplvl folder shared by another user (swipe -> delete -> confirm "remove access")
-	 * call via: CustomKeywords.'utils.Delete_object.swipeAndLeave'(folder_obj, folderName)
-	 */
-	@Keyword
-	def swipeAndLeave(TestObject obj, String folderName) {
-		Mobile.verifyElementExist(obj, 5)
-		Mobile.delay(1)
-
-		int startX = Mobile.getElementLeftPosition(obj, 5) + 200
-		int endX = Mobile.getElementLeftPosition(obj, 5) - 100
-		int y = Mobile.getElementTopPosition(obj, 5)
-
-		Mobile.swipe(startX, y, endX, y)
-		Mobile.delay(1)
-
-		Mobile.tap(ObjectRepository.findTestObject('SwipeElements/DeleteIcon'), 30)
-
-		// not owned toplvl folder: dialog must offer to remove access instead of deleting
-		String leaveText = Mobile.getText(ObjectRepository.findTestObject('SwipeElements/DeleteDialogText'), 30)
-		Mobile.verifyEqual(leaveText, 'Do you really want to remove access from ' + folderName + '?')
-
-		Mobile.tap(ObjectRepository.findTestObject('SwipeElements/YesButton'), 30)
-		Mobile.delay(3)
-	}
 }

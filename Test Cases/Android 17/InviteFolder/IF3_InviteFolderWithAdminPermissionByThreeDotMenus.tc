@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>IF3_InviteFolderWithAdminPermissionByThreeDotMenus</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1b4f36b4-475a-4496-9746-74a446521f02</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FS1_VerifyShareFileInApp</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b1ca55fe-9a37-4735-9f2f-74d32366d0d2</testCaseGuid>
+</TestCaseEntity>

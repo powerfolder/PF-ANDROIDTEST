@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB5_VerifyToCreateDocumentWithoutFileName</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c8779b3f-3649-42ac-b821-03219056ce1d</testCaseGuid>
+</TestCaseEntity>

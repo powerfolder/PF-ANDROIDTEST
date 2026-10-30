@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB10_VerifyToCreateSpreadsheetWithoutFileName</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6850921d-1cdf-4a56-b0a6-4adfcdb0f609</testCaseGuid>
+</TestCaseEntity>

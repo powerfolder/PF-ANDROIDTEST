@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VM4_DownloadFile_AndMoveToAnotherFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e40d7996-dede-4cb2-9bc4-c15ad34484a7</testCaseGuid>
+</TestCaseEntity>

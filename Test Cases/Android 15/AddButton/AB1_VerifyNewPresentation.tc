@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB1_VerifyNewPresentation</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>47c2f20b-044b-4e7d-a47b-83c06f458d64</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TSY01_check_folders_made_by_webdav</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2bf61289-122e-4911-925c-663d0e86d726</testCaseGuid>
+</TestCaseEntity>

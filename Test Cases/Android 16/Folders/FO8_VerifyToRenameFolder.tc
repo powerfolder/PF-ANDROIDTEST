@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FO8_VerifyToRenameFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0bc77c46-82cd-4783-aefa-161bd8926cf5</testCaseGuid>
+</TestCaseEntity>

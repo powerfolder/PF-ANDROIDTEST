@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC7_EnsureAppVersionSame_BeforeAndAfterLogin</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>9d8f250b-7909-4d39-8b6b-bdf46b7a71ff</testCaseGuid>
+</TestCaseEntity>

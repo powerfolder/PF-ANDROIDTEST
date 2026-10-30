@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SM2_VerifyFileToSave</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>89d7d23a-7b5c-40fc-a128-960f464178ef</testCaseGuid>
+</TestCaseEntity>

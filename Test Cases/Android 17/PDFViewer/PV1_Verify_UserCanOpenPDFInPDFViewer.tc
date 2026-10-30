@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>PV1_Verify_UserCanOpenPDFInPDFViewer</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6404a225-bb0c-45b3-8850-c74bcb604028</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FO3_VerifyFolderCreationAndDeletion</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6191fbd9-1597-472e-8381-b651f96a3d49</testCaseGuid>
+</TestCaseEntity>

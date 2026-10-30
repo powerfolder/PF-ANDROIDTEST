@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RF4_VerifyToRenamePresentationFile</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>31db8537-b454-4a18-a915-af52da8f7bb7</testCaseGuid>
+</TestCaseEntity>

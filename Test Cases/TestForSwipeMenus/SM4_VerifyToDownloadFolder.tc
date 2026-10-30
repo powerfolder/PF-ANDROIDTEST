@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>SM4_VerifyToDownloadFolder</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>dbef8897-67fc-40bb-9fea-6835c7199cc8</testCaseGuid>
-</TestCaseEntity>

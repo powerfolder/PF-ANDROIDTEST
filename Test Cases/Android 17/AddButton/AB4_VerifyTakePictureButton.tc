@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB4_VerifyTakePictureButton</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2a72ccd4-5bc7-4766-bf27-e796b05469ff</testCaseGuid>
+</TestCaseEntity>

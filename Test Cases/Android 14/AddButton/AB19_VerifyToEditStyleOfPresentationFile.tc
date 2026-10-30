@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AB19_VerifyToEditStyleOfPresentationFile</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f8cb0726-4c19-48c2-8c96-7e7a58a1c40f</testCaseGuid>
+</TestCaseEntity>

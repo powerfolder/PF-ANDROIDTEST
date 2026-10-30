@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SM1_VerifyFileToDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4fea26f4-9ec4-47b9-a611-e3a4804c55b2</testCaseGuid>
+</TestCaseEntity>

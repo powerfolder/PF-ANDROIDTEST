@@ -3,18 +3,38 @@
    <description></description>
    <name>ShareIcon</name>
    <tag></tag>
-   <elementGuidId>f2c0f521-2081-4ff2-a2ec-ae3d87f37e1e</elementGuidId>
+   <elementGuidId>3937efdf-76b6-4496-b1b6-161ef3093acd</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//*[@class='android.widget.Image' and translate(@text, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='share']</locator>
+   <locator>Share</locator>
    <locatorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class='android.widget.Image' and translate(@text, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='share']</value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
       <entry>
          <key>ATTRIBUTES</key>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@class='android.widget.Image' and translate(@text, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='share']</value>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
       </entry>
       <entry>
          <key>ANDROID_UI_AUTOMATOR</key>
@@ -22,7 +42,7 @@
       </entry>
       <entry>
          <key>ACCESSIBILITY</key>
-         <value></value>
+         <value>Share</value>
       </entry>
       <entry>
          <key>NAME</key>
@@ -36,27 +56,7 @@
          <key>IOS_CLASS_CHAIN</key>
          <value></value>
       </entry>
-      <entry>
-         <key>IMAGE</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IOS_PREDICATE_STRING</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CUSTOM</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ANDROID_VIEWTAG</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>ID</key>
-         <value></value>
-      </entry>
    </locatorCollection>
-   <locatorStrategy>XPATH</locatorStrategy>
+   <locatorStrategy>ACCESSIBILITY</locatorStrategy>
    <platform>ANDROID</platform>
 </MobileElementEntity>

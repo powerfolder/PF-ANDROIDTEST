@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>S1_VerifyDirectorySearchFunctionality</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>e3f49fa6-30f5-4166-8abb-87df2e4e1390</testCaseGuid>
-</TestCaseEntity>
