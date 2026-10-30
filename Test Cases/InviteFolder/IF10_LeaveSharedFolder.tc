@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>PFM-788: second user accepts a shared folder, creates a file, leaves the share. File must stay with the owner.</description>
+   <name>IF10_LeaveSharedFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1fda5678-1df2-4d03-a0b6-7caf66786a89</testCaseGuid>
+</TestCaseEntity>
