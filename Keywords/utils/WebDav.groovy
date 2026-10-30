@@ -276,6 +276,31 @@ class WebDav {
 		}
 	}
 	/**
+	 * Deletes an account via REST API (admin credentials required).
+	 *
+	 * @param baseUrl  Base API URL (e.g. "https://server/api")
+	 * @param username Username of the account to delete
+	 * @return true if account deleted (200) or not existing (404), false otherwise
+	 */
+	@Keyword
+	def deleteAccount(String baseUrl, String username, String apiuser, String apipass) {
+		try {
+			String url = "${baseUrl}/accounts?action=delete&name=${URLEncoder.encode(username, 'UTF-8')}"
+			RequestObject req = req("deleteAccount", "GET", url, ["Authorization": basicAuth(apiuser, apipass)])
+			int code = WS.sendRequest(req).getStatusCode()
+
+			if (code == 200 || code == 404) {
+				KeywordUtil.logInfo("✅ Account deleted or not existing (${code}): ${username}")
+				return true
+			}
+			KeywordUtil.markWarning("⚠️ Account deletion failed (${code}) for user: ${username}")
+			return false
+		} catch (Exception e) {
+			KeywordUtil.markWarning("⚠️ Error while deleting account: " + e.message)
+			return false
+		}
+	}
+	/**
 	 * Deletes all top-level folders of the account via WebDAV,
 	 * except the special "webdav" folder itself.
 	 *

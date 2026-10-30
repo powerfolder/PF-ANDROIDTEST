@@ -306,6 +306,13 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
+      <guid>8c985410-9846-44b0-ac62-b3022cdbfa7d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Android 17/InviteFolder/IF10_LeaveSharedFolder</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
       <guid>b439378c-629a-4e4c-b936-c9d03e5c32a1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
