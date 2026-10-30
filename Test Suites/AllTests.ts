@@ -522,4 +522,11 @@
       <testCaseId>Test Cases/Synchronisation/TSY03_check_filesize_changed_by_webdav</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
+   <testCaseLink>
+      <guid>c4bb3e00-cb41-4597-8421-b276d33f5b90</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/InviteFolder/IF10_LeaveSharedFolder</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
 </TestSuiteEntity>
