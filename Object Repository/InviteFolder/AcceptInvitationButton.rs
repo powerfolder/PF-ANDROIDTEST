@@ -6,7 +6,7 @@
    <elementGuidId>32d8b556-2820-4194-90a1-667ed866286b</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//*[@resource-id = 'invite_accept']</locator>
+   <locator>//*[@resource-id = 'invite_accept' or @text = 'Accept']</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <platform>ANDROID</platform>
 </MobileElementEntity>
