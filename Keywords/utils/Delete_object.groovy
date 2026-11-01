@@ -58,8 +58,10 @@ class ElementSwipeHandler {
 		Mobile.tap(ObjectRepository.findTestObject('SwipeElements/DeleteIcon'), 30)
 
 		// not owned toplvl folder: dialog must offer to remove access instead of deleting
+		// the app lists shared folders as "<name> (<owner>)", so the owner suffix is optional
 		String leaveText = Mobile.getText(ObjectRepository.findTestObject('SwipeElements/DeleteDialogText'), 30)
-		Mobile.verifyEqual(leaveText, 'Do you really want to remove access from ' + folderName + '?')
+		String leavePattern = '^Do you really want to remove access from ' + java.util.regex.Pattern.quote(folderName) + '( \\(.*\\))?\\?$'
+		Mobile.verifyMatch(leaveText, leavePattern, true)
 
 		Mobile.tap(ObjectRepository.findTestObject('SwipeElements/YesButton'), 30)
 		Mobile.delay(3)

@@ -85,16 +85,18 @@ try {
 	CustomKeywords.'utils.Process_login.login'(GlobalVariable.ServerURL, secondUser, secondPassword)
 	Mobile.delay(3)
 
-	// 6. accept share: tapping the invited folder opens the invitation dialog
-	Mobile.verifyElementExist(top_folder_obj, 30)
-	Mobile.tap(top_folder_obj, 30)
+	// 6. accept share: the second user sees the folder as "<folder name> (<owner>)", tapping the invitation opens the accept menu
+	TestObject shared_folder_obj = new TestObject()
+	shared_folder_obj.addProperty("xpath", ConditionType.EQUALS, "//*[contains(@text,'" + folderName + "')]")
+	Mobile.verifyElementExist(shared_folder_obj, 30)
+	Mobile.tap(shared_folder_obj, 30)
 	Mobile.verifyElementExist(findTestObject('InviteFolder/AcceptInvitationButton'), 30)
 	Mobile.tap(findTestObject('InviteFolder/AcceptInvitationButton'), 30)
 	Mobile.delay(5)
 
 	// 7. create text file inside the shared folder
-	Mobile.verifyElementExist(top_folder_obj, 30)
-	Mobile.tap(top_folder_obj, 30)
+	Mobile.verifyElementExist(shared_folder_obj, 30)
+	Mobile.tap(shared_folder_obj, 30)
 	Mobile.delay(4)
 
 	String textFileName = 'text_' + CustomKeywords.'utils.Get_timestamp.generateTimestamp'()
@@ -123,13 +125,13 @@ try {
 	// 8. leave share
 	Mobile.tap(findTestObject('LoginScreen/HomeIcon'), 30)
 	Mobile.delay(2)
-	CustomKeywords.'utils.Delete_object.swipeAndLeave'(top_folder_obj, folderName)
+	CustomKeywords.'utils.Delete_object.swipeAndLeave'(shared_folder_obj, folderName)
 
 	// shared folder is no longer shown, also not after a refresh from server
-	Mobile.verifyElementNotExist(top_folder_obj, 10)
+	Mobile.verifyElementNotExist(shared_folder_obj, 10)
 	Mobile.swipe(200, 400, 200, 1100)
 	Mobile.delay(5)
-	Mobile.verifyElementNotExist(top_folder_obj, 10)
+	Mobile.verifyElementNotExist(shared_folder_obj, 10)
 
 	// second user has no access on the server anymore
 	assert !api.getFolderIdByName(GlobalVariable.ApiURL + '/folders', secondUser, secondPassword, folderName) :
